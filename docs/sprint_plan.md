@@ -165,14 +165,14 @@ Acceptance:
 - [x] Claude review: evidence strings are specific, not generic
 
 ### P0-009 — Score computation — first run
-Status: BACKLOG
+Status: DONE (2026-03-31)
 Dependencies: P0-003 through P0-008 must be DONE
 Acceptance:
-- [ ] score_computation.py script runs without errors on full dataset
-- [ ] All tools with 2+ clean evaluations have scores published
-- [ ] All published scores include confidence level
-- [ ] Score history entries created for all tools with published scores
-- [ ] No tool has a score published from a CoI-flagged evaluation
+- [x] score_computation.py script runs without errors on full dataset
+- [x] All tools with 2+ clean evaluations have scores published (50/50 — all have 3)
+- [x] All published scores include confidence level (all: medium, 3 evals each)
+- [x] Score history entries created for all tools with published scores
+- [x] No tool has a score published from a CoI-flagged evaluation (0 CoI evals in dataset)
 
 ### P0-010 — First 3 versus pages
 Status: BACKLOG
@@ -357,5 +357,6 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 | 2026-03-31 | P0-006 | 1 batch (10 profiles) same session — 40/50 total. All 10 active, cleanest batch. |
 | 2026-03-31 | P0-007 | 1 batch (10 profiles) same session — **50/50 COMPLETE**. All 10 active, zero failures on full dataset validation. |
 | 2026-03-31 | P0-008 | 150 seed evaluations written (3 per tool). First 30 manually with specific metrics; remaining 120 via subagent. **150/150 PASS** validate_evaluation.py. |
+| 2026-03-31 | P0-009 | Score computation script written. All 50 tools scored. **50/50 PASS** validate_yaml.py post-write. 5 spot-checks match. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.
