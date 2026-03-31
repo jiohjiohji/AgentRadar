@@ -33,8 +33,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: |
-          if python -m pytest tests/ --collect-only -q 2>/dev/null | grep -q "test"; then
+          if find tests -type f \( -name "test_*.py" -o -name "*_test.py" \) | grep -q .; then
             python -m pytest tests/ -v --tb=short
           else
-            echo "No tests yet — skipping"
+            echo "No test files yet — skipping"
           fi
