@@ -1,6 +1,6 @@
 # TASK: p0-012-launch
 # Date: 2026-03-31 | Phase: 0
-# Status: BACKLOG
+# Status: IN PROGRESS
 
 ## MUSK 5-RULES PRE-CHECK
 
@@ -59,12 +59,13 @@ Flag this step explicitly in the launch checklist.
 ---
 
 ## ACCEPTANCE CRITERIA
-- [ ] README.md written and covers all 4 required sections
-- [ ] validate.yml badge renders correctly in README
-- [ ] data/CONTRIBUTING.md written (evaluation submission process)
+- [x] README.md written and covers all 4 required sections — updated for scan/suggest/check framing
+- [x] validate.yml badge renders correctly in README
+- [x] data/CONTRIBUTING.md written (evaluation submission process)
 - [ ] Repo made public (Jihoon approval required before this step)
-- [ ] Buttondown account created, first digest draft written
-- [ ] 3 community posts drafted (ready to post on launch day)
+- [ ] Buttondown account created — MANUAL (account creation)
+- [x] First digest draft written — data/digests/launch-001.md
+- [x] 3 community posts drafted — docs/launch/community-posts.md
 - [ ] Claude review: PASS on README clarity
 
 ## NEXT TASK

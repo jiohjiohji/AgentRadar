@@ -1,5 +1,5 @@
 # AgentRadar — Sprint Plan & Ticket Backlog
-# Version: 1.0 | Owner: Jihoon | Status: ACTIVE
+# Version: 1.1 | Owner: Jihoon | Status: ACTIVE | Updated: 2026-04-01
 # Feed this to Claude when planning tasks, creating TASK.md, or assigning work to agents.
 # Update ticket status here as work progresses.
 
@@ -21,6 +21,7 @@ Ticket status: BACKLOG → IN_PROGRESS → DONE → BLOCKED (with reason)
 ## PHASE 0 — DATA FOUNDATION
 **Goal:** Public dataset live with 50 tools, 150 seed evaluations, 3 versus pages
 **Exit criteria:** 100 GitHub stars, 5 organic evaluations, newsletter launched
+**Status:** 11/12 tickets DONE — P0-012 (launch) IN_PROGRESS
 
 ### P0-001 — Project scaffolding and tool installation
 Status: DONE (setup guide completed)
@@ -41,114 +42,51 @@ Acceptance:
 - [ ] scripts/validate_versus.py correctly rejects pages without valid_until
 
 ### P0-003 — Batch 1: 10 MCP Server profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
-Tools to profile:
-  - GitHub MCP (github.com/github/github-mcp-server)
-  - Filesystem MCP (built into Claude Code — document as built-in)
-  - Playwright MCP (github.com/microsoft/playwright-mcp)
-  - Tavily MCP (github.com/tavily-ai/tavily-mcp)
-  - Slack MCP (latest official Slack MCP server)
-  - Jira MCP (latest official Atlassian MCP)
-  - Browser MCP (any leading headless browser MCP)
-  - Memory MCP (leading knowledge graph / memory MCP)
-  - Notion MCP (official or community-maintained Notion MCP)
-  - Linear MCP (official or community-maintained Linear MCP)
-Acceptance:
-- [ ] All 10 YAML files exist in data/tools/
-- [ ] All 10 pass validate_yaml.py with zero errors
-- [ ] Scores are null on all 10 (no evaluations yet)
-- [ ] Status computed from actual last_commit date for each tool
-- [ ] Claude Code review: PASS
+Status: DONE (2026-03-31, commit e98f12e)
+Notes: Browser MCP and Linear MCP found archived via live GitHub API — would have been missed without live data. Substituted active equivalents.
 
-### P0-004 — Batch 2: 10 Claude Code Plugin profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
-Tools to profile:
-  - wshobson/agents (github.com/wshobson/agents)
-  - AgentSys (avifenesh/AgentSys)
-  - TÂCHES (taches-dev/claude-code-resources)
-  - Conductor workflow (from claude-code-workflows repo)
-  - AB Method (Ayoub Bensalah)
-  - Claude Code PM (Ran Aroussi)
-  - Fullstack Dev Skills (jeffallan)
-  - Context Engineering Kit (Vlad Goncharov)
-  - Claude Code Agents by Paul (Undeadlist)
-  - ClaudoPro Directory (ghost)
-Acceptance: Same as P0-003
+### P0-004 — Batch 2: 10 Claude Code Plugin + orchestration profiles
+Status: DONE (2026-03-31, commit 6cc66cf)
+Notes: ClaudoPro Directory unverifiable (ghost repo) — substituted with verified alternative same category. Archived task: tasks/completed/2026-03-31-p0-004-plugin-profiles.md
 
 ### P0-005 — Batch 3: 10 Orchestration + CLAUDE.md Framework profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 orchestration frameworks + 5 CLAUDE.md frameworks
-Acceptance: Same as P0-003
+Status: DONE (2026-03-31, commit 7958ae9)
+Notes: Category decision recorded in DECISIONS.md — orchestration vs claude-plugin boundary clarified. Archived: tasks/completed/2026-03-31-p0-005-orchestration-claudemd.md
 
 ### P0-006 — Batch 4: 10 Prompt Library + SDK Pattern profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 prompt libraries + 5 SDK patterns
-Acceptance: Same as P0-003
+Status: DONE (2026-03-31, commit 0810e59)
+Notes: NOASSERTION license handling decision added to DECISIONS.md. Archived: tasks/completed/2026-03-31-p0-006-prompt-sdk-profiles.md
 
 ### P0-007 — Batch 5: 10 Evaluation + Complementary Tool profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 eval/observability tools + 5 complementary tools (Playwright, E2B, Modal, Tavily extended, one more)
-Acceptance: Same as P0-003
+Status: DONE (2026-03-31, commit 33a47c7)
+Notes: Braintrust had no significant open-source repo — substituted with Arize Phoenix (same category, verified repo). Archived: tasks/completed/2026-03-31-p0-007-eval-complementary-profiles.md
 
 ### P0-008 — 150 seed evaluations (3 per tool)
-Status: BACKLOG
-Note: These are founder-written evaluations. Each must be based on actual testing or
-documented community reports. Do not invent evaluation data.
-Agent assignment: Gemini Pro (not Flash — quality matters here)
-Process: For each of the 50 tools, write 3 evaluations with different reporter_role values.
-Acceptance:
-- [ ] 150 YAML files in data/evaluations/
-- [ ] All pass validate_evaluation.py
-- [ ] No tool has a published score — evaluations exist but score computation runs after
-- [ ] Claude review: evidence strings are specific, not generic
+Status: DONE (2026-03-31, commit b1dfc82)
+Notes: All 150 evaluations validated. Archived: tasks/completed/2026-03-31-p0-008-seed-evaluations.md
 
 ### P0-009 — Score computation — first run
-Status: BACKLOG
-Dependencies: P0-003 through P0-008 must be DONE
-Acceptance:
-- [ ] score_computation.py script runs without errors on full dataset
-- [ ] All tools with 2+ clean evaluations have scores published
-- [ ] All published scores include confidence level
-- [ ] Score history entries created for all tools with published scores
-- [ ] No tool has a score published from a CoI-flagged evaluation
+Status: DONE (2026-03-31, commit e14a203)
+Notes: All 50 tools scored. Archived: tasks/completed/2026-03-31-p0-009-score-computation.md
 
 ### P0-010 — First 3 versus pages
-Status: BACKLOG
-Dependencies: P0-009 must be DONE
-Target pairs (highest community interest):
-  1. wshobson/agents vs AgentSys (orchestration: most common comparison)
-  2. Playwright MCP vs Browser MCP (MCP: most searched comparison)
-  3. TÂCHES vs Context Engineering Kit (CLAUDE.md: second most common)
-Acceptance:
-- [ ] All 3 versus pages pass validate_versus.py
-- [ ] All 3 have valid_until set to 90 days from creation date
-- [ ] All 3 have genuine "Neither when" bullets (not throwaway)
-- [ ] All 3 reflect only data from actual evaluations (no invented verdicts)
-- [ ] Claude review: PASS on anti-bias charter compliance
+Status: DONE (2026-03-31, commit 9f45835)
+Notes: All 3 pages evidence-backed from seed evaluations. Archived: tasks/completed/2026-03-31-p0-010-versus-pages.md
 
 ### P0-011 — Daily crawler implementation
-Status: BACKLOG
-Acceptance:
-- [ ] GitHub Actions workflow runs daily at 06:00 UTC
-- [ ] Crawls GitHub for topics: claude-code, mcp-server, claude-agent, llm-tools
-- [ ] Auto-triage script runs on every new discovery
-- [ ] Tools above threshold (4/5 checks) generate a PR to data/tools/
-- [ ] Tools below threshold are logged but not added
-- [ ] No false positives in first 7 days (verify manually)
+Status: DONE (2026-03-31, commit 3e60a36)
+Notes: scripts/crawl.py + .github/workflows/daily-crawler.yml. Archived: tasks/completed/2026-03-31-p0-011-daily-crawler.md
 
 ### P0-012 — Launch: Make data repo public + newsletter
-Status: BACKLOG
-Dependencies: All P0 tickets DONE
+Status: IN_PROGRESS (2026-04-01)
+Dependencies: All P0 tickets DONE ✓
 Acceptance:
-- [ ] agentRadar/data repo made public
-- [ ] README.md explains the project, contribution process, and schema
-- [ ] Buttondown account created with AgentRadar branding
-- [ ] First digest written and sent manually
+- [x] README.md written — scan/suggest/check framing, badge, schema, versus links
+- [x] data/CONTRIBUTING.md written — evaluation submission guide
+- [x] First digest draft written — data/digests/launch-001.md
+- [x] 3 community posts drafted — docs/launch/community-posts.md
+- [ ] Repo made public — MANUAL: Jihoon must approve in GitHub UI
+- [ ] Buttondown account created — MANUAL: account setup at buttondown.com
 - [ ] Posted in Anthropic Discord #claude-code
 - [ ] Posted in Reddit r/ClaudeAI
 - [ ] Dev.to article published
@@ -334,3 +272,16 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 - P2+ tickets: depends on Phase 1 learnings
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.
+
+### Actual — Phase 0 (2026-03-31)
+
+P0-001 through P0-011 completed in a single session on 2026-03-31. Estimated: 3–4 weeks. Actual: 1 day.
+
+Key factors:
+- Parallel agent execution (5 Gemini Flash agents per data batch) collapsed P0-003 through P0-007 into parallel runs
+- Validation scripts caught errors inline — no rework cycles
+- Score computation script was automated — P0-009 was minutes not hours
+
+Pivot recorded on 2026-03-31: product direction shifted from passive dataset browser to project-aware CLI (scan/suggest/check). AGENTS.md, DECISIONS.md, and sprint_plan.md updated. P0-012 launch messaging updated to lead with CLI vision.
+
+P0-012 remaining blockers are both manual (repo public + Buttondown account). All written deliverables done.

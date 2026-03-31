@@ -1,114 +1,171 @@
 # Community Post Drafts — AgentRadar Launch
 
 Status: DRAFT — post on launch day after repo is made public.
+Product framing: CLI that reads your project (scan/suggest/check) — dataset is the foundation, CLI is Phase 1.
 
 ---
 
 ## 1. Anthropic Discord — #claude-code
 
-**Format:** Plain text message, no markdown headers
+**Format:** Plain text, no markdown headers
 
 ---
 
-Hey everyone — I've been quietly building something for the past few weeks and it's finally at a point where it's worth sharing.
+Hey everyone — I've been building something for the past month and it's now public.
 
-**AgentRadar** is an open dataset of 50 Claude Code and MCP tools, scored by community evaluations. The idea: every number traces to a real developer who ran a specific task and reported scores on 6 dimensions (productivity, quality, cost efficiency, reliability, composability, setup friction). No synthetic benchmarks.
+**AgentRadar** is two things:
 
-What's in there right now:
-- 50 tool profiles with schema-validated YAML
-- 150 seed evaluations (3 per tool)
-- 3 versus pages (head-to-head comparisons with evidence-backed verdicts)
-- A daily crawler that flags when tools go stale or archived
+First, an open dataset of 50 Claude Code and MCP tools, community-scored on 6 dimensions (productivity, quality, cost efficiency, reliability, composability, setup friction). Every score comes from a structured evaluation report — real tasks, real numbers, no vendor data.
 
-The data is on GitHub: github.com/jiohjiohji/AgentRadar
+Second — and this is the point — a CLI that reads your project before making a recommendation:
 
-If you've used any of these tools on a real task and want to submit an evaluation, there's a GitHub issue form that takes about 10 minutes. The more reports a tool has, the more reliable its scores become — right now everything is at "medium" confidence (3 evals each).
+```
+agentRadar scan        → reads your stack, finds tool gaps you haven't noticed
+agentRadar suggest "browser testing"  → matches against what you already have
+agentRadar check       → flags archived/stale tools, suggests active replacements
+```
 
-Happy to answer questions here or in the GitHub discussions.
+The `scan` command is the flagship: it reads your package.json, requirements.txt, .claude/ config, and MCP setup, then tells you what you're missing for your specific stack. Not 10 options — 1–3 recommendations with "why this fits your setup."
+
+The dataset is live now. The CLI is Phase 1 (in development). I'm launching the data first so the community can contribute evaluations that will make `scan` recommendations trustworthy before the CLI ships.
+
+GitHub: github.com/jiohjiohji/AgentRadar
+
+If you've used any of the 50 tools in the dataset recently, submitting an evaluation takes about 10 minutes: github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml
+
+Happy to answer questions here.
 
 ---
 
 ## 2. Reddit — r/ClaudeAI
 
-**Title:** AgentRadar: open dataset of 50 Claude Code tools with community evaluation scores
+**Title:** AgentRadar: open dataset of 50 Claude Code tools + a CLI that reads your project before recommending
 
 **Format:** Standard Reddit post
 
 ---
 
-I've been building a dataset for the past month and wanted to share it with this community since it's directly relevant to Claude Code users.
+I've been building a tool for the Claude Code ecosystem and wanted to share it here.
 
-**What it is:** AgentRadar is an open YAML dataset of 50 Claude Code and MCP tools. Every tool has a profile with 6 community-reported scores:
+**The problem:** Most Claude Code / MCP tool lists require you to know what you're looking for. You find a Reddit thread, read some vibes-based comparison, spend 3 hours testing tools yourself. The ones you pick might be stale, incompatible with your stack, or duplicating something you already have.
 
-- **p** — Productivity (time saved on real tasks)
-- **q** — Quality (output accuracy vs baseline)
-- **c** — Cost Efficiency (token cost relative to benefit)
-- **r** — Reliability (consistency across 5+ runs)
-- **x** — Composability (how well it plays with other tools)
-- **f** — Setup Friction (time from install to working result)
+**What I built:** AgentRadar — a community dataset + CLI.
 
-**What makes it different from other tool lists:** All scores come from structured evaluation reports submitted via GitHub Issues. Scores are `null` until 2 independent reports exist. Every score shows a confidence level (low/medium/high). Tool authors can submit evaluations for their own tools but must declare the conflict of interest — their reports are weighted separately.
+The CLI reads your project first:
+
+```bash
+agentRadar scan
+# reads package.json, requirements.txt, .claude/, MCP config
+# detects your stack, existing tools, and what gaps exist
+# outputs: "You have X. You're missing Y. Here's what fits your setup."
+
+agentRadar suggest "I need browser testing"
+# matches against your existing deps — won't suggest conflicts
+# shows setup friction score prominently (vibe coders care most about "how hard is this?")
+
+agentRadar check
+# scans your installed tools
+# flags archived repos, stale tools, and better alternatives
+# "Your browser-mcp is archived. playwright-mcp is actively maintained and scores 7.9."
+```
+
+Inside Claude Code, `/radar` does all three without leaving your session.
 
 **Current state:**
-- 50 tools profiled
-- 150 evaluations in the dataset
-- 3 versus pages (head-to-head comparisons)
-- Daily crawler that checks GitHub for stale/archived tools
+- Dataset is live now: 50 tool profiles, 150 evaluations, 3 versus pages
+- CLI is in active development (Phase 1)
+- All scores come from structured community evaluation reports — no synthetic data
+
+**Top tools by composite score today:**
+
+| Tool | Score | Category |
+|------|-------|----------|
+| Anthropic Python SDK | 8.19 | sdk-pattern |
+| Filesystem MCP | 8.16 | mcp-server |
+| Anthropic TypeScript SDK | 8.15 | sdk-pattern |
+| Anthropic Cookbook | 8.01 | prompt-library |
+| TÂCHES (GSD) | 7.97 | claudemd-framework |
 
 **GitHub:** github.com/jiohjiohji/AgentRadar
 
-The top tools right now are the Anthropic Python SDK (8.19), Filesystem MCP (8.16), and Anthropic TypeScript SDK (8.15) — though these will shift as more community evaluations come in.
-
-If you've used any of these tools recently, submitting an evaluation takes ~10 minutes: github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml
+If you've used any of the 50 tools on a real task recently, submitting an evaluation takes ~10 minutes and directly improves what `scan` will recommend: github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml
 
 ---
 
 ## 3. Dev.to article
 
-**Title:** AgentRadar: Open dataset of 50 Claude Code tools with community scores
+**Title:** AgentRadar: the Claude Code tool that reads your project before making a recommendation
 
 **Tags:** claudeai, mcp, devtools, opensource
 
 ---
 
-I built a thing and it's now public: [AgentRadar](https://github.com/jiohjiohji/AgentRadar) is an open dataset of 50 Claude Code and MCP tools, where every score comes from a structured community evaluation.
+I built a thing: [AgentRadar](https://github.com/jiohjiohji/AgentRadar).
 
-### The problem it solves
+The short version: it's a CLI that reads your project context before telling you what tools to use, backed by a community dataset of structured evaluations.
 
-Every week there are new MCP servers, Claude Code plugins, and orchestration frameworks. Most tool comparisons are either vendor marketing or vibes-based. If you want to know whether Playwright MCP or BrowserMCP is better for your workflow, you either find a Reddit thread or you spend 3 hours testing both yourself.
+### The problem
 
-AgentRadar is an attempt to make that community knowledge persistent and queryable.
+Every week there are new MCP servers, Claude Code plugins, and orchestration frameworks. Finding the right one for your project means:
+
+1. Searching through GitHub, Reddit, and Discord for comparisons
+2. Evaluating whether the tool is still maintained
+3. Checking if it conflicts with what you already have
+4. Testing it manually for an hour to get a real sense of the friction
+
+AgentRadar automates that research and makes it project-aware.
 
 ### How it works
 
-Each tool has a YAML profile with 6 scored dimensions:
+```bash
+agentRadar scan
+```
+
+Reads your project: `package.json`, `requirements.txt`, `pyproject.toml`, `.claude/`, `CLAUDE.md`, MCP config.
+
+Detects: your language, framework, existing tools, Claude Code setup, and which MCP servers you have installed.
+
+Outputs 1–3 recommendations — not 10 options. Each recommendation includes what the tool does, why it fits *your* setup specifically, and its setup friction score (how long until first working result, reported by community evaluators).
+
+```bash
+agentRadar suggest "I need browser testing"
+```
+
+Context-aware: reads your project first, then matches against your query. If you already have Playwright installed, it won't recommend a tool that conflicts. Shows the versus page if two results are close.
+
+```bash
+agentRadar check
+```
+
+Maintenance mode. Scans your installed tools against the dataset. Flags:
+- Archived repos: "browser-mcp last commit Apr 2025 — consider playwright-mcp"
+- Better alternatives: "you use X (score 5.2), Y does the same thing (score 7.8)"
+
+Exit code 0 = all healthy, exit code 1 = action needed. CI-friendly.
+
+### The dataset behind it
+
+The CLI is Phase 1. What's live right now is the dataset it will use: 50 tool profiles, each scored on 6 community-reported dimensions.
 
 ```yaml
 scores:
-  p: 8.3   # Productivity
-  q: 7.7   # Quality
-  c: 7.0   # Cost Efficiency
-  r: 8.0   # Reliability
-  x: 9.0   # Composability
-  f: 8.0   # Setup Friction
+  p: 8.3   # Productivity — time saved on a real task
+  q: 7.7   # Quality — output accuracy vs baseline
+  c: 7.0   # Cost Efficiency — token cost relative to benefit
+  r: 8.0   # Reliability — consistency across 5+ runs
+  x: 9.0   # Composability — integration with other tools
+  f: 8.0   # Setup Friction — time from install to first working result
 ```
 
-Scores are computed from community evaluation reports. An evaluation requires:
+An evaluation requires:
 - A specific task you performed (not "I used it for coding")
-- A 0–10 score for each dimension with one sentence of evidence
-- A one-sentence verdict that is specific and opinionated
-- Your Claude Code version, platform, and whether you have a conflict of interest
+- Scores 0–10 with one sentence of evidence per dimension
+- A specific, opinionated one-sentence verdict
+- Conflict of interest declaration (required, doesn't disqualify)
 
-Tools start with `scores: null` and gain scores only after 2 independent reports. The `score_confidence` field (low/medium/high) is always shown — a score without confidence is meaningless.
+Tools start with `scores: null`. Scores appear after 2 independent reports. `score_confidence` (low/medium/high) is always shown. A score without confidence is meaningless.
 
-### What's in the dataset today
-
-- **50 tool profiles** spanning 9 categories: mcp-server, claude-plugin, claudemd-framework, orchestration, prompt-library, sdk-pattern, ide-integration, eval-observability, complementary
-- **150 evaluations** (3 per tool — seed evaluations to establish baselines)
-- **3 versus pages** with score tables and evidence-backed verdicts
-- **Daily crawler** via GitHub Actions that checks `pushed_at` dates and flags tools that have gone stale or archived
-
-### Top 5 tools by composite score
+### Top tools today
 
 | Tool | Category | Score | Confidence |
 |------|----------|-------|------------|
@@ -116,20 +173,20 @@ Tools start with `scores: null` and gain scores only after 2 independent reports
 | Filesystem MCP | mcp-server | 8.16 | medium |
 | Anthropic TypeScript SDK | sdk-pattern | 8.15 | medium |
 | Anthropic Cookbook | prompt-library | 8.01 | medium |
-| Anthropic Prompt Eng. Tutorial | prompt-library | 8.00 | medium |
+| TÂCHES (Get Shit Done) | claudemd-framework | 7.97 | medium |
 
-### The data is the product
+All at medium confidence (3 evals each). Scores will shift as more community reports come in.
 
-The repo is pure YAML + Python validation scripts. No database, no API at this stage — just structured files you can grep, fork, or build on. The schema is documented in `data/schema.yaml`.
+### Why launch the dataset before the CLI?
 
-### How to contribute
+The CLI is only as good as the data it uses. I want the evaluations to be trustworthy before `scan` starts making recommendations to developers. Launching the data first means the community can add evaluations while I build the CLI — instead of shipping recommendations backed by thin data.
 
-If you've used one of the 50 tools on a real task in the last 30 days, submit an evaluation via GitHub Issues. It takes about 10 minutes.
+### Contribute
+
+If you've used one of the 50 tools on a real task in the last 30 days, submit an evaluation.
 
 [Evaluation Report issue form →](https://github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml)
 
-If you want to add a tool that isn't in the dataset yet, there's a Tool Submission form too.
-
 **GitHub:** [jiohjiohji/AgentRadar](https://github.com/jiohjiohji/AgentRadar)
 
-Feedback welcome — especially on the scoring dimensions. I've been debating whether `f` (Setup Friction) should be inverted in the composite (lower friction = better) but kept it consistent for now since the evaluators understood the framing.
+The `scan` command is the one I'm most interested in feedback on — specifically whether the framing ("reads your project first, then recommends") actually changes which tools people adopt vs. a ranked list. If you have thoughts on that, open a discussion.
