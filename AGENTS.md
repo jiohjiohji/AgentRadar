@@ -49,23 +49,10 @@ Claude Code Max is the quality control budget, not the generation budget.
 
 ---
 
-## AGENTRADA SCHEMA (v1.0) — 12 FIELDS EXACTLY
+## SCHEMA (v1.0)
 
-Every tool profile YAML must have exactly these 12 fields. No more. No fewer.
-See `data/schema.yaml` for type definitions and examples.
-
-1. id — string, derived from source URL, stable forever
-2. name — string, display name
-3. source_url — string, canonical link
-4. category — enum (9 values: see schema.yaml)
-5. pricing — enum: free | freemium | paid
-6. license — string
-7. status — enum: active | stale | archived
-8. scores — object with keys: p, q, c, r, x, f (each 0–10 or null)
-9. score_confidence — enum: low | medium | high | null
-10. score_history — array of {date, overall, benchmark_version}
-11. tags — string array
-12. versus_refs — array of {id, verdict_short, valid_until}
+Every tool profile YAML must have exactly 12 fields. No more. No fewer.
+See `data/schema.yaml` for the full definition, types, and examples.
 
 ---
 

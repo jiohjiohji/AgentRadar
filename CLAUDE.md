@@ -24,13 +24,8 @@ After reviewing the listed files, output exactly:
 6. New AGENTS.md AUTOMATION entry (if something should never be manual again)
 
 ## QUALITY STANDARDS (check every review)
-- Schema compliance: exactly 12 fields in every YAML profile
-- Anti-bias: tool authors not evaluating their own tools (check CoI field)
-- Score confidence: always shown as [HIGH/MED/LOW]
-- Versus page valid_until: always set (not null, not missing)
-- Error handling: no silent catches — every error logged or surfaced
+All constraints in AGENTS.md apply. Additionally check:
 - Test coverage: happy path AND error path both tested
-- File length: no file over 200 lines (flag for splitting)
 - No new dependencies without justification
 
 ## READING ORDER FOR NEW SESSIONS
