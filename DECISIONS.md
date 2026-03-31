@@ -29,8 +29,10 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 2026-03-29 | CoI exclusion at API layer, not policy layer | Phase 0 | Code-enforced rules cannot be bypassed; policy-only rules will be ignored under pressure | Policy-only: relies on contributor honesty; insufficient for a trust-critical system
 
 ### Product
-2026-03-31 | `suggest` is the flagship command, not `top`/`search` | Phase 1 | AgentRadar's value is matching tools to developer needs, not ranking globally. Leaderboards are commodity — contextual matching is the differentiator | Leaderboard-first: makes us another awesome-list with numbers
-2026-03-31 | `suggest` v1 uses structured filtering, no AI | Phase 1 | Filter by constraints (category, pricing, status) → tag matching → dimension-weighted ranking. Existing schema supports this | AI-powered matching: premature — need usage data first to know what patterns emerge
+2026-03-31 | `scan` is the flagship — reads your project, finds tool gaps automatically | Phase 1 | Vibe coders don't search for tools. The tool should come to them. scan reads package.json/.claude/MCP config and recommends what's missing | Query-based suggest alone: still requires the dev to know what they need
+2026-03-31 | Three lifecycle commands: scan (setup), suggest (mid-project), check (maintenance) | Phase 1 | Maps to how developers actually interact with tools over time, not just at discovery | Single suggest command: misses the maintenance and proactive discovery stages
+2026-03-31 | `/radar setup [id]` lets the agent install tools inside Claude Code | Phase 1 | Vibe coders want the agent to handle everything. Recommending without installing is half a solution | Manual setup after recommendation: friction kills adoption
+2026-03-31 | Opinionated output: 1–3 recommendations max, not 10 options | Phase 1 | Vibe coders want answers, not choices. More options = more paralysis | Long result lists: recreates the problem we're solving
 
 ### Tooling
 2026-03-29 | tdd-guard enforces tests before Claude review | Phase 0 | Eliminates an entire class of Claude review failures; saves Claude tokens on trivially broken code | Manual test enforcement: forgets; prompt-based enforcement: ignored when under time pressure

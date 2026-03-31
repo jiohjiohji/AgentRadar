@@ -3,11 +3,30 @@
 
 ## PRODUCT DIRECTION
 
-AgentRadar helps developers find the right tool for THEIR project — not the highest-scored tool overall. Every feature should answer "which tool fits my situation?" not "which tool is best in general?"
+AgentRadar reads your project and tells you what tools will help — without you asking.
 
-The flagship interaction is `agentRadar suggest` — a developer describes what they need, and we return the best matches with reasons specific to their constraints (team size, budget, task type, existing stack).
+Three commands map to the developer lifecycle:
 
-Leaderboards and top-N lists are secondary. Matching is primary.
+1. **`agentRadar scan`** (starting a project or anytime)
+   Reads package.json, requirements.txt, .claude/, CLAUDE.md, MCP config.
+   Detects your stack, what tools you already use, and what gaps exist.
+   Outputs: "You have X, you're missing Y, here's what fits your setup."
+
+2. **`agentRadar suggest`** (hit a wall or want to improve)
+   Context-aware — reads your project first, then matches.
+   "I need browser testing" → checks your stack → recommends only tools compatible
+   with what you already have. Shows setup friction score and dependency conflicts.
+
+3. **`agentRadar check`** (maintenance — run periodically or via CI)
+   Scans your installed tools against the dataset.
+   Flags: stale tools, archived repos, better alternatives that won't break your setup.
+   "Your browser-mcp is archived. playwright-mcp is actively maintained and compatible."
+
+Inside Claude Code, `/radar` does all three — the agent can scan, suggest, and
+set up tools without the developer leaving their session.
+
+The tool should be opinionated. Show 1–3 recommendations with reasons, not 10 options.
+Vibe coders want answers, not choices.
 
 ---
 

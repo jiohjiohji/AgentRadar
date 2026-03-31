@@ -156,8 +156,8 @@ Acceptance:
 ---
 
 ## PHASE 1 — SIGNAL
-**Goal:** CLI that helps developers find the right tool for their project, not just the highest-scored tool
-**Exit criteria:** 200 CLI installs, 150 subscribers, 50% of `suggest` users click through to a tool
+**Goal:** A CLI that reads your project, finds gaps, and recommends tools that fit — no research needed
+**Exit criteria:** 200 CLI installs, 50% of `scan` users adopt at least 1 recommended tool
 
 ### P1-001 — Cloudflare Worker API (Phase 1 version — Git-backed)
 Status: BACKLOG
@@ -165,52 +165,84 @@ Acceptance:
 - [ ] Worker reads from GitHub raw content CDN
 - [ ] GET /api/v1/tools returns all tools as JSON
 - [ ] GET /api/v1/tools/:id returns single tool profile
-- [ ] GET /api/v1/tools/suggest?need=X&constraint=Y returns ranked matches
+- [ ] GET /api/v1/tools/match?stack=X&need=Y returns context-aware ranked matches
 - [ ] GET /api/v1/versus/:id1/:id2 returns versus page data
 - [ ] Rate limiting via KV: 100K req/day (free), returns 429 on exceeded
 - [ ] Deployed to production Cloudflare Worker URL
 
-### P1-002 — CLI v0.1: suggest (flagship command)
+### P1-002 — CLI: `scan` (flagship — reads your project, finds gaps)
 Status: BACKLOG
-Why first: This is the product. Everything else is supporting infrastructure.
+Why first: Vibe coders don't search for tools. They need the tool to come to them.
+How it works:
+  1. Reads: package.json, requirements.txt, pyproject.toml, .claude/, CLAUDE.md, MCP config
+  2. Detects: language, framework, existing tools, Claude Code setup, MCP servers installed
+  3. Compares against the AgentRadar dataset: what tools exist for your stack that you don't have?
+  4. Filters out: archived tools, tools incompatible with your stack, tools you already have
+  5. Outputs 1–3 recommendations with: what it does, why it fits YOUR setup, setup friction score
 Acceptance:
 - [ ] npm install -g agentRadar installs on macOS, Linux, Windows WSL
-- [ ] `agentRadar suggest` enters interactive mode — asks what you're trying to do
-- [ ] `agentRadar suggest "browser testing mcp"` returns top 3 matches with WHY each fits
-- [ ] Matching logic:
-      1. Filter: category, pricing, status (exclude archived by default)
-      2. Tag match: rank by overlap between query terms and tool tags
-      3. Dimension weight: if query mentions "cheap" → weight `c`; "reliable" → weight `r`; "quick setup" → weight `f`
-      4. Output: top 3 with one-sentence reason per tool, relevant score dimensions highlighted
-- [ ] `agentRadar suggest --for solo` weights `f` (friction) and `c` (cost) higher
-- [ ] `agentRadar suggest --for team` weights `r` (reliability) and `q` (quality) higher
-- [ ] `agentRadar suggest --for enterprise` weights `r`, `q`, and shows license prominently
-- [ ] Every result shows confidence bracket — never recommend without showing uncertainty
-- [ ] If 2 results are close, suggest the versus page (if it exists) instead of picking one
-- [ ] `--json` flag for machine-readable output
-- [ ] vitest suite covers: query parsing, filter logic, dimension weighting, edge cases
+- [ ] `agentRadar scan` (no args) — scans current directory, outputs recommendations
+- [ ] `agentRadar scan --path /other/project` — scan a different project
+- [ ] Detects existing tools: reads package.json deps, pip deps, .claude/skills, MCP config
+- [ ] Matches against dataset: category + tags + compatibility
+- [ ] Output is opinionated: 1–3 tools max, each with a one-line "why this fits you"
+- [ ] Shows setup friction score (f) prominently — vibe coders care most about "how hard is this?"
+- [ ] Shows `[ARCHIVED]` / `[STALE]` warnings — never recommend dead tools
+- [ ] Flags dependency conflicts: "this requires Python 3.12 but you're on 3.10"
+- [ ] `--json` flag for machine-readable output (agents can consume this)
+- [ ] vitest suite covers: project detection, matching logic, conflict detection
 
-### P1-003 — CLI v0.1: show, compare, search, top (supporting commands)
+### P1-003 — CLI: `suggest` (hit a wall — describe your need, get a match)
 Status: BACKLOG
-Dependencies: P1-002 must be done first — suggest is the entry point, these are the follow-ups
+Dependencies: P1-002 (scan) — shares the project detection and matching engine
+How it works:
+  The developer knows what they need but not which tool solves it.
+  suggest reads the project context AND the developer's query, then matches.
+Acceptance:
+- [ ] `agentRadar suggest "browser testing"` — returns top 3 matches compatible with your stack
+- [ ] `agentRadar suggest "cheaper alternative to X"` — finds tools in same category, weights cost
+- [ ] Context-aware: if you have playwright installed, don't suggest playwright-mcp conflicts
+- [ ] `--for solo` / `--for team` / `--for enterprise` — adjusts dimension weights
+- [ ] If 2 results are close, shows the versus page instead of picking one
+- [ ] Every result shows confidence bracket — never recommend without showing uncertainty
+
+### P1-004 — CLI: `check` (maintenance — are your tools still healthy?)
+Status: BACKLOG
+Dependencies: P1-002 (scan) — reuses project detection
+How it works:
+  Run periodically (or add to CI). Scans what you have installed and checks each
+  tool against the AgentRadar dataset for staleness, alternatives, and issues.
+Acceptance:
+- [ ] `agentRadar check` — scans installed tools, reports health
+- [ ] Flags archived/stale tools: "browser-mcp last commit Apr 2025 — consider playwright-mcp"
+- [ ] Flags better alternatives: "you use X (score 5.2), Y does the same thing (score 7.8)"
+- [ ] Only recommends alternatives that are compatible with existing deps (no breaking changes)
+- [ ] Exit code 0 = all healthy, exit code 1 = action needed (CI-friendly)
+- [ ] `agentRadar check --fix` — outputs commands/config to switch to recommended alternatives
+- [ ] Can run as GitHub Action: `.github/workflows/agentRadar-check.yml`
+
+### P1-005 — Claude Code `/radar` plugin (all three commands inside the agent)
+Status: BACKLOG
+Dependencies: P1-002, P1-003, P1-004
+Why this matters: Vibe coders live inside Claude Code. The agent should discover and
+set up tools without the developer leaving the session.
+Acceptance:
+- [ ] `/radar scan` — scans current project, shows recommendations in Claude Code
+- [ ] `/radar suggest [need]` — context-aware suggest inside the session
+- [ ] `/radar check` — health check inside the session
+- [ ] `/radar setup [tool-id]` — agent installs and configures the recommended tool
+    (adds to MCP config, updates CLAUDE.md, installs deps — all within the session)
+- [ ] Plugin installable via: npm install -g @agentRadar/claude-plugin
+
+### P1-006 — CLI: `show`, `compare` (supporting — for when the dev wants detail)
+Status: BACKLOG
 Acceptance:
 - [ ] `agentRadar show [id]` — full profile with all 6 scores + confidence
 - [ ] `agentRadar compare [id1] [id2]` — side-by-side with Quick Answer if versus page exists
-- [ ] `agentRadar search [query]` — keyword search, returns top 10
-- [ ] `agentRadar top --category [c]` — leaderboard view (secondary to suggest)
-- [ ] `agentRadar new --since [N]d` — recently discovered tools
+- [ ] `--json` flag on all commands
 - [ ] CLI works in offline mode with local cache (24-hour TTL)
-- [ ] All commands have `--json` flag
 
-### P1-004 — Claude Code /radar plugin
-Status: BACKLOG
-Acceptance:
-- [ ] `/radar suggest [need]` works inside Claude Code session (flagship)
-- [ ] `/radar show [id]` works inside Claude Code session
-- [ ] `/radar compare [id1] [id2]` works inside Claude Code session
-- [ ] Plugin installable via: npm install -g @agentRadar/claude-plugin
-
-### P1-005 — Weekly processor automation
+### P1-007 — Weekly processor automation
 Status: BACKLOG
 Acceptance:
 - [ ] GitHub Actions workflow runs every Monday at 06:00 UTC
@@ -220,7 +252,7 @@ Acceptance:
 - [ ] Digest draft committed to data/digests/YYYY-MM-DD-draft.md
 - [ ] Buttondown API call sends digest after maintainer approves draft
 
-### P1-006 — Static web UI + Pagefind
+### P1-008 — Static web UI + Pagefind
 Status: BACKLOG
 Acceptance:
 - [ ] GitHub Pages site builds from YAML + markdown via GitHub Actions
@@ -230,7 +262,7 @@ Acceptance:
 - [ ] Score freshness badges displayed on tool profile pages
 - [ ] Mobile-responsive (test at 375px width)
 
-### P1-007 — Score freshness display (all surfaces)
+### P1-009 — Score freshness display (all surfaces)
 Status: BACKLOG
 Acceptance:
 - [ ] CLI, API, and web UI all show freshness_status on every score
@@ -240,7 +272,7 @@ Acceptance:
 - [ ] historical: [HISTORICAL] indicator in grey, tool marked as archived/deprecated
 - [ ] API response includes freshness_status field on every score object
 
-### P1-008 — Pro tier: Stripe + watchlist + early digest
+### P1-010 — Pro tier: Stripe + watchlist + early digest
 Status: BACKLOG
 Acceptance:
 - [ ] Stripe checkout creates Pro subscription ($9/month beta)
@@ -272,7 +304,7 @@ Tickets to be refined when Phase 1 exit criteria are met.
 ### P3-003 — Full benchmark suite (T04 + T06 added)
 ### P3-004 — Tier 3 Deep Eval programme
 ### P3-005 — Monthly ecosystem sync
-### P3-006 — suggest v2: ML-powered matching (depends on P1-002 usage data)
+### P3-006 — scan/suggest v2: learns from what devs actually adopt after recommendations
 ### P3-007 — agentRadar watch webhooks (Team tier)
 ### P3-008 — Pro stable pricing ($15/month)
 
@@ -290,7 +322,7 @@ Tickets to be refined when Phase 1 exit criteria are met.
 ## PHASE 5 — STANDARD (Year 3)
 ### P5-001 — GitHub MCP Registry integration
 ### P5-002 — International expansion
-### P5-003 — suggest v3: project-aware matching (reads repo context to auto-detect needs)
+### P5-003 — scan v3: deep project analysis (reads code patterns, detects workflow bottlenecks, proactive recommendations)
 
 ---
 
