@@ -1,0 +1,16 @@
+id: "gh-jerhadf-linear-mcp"
+name: "Linear MCP Server"
+source_url: "https://github.com/jerhadf/linear-mcp-server"
+category: mcp-server
+pricing: free
+license: MIT
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - linear
+  - project-management
+  - issue-tracking
+  - engineering-workflow
+versus_refs: []

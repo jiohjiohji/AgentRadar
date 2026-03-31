@@ -1,0 +1,18 @@
+id: "gh-makenotion-notion-mcp"
+name: "Notion MCP Server"
+source_url: "https://github.com/makenotion/notion-mcp-server"
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - notion
+  - knowledge-management
+  - notes
+  - pages
+  - databases
+  - official
+versus_refs: []

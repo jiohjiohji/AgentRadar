@@ -54,7 +54,8 @@ Every tool profile YAML must conform to `data/schema.yaml`. The validators in `s
 
 Added when something actually goes wrong. Each entry must include what happened.
 
-_(Empty — nothing has gone wrong yet. Add entries as real issues arise.)_
+- **Do not infer `status` from memory or assumption.** Always query `pushed_at` from the GitHub API. First batch revealed Browser MCP and Linear MCP are archived — this would have been missed without live data.
+- **Do not use a parent repo URL as `source_url` when the tool lives in a subdirectory.** Use the subdirectory URL (e.g. `…/tree/main/src/memory`). ID must be derived from the subdirectory path, not the parent repo name.
 
 ---
 

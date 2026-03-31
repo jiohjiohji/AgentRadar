@@ -1,0 +1,19 @@
+id: "gh-microsoft-playwright-mcp"
+name: "Playwright MCP"
+source_url: "https://github.com/microsoft/playwright-mcp"
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - browser-automation
+  - testing
+  - web-scraping
+  - playwright
+  - headless-browser
+  - microsoft
+  - official
+versus_refs: []

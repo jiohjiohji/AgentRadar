@@ -41,7 +41,7 @@ Acceptance:
 - [ ] scripts/validate_versus.py correctly rejects pages without valid_until
 
 ### P0-003 — Batch 1: 10 MCP Server profiles
-Status: BACKLOG
+Status: DONE
 Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
 Tools to profile:
   - GitHub MCP (github.com/github/github-mcp-server)
