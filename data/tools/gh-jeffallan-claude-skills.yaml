@@ -1,0 +1,18 @@
+id: "gh-jeffallan-claude-skills"
+name: "Fullstack Dev Skills"
+source_url: "https://github.com/Jeffallan/claude-skills"
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - skills
+  - fullstack
+  - pair-programming
+  - claude-code-native
+  - frontend
+  - backend
+versus_refs: []

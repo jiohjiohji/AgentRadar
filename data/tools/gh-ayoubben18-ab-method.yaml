@@ -1,0 +1,17 @@
+id: "gh-ayoubben18-ab-method"
+name: "AB Method"
+source_url: "https://github.com/ayoubben18/ab-method"
+category: claudemd-framework
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - subagents
+  - mission-driven
+  - incremental
+  - claude-code-native
+  - workflow
+versus_refs: []

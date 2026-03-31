@@ -1,0 +1,17 @@
+id: "gh-ryanmac-code-conductor"
+name: "Code Conductor"
+source_url: "https://github.com/ryanmac/code-conductor"
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - parallel-agents
+  - orchestration
+  - github-native
+  - worktrees
+  - claude-code-native
+versus_refs: []

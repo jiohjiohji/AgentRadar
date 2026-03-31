@@ -62,7 +62,7 @@ Acceptance:
 - [ ] Claude Code review: PASS
 
 ### P0-004 — Batch 2: 10 Claude Code Plugin profiles
-Status: BACKLOG
+Status: DONE
 Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
 Tools to profile:
   - wshobson/agents (github.com/wshobson/agents)

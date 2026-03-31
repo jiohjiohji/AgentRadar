@@ -1,0 +1,16 @@
+id: "gh-ranaroussi-cc-bridge"
+name: "CC Bridge"
+source_url: "https://github.com/ranaroussi/cc-bridge"
+category: claude-plugin
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - api-compatibility
+  - openai-compatible
+  - claude-code-cli
+  - bridge
+versus_refs: []

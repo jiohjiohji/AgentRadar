@@ -1,0 +1,18 @@
+id: "gh-gemini-cli-conductor"
+name: "Conductor"
+source_url: "https://github.com/gemini-cli-extensions/conductor"
+category: orchestration
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - spec-driven-development
+  - workflow
+  - planning
+  - implementation
+  - gemini-cli
+  - multi-agent
+versus_refs: []

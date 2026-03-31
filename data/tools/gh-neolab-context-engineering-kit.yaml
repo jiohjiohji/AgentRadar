@@ -1,0 +1,18 @@
+id: "gh-neolab-context-engineering-kit"
+name: "Context Engineering Kit"
+source_url: "https://github.com/NeoLabHQ/context-engineering-kit"
+category: claude-plugin
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - context-engineering
+  - skills
+  - quality
+  - multi-agent-compatible
+  - opencode
+  - cursor
+versus_refs: []
