@@ -121,9 +121,9 @@ Acceptance:
 - [x] Claude Code review: PASS
 
 ### P0-007 — Batch 5: 10 Evaluation + Complementary Tool profiles
-Status: BACKLOG
+Status: IN_PROGRESS
 Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 eval/observability tools + 5 complementary tools (Playwright, E2B, Modal, Tavily extended, one more)
+Coverage: 5 eval/observability tools + 5 complementary tools
 Acceptance: Same as P0-003
 
 ### P0-008 — 150 seed evaluations (3 per tool)

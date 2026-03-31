@@ -37,6 +37,7 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 2026-03-31 | Sprint plan tool names are directional, not exact | P0-004 | Four of ten P0-004 entries resolved to different repos than listed: TÂCHES → gsd-build/get-shit-done; Conductor → gemini-cli-extensions/conductor; ClaudoPro → unverifiable (substituted ryanmac/code-conductor); Claude Code PM (Ran Aroussi) → ranaroussi/cc-bridge | Always GitHub-search first; never assume the listed name is the canonical repo
 2026-03-31 | Unverifiable tools are substituted, never invented | P0-004 | ClaudoPro Directory could not be found on GitHub; inventing a profile would violate the no-invented-data constraint | Leaving a gap: breaks the batch-of-10 contract; using invented data: violates core trust guarantee. Substitute rule: same category, verified repo, note pivot in commit and sprint_plan.md
 2026-03-31 | `orchestration` for general frameworks, `claude-plugin` for Claude Code–native only | P0-005 | CrewAI, AutoGen, LangGraph support Claude but were not built for it; mixing them into claude-plugin pollutes search and versus page matching | One combined category: breaks discovery — users searching for Claude Code plugins don't want general LLM frameworks
+2026-03-31 | GitHub NOASSERTION license stored as null | P0-006 | GitHub returns NOASSERTION when it detects a license file but cannot match a known SPDX ID; null is the correct schema value — do not invent an SPDX string | Storing "NOASSERTION" as-is: not a valid SPDX string, breaks any downstream license filtering
 
 ---
 
