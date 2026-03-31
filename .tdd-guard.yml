@@ -1,0 +1,35 @@
+# tdd-guard configuration for agentRadar
+# These are hard gates — agents cannot merge without passing them
+
+require_tests: true
+block_on_fail: true        # Prevents commit if tests fail
+
+# Python test command (for core/ crawlers, scripts)
+test_commands:
+  python: "python -m pytest tests/ -v --tb=short --cov=core --cov-report=term-missing"
+  typescript: "npm run test --prefix cli"
+
+# Minimum test coverage before any commit
+coverage_threshold: 80
+
+# AgentRadar-specific file validators
+file_validators:
+  - match: "data/tools/*.yaml"
+    command: "python scripts/validate_yaml.py {file}"
+    error_message: "YAML profile failed schema validation. Check all 12 required fields."
+
+  - match: "data/evaluations/*.yaml"
+    command: "python scripts/validate_evaluation.py {file}"
+    error_message: "Evaluation failed validation. Check CoI field and all required score fields."
+
+  - match: "data/versus/*.md"
+    command: "python scripts/validate_versus.py {file}"
+    error_message: "Versus page failed validation. Check 5 required sections and valid_until field."
+
+  - match: "api/worker.js"
+    require_test_file: true
+    test_path: "api/tests/test_worker.js"
+
+  - match: "core/crawlers/*.py"
+    require_test_file: true
+    test_path_pattern: "tests/test_{filename}.py"

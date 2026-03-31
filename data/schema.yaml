@@ -1,0 +1,101 @@
+# AgentRadar Tool Profile Schema v1.0
+# Every tool in data/tools/*.yaml must conform to this schema exactly.
+# 12 fields. No more. No fewer.
+
+schema_version: "1.0"
+
+fields:
+  id:
+    type: string
+    required: true
+    description: "Unique stable identifier. Derived from source URL. Never changes."
+    example: "gh-wshobson-agents"
+    pattern: "^[a-z0-9-]+$"
+
+  name:
+    type: string
+    required: true
+    description: "Human-readable display name."
+    example: "Claude Code Agents"
+
+  source_url:
+    type: string
+    required: true
+    description: "Canonical link to the tool. Most important field."
+    example: "https://github.com/wshobson/agents"
+
+  category:
+    type: enum
+    required: true
+    values: [mcp-server, claude-plugin, claudemd-framework, orchestration, prompt-library, sdk-pattern, ide-integration, eval-observability, complementary]
+    description: "Primary classification used for versus page matching and search."
+
+  pricing:
+    type: enum
+    required: true
+    values: [free, freemium, paid]
+    description: "First question every developer asks."
+
+  license:
+    type: string
+    required: true
+    description: "Enterprise gating requirement."
+    example: "MIT"
+    allow_null: true
+
+  status:
+    type: enum
+    required: true
+    values: [active, stale, archived]
+    description: "Computed from last_commit age. active:<60d, stale:60-180d, archived:>180d"
+
+  scores:
+    type: object
+    required: true
+    allow_null: true
+    description: "Null until 2 independent community reports exist. Never invent scores."
+    properties:
+      p: {type: number, min: 0, max: 10, description: "Productivity"}
+      q: {type: number, min: 0, max: 10, description: "Quality"}
+      c: {type: number, min: 0, max: 10, description: "Cost Efficiency"}
+      r: {type: number, min: 0, max: 10, description: "Reliability"}
+      x: {type: number, min: 0, max: 10, description: "Composability"}
+      f: {type: number, min: 0, max: 10, description: "Setup Friction"}
+
+  score_confidence:
+    type: enum
+    required: true
+    allow_null: true
+    values: [low, medium, high]
+    description: "low:<3 reports, medium:3-9, high:10+. NEVER hide this. NEVER display score without it."
+
+  score_history:
+    type: array
+    required: true
+    description: "Append-only. Never delete entries."
+    items:
+      date: string (YYYY-MM-DD)
+      overall: number
+      benchmark_version: string
+
+  tags:
+    type: array
+    required: true
+    items: string
+    description: "Used for versus page auto-matching and search filtering."
+
+  versus_refs:
+    type: array
+    required: true
+    description: "Links to head-to-head comparison pages."
+    items:
+      id: string
+      verdict_short: string
+      valid_until: string (YYYY-MM-DD)
+
+# ANTI-BIAS RULES (enforced by validate_yaml.py)
+anti_bias:
+  - "Tool authors cannot evaluate their own tools. CoI field is mandatory on every evaluation."
+  - "Score changes >±0.5 require 3+ independent data points."
+  - "All tools in a category run identical benchmark tasks."
+  - "valid_until must be set on all versus_refs entries."

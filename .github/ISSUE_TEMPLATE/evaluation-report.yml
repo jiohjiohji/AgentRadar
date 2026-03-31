@@ -1,0 +1,83 @@
+name: Evaluation Report
+description: Submit a structured evaluation of a tool you have used
+title: "[EVAL] "
+labels: ["evaluation", "needs-review"]
+body:
+  - type: input
+    id: tool_id
+    attributes:
+      label: Tool ID
+      description: The AgentRadar ID (e.g. gh-wshobson-agents) from data/tools/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reporter_role
+    attributes:
+      label: Your Role
+      options:
+        - solo-developer
+        - small-team
+        - enterprise-dev
+    validations:
+      required: true
+
+  - type: input
+    id: claude_code_version
+    attributes:
+      label: Claude Code Version
+      description: Run `claude --version` to find this
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macos
+        - linux
+        - windows-wsl
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_performed
+    attributes:
+      label: Task Performed
+      description: What specific task did you use this tool for? Be concrete.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scores
+    attributes:
+      label: Scores (0-10 each with one sentence of evidence)
+      description: |
+        Format exactly like this:
+        Productivity: 8 — Saved ~40 minutes on a 200-line refactor vs doing it manually
+        Quality: 7 — Output matched gold standard on 6/8 test cases
+        Cost Efficiency: 6 — Used ~6,200 tokens; baseline is ~4,100
+        Reliability: 8 — Passed 5/5 runs with consistent output
+        Composability: 9 — Integrated with existing Playwright MCP in under 10 minutes
+        Setup Friction: 6 — 45 minutes to first working result; docs could be clearer
+    validations:
+      required: true
+
+  - type: textarea
+    id: verdict
+    attributes:
+      label: One-Sentence Verdict
+      description: The most important field. Must be specific and opinionated.
+      placeholder: "Best choice for teams who want multi-agent without writing their own orchestration — worth the setup time."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: conflict_of_interest
+    attributes:
+      label: Conflict of Interest
+      description: This affects how your evaluation is weighted — it does not exclude it
+      options:
+        - label: I am the author or a contributor to this tool
+          required: false

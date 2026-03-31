@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.Python
+env/
+venv/
+*.egg-info/
+
+# Build outputs
+dist/
+build/
+*.js.map
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml
+*.lcov
+
+# Environment
+.env
+.env.local
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tool config (keep these out of git to avoid confusion)
+.agnix-cache/
+
+# Claude Code session files (do not commit)
+.claude/sessions/
+*.claude-session
+
+# Temp files
+/tmp/
+*.tmp

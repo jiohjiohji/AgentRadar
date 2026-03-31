@@ -1,0 +1,20 @@
+# Example of a correctly formatted tool profile
+# All 12 required fields present. Scores are null (not yet evaluated).
+
+id: "gh-wshobson-agents"
+name: "Claude Code Agents"
+source_url: "https://github.com/wshobson/agents"
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - multi-agent
+  - orchestration
+  - workflow
+  - claude-code-native
+  - skills
+versus_refs: []

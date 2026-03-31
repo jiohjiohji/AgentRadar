@@ -1,0 +1,25 @@
+# claude-context-mode configuration for agentRadar
+# Controls what Claude sees compressed vs full vs never
+
+compress:
+  - data/tools/             # Compress all YAMLs → summary index (tool count, categories)
+  - data/evaluations/       # Compress evals → counts per tool only
+  - data/digests/           # Claude never needs old digest content
+  - node_modules/           # Never load
+
+expand_on_demand:           # Claude requests specific files when it needs them
+  - data/tools/*.yaml       # Individual profiles expanded on request
+  - data/evaluations/*.yaml # Individual evals expanded on request
+
+always_load:                # Always include these in full — Claude always needs them
+  - data/schema.yaml        # Field definitions Claude checks against
+  - AGENTS.md               # The constitution
+  - DECISIONS.md            # The memory
+  - CLAUDE.md               # Claude's current scope
+  - TASK.md                 # The active ticket
+
+never_load:
+  - .git/
+  - data/digests/
+  - tasks/completed/        # Historical — load only if explicitly requested
+  - .context-mode.yml       # Circular

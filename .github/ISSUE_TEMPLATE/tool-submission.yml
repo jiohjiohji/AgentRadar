@@ -1,0 +1,56 @@
+name: Tool Submission
+description: Submit a new Claude Code or MCP tool for the AgentRadar dataset
+title: "[TOOL] "
+labels: ["tool-submission", "needs-triage"]
+body:
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: The canonical URL for this tool (GitHub repo, npm page, etc.)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - mcp-server
+        - claude-plugin
+        - claudemd-framework
+        - orchestration
+        - prompt-library
+        - sdk-pattern
+        - ide-integration
+        - eval-observability
+        - complementary
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: Pricing
+      options:
+        - free
+        - freemium
+        - paid
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_useful
+    attributes:
+      label: Why is this useful?
+      description: One paragraph. Be specific about the problem it solves.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: conflict_of_interest
+    attributes:
+      label: Conflict of Interest
+      options:
+        - label: I am the author or a contributor to this tool
+          required: false

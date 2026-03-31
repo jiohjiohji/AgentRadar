@@ -1,0 +1,28 @@
+# agnix configuration for agentRadar
+# Validates all agent configuration files on every push
+
+target: claude-code
+strict: false              # Warnings don't block; errors do
+auto_fix: true             # Fix simple issues automatically
+
+rules:
+  # CLAUDE.md rules
+  claude_md_has_model_section: error
+  claude_md_has_scope_section: error
+  claude_md_no_wildcard_file_refs: error    # "review the whole project" is forbidden
+
+  # AGENTS.md rules
+  agents_md_has_routing_table: error
+  agents_md_has_forbidden_patterns: error
+  agents_md_has_decisions_log: warning
+
+  # Skill rules
+  skill_md_has_trigger_description: error  # Every skill must say when to fire
+  skill_md_has_acceptance_criteria: warning
+  skill_references_exist: error            # No broken references/ paths
+
+  # Hook rules
+  hooks_have_error_handling: error
+  hooks_not_blocking_on_network: warning   # Hooks should not make network calls
+
+output_format: pretty      # Use 'sarif' for GitHub Actions integration
