@@ -65,13 +65,13 @@ is understood before it is automated.
             ┌──────────────────────────────┼─────────────────────────────┐
             │                             │                              │
 ┌───────────▼────────┐    ┌──────────────▼──────────┐   ┌──────────────▼─────┐
-│   API LAYER         │    │   SURFACE LAYER          │   │ NEWSLETTER         │
-│ Cloudflare Worker   │    │ GitHub Pages             │   │ Buttondown         │
-│ + KV (rate limit)  │    │ + Pagefind (search)      │   │ ($0 → $9/mo)       │
+│   API LAYER         │    │   SURFACE LAYER          │   │ NEWSLETTER (P1-007)│
+│ Cloudflare Worker   │    │ /radar plugin (PRIMARY)  │   │ Buttondown         │
+│ + KV (rate limit)  │    │ GitHub Pages + Pagefind  │   │ ($0 → $9/mo)       │
 │ + D1 (search idx)  │    │                          │   │                    │
-│ $0 → $5/mo         │    │   agentRadar CLI (npm)   │   │ Weekly digest      │
-│                     │    │   /radar plugin          │   │ Score alerts (Pro) │
-│ All public APIs     │    │   VS Code extension      │   │                    │
+│ $0 → $5/mo         │    │   agentRadar CLI (CI)    │   │ Weekly digest      │
+│                     │    │   VS Code ext (Phase 2)  │   │ Score alerts (Pro) │
+│ All public APIs     │    │                          │   │                    │
 └─────────────────────┘    └──────────────────────────┘   └────────────────────┘
 ```
 
@@ -138,7 +138,7 @@ Logic:  for each tool: recompute scores from evaluations (excluding CoI-flagged)
         check last_commit age → update status if changed
         compare new score to previous → if delta ≥0.01, append to score_history
         compile digest: new tools, movers, stale alerts, spotlight
-        send digest via Buttondown API after maintainer review
+        send digest via Buttondown API after maintainer review (Phase 1-007+)
 ```
 
 **Score Computation Rules:**
@@ -231,10 +231,10 @@ async function checkRateLimit(apiKey, limit) {
 search → ApiClient.searchTools(query) → format as table
 show   → ApiClient.getTool(id) → format as profile
 compare → ApiClient.getTool(id1) + getTool(id2) + getVersus(id1,id2) → format
-top    → ApiClient.listTools(filters) → format as ranked table
+top    → ApiClient.listTools(filters) → format as table (ranked by status + stars, not scores)
 new    → ApiClient.listTools({since: N days}) → format
 watch  → check Pro key → ApiClient.addWebhook(toolId, email) → confirm
-suggest → keyword index (local) → filter by scores → rank → format
+suggest → keyword index (local) → filter by category + tags + stack compatibility → rank by status + stars → format
 ```
 
 **Offline behaviour:**
@@ -254,9 +254,11 @@ if (network unavailable AND no cache):
 - No JavaScript framework — plain HTML/CSS + minimal JS for Pagefind integration
 - Deploy trigger: any push to agentRadar/data that passes CI
 
-**Claude Code Plugin:** npm package published to `@agentRadar/claude-plugin`
-- Four commands: `/radar search`, `/radar show`, `/radar compare`, `/radar top`
-- Each command calls the public API and formats response for terminal display
+**Claude Code Plugin (PRIMARY entry point):** npm package published to `@agentRadar/claude-plugin`
+- Commands: `/radar scan`, `/radar suggest`, `/radar check`, `/radar setup [id]`, `/radar show [id]`
+- Reads project context (package.json, .claude/, MCP config) before recommending
+- Ranking: status + stars + tag overlap — scores shown when present, never required
+- `/radar setup` installs and configures the tool inside the session (MCP config, CLAUDE.md, deps)
 - Installed once per machine, applies to all Claude Code sessions
 
 **VS Code Extension (Phase 2):**

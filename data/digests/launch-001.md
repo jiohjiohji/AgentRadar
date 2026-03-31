@@ -15,18 +15,24 @@ The dataset is public on GitHub: github.com/jiohjiohji/AgentRadar
 
 ---
 
-## What AgentRadar will do (the CLI, in active development)
+## What AgentRadar will do (in active development)
 
-```bash
-agentRadar scan        # reads package.json, requirements.txt, .claude/, MCP config
-                       # detects your stack, finds tool gaps, outputs 1-3 recommendations
-agentRadar suggest "browser testing"  # matches against your existing setup
-agentRadar check       # flags stale tools, suggests active replacements
+If you're in Claude Code, add the plugin and type:
+
+```
+/radar scan          → reads your project, tells you what's missing for your stack
+/radar suggest "browser testing"  → compatible matches, no conflicts
+/radar check         → flags archived/stale tools in your current setup
+/radar setup [id]    → installs and configures the tool inside the session
 ```
 
-The insight behind it: most tool lists require you to know what you're looking for. `scan` reads your project first, then tells you what you're missing — without you having to ask.
+No separate install. You're already in Claude Code.
 
-The CLI is Phase 1. The dataset is live now.
+For CI, the standalone `check` command runs as a health check with exit codes.
+
+The insight: most tool discovery requires you to already know what you're looking for. `/radar` reads your project first — your package.json, MCP config, .claude/ — and tells you what's missing.
+
+The plugin is Phase 1. The dataset is live now.
 
 ---
 

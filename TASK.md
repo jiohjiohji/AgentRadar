@@ -6,7 +6,7 @@
 
 ### Rule 1 — Is this requirement legitimate?
 Who asked for this: Sprint plan P0-012 — the repo is private and no one can use the data yet.
-What breaks without it: Phase 0 exit criteria (100 stars, 5 organic evals, newsletter launched) are all gated on the repo being public.
+What breaks without it: Phase 0 exit criteria (100 stars, 5 organic evals, community posts live) are all gated on the repo being public.
 Decision: PROCEED
 
 ### Rule 2 — What can be deleted first?
@@ -16,8 +16,7 @@ Do NOT build a web UI, CLI, or API before making the data public — the data IS
 ### Rule 3 — Simplest implementation?
 1. README.md — explains dataset, schema, contribution guide, link to schema.yaml
 2. Make repo public (manual GitHub UI step — flag for Jihoon to approve)
-3. Buttondown account + first digest draft
-4. Post in 3 communities: Anthropic Discord #claude-code, Reddit r/ClaudeAI, Dev.to
+3. Post in 3 communities: Anthropic Discord #claude-code, Reddit r/ClaudeAI, Dev.to
 
 ### Rule 4 — What slowed last time?
 Nothing blocked P0-011. Risk here: README quality — a poor README means no organic contributions. Write it to answer the three questions every developer asks first:
@@ -26,7 +25,7 @@ Nothing blocked P0-011. Risk here: README quality — a poor README means no org
   3. How do I submit an evaluation?
 
 ### Rule 5 — What to automate?
-Community posts are one-time manual actions. The only automation candidate is Buttondown digest publishing — wire up after first manual send confirms format.
+Community posts are one-time manual actions. No automation needed for P0-012. Buttondown digest deferred to P1-007.
 
 ---
 
@@ -46,15 +45,12 @@ Required sections:
 This is a manual step — Jihoon must approve before proceeding.
 Flag this step explicitly in the launch checklist.
 
-### 3. Buttondown newsletter
-- Account created at buttondown.com with AgentRadar branding
-- Confirmed double-opt-in is enabled
-- First digest draft written (top 5 tools by composite score, 1 versus highlight)
-
-### 4. Community posts
+### 3. Community posts
 - Anthropic Discord #claude-code
 - Reddit r/ClaudeAI
-- Dev.to article (title: "AgentRadar: Open dataset of 50 Claude Code tools with community scores")
+- Dev.to article (title: "I built a /radar plugin for Claude Code that reads your project before recommending tools")
+
+_Buttondown newsletter deferred to P1-007 — no audience before the /radar plugin ships._
 
 ---
 
@@ -62,11 +58,11 @@ Flag this step explicitly in the launch checklist.
 - [x] README.md written and covers all 4 required sections — updated for scan/suggest/check framing
 - [x] validate.yml badge renders correctly in README
 - [x] data/CONTRIBUTING.md written (evaluation submission process)
-- [ ] Repo made public (Jihoon approval required before this step)
-- [ ] Buttondown account created — MANUAL (account creation)
+- [x] Repo made public (2026-04-01)
+- [x] Digest draft written — data/digests/launch-001.md (Buttondown account deferred to P1-007)
 - [x] First digest draft written — data/digests/launch-001.md
 - [x] 3 community posts drafted — docs/launch/community-posts.md
 - [ ] Claude review: PASS on README clarity
 
 ## NEXT TASK
-p1-001-cloudflare-worker (Phase 1 begins)
+p1-001-radar-plugin (Phase 1 begins — /radar Claude Code plugin)

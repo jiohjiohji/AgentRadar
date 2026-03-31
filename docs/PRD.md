@@ -1,6 +1,6 @@
 # AgentRadar — Product Requirements Document
-# Version: 1.0 | Owner: Jihoon | Status: APPROVED
-# Last updated: 2026-03-31
+# Version: 1.1 | Owner: Jihoon | Status: APPROVED
+# Last updated: 2026-04-01 — pivot: /radar plugin PRIMARY, CLI secondary, scores as tiebreaker
 # Feed this to Claude at session start for any product, feature, or UI work.
 
 ---
@@ -46,8 +46,8 @@ product decision.
 | 1 — Trigger | Hit friction in workflow. Begin searching. | — | SEO on versus pages |
 | 2 — Quick Scan | Google, Discord, Reddit. Scan top 3–4 results. | 2–5 min | Weekly digest |
 | 3 — Choice Paralysis ★ | Two tools look equivalent. No comparison. | Minutes to days | Versus page → **HIGHEST LEVERAGE** |
-| 4 — Trial | Install and try first choice. Often fails. | 30–120 min | `agentRadar suggest` |
-| 5 — Lock-in | Tool adopted for months regardless of quality. | Permanent | `agentRadar watch` alerts |
+| 4 — Trial | Install and try first choice. Often fails. | 30–120 min | `/radar suggest` + `/radar setup` |
+| 5 — Lock-in | Tool adopted for months regardless of quality. | Permanent | `/radar check` + `agentRadar watch` alerts |
 
 **Every feature must clearly state which phase it addresses.**
 
@@ -56,7 +56,7 @@ product decision.
 These are explicit non-goals. Any feature that addresses these is out of scope.
 
 - We do not build or host MCP servers
-- We do not provide tool installation or configuration assistance
+- ~~We do not provide tool installation or configuration assistance~~ **UPDATED 2026-04-01:** `/radar setup [id]` installs and configures tools inside Claude Code sessions. This is a core feature, not a non-goal.
 - We do not offer security scanning or vulnerability detection
 - We do not replace the tools we evaluate
 - We do not generate synthetic reviews or AI-authored evaluations
@@ -121,23 +121,22 @@ discover are included in the dataset.
 
 ### Phase 1 — Signal
 
-**US-003** As a developer, I want to search for tools from my terminal so that I never
-break my workflow to use a browser.
-- Acceptance: `agentRadar search "multi-agent orchestration"` returns results in under 2 seconds
-- Acceptance: Results show name, category, score with confidence level, and URL
-- Acceptance: Works offline against a local cache if network is unavailable
+**US-003** As a developer, I want my tools to be discovered automatically so that I
+don't have to know what I'm missing.
+- Acceptance: `/radar scan` reads project context and outputs 1–3 gap recommendations
+- Acceptance: Ranking uses status + stars + tag overlap — not scores
+- Acceptance: Tools with no evaluations are surfaced when category/tags match
 
-**US-004** As a developer, I want to compare two specific tools so that I can make a
-confident choice without reading two separate READMEs.
-- Acceptance: `agentRadar compare [id1] [id2]` returns side-by-side scores in under 2 seconds
-- Acceptance: Output includes a "Quick Answer" section in plain English
-- Acceptance: If either tool's score is Stale or Aging, a warning is displayed
-- Acceptance: If a versus page exists, its URL is included
+**US-004** As a developer, I want to describe a need and get compatible matches so that
+I can find the right tool without manual research.
+- Acceptance: `/radar suggest "browser testing"` returns context-aware matches in under 2 seconds
+- Acceptance: Results are filtered by stack compatibility; scores used as tiebreaker only
+- Acceptance: If two tools are close, the versus page is surfaced instead of picking one
 
-**US-005** As a developer, I want to use AgentRadar inside Claude Code so that I
-never leave my coding session to evaluate a tool.
-- Acceptance: `/radar compare [id1] [id2]` works inside Claude Code session
-- Acceptance: Output is formatted for terminal display
+**US-005** As a developer, I want to install a recommended tool without leaving Claude Code
+so that the agent handles everything end-to-end.
+- Acceptance: `/radar setup [id]` adds tool to MCP config, updates CLAUDE.md, installs deps
+- Acceptance: `/radar scan`, `/radar suggest`, `/radar check` all work inside Claude Code
 - Acceptance: Plugin is installable in one command
 
 **US-006** As a developer, I want to subscribe to score change alerts for tools I use
@@ -207,8 +206,8 @@ Only features with Value ≥ 4 AND Effort ≤ 3 are in Phase 0–1. Others wait.
 | Feature | Value | Effort | Phase | Decision |
 |---|---|---|---|---|
 | Public YAML dataset (50 tools) | 5 | 1 | 0 | BUILD NOW |
-| CLI: search, show, compare, top | 5 | 2 | 1 | BUILD NOW |
-| Claude Code /radar plugin | 5 | 2 | 1 | BUILD NOW |
+| Claude Code /radar plugin (scan, suggest, check, setup) | 5 | 2 | 1 | BUILD NOW — PRIMARY |
+| CLI: check (CI), scan, suggest | 4 | 2 | 1 | BUILD NOW — SECONDARY |
 | Score freshness badges | 5 | 2 | 3 | Phase 3 |
 | Versus page staleness detection | 4 | 2 | 3 | Phase 3 |
 | Automated benchmarks | 4 | 4 | 2 | Phase 2 |
@@ -217,7 +216,7 @@ Only features with Value ≥ 4 AND Effort ≤ 3 are in Phase 0–1. Others wait.
 | Team dashboard | 4 | 3 | 2 | Phase 2 |
 | Private evaluations | 4 | 4 | 4 | Phase 4 |
 | Enterprise SSO + audit logs | 3 | 5 | 4 | Phase 4 |
-| `agentRadar suggest` (task-based) | 5 | 3 | 3 | Phase 3 |
+| `agentRadar suggest` (task-based, standalone CLI) | 5 | 3 | 1 | Phase 1 (P1-004) |
 | `agentRadar watch` (Pro alerts) | 4 | 2 | 1 | Phase 1 (Pro) |
 | Monthly ecosystem sync | 4 | 2 | 3 | Phase 3 |
 
@@ -264,8 +263,7 @@ Only features with Value ≥ 4 AND Effort ≤ 3 are in Phase 0–1. Others wait.
 - 3 versus pages published and accessible
 
 ### Phase 1 End (Week 8)
-- 200+ CLI installs
-- 150+ digest subscribers
+- 500+ /radar plugin installs
 - 50+ organic evaluations
 - 10 paying Pro subscribers ($90 MRR)
 

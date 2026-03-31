@@ -4,17 +4,24 @@
 
 **AgentRadar reads your project and tells you what tools will help — without you having to search.**
 
-Three commands, one workflow:
+If you're already in Claude Code, just add the plugin. No separate install.
 
-```bash
-agentRadar scan        # reads your project, finds gaps in your current setup
-agentRadar suggest "browser testing"   # describe a need, get compatible matches
-agentRadar check       # flags stale or archived tools and suggests replacements
+```
+/radar scan          # reads your project, finds gaps in your current setup
+/radar suggest "browser testing"   # describe a need, get compatible matches
+/radar check         # flags stale or archived tools and suggests replacements
+/radar setup [id]    # installs and configures a tool without leaving your session
 ```
 
-Inside Claude Code, `/radar` does all three without leaving your session.
+Or use the standalone CLI:
 
-> **Phase 0 — data foundation is live.** The CLI is in active development (Phase 1). This repo is the dataset that powers it: 50 community-scored tool profiles, 150 evaluations, zero synthetic scores.
+```bash
+agentRadar check     # run in CI — exit 0 healthy, exit 1 action needed
+agentRadar scan      # gap detection for a project
+agentRadar suggest "browser testing"
+```
+
+> **Phase 0 — data foundation is live.** The `/radar` plugin and CLI are in active development (Phase 1). This repo is the dataset that powers them: 50 tool profiles, 150 community evaluations, zero synthetic scores.
 
 ---
 

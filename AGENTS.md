@@ -5,28 +5,35 @@
 
 AgentRadar reads your project and tells you what tools will help — without you asking.
 
+**Primary entry point: `/radar` inside Claude Code.**
+Claude Code users are already in an agentic session. The plugin requires no separate install.
+`/radar setup [id]` installs and configures the recommended tool without leaving the session.
+This is the highest-demand path — meet developers where they are.
+
+**Secondary entry point: standalone CLI for non-session contexts (CI, onboarding).**
+
 Three commands map to the developer lifecycle:
 
-1. **`agentRadar scan`** (starting a project or anytime)
+1. **`scan`** (starting a project or anytime)
    Reads package.json, requirements.txt, .claude/, CLAUDE.md, MCP config.
    Detects your stack, what tools you already use, and what gaps exist.
    Outputs: "You have X, you're missing Y, here's what fits your setup."
+   Ranking: status (active/stale/archived) + GitHub stars + tag overlap. Not scores.
 
-2. **`agentRadar suggest`** (hit a wall or want to improve)
-   Context-aware — reads your project first, then matches.
-   "I need browser testing" → checks your stack → recommends only tools compatible
-   with what you already have. Shows setup friction score and dependency conflicts.
+2. **`suggest`** (hit a wall or want to improve)
+   Context-aware — reads your project first, then matches your query.
+   "I need browser testing" → checks your stack → recommends compatible tools only.
+   Scores used only as tiebreaker when two tools are equally compatible.
 
-3. **`agentRadar check`** (maintenance — run periodically or via CI)
+3. **`check`** (maintenance — run periodically or via CI)
    Scans your installed tools against the dataset.
-   Flags: stale tools, archived repos, better alternatives that won't break your setup.
-   "Your browser-mcp is archived. playwright-mcp is actively maintained and compatible."
+   Flags: archived repos, stale tools, better alternatives that won't break your setup.
+   CI-friendly: exit code 0 = healthy, exit code 1 = action needed.
 
-Inside Claude Code, `/radar` does all three — the agent can scan, suggest, and
-set up tools without the developer leaving their session.
-
-The tool should be opinionated. Show 1–3 recommendations with reasons, not 10 options.
-Vibe coders want answers, not choices.
+**On community evaluations:**
+Scores are optional signal, not a gate. A tool with no evaluations is immediately useful
+in scan — its category, tags, and maintenance status are what determine fit. Scores appear
+in suggest (tiebreaker) and versus pages (evidence-backed verdicts). Never block on them.
 
 ---
 

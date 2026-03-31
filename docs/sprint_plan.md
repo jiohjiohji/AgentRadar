@@ -20,8 +20,8 @@ Ticket status: BACKLOG → IN_PROGRESS → DONE → BLOCKED (with reason)
 
 ## PHASE 0 — DATA FOUNDATION
 **Goal:** Public dataset live with 50 tools, 150 seed evaluations, 3 versus pages
-**Exit criteria:** 100 GitHub stars, 5 organic evaluations, newsletter launched
-**Status:** 11/12 tickets DONE — P0-012 (launch) IN_PROGRESS
+**Exit criteria:** 100 GitHub stars, 5 organic evaluations, community posts live
+**Status:** 12/12 tickets DONE — P0-012 written deliverables complete, 3 community posts pending manual publish
 
 ### P0-001 — Project scaffolding and tool installation
 Status: DONE (setup guide completed)
@@ -77,148 +77,111 @@ Notes: All 3 pages evidence-backed from seed evaluations. Archived: tasks/comple
 Status: DONE (2026-03-31, commit 3e60a36)
 Notes: scripts/crawl.py + .github/workflows/daily-crawler.yml. Archived: tasks/completed/2026-03-31-p0-011-daily-crawler.md
 
-### P0-012 — Launch: Make data repo public + newsletter
+### P0-012 — Launch: Make data repo public + community posts
 Status: IN_PROGRESS (2026-04-01)
 Dependencies: All P0 tickets DONE ✓
+Note: Buttondown dropped — newsletter deferred to P1-007 (Pro digest). Acquisition channel
+is the /radar plugin, not email. No audience to send to before the plugin ships.
 Acceptance:
-- [x] README.md written — scan/suggest/check framing, badge, schema, versus links
+- [x] README.md written — /radar plugin primary, CLI secondary, badge, schema, versus links
 - [x] data/CONTRIBUTING.md written — evaluation submission guide
-- [x] First digest draft written — data/digests/launch-001.md
+- [x] Repo made public (2026-04-01)
 - [x] 3 community posts drafted — docs/launch/community-posts.md
-- [ ] Repo made public — MANUAL: Jihoon must approve in GitHub UI
-- [ ] Buttondown account created — MANUAL: account setup at buttondown.com
-- [ ] Posted in Anthropic Discord #claude-code
-- [ ] Posted in Reddit r/ClaudeAI
-- [ ] Dev.to article published
+- [ ] Post in Anthropic Discord #claude-code — MANUAL
+- [ ] Post in Reddit r/ClaudeAI — MANUAL
+- [ ] Publish Dev.to article — MANUAL
+Exit criteria (100 stars, 5 organic evals) are lagging indicators measured post-launch, not blockers.
 
 ---
 
 ## PHASE 1 — SIGNAL
-**Goal:** A CLI that reads your project, finds gaps, and recommends tools that fit — no research needed
-**Exit criteria:** 200 CLI installs, 50% of `scan` users adopt at least 1 recommended tool
+**Goal:** Developers inside Claude Code can find, evaluate, and install the right tools without leaving their session
+**Exit criteria:** 500 /radar plugin installs, 50% of scan users adopt at least 1 recommended tool
+**Priority rationale:** Claude Code users are the target audience. /radar (zero friction, no separate install) ships first. CLI ships second for CI and non-session contexts.
 
-### P1-001 — Cloudflare Worker API (Phase 1 version — Git-backed)
+### P1-001 — Claude Code `/radar` plugin (PRIMARY entry point)
 Status: BACKLOG
+Why first: Claude Code users are already in a session. The plugin requires no separate install —
+just add a plugin. This is the fastest path to actual users.
+Data source: fetches YAMLs directly from GitHub raw content. No Worker dependency for MVP.
+Acceptance:
+- [ ] `/radar scan` — reads current project, outputs 1–3 recommendations with "why this fits you"
+- [ ] `/radar suggest [need]` — "I need browser testing" → compatible matches for current stack
+- [ ] `/radar check` — flags archived/stale tools, shows better alternatives
+- [ ] `/radar setup [tool-id]` — agent installs and configures the tool inside the session
+    (adds to MCP config, updates CLAUDE.md, installs deps — without leaving Claude Code)
+- [ ] `/radar show [tool-id]` — full profile, scores if available, versus page link if exists
+- [ ] Plugin installable via npm install -g @agentRadar/claude-plugin
+- [ ] Ranking logic: status + stars + tag overlap — scores shown when present, never required
+
+### P1-002 — Cloudflare Worker API (Git-backed)
+Status: BACKLOG
+Dependencies: P1-001 (proves the data model before adding infra)
 Acceptance:
 - [ ] Worker reads from GitHub raw content CDN
 - [ ] GET /api/v1/tools returns all tools as JSON
 - [ ] GET /api/v1/tools/:id returns single tool profile
 - [ ] GET /api/v1/tools/match?stack=X&need=Y returns context-aware ranked matches
 - [ ] GET /api/v1/versus/:id1/:id2 returns versus page data
-- [ ] Rate limiting via KV: 100K req/day (free), returns 429 on exceeded
+- [ ] Rate limiting via KV: 100K req/day free, returns 429 on exceeded
 - [ ] Deployed to production Cloudflare Worker URL
 
-### P1-002 — CLI: `scan` (flagship — reads your project, finds gaps)
+### P1-003 — CLI: `check` (maintenance — highest CI demand)
 Status: BACKLOG
-Why first: Vibe coders don't search for tools. They need the tool to come to them.
-How it works:
-  1. Reads: package.json, requirements.txt, pyproject.toml, .claude/, CLAUDE.md, MCP config
-  2. Detects: language, framework, existing tools, Claude Code setup, MCP servers installed
-  3. Compares against the AgentRadar dataset: what tools exist for your stack that you don't have?
-  4. Filters out: archived tools, tools incompatible with your stack, tools you already have
-  5. Outputs 1–3 recommendations with: what it does, why it fits YOUR setup, setup friction score
+Why before scan: CI integration is a pull — teams add it to their workflow. scan requires
+the developer to already trust AgentRadar enough to run it. check earns that trust first.
+Dependencies: P1-002 (Worker API for match endpoint)
 Acceptance:
-- [ ] npm install -g agentRadar installs on macOS, Linux, Windows WSL
-- [ ] `agentRadar scan` (no args) — scans current directory, outputs recommendations
-- [ ] `agentRadar scan --path /other/project` — scan a different project
-- [ ] Detects existing tools: reads package.json deps, pip deps, .claude/skills, MCP config
-- [ ] Matches against dataset: category + tags + compatibility
-- [ ] Output is opinionated: 1–3 tools max, each with a one-line "why this fits you"
-- [ ] Shows setup friction score (f) prominently — vibe coders care most about "how hard is this?"
-- [ ] Shows `[ARCHIVED]` / `[STALE]` warnings — never recommend dead tools
-- [ ] Flags dependency conflicts: "this requires Python 3.12 but you're on 3.10"
-- [ ] `--json` flag for machine-readable output (agents can consume this)
-- [ ] vitest suite covers: project detection, matching logic, conflict detection
-
-### P1-003 — CLI: `suggest` (hit a wall — describe your need, get a match)
-Status: BACKLOG
-Dependencies: P1-002 (scan) — shares the project detection and matching engine
-How it works:
-  The developer knows what they need but not which tool solves it.
-  suggest reads the project context AND the developer's query, then matches.
-Acceptance:
-- [ ] `agentRadar suggest "browser testing"` — returns top 3 matches compatible with your stack
-- [ ] `agentRadar suggest "cheaper alternative to X"` — finds tools in same category, weights cost
-- [ ] Context-aware: if you have playwright installed, don't suggest playwright-mcp conflicts
-- [ ] `--for solo` / `--for team` / `--for enterprise` — adjusts dimension weights
-- [ ] If 2 results are close, shows the versus page instead of picking one
-- [ ] Every result shows confidence bracket — never recommend without showing uncertainty
-
-### P1-004 — CLI: `check` (maintenance — are your tools still healthy?)
-Status: BACKLOG
-Dependencies: P1-002 (scan) — reuses project detection
-How it works:
-  Run periodically (or add to CI). Scans what you have installed and checks each
-  tool against the AgentRadar dataset for staleness, alternatives, and issues.
-Acceptance:
-- [ ] `agentRadar check` — scans installed tools, reports health
+- [ ] `agentRadar check` — scans installed tools (package.json, MCP config, .claude/), reports health
 - [ ] Flags archived/stale tools: "browser-mcp last commit Apr 2025 — consider playwright-mcp"
-- [ ] Flags better alternatives: "you use X (score 5.2), Y does the same thing (score 7.8)"
-- [ ] Only recommends alternatives that are compatible with existing deps (no breaking changes)
-- [ ] Exit code 0 = all healthy, exit code 1 = action needed (CI-friendly)
-- [ ] `agentRadar check --fix` — outputs commands/config to switch to recommended alternatives
-- [ ] Can run as GitHub Action: `.github/workflows/agentRadar-check.yml`
+- [ ] Flags better alternatives based on category + star count (not score)
+- [ ] Only recommends alternatives compatible with existing deps — no breaking changes
+- [ ] Exit code 0 = healthy, exit code 1 = action needed (CI-friendly)
+- [ ] `agentRadar check --fix` — outputs install commands for recommended replacements
+- [ ] GitHub Action template: `.github/workflows/agentRadar-check.yml`
 
-### P1-005 — Claude Code `/radar` plugin (all three commands inside the agent)
+### P1-004 — CLI: `scan` + `suggest` (discovery)
 Status: BACKLOG
-Dependencies: P1-002, P1-003, P1-004
-Why this matters: Vibe coders live inside Claude Code. The agent should discover and
-set up tools without the developer leaving the session.
+Dependencies: P1-003 (shares project detection engine from check)
 Acceptance:
-- [ ] `/radar scan` — scans current project, shows recommendations in Claude Code
-- [ ] `/radar suggest [need]` — context-aware suggest inside the session
-- [ ] `/radar check` — health check inside the session
-- [ ] `/radar setup [tool-id]` — agent installs and configures the recommended tool
-    (adds to MCP config, updates CLAUDE.md, installs deps — all within the session)
-- [ ] Plugin installable via: npm install -g @agentRadar/claude-plugin
+- [ ] `agentRadar scan` — reads project, outputs 1–3 gap recommendations
+- [ ] `agentRadar suggest "browser testing"` — query-based, context-aware match
+- [ ] Detects existing tools: package.json deps, pip deps, .claude/skills, MCP config
+- [ ] Matches on: category + tags + stack compatibility — not scores
+- [ ] If 2 tools are close, surfaces the versus page link instead of picking one
+- [ ] Shows `[ARCHIVED]` / `[STALE]` — never recommends dead tools
+- [ ] `--json` flag for agent-consumable output
+- [ ] npm install -g agentRadar works on macOS, Linux, Windows WSL
 
-### P1-006 — CLI: `show`, `compare` (supporting — for when the dev wants detail)
+### P1-005 — Static web UI + Pagefind (browseable dataset, SEO)
 Status: BACKLOG
-Acceptance:
-- [ ] `agentRadar show [id]` — full profile with all 6 scores + confidence
-- [ ] `agentRadar compare [id1] [id2]` — side-by-side with Quick Answer if versus page exists
-- [ ] `--json` flag on all commands
-- [ ] CLI works in offline mode with local cache (24-hour TTL)
-
-### P1-007 — Weekly processor automation
-Status: BACKLOG
-Acceptance:
-- [ ] GitHub Actions workflow runs every Monday at 06:00 UTC
-- [ ] Score recomputation runs over full dataset
-- [ ] Stale status updated for all tools based on last_commit age
-- [ ] Versus page staleness detection runs (flags pages with >1.0 score drift)
-- [ ] Digest draft committed to data/digests/YYYY-MM-DD-draft.md
-- [ ] Buttondown API call sends digest after maintainer approves draft
-
-### P1-008 — Static web UI + Pagefind
-Status: BACKLOG
+Why here: the public repo is live. People will find it via search. They need browseable pages
+with canonical URLs — not a React app, just rendered YAML + markdown.
 Acceptance:
 - [ ] GitHub Pages site builds from YAML + markdown via GitHub Actions
 - [ ] All 50 tool profiles have individual pages with canonical URLs
-- [ ] All versus pages have individual pages with canonical URLs
+- [ ] All versus pages have individual pages
 - [ ] Pagefind search returns results in <100ms (browser-side)
-- [ ] Score freshness badges displayed on tool profile pages
-- [ ] Mobile-responsive (test at 375px width)
+- [ ] Mobile-responsive (375px width)
+- [ ] Maintenance status badge on every tool page
 
-### P1-009 — Score freshness display (all surfaces)
+### P1-006 — Weekly processor automation
 Status: BACKLOG
 Acceptance:
-- [ ] CLI, API, and web UI all show freshness_status on every score
-- [ ] current: no badge modification
-- [ ] aging: [AGING] indicator in amber
-- [ ] stale: [STALE] indicator in orange, score visually de-emphasised
-- [ ] historical: [HISTORICAL] indicator in grey, tool marked as archived/deprecated
-- [ ] API response includes freshness_status field on every score object
+- [ ] GitHub Actions workflow runs every Monday at 06:00 UTC
+- [ ] Stale status updated for all tools based on last_commit age
+- [ ] Versus page staleness detection (flags pages with >1.0 score drift)
+- [ ] Digest draft committed to data/digests/YYYY-MM-DD-draft.md
+- [ ] Buttondown API sends digest after maintainer approves draft (requires P1-007 — Buttondown deferred)
 
-### P1-010 — Pro tier: Stripe + watchlist + early digest
+### P1-007 — Pro tier: Stripe + watchlist + early digest
 Status: BACKLOG
 Acceptance:
 - [ ] Stripe checkout creates Pro subscription ($9/month beta)
 - [ ] Webhook writes Pro API key to Cloudflare KV within 5 minutes of payment
-- [ ] agentRadar watch [id] prompts for API key if not set
-- [ ] agentRadar watch [id] stores subscription in KV against API key
-- [ ] Weekly processor sends email within 24 hours of score change >0.3 for watched tools
-- [ ] Pro subscribers receive digest on Saturday (48 hours before public Monday release)
+- [ ] `agentRadar watch [id]` stores subscription against API key
+- [ ] Email within 24 hours of status change (active → stale, stale → archived) for watched tools
+- [ ] Pro subscribers receive digest Saturday (48 hours before public Monday)
 - [ ] Subscription lapse cancels API key within 24 hours of failed payment
 
 ---
@@ -282,6 +245,8 @@ Key factors:
 - Validation scripts caught errors inline — no rework cycles
 - Score computation script was automated — P0-009 was minutes not hours
 
-Pivot recorded on 2026-03-31: product direction shifted from passive dataset browser to project-aware CLI (scan/suggest/check). AGENTS.md, DECISIONS.md, and sprint_plan.md updated. P0-012 launch messaging updated to lead with CLI vision.
+Pivot recorded on 2026-03-31: product direction shifted from passive dataset browser to /radar Claude Code plugin (primary) + CLI (secondary). AGENTS.md, DECISIONS.md, sprint_plan.md updated. P1 reordered: /radar plugin is P1-001, CLI check is P1-003.
 
-P0-012 remaining blockers are both manual (repo public + Buttondown account). All written deliverables done.
+Buttondown dropped from P0-012. Newsletter deferred to P1-007 (Pro digest) — no audience before the plugin ships.
+
+P0-012 remaining: 3 community posts to publish manually. Repo is public. All written deliverables done.
