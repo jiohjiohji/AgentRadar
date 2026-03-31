@@ -1,60 +1,60 @@
-# TASK: phase-0-seed-dataset
+# TASK: p0-005-orchestration-claudemd-profiles
 # Date: 2026-03-31 | Phase: 0
-# Status: DONE
+# Status: BACKLOG
 
 ## MUSK 5-RULES PRE-CHECK
 
 ### Rule 1 — Is this requirement legitimate?
-Who asked for this: Phase 0 plan (the data is the product)
-What breaks without it: Nothing exists to evaluate, compare, or discover. Zero value.
+Who asked for this: Sprint plan P0-005 — 30 tools needed before score computation (P0-009) can run.
+What breaks without it: Orchestration and CLAUDE.md categories have zero coverage.
 Decision: PROCEED
 
 ### Rule 2 — What can be deleted first?
-Remove nothing — this is the first task. Start clean.
-Minimum viable version: 10 tool profiles (not 50). Start with 10 and validate quality before scaling.
+Remove nothing — additive batch.
+Minimum viable version: 10 profiles validated.
 
 ### Rule 3 — Simplest implementation?
-First instinct: write all 50 profiles in one session
-Simpler approach: write 10 profiles, validate all 10, then write 10 more in batches
-Chosen approach: batches of 10. Quality over speed.
+Same workflow: gh api to get pushed_at → write YAML → validate_yaml.py.
+Do not create a new automation script mid-batch; log the pattern for P1.
 
 ### Rule 4 — What slowed last time?
-No history yet. First task.
-Prevention: N/A
+Sprint plan tool names were approximate — 4 of 10 P0-004 entries needed pivots.
+Prevention: GitHub-search first for every entry, before writing any profile.
 
 ### Rule 5 — What to automate?
-After writing 10 profiles manually, identify any fields that can be auto-populated from GitHub API.
-This will become the auto-triage script (Phase 1).
+The lookup step (sprint plan name → canonical repo) is now clearly repeatable.
+Note for P1: add a `scripts/find_repo.py` that resolves a tool name to its top GitHub match.
 
 ---
 
-## TASK BREAKDOWN
+## TARGET TOOLS (verify all before profiling)
 
-### Gemini Agent Jobs (run in parallel)
-- [x] Agent 1: Generate profiles for GitHub MCP, Filesystem MCP | Acceptance: validate_yaml.py PASS
-- [x] Agent 2: Generate profiles for Playwright MCP, Tavily MCP | Acceptance: validate_yaml.py PASS
-- [x] Agent 3: Generate profiles for Slack MCP, Atlassian MCP | Acceptance: validate_yaml.py PASS
-- [x] Agent 4: Generate profiles for Browser MCP, Memory MCP | Acceptance: validate_yaml.py PASS
-- [x] Agent 5: Generate profiles for Notion MCP, Linear MCP | Acceptance: validate_yaml.py PASS
+### Orchestration frameworks (5)
+- CrewAI (any official Claude Code integration or standalone)
+- AutoGen / AG2 (Microsoft multi-agent framework)
+- LangGraph (LangChain orchestration layer)
+- OpenAI Swarm or equivalent lightweight orchestration
+- One more active orchestration framework (search: "agent orchestration claude-code" by stars)
 
-### tdd-guard Gate
-- Validation: python scripts/validate_yaml.py data/tools/
-- All 10 profiles pass with zero errors
-
-### Claude Code Review
-Review files: data/tools/ (all 10 profiles)
-Quality gate: All 12 fields present; scores are null (not invented); status computed from real last-commit dates
-Update AGENTS.md: YES — add any patterns found in the first batch
+### CLAUDE.md frameworks (5)
+- SPARC framework (ruvnet or equivalent)
+- Claude Engineer (a prominent CLAUDE.md-driven dev framework)
+- cursor-tools or equivalent CLAUDE.md + tools combo
+- One prominent RULES.md / AGENTS.md template repo
+- One more CLAUDE.md best-practices repo
 
 ---
 
-## DONE WHEN
-- [x] 10 tool profiles in data/tools/
-- [x] All 10 pass validate_yaml.py with zero errors
-- [x] Claude review: PASS
-- [x] /iterate command run and AGENTS.md updated
-- [x] TASK.md archived
-- [x] Committed
+## ACCEPTANCE CRITERIA
+- [ ] All 10 YAML files exist in data/tools/
+- [ ] All 10 pass validate_yaml.py with zero errors
+- [ ] Scores are null on all 10 (no evaluations yet)
+- [ ] Status computed from actual pushed_at via gh api
+- [ ] Claude Code review: PASS
+- [ ] Pivots documented in sprint_plan.md
+- [ ] /iterate run: AGENTS.md + DECISIONS.md updated
+- [ ] TASK.md archived to tasks/completed/
+- [ ] Committed on feature branch
 
 ## NEXT TASK
-phase-0-seed-dataset-batch-2 (tools 11-20)
+p0-006-prompt-library-sdk-profiles (tools 31-40)

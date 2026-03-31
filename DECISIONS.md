@@ -32,6 +32,11 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 2026-03-29 | tdd-guard enforces tests before Claude review | Phase 0 | Eliminates an entire class of Claude review failures; saves Claude tokens on trivially broken code | Manual test enforcement: forgets; prompt-based enforcement: ignored when under time pressure
 2026-03-31 | claude-context-mode deferred — package does not exist on npm | Phase 0 | Originally planned for 98% context reduction; not available as published package | Will revisit when a real context compression tool is available
 
+### Data Curation (added 2026-03-31 after P0-003 + P0-004)
+2026-03-31 | GitHub API `pushed_at` is the canonical source for `status` | P0-003 | Only live data prevents silently wrong active/archived flags; Browser MCP and Linear MCP would have been wrong without it | Manual estimation: unacceptably error-prone at scale
+2026-03-31 | Sprint plan tool names are directional, not exact | P0-004 | Four of ten P0-004 entries resolved to different repos than listed: TÂCHES → gsd-build/get-shit-done; Conductor → gemini-cli-extensions/conductor; ClaudoPro → unverifiable (substituted ryanmac/code-conductor); Claude Code PM (Ran Aroussi) → ranaroussi/cc-bridge | Always GitHub-search first; never assume the listed name is the canonical repo
+2026-03-31 | Unverifiable tools are substituted, never invented | P0-004 | ClaudoPro Directory could not be found on GitHub; inventing a profile would violate the no-invented-data constraint | Leaving a gap: breaks the batch-of-10 contract; using invented data: violates core trust guarantee. Substitute rule: same category, verified repo, note pivot in commit and sprint_plan.md
+
 ---
 
 ## DEFERRED DECISIONS (do not implement — document why)

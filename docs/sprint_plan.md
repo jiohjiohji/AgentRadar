@@ -41,41 +41,44 @@ Acceptance:
 - [ ] scripts/validate_versus.py correctly rejects pages without valid_until
 
 ### P0-003 — Batch 1: 10 MCP Server profiles
-Status: DONE
-Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
-Tools to profile:
-  - GitHub MCP (github.com/github/github-mcp-server)
-  - Filesystem MCP (built into Claude Code — document as built-in)
-  - Playwright MCP (github.com/microsoft/playwright-mcp)
-  - Tavily MCP (github.com/tavily-ai/tavily-mcp)
-  - Slack MCP (latest official Slack MCP server)
-  - Jira MCP (latest official Atlassian MCP)
-  - Browser MCP (any leading headless browser MCP)
-  - Memory MCP (leading knowledge graph / memory MCP)
-  - Notion MCP (official or community-maintained Notion MCP)
-  - Linear MCP (official or community-maintained Linear MCP)
+Status: DONE (2026-03-31)
+Tools profiled (actual repos):
+  - gh-github-mcp-server → github/github-mcp-server (active)
+  - gh-mcp-filesystem → modelcontextprotocol/servers/src/filesystem (active)
+  - gh-microsoft-playwright-mcp → microsoft/playwright-mcp (active)
+  - gh-tavily-mcp → tavily-ai/tavily-mcp (active)
+  - gh-korotovsky-slack-mcp → korotovsky/slack-mcp-server (active)
+  - gh-atlassian-mcp-server → atlassian/atlassian-mcp-server (active)
+  - gh-browsermcp-mcp → BrowserMCP/mcp (archived — last push Apr 2025)
+  - gh-mcp-memory → modelcontextprotocol/servers/src/memory (active)
+  - gh-makenotion-notion-mcp → makenotion/notion-mcp-server (active)
+  - gh-jerhadf-linear-mcp → jerhadf/linear-mcp-server (archived — last push May 2025)
 Acceptance:
-- [ ] All 10 YAML files exist in data/tools/
-- [ ] All 10 pass validate_yaml.py with zero errors
-- [ ] Scores are null on all 10 (no evaluations yet)
-- [ ] Status computed from actual last_commit date for each tool
-- [ ] Claude Code review: PASS
+- [x] All 10 YAML files exist in data/tools/
+- [x] All 10 pass validate_yaml.py with zero errors
+- [x] Scores are null on all 10 (no evaluations yet)
+- [x] Status computed from actual last_commit date for each tool
+- [x] Claude Code review: PASS
 
-### P0-004 — Batch 2: 10 Claude Code Plugin profiles
-Status: DONE
-Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
-Tools to profile:
-  - wshobson/agents (github.com/wshobson/agents)
-  - AgentSys (avifenesh/AgentSys)
-  - TÂCHES (taches-dev/claude-code-resources)
-  - Conductor workflow (from claude-code-workflows repo)
-  - AB Method (Ayoub Bensalah)
-  - Claude Code PM (Ran Aroussi)
-  - Fullstack Dev Skills (jeffallan)
-  - Context Engineering Kit (Vlad Goncharov)
-  - Claude Code Agents by Paul (Undeadlist)
-  - ClaudoPro Directory (ghost)
-Acceptance: Same as P0-003
+### P0-004 — Batch 2: 10 Claude Code Plugin/Orchestration profiles
+Status: DONE (2026-03-31)
+Tools profiled (actual repos — pivots noted):
+  - gh-wshobson-agents → wshobson/agents (active, 32.6k stars)
+  - gh-avifenesh-agentsys → avifenesh/AgentSys (active)
+  - gh-gsd-build-get-shit-done → gsd-build/get-shit-done [PIVOT: plan said taches-dev/claude-code-resources — resolved to actual TÂCHES repo, 45.6k stars]
+  - gh-gemini-cli-conductor → gemini-cli-extensions/conductor [PIVOT: plan said "claude-code-workflows repo" — resolved to original Conductor source, 3.3k stars]
+  - gh-ayoubben18-ab-method → ayoubben18/ab-method (stale, 156 stars)
+  - gh-ranaroussi-cc-bridge → ranaroussi/cc-bridge [PIVOT: plan said "Claude Code PM" — no PM tool found; used Ran Aroussi's most prominent Claude Code repo]
+  - gh-jeffallan-claude-skills → Jeffallan/claude-skills (active, 7.5k stars)
+  - gh-neolab-context-engineering-kit → NeoLabHQ/context-engineering-kit (active, 735 stars)
+  - gh-undeadlist-claude-code-agents → undeadlist/claude-code-agents (active, 102 stars)
+  - gh-ryanmac-code-conductor → ryanmac/code-conductor [PIVOT: plan said "ClaudoPro Directory (ghost)" — unverifiable; substituted verified alternative in same category]
+Acceptance:
+- [x] All 10 YAML files exist in data/tools/
+- [x] All 10 pass validate_yaml.py with zero errors
+- [x] Scores are null on all 10 (no evaluations yet)
+- [x] Status computed from actual last_commit date for each tool
+- [x] Claude Code review: PASS
 
 ### P0-005 — Batch 3: 10 Orchestration + CLAUDE.md Framework profiles
 Status: BACKLOG
@@ -291,5 +294,10 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 - P0 tickets: 2–3 tickets per week (data work is labour-intensive)
 - P1 tickets: 1–2 tickets per week (more technical, but tools help)
 - P2+ tickets: depends on Phase 1 learnings
+
+### Actual velocity log
+| Date | Tickets completed | Notes |
+|------|-------------------|-------|
+| 2026-03-31 | P0-003, P0-004 | 2 batches (20 profiles) in one session with Claude Code |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.
