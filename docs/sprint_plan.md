@@ -214,8 +214,8 @@ Acceptance:
 ---
 
 ## PHASE 1 — SIGNAL
-**Goal:** CLI, Claude Code plugin, static web UI, Pro tier
-**Exit criteria:** 200 CLI installs, 150 subscribers, 10 Pro subscribers
+**Goal:** CLI that helps developers find the right tool for their project, not just the highest-scored tool
+**Exit criteria:** 200 CLI installs, 150 subscribers, 50% of `suggest` users click through to a tool
 
 ### P1-001 — Cloudflare Worker API (Phase 1 version — Git-backed)
 Status: BACKLOG
@@ -223,41 +223,50 @@ Acceptance:
 - [ ] Worker reads from GitHub raw content CDN
 - [ ] GET /api/v1/tools returns all tools as JSON
 - [ ] GET /api/v1/tools/:id returns single tool profile
+- [ ] GET /api/v1/tools/suggest?need=X&constraint=Y returns ranked matches
 - [ ] GET /api/v1/versus/:id1/:id2 returns versus page data
 - [ ] Rate limiting via KV: 100K req/day (free), returns 429 on exceeded
 - [ ] Deployed to production Cloudflare Worker URL
-- [ ] Latency P95 <200ms from Melbourne (test location)
 
-### P1-002 — CLI v0.1: search, show, compare, top
+### P1-002 — CLI v0.1: suggest (flagship command)
 Status: BACKLOG
+Why first: This is the product. Everything else is supporting infrastructure.
 Acceptance:
 - [ ] npm install -g agentRadar installs on macOS, Linux, Windows WSL
-- [ ] agentRadar search [query] returns top 10 results in <2s
-- [ ] agentRadar show [id] returns full profile with all 6 dimension scores
-- [ ] agentRadar compare [id1] [id2] returns side-by-side with Quick Answer if versus page exists
-- [ ] agentRadar top --category [c] --min-score [n] returns filtered ranked list
-- [ ] Every score output includes confidence bracket [HIGH/MED/LOW]
-- [ ] Stale/Aging scores show a warning indicator
-- [ ] CLI works in offline mode with local cache (24-hour TTL)
-- [ ] All commands have --json flag for machine-readable output
-- [ ] vitest suite covers all commands: happy path + error path
+- [ ] `agentRadar suggest` enters interactive mode — asks what you're trying to do
+- [ ] `agentRadar suggest "browser testing mcp"` returns top 3 matches with WHY each fits
+- [ ] Matching logic:
+      1. Filter: category, pricing, status (exclude archived by default)
+      2. Tag match: rank by overlap between query terms and tool tags
+      3. Dimension weight: if query mentions "cheap" → weight `c`; "reliable" → weight `r`; "quick setup" → weight `f`
+      4. Output: top 3 with one-sentence reason per tool, relevant score dimensions highlighted
+- [ ] `agentRadar suggest --for solo` weights `f` (friction) and `c` (cost) higher
+- [ ] `agentRadar suggest --for team` weights `r` (reliability) and `q` (quality) higher
+- [ ] `agentRadar suggest --for enterprise` weights `r`, `q`, and shows license prominently
+- [ ] Every result shows confidence bracket — never recommend without showing uncertainty
+- [ ] If 2 results are close, suggest the versus page (if it exists) instead of picking one
+- [ ] `--json` flag for machine-readable output
+- [ ] vitest suite covers: query parsing, filter logic, dimension weighting, edge cases
 
-### P1-003 — CLI v0.1: new and digest commands
+### P1-003 — CLI v0.1: show, compare, search, top (supporting commands)
 Status: BACKLOG
+Dependencies: P1-002 must be done first — suggest is the entry point, these are the follow-ups
 Acceptance:
-- [ ] agentRadar new --since [N]d returns tools discovered in last N days
-- [ ] agentRadar digest returns latest weekly digest formatted for terminal
-- [ ] agentRadar digest prompts for newsletter subscription after display
+- [ ] `agentRadar show [id]` — full profile with all 6 scores + confidence
+- [ ] `agentRadar compare [id1] [id2]` — side-by-side with Quick Answer if versus page exists
+- [ ] `agentRadar search [query]` — keyword search, returns top 10
+- [ ] `agentRadar top --category [c]` — leaderboard view (secondary to suggest)
+- [ ] `agentRadar new --since [N]d` — recently discovered tools
+- [ ] CLI works in offline mode with local cache (24-hour TTL)
+- [ ] All commands have `--json` flag
 
 ### P1-004 — Claude Code /radar plugin
 Status: BACKLOG
 Acceptance:
-- [ ] /radar search [query] works inside Claude Code session
-- [ ] /radar show [id] works inside Claude Code session
-- [ ] /radar compare [id1] [id2] works inside Claude Code session
-- [ ] /radar top [category] works inside Claude Code session
+- [ ] `/radar suggest [need]` works inside Claude Code session (flagship)
+- [ ] `/radar show [id]` works inside Claude Code session
+- [ ] `/radar compare [id1] [id2]` works inside Claude Code session
 - [ ] Plugin installable via: npm install -g @agentRadar/claude-plugin
-- [ ] Install instructions documented in agentRadar/claude-plugin/README.md
 
 ### P1-005 — Weekly processor automation
 Status: BACKLOG
@@ -321,7 +330,7 @@ Tickets to be refined when Phase 1 exit criteria are met.
 ### P3-003 — Full benchmark suite (T04 + T06 added)
 ### P3-004 — Tier 3 Deep Eval programme
 ### P3-005 — Monthly ecosystem sync
-### P3-006 — agentRadar suggest command
+### P3-006 — suggest v2: ML-powered matching (depends on P1-002 usage data)
 ### P3-007 — agentRadar watch webhooks (Team tier)
 ### P3-008 — Pro stable pricing ($15/month)
 
@@ -339,7 +348,7 @@ Tickets to be refined when Phase 1 exit criteria are met.
 ## PHASE 5 — STANDARD (Year 3)
 ### P5-001 — GitHub MCP Registry integration
 ### P5-002 — International expansion
-### P5-003 — "For My Situation" adaptive scoring
+### P5-003 — suggest v3: project-aware matching (reads repo context to auto-detect needs)
 
 ---
 

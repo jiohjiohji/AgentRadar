@@ -28,6 +28,10 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 2026-03-29 | Minimum 2 reports before publishing score | Phase 0 | 1 report can be a tool author gaming the system | 1 report: too easily gamed; 3 reports: too slow to build dataset
 2026-03-29 | CoI exclusion at API layer, not policy layer | Phase 0 | Code-enforced rules cannot be bypassed; policy-only rules will be ignored under pressure | Policy-only: relies on contributor honesty; insufficient for a trust-critical system
 
+### Product
+2026-03-31 | `suggest` is the flagship command, not `top`/`search` | Phase 1 | AgentRadar's value is matching tools to developer needs, not ranking globally. Leaderboards are commodity — contextual matching is the differentiator | Leaderboard-first: makes us another awesome-list with numbers
+2026-03-31 | `suggest` v1 uses structured filtering, no AI | Phase 1 | Filter by constraints (category, pricing, status) → tag matching → dimension-weighted ranking. Existing schema supports this | AI-powered matching: premature — need usage data first to know what patterns emerge
+
 ### Tooling
 2026-03-29 | tdd-guard enforces tests before Claude review | Phase 0 | Eliminates an entire class of Claude review failures; saves Claude tokens on trivially broken code | Manual test enforcement: forgets; prompt-based enforcement: ignored when under time pressure
 2026-03-31 | claude-context-mode deferred — package does not exist on npm | Phase 0 | Originally planned for 98% context reduction; not available as published package | Will revisit when a real context compression tool is available
