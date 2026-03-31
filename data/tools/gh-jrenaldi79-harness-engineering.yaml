@@ -1,0 +1,17 @@
+id: "gh-jrenaldi79-harness-engineering"
+name: "Harness Engineering"
+source_url: "https://github.com/jrenaldi79/harness-engineering"
+category: claudemd-framework
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - CLAUDE.md
+  - context-engineering
+  - mechanical-enforcement
+  - best-practices
+  - bootstrap
+versus_refs: []

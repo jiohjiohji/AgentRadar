@@ -81,10 +81,24 @@ Acceptance:
 - [x] Claude Code review: PASS
 
 ### P0-005 — Batch 3: 10 Orchestration + CLAUDE.md Framework profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 orchestration frameworks + 5 CLAUDE.md frameworks
-Acceptance: Same as P0-003
+Status: DONE (2026-03-31)
+Tools profiled (actual repos):
+  - gh-crewai-crewai → crewAIInc/crewAI (active, 47.7k stars)
+  - gh-microsoft-autogen → microsoft/autogen (active, 56.5k stars)
+  - gh-langchain-langgraph → langchain-ai/langgraph (active, 28k stars)
+  - gh-ruvnet-ruflo → ruvnet/ruflo (active, 28.8k stars, prev. claude-flow)
+  - gh-openai-swarm → openai/swarm (archived, 21.3k stars)
+  - gh-doriandarko-claude-engineer → Doriandarko/claude-engineer (archived, 11.2k stars)
+  - gh-josix-awesome-claude-md → josix/awesome-claude-md (active, 184 stars)
+  - gh-abhishekray07-claude-md-templates → abhishekray07/claude-md-templates (active, 116 stars)
+  - gh-jrenaldi79-harness-engineering → jrenaldi79/harness-engineering (active, 51 stars)
+  - gh-ithiria894-claude-code-workflows → ithiria894/awesome-claude-code-workflows (active, 59 stars)
+Acceptance:
+- [x] All 10 YAML files exist in data/tools/
+- [x] All 10 pass validate_yaml.py with zero errors
+- [x] Scores are null on all 10 (no evaluations yet)
+- [x] Status computed from actual pushed_at via gh api
+- [x] Claude Code review: PASS
 
 ### P0-006 — Batch 4: 10 Prompt Library + SDK Pattern profiles
 Status: BACKLOG

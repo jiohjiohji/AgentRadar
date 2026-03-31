@@ -1,0 +1,18 @@
+id: "gh-openai-swarm"
+name: "OpenAI Swarm"
+source_url: "https://github.com/openai/swarm"
+category: orchestration
+pricing: free
+license: MIT
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - multi-agent
+  - orchestration
+  - lightweight
+  - educational
+  - openai
+  - handoffs
+versus_refs: []

@@ -1,0 +1,17 @@
+id: "gh-doriandarko-claude-engineer"
+name: "Claude Engineer"
+source_url: "https://github.com/Doriandarko/claude-engineer"
+category: claude-plugin
+pricing: free
+license: null
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - autonomous-coding
+  - cli
+  - tool-use
+  - self-expanding
+  - software-development
+versus_refs: []

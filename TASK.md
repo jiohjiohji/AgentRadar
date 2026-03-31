@@ -1,47 +1,45 @@
-# TASK: p0-005-orchestration-claudemd-profiles
+# TASK: p0-006-prompt-library-sdk-profiles
 # Date: 2026-03-31 | Phase: 0
 # Status: BACKLOG
 
 ## MUSK 5-RULES PRE-CHECK
 
 ### Rule 1 — Is this requirement legitimate?
-Who asked for this: Sprint plan P0-005 — 30 tools needed before score computation (P0-009) can run.
-What breaks without it: Orchestration and CLAUDE.md categories have zero coverage.
+Who asked for this: Sprint plan P0-006 — 40 tools needed to reach scoring threshold.
+What breaks without it: Prompt library and SDK pattern categories have zero coverage.
 Decision: PROCEED
 
 ### Rule 2 — What can be deleted first?
-Remove nothing — additive batch.
-Minimum viable version: 10 profiles validated.
+Nothing — additive batch.
 
 ### Rule 3 — Simplest implementation?
-Same workflow: gh api to get pushed_at → write YAML → validate_yaml.py.
-Do not create a new automation script mid-batch; log the pattern for P1.
+Same workflow: gh api search → write YAML → validate.
 
 ### Rule 4 — What slowed last time?
-Sprint plan tool names were approximate — 4 of 10 P0-004 entries needed pivots.
-Prevention: GitHub-search first for every entry, before writing any profile.
+CLAUDE.md frameworks are a thin category — many repos under 200 stars.
+Prevention: Accept smaller repos where the category is genuinely sparse.
 
 ### Rule 5 — What to automate?
-The lookup step (sprint plan name → canonical repo) is now clearly repeatable.
-Note for P1: add a `scripts/find_repo.py` that resolves a tool name to its top GitHub match.
+After 40 profiles, the lookup pattern is fully proven.
+P1 ticket: build scripts/find_repo.py to automate sprint-plan-name → canonical-repo resolution.
 
 ---
 
 ## TARGET TOOLS (verify all before profiling)
 
-### Orchestration frameworks (5)
-- CrewAI (any official Claude Code integration or standalone)
-- AutoGen / AG2 (Microsoft multi-agent framework)
-- LangGraph (LangChain orchestration layer)
-- OpenAI Swarm or equivalent lightweight orchestration
-- One more active orchestration framework (search: "agent orchestration claude-code" by stars)
+### Prompt libraries (5)
+- Anthropic cookbook (official Anthropic prompt/recipe collection)
+- Fabric (danielmiessler/fabric — prompt patterns framework)
+- LangChain Hub or equivalent community prompt library
+- Promptflow (Microsoft prompt engineering framework)
+- One more active prompt library (search: "prompt library claude" by stars)
 
-### CLAUDE.md frameworks (5)
-- SPARC framework (ruvnet or equivalent)
-- Claude Engineer (a prominent CLAUDE.md-driven dev framework)
-- cursor-tools or equivalent CLAUDE.md + tools combo
-- One prominent RULES.md / AGENTS.md template repo
-- One more CLAUDE.md best-practices repo
+### SDK patterns (5)
+- Anthropic Python SDK (anthropics/anthropic-sdk-python)
+- Anthropic TypeScript SDK (anthropics/anthropic-sdk-typescript)
+- Vercel AI SDK (vercel/ai — includes Claude support)
+- One prominent SDK wrapper or adapter pattern
+- One Claude-specific SDK extension or utility
 
 ---
 
@@ -52,9 +50,9 @@ Note for P1: add a `scripts/find_repo.py` that resolves a tool name to its top G
 - [ ] Status computed from actual pushed_at via gh api
 - [ ] Claude Code review: PASS
 - [ ] Pivots documented in sprint_plan.md
-- [ ] /iterate run: AGENTS.md + DECISIONS.md updated
+- [ ] /iterate run: AGENTS.md + DECISIONS.md updated if needed
 - [ ] TASK.md archived to tasks/completed/
 - [ ] Committed on feature branch
 
 ## NEXT TASK
-p0-006-prompt-library-sdk-profiles (tools 31-40)
+p0-007-eval-observability-profiles (tools 41-50)

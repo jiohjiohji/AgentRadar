@@ -57,6 +57,7 @@ Added when something actually goes wrong. Each entry must include what happened.
 - **Do not infer `status` from memory or assumption.** Always query `pushed_at` from the GitHub API. First batch revealed Browser MCP and Linear MCP are archived — this would have been missed without live data.
 - **Do not use a parent repo URL as `source_url` when the tool lives in a subdirectory.** Use the subdirectory URL (e.g. `…/tree/main/src/memory`). ID must be derived from the subdirectory path, not the parent repo name.
 - **Sprint plan tool names are approximate.** Always verify the exact repo via GitHub API search before profiling. Names like "ClaudoPro Directory (ghost)" may be unverifiable — substitute with a verified alternative of the same category and flag in the commit message.
+- **Use `orchestration` for general agent frameworks regardless of Claude support.** CrewAI, AutoGen, LangGraph, and similar frameworks are `orchestration` even when they have Claude integrations. `claude-plugin` is reserved for tools built specifically for Claude Code.
 
 ---
 
