@@ -1,0 +1,48 @@
+tool_id: gh-gemini-cli-conductor
+reporter_role: researcher
+date_evaluated: "2026-03-29"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Evaluated Conductor methodology for research software development: writing analysis
+  pipelines for computational linguistics experiments. Tested whether the spec-driven
+  approach translates from product engineering to research code, which has more exploratory
+  and iterative characteristics than typical product feature development.
+scores:
+  p:
+    value: 4
+    evidence: >
+      Research code is inherently exploratory and specs become outdated as hypotheses
+      change; writing formal specs before uncertain analysis pipelines added friction without
+      proportional quality benefit in this context.
+  q:
+    value: 6
+    evidence: >
+      For well-defined analysis modules (data loading, preprocessing) the spec approach
+      improved quality; for hypothesis-testing code the rigid spec format felt premature and constrained iteration.
+  c:
+    value: 7
+    evidence: >
+      The methodology itself costs nothing additional in API terms; the cost is researcher
+      time writing specs, which is poorly matched to research's iterative nature.
+  r:
+    value: 7
+    evidence: >
+      When specs were written and followed, implementation was predictable; the inconsistency
+      was in researchers following the process rather than in the methodology itself.
+  x:
+    value: 4
+    evidence: >
+      As a pure methodology, composability with other tools is not applicable; it works
+      alongside any Claude Code tool set without modification or configuration.
+  f:
+    value: 6
+    evidence: >
+      Specification writing was straightforward for researchers familiar with academic
+      paper structure; the concept mapping from research methods to software specs took one workshop session.
+verdict: >
+  Conductor methodology is well-suited to product engineering with defined requirements but
+  poorly matched to exploratory research software development; researchers would benefit more
+  from lightweight experiment logging conventions than from pre-implementation specification
+  discipline that assumes stable requirements.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-wandb-weave
+reporter_role: developer
+date_evaluated: "2026-03-21"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Integrated Weave into a production Claude-powered code review assistant to monitor
+  output quality over time. Used Weave's tracing to log each review request and response,
+  built a weekly evaluation pipeline using Weave's Evaluation class to spot-check 50
+  random reviews per week, and used the dashboard to track quality trends over 6 weeks.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Weekly quality monitoring that previously required manually sampling and grading
+      reviews now runs automatically with Weave; the time savings were approximately 3 hours per week.
+  q:
+    value: 7
+    evidence: >
+      Weave's evaluation framework correctly computed our custom quality metrics across
+      all 50-review weekly samples; the trend dashboard showed a 12% quality improvement after a prompt update.
+  c:
+    value: 7
+    evidence: >
+      Weave hosted service is free at our usage level; evaluation Claude API costs for
+      50 weekly reviews add approximately $1/week, which is entirely justified by the quality monitoring value.
+  r:
+    value: 8
+    evidence: >
+      Weave captured all production traces reliably over 6 weeks with no missing requests;
+      the asynchronous trace upload design prevented any latency impact on the production service.
+  x:
+    value: 8
+    evidence: >
+      Works alongside our existing Datadog monitoring; Weave handles LLM-specific quality
+      metrics while Datadog handles infrastructure metrics; the two systems complement each other cleanly.
+  f:
+    value: 8
+    evidence: >
+      Adding Weave to the production service required 5 lines of instrumentation code;
+      traces appeared in the Weave UI within minutes of the first instrumented request.
+verdict: >
+  Weave is effective for production LLM quality monitoring, providing automated weekly
+  evaluation and trend tracking that surfaces quality degradation before users notice it;
+  the non-intrusive instrumentation and generous free tier make it accessible for teams
+  without dedicated ML operations infrastructure.
+conflict_of_interest: none

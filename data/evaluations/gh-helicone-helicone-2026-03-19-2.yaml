@@ -1,0 +1,47 @@
+tool_id: gh-helicone-helicone
+reporter_role: small-team
+date_evaluated: "2026-03-19"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Adopted Helicone for a 5-person startup to gain visibility into Claude API costs across
+  three different product features. Used Helicone's custom properties to tag requests
+  by feature and user segment, enabling cost attribution by product area. Also tested
+  the caching feature for repeated prompt patterns in the content generation feature.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Custom property tagging enabled us to identify that our bulk export feature used
+      5x more tokens than expected, leading to a prompt optimization that reduced its cost by 70%.
+  q:
+    value: 8
+    evidence: >
+      Request logs were accurate and the custom property filtering in the dashboard worked
+      correctly; cost attribution by feature was reliable and matched our own accounting estimates.
+  c:
+    value: 7
+    evidence: >
+      Helicone's base plan covered our request volume at reasonable cost; the caching
+      feature saved approximately 15% on repeated content generation prompts, partially offsetting the tool cost.
+  r:
+    value: 8
+    evidence: >
+      Two weeks of continuous use with no proxy failures; the Helicone proxy added an
+      average of 30ms latency per request which was acceptable for our use case.
+  x:
+    value: 9
+    evidence: >
+      Works across all our services (Python backend, Node.js microservice, Claude Code sessions)
+      with the same one-line baseUrl change per service; team-wide adoption was completed in 30 minutes.
+  f:
+    value: 10
+    evidence: >
+      Single environment variable change per service; the team adopted Helicone across
+      all services in one morning without disrupting any active development work.
+verdict: >
+  Helicone is the best observability solution for small teams that need API cost visibility
+  without engineering overhead; the custom property tagging for cost attribution by feature
+  is particularly valuable for startups optimizing their AI infrastructure spend, and the
+  caching feature provides a meaningful cost reduction for repetitive prompt patterns.
+conflict_of_interest: none

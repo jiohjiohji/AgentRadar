@@ -1,0 +1,47 @@
+tool_id: gh-ithiria894-claude-code-workflows
+reporter_role: small-team
+date_evaluated: "2026-03-23"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Used the workflow recipes collection to standardize how a 4-person team uses Claude Code
+  across their development cycle. Selected and shared the PR review, code architecture review,
+  and documentation generation workflow recipes with all team members. Measured consistency
+  of Claude Code usage across team members before and after adopting shared workflows.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Team members converged on consistent Claude Code usage patterns within one sprint
+      after adopting shared recipes, reducing the time spent comparing approaches and sharing tips.
+  q:
+    value: 7
+    evidence: >
+      Code review outputs using the PR review recipe were structurally comparable across
+      team members, making review quality easier to discuss and improve collectively.
+  c:
+    value: 10
+    evidence: >
+      Zero cost resource that reduces per-session token waste from suboptimal prompting;
+      consistent workflow recipes are more token-efficient than individual ad-hoc prompt styles.
+  r:
+    value: 8
+    evidence: >
+      Recipes produce reliable output structures; the consistency comes from the recipe
+      constraining Claude's response format rather than from any runtime mechanism.
+  x:
+    value: 7
+    evidence: >
+      Recipes reference standard Claude Code tools; the collection also includes MCP-aware
+      recipes for teams using common MCP tools, which our team found valuable for filesystem workflows.
+  f:
+    value: 10
+    evidence: >
+      No setup; a team lead shared a link to the collection and team members bookmarked
+      relevant recipes; adoption required only reading the recipe descriptions.
+verdict: >
+  The awesome-claude-code-workflows collection is an underrated team productivity resource;
+  standardizing on shared workflow recipes improves team consistency and quality without
+  any infrastructure investment, making it one of the highest-ROI improvements available
+  to small teams adopting Claude Code.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-abhishekray07-claude-md-templates
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-26"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Evaluated the CLAUDE.md templates for use as a standardization foundation across a
+  large engineering organization. Assessed whether the templates could be extended with
+  enterprise-specific sections (security requirements, compliance constraints, approved
+  library lists) and maintained as a versioned internal standard.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The templates provide a good structure that accelerates creating an enterprise CLAUDE.md
+      standard; however, enterprise-specific sections (compliance, security, approved tools) required extensive additions.
+  q:
+    value: 6
+    evidence: >
+      Template quality for common sections is good; the enterprise gaps in security and
+      compliance conventions meant these critical sections had to be written from scratch rather than adapted.
+  c:
+    value: 10
+    evidence: >
+      No cost beyond developer time; the templates are freely available and the organizational
+      benefit of standardized CLAUDE.md files compounds across every repository that adopts them.
+  r:
+    value: 9
+    evidence: >
+      Template-derived CLAUDE.md files are static configuration; once reviewed and approved
+      for enterprise use, they deliver completely reliable context across all Claude Code sessions.
+  x:
+    value: 7
+    evidence: >
+      Standardized CLAUDE.md across the organization improves the quality of every Claude Code
+      interaction including MCP tool use; the context layer benefits the entire AI tool ecosystem.
+  f:
+    value: 8
+    evidence: >
+      An architect can fork the templates repository, add enterprise-specific sections,
+      and publish an internal template library in half a day without any tooling infrastructure.
+verdict: >
+  The CLAUDE.md templates provide a useful foundation for enterprise CLAUDE.md standardization
+  but are missing enterprise-critical sections around security, compliance, and approved
+  tooling; organizations should treat them as a starting point requiring 30-50% additional
+  content for enterprise contexts rather than a production-ready enterprise template.
+conflict_of_interest: none

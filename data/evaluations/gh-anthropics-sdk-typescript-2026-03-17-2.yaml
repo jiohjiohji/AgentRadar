@@ -1,0 +1,48 @@
+tool_id: gh-anthropics-sdk-typescript
+reporter_role: team-lead
+date_evaluated: "2026-03-17"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Adopted the TypeScript SDK as the standard for a team building a Claude-powered
+  document intelligence platform. Set up shared type definitions for Claude API requests
+  and responses across 5 microservices. Evaluated the SDK's suitability as a team-wide
+  standard for consistent API interaction patterns across the codebase.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Shared SDK type definitions enabled code reuse across 5 services and eliminated
+      duplicate request construction code; team velocity on Claude-powered features increased in the second sprint.
+  q:
+    value: 9
+    evidence: >
+      Type-safe responses prevented data shape mismatches that would have caused runtime
+      errors in production; the compiler caught 6 type errors during team code review that
+      would have been hard to test for manually.
+  c:
+    value: 8
+    evidence: >
+      The SDK adds no cost; its reliability and type safety reduce the engineering time
+      spent debugging Claude integration issues, which has significant indirect cost benefits at team scale.
+  r:
+    value: 9
+    evidence: >
+      Consistent SDK version pinned across all 5 services via package.json; no SDK-level
+      issues were encountered across 3 weeks of active multi-service development.
+  x:
+    value: 9
+    evidence: >
+      Works with Express, NestJS, and our internal service mesh without modification;
+      the SDK's design is framework-agnostic and the TypeScript types compose well with any Node.js framework.
+  f:
+    value: 10
+    evidence: >
+      Team onboarding to the SDK was under 10 minutes per engineer; npm install and the
+      type inference make it immediately productive without requiring documentation for basic use cases.
+verdict: >
+  The Anthropic TypeScript SDK is the recommended standard for teams building Node.js services
+  that use Claude; its type system provides team-scale benefits that go beyond individual
+  productivity, catching integration errors at compile time across service boundaries and
+  enabling confident refactoring of Claude-dependent code.
+conflict_of_interest: none

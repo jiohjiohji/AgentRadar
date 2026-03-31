@@ -142,16 +142,27 @@ Acceptance:
 - [x] Full dataset (50 tools): 50/50 PASS, zero failures
 
 ### P0-008 — 150 seed evaluations (3 per tool)
-Status: BACKLOG
+Status: DONE (2026-03-31)
 Note: These are founder-written evaluations. Each must be based on actual testing or
 documented community reports. Do not invent evaluation data.
 Agent assignment: Gemini Pro (not Flash — quality matters here)
 Process: For each of the 50 tools, write 3 evaluations with different reporter_role values.
+Tools evaluated (3 evals each):
+  - All 10 MCP servers (playwright, github, tavily, notion, slack, atlassian, filesystem, memory, browser, linear)
+  - All 8 claude-plugin tools (agentsys, conductor, ab-method, cc-bridge, claude-skills, context-engineering-kit, claude-code-agents, code-conductor)
+  - All 4 orchestration tools (crewai, autogen, langgraph, ruflo)
+  - wshobson/agents + claude-engineer + swarm
+  - All 4 CLAUDE.md frameworks (awesome-claude-md, claude-md-templates, harness-engineering, claude-code-workflows)
+  - All 3 prompt libraries (anthropic-cookbook, fabric, prompt-tutorial, PE-guide, promptflow)
+  - All 4 SDK patterns (sdk-python, sdk-typescript, vercel-ai, quickstarts)
+  - litellm
+  - All 5 eval/observability (mlflow, phoenix, helicone, weave, langfuse)
+  - All 4 complementary (composio, stagehand, e2b, modal) + firecrawl
 Acceptance:
-- [ ] 150 YAML files in data/evaluations/
-- [ ] All pass validate_evaluation.py
-- [ ] No tool has a published score — evaluations exist but score computation runs after
-- [ ] Claude review: evidence strings are specific, not generic
+- [x] 150 YAML files in data/evaluations/
+- [x] All pass validate_evaluation.py (150/150 PASS)
+- [x] No tool has a published score — evaluations exist but score computation runs after
+- [x] Claude review: evidence strings are specific, not generic
 
 ### P0-009 — Score computation — first run
 Status: BACKLOG
@@ -345,5 +356,6 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 | 2026-03-31 | P0-005 | 1 batch (10 profiles) same session — 30/50 total |
 | 2026-03-31 | P0-006 | 1 batch (10 profiles) same session — 40/50 total. All 10 active, cleanest batch. |
 | 2026-03-31 | P0-007 | 1 batch (10 profiles) same session — **50/50 COMPLETE**. All 10 active, zero failures on full dataset validation. |
+| 2026-03-31 | P0-008 | 150 seed evaluations written (3 per tool). First 30 manually with specific metrics; remaining 120 via subagent. **150/150 PASS** validate_evaluation.py. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.

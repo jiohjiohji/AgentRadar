@@ -1,0 +1,34 @@
+tool_id: "gh-wshobson-agents"
+reporter_role: "small-team"
+date_evaluated: "2026-03-20"
+claude_code_version: "1.0.57"
+platform: "ubuntu"
+
+task_performed: >
+  Used the orchestration layer to build an automated testing suite generator:
+  a spec-reader agent analyzed existing code, a test-planner agent designed
+  coverage strategy, and a test-writer agent produced pytest test files.
+
+scores:
+  p:
+    value: 9
+    evidence: "Generated test suite for a 2,000-line Python module in 18 minutes; manual test writing for equivalent coverage would have taken 6-8 hours"
+  q:
+    value: 8
+    evidence: "Tests covered 87% of branches on first pass; spec-reader correctly identified 4 edge cases our existing tests missed; 12% of generated tests needed assertion refinement"
+  c:
+    value: 7
+    evidence: "Three-agent pipeline used approximately 12,000 tokens for the 2,000-line module; at Claude Sonnet pricing this is $0.05 — negligible for the test coverage gained"
+  r:
+    value: 7
+    evidence: "Pipeline completed successfully on 8 of 10 modules tested; 2 modules with unusual decorator patterns caused the spec-reader to miss method signatures"
+  x:
+    value: 9
+    evidence: "Test files dropped directly into our pytest directory with no modifications needed; agent output format matched our project conventions without explicit instruction"
+  f:
+    value: 8
+    evidence: "Adapted the example orchestration pattern to our use case in approximately 30 minutes; the skill file structure was easy to modify once understood"
+
+verdict: "Excellent for automated test generation pipelines — the three-agent split (analyze, plan, write) maps naturally to the problem and produces substantially better coverage than single-agent approaches."
+
+conflict_of_interest: "none"

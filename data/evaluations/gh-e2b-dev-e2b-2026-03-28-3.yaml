@@ -1,0 +1,47 @@
+tool_id: gh-e2b-dev-e2b
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-28"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated E2B for enterprise deployment as a secure code execution service for a Claude-powered
+  internal data analysis platform. Assessed VPC deployment options, data residency controls,
+  network isolation for sandboxes, compliance with SOC 2 requirements, and pricing at
+  enterprise usage volumes of 10,000+ sandbox executions per month.
+scores:
+  p:
+    value: 7
+    evidence: >
+      E2B's managed sandbox infrastructure eliminated 3 months of estimated platform
+      engineering work; the enterprise plan's SLA and compliance documentation accelerated our security review.
+  q:
+    value: 8
+    evidence: >
+      Network isolation between sandboxes met our security requirements; the configurable
+      internet access controls enabled fine-grained network policy enforcement per sandbox template.
+  c:
+    value: 6
+    evidence: >
+      Enterprise pricing at 10k+ executions per month requires the enterprise plan;
+      negotiated pricing was competitive with equivalent self-hosted infrastructure costs when engineering overhead is included.
+  r:
+    value: 8
+    evidence: >
+      E2B's enterprise SLA guarantees 99.9% availability; during our 4-week evaluation
+      we observed one 3-minute degraded performance window that did not reach the threshold for SLA credit.
+  x:
+    value: 7
+    evidence: >
+      Enterprise E2B integrates with private VPC networks; connecting it to our internal
+      data lake required configuring the E2B network gateway, which required collaboration with the E2B enterprise team.
+  f:
+    value: 6
+    evidence: >
+      Enterprise onboarding required a dedicated technical account manager session and
+      security questionnaire completion; 2 weeks from initial contact to production readiness for the enterprise tier.
+verdict: >
+  E2B's enterprise tier is a credible secure code execution solution for organizations
+  with compliance requirements; the VPC deployment and SOC 2 certification address the
+  key enterprise security concerns; pricing is competitive with self-hosted alternatives
+  when engineering time is properly accounted for in the build-versus-buy analysis.
+conflict_of_interest: none

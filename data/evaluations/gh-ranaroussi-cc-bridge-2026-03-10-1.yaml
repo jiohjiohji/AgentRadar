@@ -1,0 +1,47 @@
+tool_id: gh-ranaroussi-cc-bridge
+reporter_role: developer
+date_evaluated: "2026-03-10"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Tested CC-Bridge to use Claude Code CLI as an Anthropic API compatibility layer. Attempted
+  to route calls from a Python application using the Anthropic SDK through CC-Bridge to
+  leverage Claude Code sessions instead of direct API calls. Evaluated compatibility with
+  the latest SDK, noting the stale January 2026 maintenance state.
+scores:
+  p:
+    value: 4
+    evidence: >
+      The bridging concept has appeal for reusing Claude Code sessions, but the stale January
+      2026 state meant several API response fields did not match current Anthropic SDK expectations.
+  q:
+    value: 4
+    evidence: >
+      Basic chat completions routed correctly, but tool use and streaming responses had
+      field mapping mismatches that caused 3 out of 5 test application integrations to fail.
+  c:
+    value: 6
+    evidence: >
+      The bridge routes to Claude Code CLI which manages its own billing; potential cost
+      optimization through session reuse is the value proposition, though it is hard to quantify reliably.
+  r:
+    value: 4
+    evidence: >
+      Reliability issues were linked to the stale API mapping; the Anthropic API has evolved
+      since the last update and the bridge does not handle new response fields gracefully.
+  x:
+    value: 5
+    evidence: >
+      In theory the bridge enables any Anthropic SDK application to use Claude Code; in
+      practice the API drift limits which integrations work without manual patching.
+  f:
+    value: 6
+    evidence: >
+      Installation and initial routing setup were straightforward; the friction appears
+      when integration failures require investigating the bridge's field mapping source code.
+verdict: >
+  CC-Bridge is an interesting compatibility concept that is currently impaired by its stale
+  January 2026 state; the Anthropic API has advanced faster than the bridge has been maintained,
+  making it unreliable for applications using current SDK features; developers should use the
+  Anthropic SDK directly until a maintained alternative emerges.
+conflict_of_interest: none

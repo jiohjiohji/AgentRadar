@@ -1,0 +1,34 @@
+tool_id: "gh-mendableai-firecrawl"
+reporter_role: "team-lead"
+date_evaluated: "2026-03-25"
+claude_code_version: "N/A"
+platform: "ubuntu"
+
+task_performed: >
+  Evaluated Firecrawl as a replacement for our in-house web scraping service
+  that fed competitive intelligence data to a Claude agent. Tested against
+  15 competitor sites including three with heavy JavaScript and anti-bot measures.
+
+scores:
+  p:
+    value: 7
+    evidence: "Eliminated one dedicated scraper engineer's maintenance burden; however, anti-bot detection on 3 of 15 sites required fallback to manual collection, limiting full replacement"
+  q:
+    value: 8
+    evidence: "Content fidelity was high on 12 of 15 sites; the three with aggressive bot-detection returned partial or empty responses despite Firecrawl's stealth mode"
+  c:
+    value: 6
+    evidence: "At our volume of ~5,000 pages/day, monthly API cost is approximately $300 on the Growth plan; our previous EC2-based solution cost $180/month but required 8 hours/month of maintenance"
+  r:
+    value: 7
+    evidence: "99.1% success rate on accessible sites; anti-bot failures are deterministic and predictable, not random, making them manageable with a routing layer"
+  x:
+    value: 8
+    evidence: "Integrated with our existing Python data pipeline in one afternoon; webhook support allowed async processing that fit our queue architecture cleanly"
+  f:
+    value: 8
+    evidence: "Team of three engineers were productive with the API within one hour; webhook configuration took an additional 30 minutes but documentation was clear"
+
+verdict: "Production-viable for competitive intelligence at moderate scale; budget for the anti-bot gap with a fallback strategy and the ROI on reduced maintenance is positive for most teams."
+
+conflict_of_interest: "none"

@@ -1,0 +1,47 @@
+tool_id: gh-atlassian-mcp-server
+reporter_role: developer
+date_evaluated: "2026-03-16"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Used Atlassian MCP to implement a release notes generator that queries closed Jira tickets
+  from the release version, reads their descriptions and resolution comments, and generates
+  a customer-facing changelog. Tested cross-project JQL queries spanning two Jira projects
+  and linked Confluence release note pages.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Release note generation that required an hour of manual Jira querying and writing
+      now completes in 15 minutes; the cross-project query capability was essential for our setup.
+  q:
+    value: 7
+    evidence: >
+      Ticket summaries were accurate and the tone was appropriate for customer communications;
+      a few tickets with minimal description required Claude to make assumptions that needed correction.
+  c:
+    value: 5
+    evidence: >
+      Cross-project queries returning 80+ tickets with their full descriptions created
+      large context windows; one release note generation consumed 22k tokens, costing around $1.30.
+  r:
+    value: 7
+    evidence: >
+      Across four release cycles the tool performed consistently; one failure occurred when
+      a Jira project had custom field configurations that the MCP returned as null values.
+  x:
+    value: 7
+    evidence: >
+      Reading from Jira and writing the changelog to a Confluence page in the same MCP
+      session without switching tools was a genuine workflow improvement over API-scripted alternatives.
+  f:
+    value: 6
+    evidence: >
+      Getting the JQL query syntax right for version-based ticket filters took several iterations;
+      the MCP does not surface JQL validation errors in a helpful way, making debugging tedious.
+verdict: >
+  Atlassian MCP is effective for release workflow automation particularly when tickets are
+  well-documented; sparse Jira ticket descriptions limit output quality and high token costs
+  for large releases are a consideration, but the integrated Jira-to-Confluence pipeline is
+  a genuine workflow improvement for Atlassian-native teams.
+conflict_of_interest: none

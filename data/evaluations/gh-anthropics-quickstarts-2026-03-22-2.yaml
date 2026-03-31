@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-quickstarts
+reporter_role: student
+date_evaluated: "2026-03-22"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used the Anthropic quickstarts to build a first AI application for a software engineering
+  course capstone. Selected the document Q&A quickstart, adapted it for course research papers
+  rather than business documents, and extended it with a simple Flask web UI. Evaluated the
+  learning value as a starting point for first-time Claude application developers.
+scores:
+  p:
+    value: 9
+    evidence: >
+      As a first-time Claude developer, the quickstart saved days of research into API patterns;
+      I was building new features on top of a working application rather than debugging basic setup.
+  q:
+    value: 8
+    evidence: >
+      The document Q&A quickstart's retrieval pattern was correct and the answer quality
+      was good for course paper content; the chunking strategy worked well for academic paper structure.
+  c:
+    value: 9
+    evidence: >
+      Free official code; the correct chunking and retrieval patterns prevented the token-expensive
+      mistakes that first-time developers typically make, saving API budget throughout the project.
+  r:
+    value: 9
+    evidence: >
+      The quickstart code is stable and regularly updated; I had no compatibility issues
+      on Ubuntu 24.04 and the code worked correctly without modifications for my document type.
+  x:
+    value: 7
+    evidence: >
+      The quickstart is self-contained but the patterns are extensible; I added a Flask
+      web interface and SQLite storage to the quickstart without changing the core Claude integration.
+  f:
+    value: 10
+    evidence: >
+      Clone, pip install, API key, run; working Q&A application in under 10 minutes;
+      this is genuinely the fastest path from zero Claude experience to a working application.
+verdict: >
+  Anthropic quickstarts are the recommended starting point for anyone building their first
+  Claude application; the code quality and correctness reduce the learning curve from weeks
+  to days, and the working foundation allows students to focus on learning domain logic
+  rather than API integration details.
+conflict_of_interest: none

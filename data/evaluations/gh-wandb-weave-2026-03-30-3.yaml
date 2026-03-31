@@ -1,0 +1,47 @@
+tool_id: gh-wandb-weave
+reporter_role: team-lead
+date_evaluated: "2026-03-30"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Led a team evaluation of Weave for standardizing LLM evaluation practices across a
+  data science team of 8. Conducted a comparison sprint where 4 team members used Weave
+  and 4 used MLflow for the same prompt optimization task, then compared the workflow
+  experience and evaluation result quality.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Team members using Weave completed the evaluation sprint 20% faster than the MLflow
+      group; the auto-instrumentation and built-in LLM evaluation patterns were the primary time savers.
+  q:
+    value: 8
+    evidence: >
+      Weave's structured evaluation class produced more consistent results across team members
+      than MLflow's more flexible approach; consistency is a team-level quality advantage.
+  c:
+    value: 7
+    evidence: >
+      At team scale the free tier was sufficient for our sprint usage; the WandB enterprise
+      pricing for larger teams is a consideration for budget planning beyond the startup phase.
+  r:
+    value: 8
+    evidence: >
+      No outages or data loss during the 3-day evaluation sprint; all 8 team members could
+      access shared evaluation results in real-time without any data conflicts.
+  x:
+    value: 8
+    evidence: >
+      Weave integrates with the broader WandB ecosystem; teams already using WandB for
+      ML experiment tracking will find Weave's LLM capabilities a natural extension.
+  f:
+    value: 8
+    evidence: >
+      Team onboarding averaged 25 minutes per engineer; the decorator-based instrumentation
+      was immediately intuitive for Python developers and required no framework knowledge.
+verdict: >
+  Weave is the better choice over MLflow for teams focused primarily on LLM evaluation;
+  its built-in LLM evaluation patterns and auto-instrumentation reduce setup time and improve
+  consistency, while the WandB ecosystem integration provides a growth path as teams mature
+  their AI development practices.
+conflict_of_interest: none

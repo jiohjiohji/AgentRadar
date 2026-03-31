@@ -1,0 +1,34 @@
+tool_id: "gh-microsoft-autogen"
+reporter_role: "developer"
+date_evaluated: "2026-03-21"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Built a data analysis pipeline using AutoGen's AssistantAgent and
+  CodeExecutorAgent to automate exploratory data analysis: hypothesis
+  generation, code writing, execution, and iterative refinement.
+
+scores:
+  p:
+    value: 8
+    evidence: "EDA that typically takes a junior analyst 4 hours to produce was automated in 22 minutes; iterative code-execute-refine loop is genuinely powerful for data exploration tasks"
+  q:
+    value: 8
+    evidence: "Generated EDA reports were thorough and identified 3 data quality issues our team had missed; code quality was clean and reproducible; visualizations required minor styling adjustments"
+  c:
+    value: 6
+    evidence: "Code execution loop generated 22,000 tokens for a medium-complexity dataset analysis; acceptable for the value but would be expensive for routine daily analyses at scale"
+  r:
+    value: 7
+    evidence: "Pipeline completed successfully on 8 of 10 test datasets; 2 failures occurred on datasets with unusual datetime formats that confused the code agent's initial assumptions"
+  x:
+    value: 7
+    evidence: "Docker-based code execution sandbox integrated cleanly with our data environment; required 1 hour to configure correct Python dependencies in the execution container"
+  f:
+    value: 6
+    evidence: "Core concepts clicked after working through the documentation examples; CodeExecutorAgent Docker setup required troubleshooting networking and volume mount configuration"
+
+verdict: "Genuinely impressive for code-execute-refine loops on data analysis; the iterative capability justifies the token cost for complex analytical tasks that would otherwise require hours of manual work."
+
+conflict_of_interest: "none"

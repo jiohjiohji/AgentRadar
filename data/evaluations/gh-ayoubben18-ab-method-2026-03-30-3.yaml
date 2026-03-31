@@ -1,0 +1,47 @@
+tool_id: gh-ayoubben18-ab-method
+reporter_role: small-team
+date_evaluated: "2026-03-30"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Attempted to use AB-method for a small team's product planning workflow. Two team members
+  tried adopting the mission-driven subagent framework for competitive analysis and feature
+  prioritization tasks. Evaluated team adoption friction and whether the stale November 2025
+  state of the project impacted day-to-day use.
+scores:
+  p:
+    value: 4
+    evidence: >
+      One team member found the mission framing helpful; the other preferred direct prompting
+      and found the template overhead slowed them down without clear quality benefit for their tasks.
+  q:
+    value: 5
+    evidence: >
+      Product planning outputs from the mission-structured approach were well-organized but
+      not noticeably more accurate than direct prompting; the structure benefited format more than content.
+  c:
+    value: 6
+    evidence: >
+      No additional tool costs; the methodology is free to use and the token overhead
+      from mission templates is negligible relative to the task content itself.
+  r:
+    value: 4
+    evidence: >
+      The stale templates required team members to debug broken syntax twice in one week;
+      for a tool competing for time with direct Claude Code use, reliability matters for adoption.
+  x:
+    value: 5
+    evidence: >
+      Works alongside existing Claude Code configurations without any integration steps;
+      composability is not a differentiator since the methodology adds no new tools.
+  f:
+    value: 5
+    evidence: >
+      Team adoption required a 30-minute explanation session and individual setup time to
+      update templates; a stale tool demands more onboarding than a maintained one.
+verdict: >
+  AB-method has conceptual merit for teams wanting structured subagent coordination, but
+  the stale November 2025 state creates adoption friction that discourages consistent team use;
+  teams should treat it as a source of patterns to adapt rather than a maintained framework
+  to adopt wholesale.
+conflict_of_interest: none

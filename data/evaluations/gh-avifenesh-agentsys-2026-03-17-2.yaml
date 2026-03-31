@@ -1,0 +1,47 @@
+tool_id: gh-avifenesh-agentsys
+reporter_role: team-lead
+date_evaluated: "2026-03-17"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Piloted AgentSys with a 3-person team for one sprint, using the project management,
+  code review, and bug analysis agent skills. Assessed whether the pre-built agents
+  provide enough value to justify the setup and learning curve for a team that already
+  has established Claude Code workflows.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Team members with existing Claude Code habits saw modest improvements; the agents added
+      value mainly for newer team members who lacked prompt engineering experience for specialized tasks.
+  q:
+    value: 6
+    evidence: >
+      Bug analysis agent identified 3 of 5 planted bugs in test code correctly; it missed
+      two subtle concurrency issues that required more domain context than the agent template provided.
+  c:
+    value: 5
+    evidence: >
+      The orchestration layer adds 20-30% token overhead compared to direct Claude prompts
+      for equivalent tasks; for a team doing hundreds of agent calls daily this cost is material.
+  r:
+    value: 7
+    evidence: >
+      The agents were consistently available and functional throughout the sprint week;
+      no crashes or framework failures, though output quality varied with code complexity.
+  x:
+    value: 6
+    evidence: >
+      Integration with our existing MCP tools required adding explicit tool references to
+      the agent configurations; out of the box the agents assume a default tool set that did not match ours.
+  f:
+    value: 5
+    evidence: >
+      Onboarding the team took a half day; each member needed to understand the plugin
+      manifest format and agent invocation syntax before contributing to agent configurations.
+verdict: >
+  AgentSys offers a structured agent library that benefits teams starting with AI-assisted
+  development, but experienced Claude Code users may find the framework overhead and template
+  limitations add more friction than value; the orchestration costs and learning curve favor
+  adoption by teams with lower existing AI workflow maturity.
+conflict_of_interest: none

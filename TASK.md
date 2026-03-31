@@ -1,70 +1,81 @@
-# TASK: p0-008-seed-evaluations
+# TASK: p0-009-score-computation
 # Date: 2026-03-31 | Phase: 0
 # Status: BACKLOG
 
 ## MUSK 5-RULES PRE-CHECK
 
 ### Rule 1 — Is this requirement legitimate?
-Who asked for this: Sprint plan P0-008 — no scores exist until evaluations are written.
-What breaks without it: Score computation (P0-009) cannot run. The dataset is profiles only.
+Who asked for this: Sprint plan P0-009 — 150 evaluations exist but no scores are published.
+What breaks without it: The entire value proposition of AgentRadar (ranked, comparable scores) is blocked.
 Decision: PROCEED
 
 ### Rule 2 — What can be deleted first?
-Write 3 evaluations per tool × 50 tools = 150. Start with 10 tools (30 evals), validate quality, then batch the rest.
-Do NOT write evaluations for tools where you have no actual usage data. Flag these as needing community contribution.
+Do not build a complex scoring engine. A simple aggregation script (mean of dimension values,
+confidence from eval count, CoI filtering) is sufficient. No ML, no weighting algorithms yet.
 
 ### Rule 3 — Simplest implementation?
-Use validate_evaluation.py to gate every batch. Write in groups of 10 tools (30 evals), validate, then continue.
+scripts/score_computation.py reads data/evaluations/*.yaml, groups by tool_id, computes:
+  - dimension means (p, q, c, r, x, f) across all clean evals
+  - composite score (mean of 6 dimensions)
+  - confidence: LOW (<3 evals), MED (3–9 evals), HIGH (10+ evals)
+  - Writes scores to each tool profile in data/tools/[tool-id].yaml
 
 ### Rule 4 — What slowed last time?
-Profiles were the easy part — data came from GitHub API.
-Evaluations require actual usage evidence. This is harder. Do not invent.
+Profile write collisions — evaluation writing conflicted when multiple agents shared state.
+For score computation: run as a single sequential script, not distributed.
 
 ### Rule 5 — What to automate?
-Evaluation ingestion (community PRs → auto-validate → queue for review) is the P1 automation target.
+Score recomputation should run in GitHub Actions on every merged evaluation PR.
+Implement the local script first; wire up Actions in P0-011.
 
 ---
 
 ## PROCESS
 
-### Per evaluation file: data/evaluations/[tool-id]-[N].yaml
-Required fields (check validate_evaluation.py for exact schema):
-- tool_id (must match a profile in data/tools/)
-- reporter_role (developer / team-lead / researcher / student / etc.)
-- coi_declared (boolean — conflict of interest disclosure)
-- evidence (specific, not generic — "increased PR review speed by 40%" not "very useful")
-- date_tested (YYYY-MM-DD)
-- dimensions (p, q, c, r, x, f — scores 0-10 or null if untested)
+### Score computation logic
+Input: data/evaluations/*.yaml (150 files, 3 per tool)
+Output: scores block in each data/tools/[tool-id].yaml
 
-### Quality gate (from AGENTS.md + PRD)
-- evidence strings must be specific — reject generic claims
-- coi_declared must be present on every eval
-- Tool authors cannot evaluate their own tool
-- Scores must come from actual testing, not reputation
+1. Load all evaluations, group by tool_id
+2. Filter: discard any eval where conflict_of_interest is not "none" (CoI filtering)
+3. For each tool, compute per-dimension mean (values 0–10, null scores excluded from mean)
+4. Compute composite = mean(p, q, c, r, x, f)
+5. Assign confidence:
+   - LOW: 1–2 clean evals
+   - MED: 3–9 clean evals
+   - HIGH: 10+ clean evals
+6. Write scores block to tool profile:
+   ```yaml
+   scores:
+     p: 8.3
+     q: 7.7
+     c: 6.0
+     r: 8.0
+     x: 8.3
+     f: 6.3
+     composite: 7.4
+     confidence: MED
+     eval_count: 3
+     last_computed: "2026-03-31"
+   ```
 
-### Priority order for first 30 evals (10 tools × 3 each)
-Start with the 10 highest-star active tools across all categories:
-  1. Firecrawl (101.6k) — complementary
-  2. Fabric (40.3k) — prompt-library
-  3. CrewAI (47.7k) — orchestration
-  4. wshobson/agents (32.6k) — orchestration
-  5. Anthropic Cookbook (36.8k) — prompt-library
-  6. AutoGen (56.5k) — orchestration
-  7. LangGraph (28k) — orchestration
-  8. TÂCHES (45.6k) — claudemd-framework
-  9. LiteLLM (41.6k) — sdk-pattern
-  10. Ruflo/claude-flow (28.8k) — orchestration
+### Quality gate
+- Validate all tool profiles still pass validate_yaml.py after scores are written
+- Confirm no tool has scores from CoI-flagged evaluations
+- Spot-check: manually verify 5 tool score computations match expected values
 
 ---
 
 ## ACCEPTANCE CRITERIA
-- [ ] scripts/validate_evaluation.py exists and catches missing CoI field
-- [ ] First 30 evaluations (10 tools) pass validate_evaluation.py
-- [ ] All 150 evaluations pass validate_evaluation.py
-- [ ] Evidence strings reviewed: no generic claims
-- [ ] No tool has evaluations from its own author
+- [ ] scripts/score_computation.py exists and runs without errors
+- [ ] All 50 tools with 3+ evaluations have scores written to their profiles
+- [ ] All published scores include confidence level (LOW/MED/HIGH)
+- [ ] Score history: last_computed date present on every scored tool
+- [ ] No tool has scores from CoI-flagged evaluations
+- [ ] All 50 tool profiles still pass validate_yaml.py after score write
+- [ ] Spot-check: 5 manually verified computations match script output
 - [ ] Claude review: PASS
-- [ ] Committed
+- [ ] Committed on feature/p0-009-score-computation branch
 
 ## NEXT TASK
-p0-009-score-computation
+p0-010-versus-pages

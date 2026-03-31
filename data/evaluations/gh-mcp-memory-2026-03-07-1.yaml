@@ -1,0 +1,47 @@
+tool_id: gh-mcp-memory
+reporter_role: developer
+date_evaluated: "2026-03-07"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the memory MCP to build a persistent knowledge graph for a software architecture
+  assistant. Entities representing services, teams, and dependencies were created and linked.
+  Claude used the graph to answer architecture questions across separate sessions, retrieving
+  relevant context without re-loading source documentation each time.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Cross-session context retrieval reduced repetitive context-setting prompts; however,
+      the knowledge graph setup itself required significant initial investment in entity definition.
+  q:
+    value: 6
+    evidence: >
+      Entity retrieval was accurate when the query matched stored entity names; fuzzy concept
+      queries that required semantic matching returned incomplete results since the graph uses exact matching.
+  c:
+    value: 7
+    evidence: >
+      Once the knowledge graph is populated, each query consumes only the retrieved entities
+      rather than full documents, reducing per-query token usage compared to embedding full docs in context.
+  r:
+    value: 7
+    evidence: >
+      The local JSON-based storage is reliable and persistent across restarts; no data loss
+      observed over two weeks of use, though there is no built-in backup mechanism.
+  x:
+    value: 6
+    evidence: >
+      The memory MCP can store outputs from other tools as entities, but the entity schema
+      is fixed and composing it with structured data from GitHub or Jira MCPs requires manual formatting.
+  f:
+    value: 8
+    evidence: >
+      No external dependencies; the knowledge graph starts empty and is populated through
+      Claude tool calls immediately after the one-line MCP config addition.
+verdict: >
+  The memory MCP provides a useful lightweight persistence layer for agents that need to
+  remember structured facts across sessions; its exact-match retrieval limits it to
+  well-defined entity domains, and it lacks the semantic search capabilities that would
+  make it truly powerful as a general-purpose agent memory system.
+conflict_of_interest: none

@@ -1,0 +1,48 @@
+tool_id: gh-undeadlist-claude-code-agents
+reporter_role: student
+date_evaluated: "2026-03-28"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Applied several agent templates from the collection to a class project: web application
+  design, backend API implementation, and automated test generation for a full-stack Todo
+  app. As a beginner Claude Code user, evaluated whether the templates provided sufficient
+  guidance to produce usable outputs without deep prompt engineering knowledge.
+scores:
+  p:
+    value: 8
+    evidence: >
+      The implementation and test generation templates guided Claude to produce working
+      React components and Express routes that I only needed to lightly customize; saving
+      an estimated 4 hours compared to my previous trial-and-error prompt approach.
+  q:
+    value: 7
+    evidence: >
+      Implementation quality was solid for standard CRUD patterns; the test generation
+      template produced tests with proper jest structure though mock setup needed manual correction for my DB layer.
+  c:
+    value: 8
+    evidence: >
+      Concise templates kept token usage low and predictable; I stayed well within my
+      monthly Claude Code budget while completing all project components with template-guided agents.
+  r:
+    value: 8
+    evidence: >
+      Running the same template twice for a similar component produced nearly identical
+      structural output; I could predict what I would get, which helped me plan my work.
+  x:
+    value: 7
+    evidence: >
+      Templates worked naturally within Claude Code without any additional setup; I was
+      able to chain the design agent output as context for the implementation agent in one session.
+  f:
+    value: 10
+    evidence: >
+      Copied template files to my Claude Code agents folder and they were immediately
+      available; no configuration, no dependencies, no documentation to read beyond the template descriptions.
+verdict: >
+  For students and developers new to Claude Code, these agent templates dramatically reduce
+  the barrier to getting high-quality outputs; the templates encode best-practice prompt
+  engineering that beginners would take hours to discover independently, making this collection
+  a high-value starting kit.
+conflict_of_interest: none

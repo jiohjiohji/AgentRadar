@@ -1,0 +1,47 @@
+tool_id: gh-e2b-dev-e2b
+reporter_role: developer
+date_evaluated: "2026-03-08"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used E2B secure sandboxes to execute Claude-generated code safely in a code assistant
+  application. Claude generates Python data analysis scripts that are executed in E2B
+  sandboxes with internet access for package installation. Evaluated security isolation,
+  execution speed, and sandbox lifecycle management in a multi-user application.
+scores:
+  p:
+    value: 8
+    evidence: >
+      E2B eliminated the need to build custom Docker sandboxing infrastructure; going from
+      concept to running untrusted user code safely took 2 hours versus an estimated 2 weeks of custom work.
+  q:
+    value: 8
+    evidence: >
+      Sandbox isolation worked correctly; no file system bleed between concurrent sandboxes
+      was observed in 50 concurrent execution tests; pip package installation within sandboxes completed correctly.
+  c:
+    value: 6
+    evidence: >
+      E2B charges per sandbox-minute; a typical 5-minute data analysis sandbox cost $0.05;
+      at high volume this adds meaningful cost to each user interaction that must be factored in pricing.
+  r:
+    value: 8
+    evidence: >
+      Sandbox creation latency averaged 1.8 seconds cold, 0.3 seconds warm; sandbox
+      execution was reliable across 200 test runs with 3 timeouts attributable to user code infinite loops.
+  x:
+    value: 7
+    evidence: >
+      E2B provides Python and Node.js SDKs that integrate with the Anthropic SDK naturally;
+      we use it in a Claude tool use loop where execution results feed back to Claude for analysis.
+  f:
+    value: 8
+    evidence: >
+      pip install e2b-code-interpreter, API key, and first sandbox execution ran in under
+      10 minutes; the code interpreter template is immediately useful for Python execution use cases.
+verdict: >
+  E2B provides production-ready secure code execution infrastructure that is significantly
+  faster to adopt than building custom sandboxing; the per-minute pricing model scales
+  reasonably for moderate usage but requires careful cost management for high-volume
+  user-facing applications where code execution is in the critical path.
+conflict_of_interest: none

@@ -1,0 +1,48 @@
+tool_id: gh-vercel-ai
+reporter_role: team-lead
+date_evaluated: "2026-03-20"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Led adoption of the Vercel AI SDK as the standard for building LLM-powered features
+  across a SaaS product's Next.js frontend. Evaluated the SDK for document summarization,
+  structured data extraction, and conversational search features. Tested multi-provider
+  support to maintain optionality between Claude and other models.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Common LLM feature patterns (streaming chat, structured extraction, summarization)
+      are implemented in days rather than weeks with the SDK; the provider abstraction prevented
+      two planned model migration projects from requiring application code changes.
+  q:
+    value: 8
+    evidence: >
+      Structured output via the SDK's generateObject function with Zod schemas worked
+      reliably for our extraction use cases; the typed return values integrated cleanly with our TypeScript service layer.
+  c:
+    value: 7
+    evidence: >
+      The SDK's streaming reduces time-to-first-token for users but does not reduce API
+      costs; multi-model routing adds flexibility but requires careful prompt testing per model to maintain quality.
+  r:
+    value: 8
+    evidence: >
+      The SDK has been stable across 3 minor version updates over 6 weeks; the Vercel
+      team's active maintenance and breaking change documentation made updates low-risk.
+  x:
+    value: 9
+    evidence: >
+      Deep Next.js integration means the SDK composes with App Router, Middleware, and
+      Vercel Functions natively; teams using non-Next.js React frameworks have fewer conveniences.
+  f:
+    value: 9
+    evidence: >
+      npm install ai @ai-sdk/anthropic and the first streaming completion runs in minutes;
+      the TypeScript types make the API self-documenting for experienced TypeScript developers.
+verdict: >
+  The Vercel AI SDK is the productivity-maximizing choice for Next.js teams building
+  Claude-powered features; its abstractions over streaming, structured output, and multi-model
+  support address the core challenges of production LLM integration and the active maintenance
+  makes it a safe long-term dependency.
+conflict_of_interest: none

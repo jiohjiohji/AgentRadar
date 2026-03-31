@@ -1,0 +1,48 @@
+tool_id: gh-anthropics-prompt-tutorial
+reporter_role: developer
+date_evaluated: "2026-03-19"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used the interactive tutorial as a team onboarding resource for 5 engineers new to
+  Claude and prompt engineering. Assigned specific chapters based on each engineer's use
+  case and tracked completion and self-reported understanding improvement. Evaluated the
+  tutorial's suitability as a structured onboarding curriculum.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Engineers who completed the tutorial required fewer corrections to their Claude prompts
+      within the first week; two engineers reported the structured output chapter immediately
+      improved their API integration work.
+  q:
+    value: 9
+    evidence: >
+      Tutorial content is authoritative and accurate; the exercises are the right difficulty
+      for experienced developers learning prompt engineering for the first time.
+  c:
+    value: 10
+    evidence: >
+      Free and official; using it as an onboarding resource incurs no cost beyond engineer
+      time and the knowledge transfer benefits compound across all future Claude usage.
+  r:
+    value: 9
+    evidence: >
+      The tutorial content is well-maintained by Anthropic and accurately reflects current
+      Claude behavior; exercises ran correctly across Ubuntu 22.04 and 24.04 without issues.
+  x:
+    value: 7
+    evidence: >
+      Prompt engineering skills learned apply directly to Claude Code workflows, MCP tool
+      prompting, and agent design; the tutorial foundational knowledge enables better use of all Claude tools.
+  f:
+    value: 9
+    evidence: >
+      pip install requirements.txt and jupyter notebook; straightforward for developers
+      and the tutorial handles API configuration clearly for those setting up Claude access for the first time.
+verdict: >
+  The Anthropic prompt engineering tutorial is the recommended first-step resource for any
+  engineer adopting Claude in their workflow; its authoritative content, clear exercises,
+  and free availability make it the highest-ROI educational investment in the Anthropic
+  tooling ecosystem.
+conflict_of_interest: none

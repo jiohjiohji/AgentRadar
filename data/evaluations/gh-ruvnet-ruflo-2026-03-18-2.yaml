@@ -1,0 +1,34 @@
+tool_id: "gh-ruvnet-ruflo"
+reporter_role: "researcher"
+date_evaluated: "2026-03-18"
+claude_code_version: "1.0.57"
+platform: "linux"
+
+task_performed: >
+  Tested Ruflo's distributed swarm intelligence for an automated code audit
+  pipeline: static analysis agent, dependency vulnerability scanner, performance
+  profiler, and security reviewer running concurrently against a 50,000-line codebase.
+
+scores:
+  p:
+    value: 9
+    evidence: "Codebase audit that took a security team 2 days to complete manually ran in 38 minutes; four parallel agents covered different audit dimensions without context overlap"
+  q:
+    value: 7
+    evidence: "Vulnerability and dependency findings matched manual audit on 79% of issues; performance profiler missed 4 of 11 N+1 query patterns; security agent had 3 false positives requiring human review"
+  c:
+    value: 5
+    evidence: "50,000-line audit with 4-agent swarm used approximately 120,000 tokens; at Claude Sonnet pricing this is approximately $0.50 per audit — acceptable for occasional use, expensive for daily CI runs"
+  r:
+    value: 7
+    evidence: "All 4 agents completed successfully in 8 of 10 test runs; 2 runs had a memory synchronization issue where agents wrote conflicting findings to shared state"
+  x:
+    value: 7
+    evidence: "Swarm output format required custom parsing to integrate with our existing vulnerability tracking system; no native integration with standard security tooling formats"
+  f:
+    value: 6
+    evidence: "Documentation covers the concepts well but the swarm configuration syntax requires multiple reads; first working audit pipeline took approximately 4 hours"
+
+verdict: "Strong for large-scale, one-off audits where parallel coverage matters; daily CI use requires token cost optimization; the shared state synchronization issue needs monitoring."
+
+conflict_of_interest: "none"

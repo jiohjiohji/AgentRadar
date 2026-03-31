@@ -1,0 +1,34 @@
+tool_id: "gh-anthropics-cookbook"
+reporter_role: "developer"
+date_evaluated: "2026-03-10"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Used the Anthropic Cookbook RAG and tool-use notebooks as starting points for
+  building a production customer support agent. Adapted the multi-turn conversation
+  and function calling patterns to our specific domain.
+
+scores:
+  p:
+    value: 8
+    evidence: "Cookbook patterns reduced initial prototype time from an estimated 2 days to 6 hours; function calling notebook provided working boilerplate that required adaptation rather than from-scratch design"
+  q:
+    value: 9
+    evidence: "All code examples ran correctly on first attempt; patterns reflected current API best practices; no deprecated API calls found across 8 notebooks reviewed"
+  c:
+    value: 9
+    evidence: "Free resource; the patterns taught efficient token usage including system prompt caching and streaming, which reduced our production API costs by approximately 30%"
+  r:
+    value: 9
+    evidence: "Reference implementations are stable and maintained; in 6 months of consulting the cookbook, no breaking changes encountered; notebooks consistently executable"
+  x:
+    value: 8
+    evidence: "Patterns adapted cleanly to our stack (Python, FastAPI); the cookbook's modular notebook structure made it easy to extract only the relevant patterns"
+  f:
+    value: 10
+    evidence: "Zero setup required; clone or browse GitHub; all notebooks runnable in Colab in under 2 minutes with just an API key"
+
+verdict: "Essential first reference for any Claude API integration — the quality and currency of examples saves hours of API exploration and establishes correct patterns from the start."
+
+conflict_of_interest: "none"

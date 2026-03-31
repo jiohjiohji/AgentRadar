@@ -1,0 +1,34 @@
+tool_id: "gh-wshobson-agents"
+reporter_role: "developer"
+date_evaluated: "2026-03-05"
+claude_code_version: "1.0.57"
+platform: "macos"
+
+task_performed: >
+  Used wshobson/agents to implement a full-stack feature: new REST API endpoint,
+  database migration, unit tests, and React component, coordinating a
+  backend-architect agent and a frontend-developer agent running in parallel.
+
+scores:
+  p:
+    value: 9
+    evidence: "Full-stack feature that normally takes me 3-4 hours completed in 55 minutes with minimal intervention; agent coordination eliminated the mental context-switching between backend and frontend"
+  q:
+    value: 8
+    evidence: "Code passed review on first pass for the backend agent output; frontend component required one round of feedback for prop types and accessibility; migration was correct"
+  c:
+    value: 7
+    evidence: "Two parallel agents used approximately 8,000 tokens for the feature; comparable to doing it sequentially in one context but faster — token cost was not the constraint"
+  r:
+    value: 8
+    evidence: "Completed successfully on 9 of 10 feature implementations over one month; one run produced a migration that conflicted with an existing index, requiring manual correction"
+  x:
+    value: 9
+    evidence: "Skills from existing Claude Code session carried over directly; adding the orchestration layer required zero changes to my existing CLAUDE.md or tool configuration"
+  f:
+    value: 8
+    evidence: "Clone, read the README, add agents to CLAUDE.md — productive in 20 minutes; parallel agent configuration required reading one example skill file to understand the pattern"
+
+verdict: "Best multi-agent orchestration for Claude Code native workflows — the skills-based architecture fits naturally into existing Claude Code setups without requiring a separate framework."
+
+conflict_of_interest: "none"

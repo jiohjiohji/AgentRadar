@@ -1,0 +1,47 @@
+tool_id: gh-vercel-ai
+reporter_role: student
+date_evaluated: "2026-03-29"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used the Vercel AI SDK for a hackathon project: a Claude-powered recipe generator with
+  streaming output and a multi-turn conversation UI. Built in Next.js using the useChat
+  hook and Anthropic provider. The entire project was completed in 24 hours including
+  UI polish and deployment to Vercel.
+scores:
+  p:
+    value: 10
+    evidence: >
+      The useChat hook handled all streaming state management that would have taken most
+      of the hackathon time to implement manually; I could focus entirely on the recipe logic and UI design.
+  q:
+    value: 8
+    evidence: >
+      Streaming worked perfectly in the deployed Vercel environment with no cold-start issues;
+      the conversation history management in useChat was correct and handled context correctly.
+  c:
+    value: 8
+    evidence: >
+      No additional cost from the SDK itself; using Haiku for development kept API costs
+      under $2 for the entire hackathon, which the SDK's model switching made easy.
+  r:
+    value: 9
+    evidence: >
+      The application ran without SDK-level errors throughout the hackathon demo day with
+      multiple concurrent users; Vercel's serverless infrastructure and the SDK handled concurrency correctly.
+  x:
+    value: 9
+    evidence: >
+      One-click Vercel deployment with the AI SDK preconfigured; the platform and SDK
+      are designed together and the deployment experience reflected that deep integration.
+  f:
+    value: 10
+    evidence: >
+      The Vercel AI template gave me a working streaming chat interface in 3 minutes;
+      a hackathon contestant with basic Next.js knowledge can be productive immediately.
+verdict: >
+  The Vercel AI SDK is the best tool for hackathon and rapid prototype development with
+  Claude; the useChat hook eliminates the most time-consuming streaming implementation
+  work and the Vercel deployment integration means a polished demo is achievable in hours
+  rather than days.
+conflict_of_interest: none

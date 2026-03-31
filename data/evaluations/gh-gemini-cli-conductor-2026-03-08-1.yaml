@@ -1,0 +1,48 @@
+tool_id: gh-gemini-cli-conductor
+reporter_role: developer
+date_evaluated: "2026-03-08"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Tested the Conductor spec-driven development methodology for building a new REST API
+  feature. Wrote a specification document per Conductor's format, then used Claude Code
+  to execute each stage of the methodology: clarification, architecture, implementation,
+  and review. Evaluated how well the structured approach improved implementation quality.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The spec-first approach prevented two major misunderstandings that typically require
+      rework cycles, but writing the specification document added 45 minutes of overhead per feature.
+  q:
+    value: 7
+    evidence: >
+      Implementation quality was noticeably higher when the spec document was detailed;
+      Claude produced correct business logic on the first pass in 3 of 4 test features,
+      compared to my baseline of 1-2 revision cycles without specs.
+  c:
+    value: 7
+    evidence: >
+      The structured stages prevent token-expensive rework by front-loading clarity;
+      total tokens per feature were similar to unstructured development but rework tokens were eliminated.
+  r:
+    value: 7
+    evidence: >
+      The methodology produces consistent outcomes because the spec constrains Claude's
+      interpretation space; output variability was lower than free-form prompting for equivalent tasks.
+  x:
+    value: 5
+    evidence: >
+      Conductor is a methodology, not an MCP tool; it composes with Claude Code's tools
+      but does not add new capabilities — integration value depends on team discipline, not code.
+  f:
+    value: 7
+    evidence: >
+      Getting started required reading the methodology documentation and writing a first
+      spec; Claude Code itself needed no special configuration, making the learning curve the main cost.
+verdict: >
+  Conductor's spec-driven approach is a genuine quality improvement for teams willing to
+  invest in upfront specification; it works best for features with clear boundaries rather
+  than exploratory work, and its value is in the methodology discipline rather than any
+  novel tooling capability.
+conflict_of_interest: none

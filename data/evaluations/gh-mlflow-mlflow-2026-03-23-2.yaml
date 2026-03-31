@@ -1,0 +1,48 @@
+tool_id: gh-mlflow-mlflow
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-23"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated MLflow for enterprise LLM experiment tracking across a data science team of
+  20 researchers. Assessed MLflow Tracking Server deployment with PostgreSQL backend,
+  artifact storage with S3, RBAC configuration, and integration with our existing ML
+  infrastructure for both traditional ML and LLM workloads.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Centralized experiment tracking eliminated the "results in emails" problem that
+      plagued our research team; researchers can now compare any colleague's LLM experiment
+      results in the shared UI without requesting exports.
+  q:
+    value: 8
+    evidence: >
+      The PostgreSQL-backed tracking server handled concurrent logging from 20 researchers
+      without contention; experiment metadata and artifact pointers were consistently accurate.
+  c:
+    value: 8
+    evidence: >
+      MLflow is open source with no licensing cost at any scale; infrastructure cost is
+      the PostgreSQL instance and S3 storage, which are standard enterprise expenses already in our budget.
+  r:
+    value: 8
+    evidence: >
+      After initial deployment stabilization, the production MLflow server ran without
+      incidents for 5 weeks; S3 artifact storage has been completely reliable.
+  x:
+    value: 8
+    evidence: >
+      Integrates with Databricks, SageMaker, and standard Python ML frameworks; connecting
+      it to our Claude experiment code required 30 lines of mlflow.log_param/log_metric calls.
+  f:
+    value: 6
+    evidence: >
+      Enterprise deployment with PostgreSQL and S3 configuration required an MLflow-experienced
+      engineer 2 days to set up correctly; the default local SQLite configuration is trivial but not enterprise-suitable.
+verdict: >
+  MLflow is enterprise-ready for LLM experiment tracking and scales well to large research
+  teams; the open-source model, PostgreSQL/S3 backend options, and broad ML ecosystem
+  integration make it a sound long-term platform choice; enterprise setup requires dedicated
+  infrastructure work but the operational investment pays off at team scale.
+conflict_of_interest: none

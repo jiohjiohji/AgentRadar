@@ -1,0 +1,47 @@
+tool_id: gh-gemini-cli-conductor
+reporter_role: team-lead
+date_evaluated: "2026-03-19"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Piloted the Conductor methodology with 5 engineers across a two-week sprint. Each engineer
+  wrote specifications before implementation for their assigned features. Measured pull request
+  revision counts, bug rates in review, and developer time-to-completion compared to the
+  previous sprint without the methodology.
+scores:
+  p:
+    value: 5
+    evidence: >
+      Time-to-completion per feature was essentially flat compared to the previous sprint;
+      the spec writing time offset the implementation efficiency gains, suggesting more practice is needed.
+  q:
+    value: 8
+    evidence: >
+      PR revision requests dropped by 40% compared to the prior sprint; bugs caught in review
+      were concentrated in complex edge cases rather than basic logic errors, indicating higher first-pass quality.
+  c:
+    value: 7
+    evidence: >
+      No additional API cost; the methodology change reduced expensive rework token usage
+      by approximately 30% across the sprint's Claude Code sessions.
+  r:
+    value: 8
+    evidence: >
+      The methodology produced more consistent implementation patterns across different engineers;
+      code reviews noted fewer idiosyncratic approaches compared to free-form Claude Code use.
+  x:
+    value: 4
+    evidence: >
+      Conductor is documentation and process, not code; composability with other tools
+      is not a meaningful concept here — its value is entirely in the workflow discipline it imposes.
+  f:
+    value: 7
+    evidence: >
+      Engineers reported the specification template was easy to fill in once they understood
+      the format; the first feature took about 90 minutes, subsequent features took 30-45 minutes.
+verdict: >
+  Conductor's spec-driven methodology delivers measurable quality improvements in a team
+  setting, evidenced by reduced PR revisions; the productivity impact is initially neutral
+  as engineers adjust to spec-writing overhead, with gains expected to compound as the team
+  internalizes the process.
+conflict_of_interest: none

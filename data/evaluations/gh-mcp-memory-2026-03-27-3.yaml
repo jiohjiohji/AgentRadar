@@ -1,0 +1,47 @@
+tool_id: gh-mcp-memory
+reporter_role: small-team
+date_evaluated: "2026-03-27"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Deployed the memory MCP as a shared customer context store for a 4-person sales support
+  team. Claude stores customer preferences, past conversation summaries, and product fit
+  notes as entities. Team members query Claude using the memory MCP at the start of each
+  customer call to retrieve context without reading full CRM notes.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Pre-call context retrieval improved from reading 5 minutes of CRM notes to a 30-second
+      Claude query; however, keeping the knowledge graph updated requires disciplined data entry.
+  q:
+    value: 7
+    evidence: >
+      Entity retrieval for specific customers was accurate and the stored observations were
+      returned in full; quality depends entirely on the quality of what was stored originally.
+  c:
+    value: 8
+    evidence: >
+      The memory MCP has no external cost and retrieval queries are lightweight on tokens;
+      total Claude cost for context queries across the team was under $5 per month.
+  r:
+    value: 7
+    evidence: >
+      The local JSON file storing the knowledge graph created a single point of failure
+      when one team member's laptop was the host; migrating to a shared network path resolved this.
+  x:
+    value: 5
+    evidence: >
+      The memory graph is isolated from our CRM; maintaining two sources of customer truth
+      created confusion about which was authoritative and required manual sync discipline from the team.
+  f:
+    value: 8
+    evidence: >
+      Team members could start querying customer context on day one after the initial
+      knowledge graph was populated by one team member; no individual setup required per user.
+verdict: >
+  The memory MCP works well as a lightweight customer context layer for small teams willing
+  to maintain it, but the lack of CRM integration and single-file storage model create
+  operational friction at team scale; it is best suited for personal use or very small teams
+  with clear ownership of the knowledge graph.
+conflict_of_interest: none

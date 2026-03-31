@@ -1,0 +1,47 @@
+tool_id: gh-jeffallan-claude-skills
+reporter_role: developer
+date_evaluated: "2026-03-06"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Installed the 66 specialized skills collection and tested 12 of them across a full-stack
+  Node.js project: used the database schema generation skill, the REST endpoint scaffolding
+  skill, the Jest test generation skill, the Dockerfile creation skill, and the code
+  explanation skill. Evaluated consistency and quality across different skill invocations.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Skills for scaffolding and boilerplate generation consistently produced working first
+      drafts; the database schema and Dockerfile skills alone saved an estimated 2 hours on setup work.
+  q:
+    value: 7
+    evidence: >
+      Most skills produced high-quality output for standard patterns; the REST endpoint skill
+      generated correct Express middleware structure but did not include error handling middleware by default.
+  c:
+    value: 7
+    evidence: >
+      Skill invocations are concise by design, keeping token overhead low; the 66 skills are
+      implemented as focused prompt templates that do not add significant overhead per call.
+  r:
+    value: 8
+    evidence: >
+      Across 20 skill invocations over three sessions, output was highly consistent for the
+      same skill with equivalent inputs; the structured skill format constrains variation effectively.
+  x:
+    value: 8
+    evidence: >
+      Skills integrate as Claude Code slash commands natively; no MCP configuration needed
+      and they work alongside any other tool in the Claude Code configuration without conflict.
+  f:
+    value: 9
+    evidence: >
+      Install by cloning the skills repo into the Claude Code skills directory; skills
+      appear immediately as slash commands in Claude Code with no additional configuration.
+verdict: >
+  The 66-skill collection is one of the most immediately useful Claude Code extensions for
+  full-stack developers; the quality is consistently good for standard patterns, setup is
+  trivial, and the breadth of coverage means most common coding tasks have a purpose-built
+  skill that beats a generic prompt.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-jerhadf-linear-mcp
+reporter_role: small-team
+date_evaluated: "2026-03-17"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Used the archived Linear MCP to automate sprint retrospective data collection for a
+  startup team. Claude queried completed issues from the last sprint cycle, categorized
+  them by label and assignee, and generated a retrospective summary document. Compared
+  the workflow against direct Linear API usage to assess real-world viability.
+scores:
+  p:
+    value: 3
+    evidence: >
+      The sprint query worked twice but the third attempt failed mid-run due to a deprecated
+      field, requiring a restart and costing more time than the manual approach would have taken.
+  q:
+    value: 4
+    evidence: >
+      Completed issues were returned accurately in the two successful runs, but the missing
+      cycle ID field (deprecated in Linear's API update) meant sprint boundary filtering was unreliable.
+  c:
+    value: 5
+    evidence: >
+      Failed API calls still consume Claude tokens for the attempt and error handling;
+      the 33% failure rate makes the effective token cost per successful operation higher than alternatives.
+  r:
+    value: 3
+    evidence: >
+      Only 2 of 3 full sprint query runs completed without errors; the failure was not
+      transient but structural due to API schema changes, making reliability fundamentally limited.
+  x:
+    value: 4
+    evidence: >
+      When the tool worked, it composed fine with filesystem writes for the summary document;
+      the unreliability means pipelines that include it cannot be left to run unattended.
+  f:
+    value: 5
+    evidence: >
+      The Linear API key setup was simple, but investigating why mutations failed required
+      reading Linear's API changelog to understand which fields were removed post-archival.
+verdict: >
+  The archived Linear MCP is not suitable for team production workflows; Linear's ongoing
+  GraphQL API evolution has outpaced the frozen implementation, causing increasing failure
+  rates for write operations; teams should either fork and maintain the MCP or use Linear's
+  SDK directly until an official or well-maintained alternative is available.
+conflict_of_interest: none

@@ -1,0 +1,46 @@
+tool_id: gh-josix-awesome-claude-md
+reporter_role: team-lead
+date_evaluated: "2026-03-21"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Used the awesome-claude-md collection as a reference for standardizing CLAUDE.md files
+  across 8 different repositories in a polyglot engineering organization. Identified patterns
+  applicable to Go, Python, TypeScript, and infrastructure (Terraform) projects and adapted
+  them into reusable templates for each technology stack.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Standardizing CLAUDE.md across 8 repos using the collection as a starting point took
+      one afternoon rather than the estimated two days of original work; the examples accelerated the pattern identification.
+  q:
+    value: 6
+    evidence: >
+      Python and TypeScript examples were high quality; Go and Terraform examples were sparse
+      in the collection, requiring more original work for those stacks.
+  c:
+    value: 10
+    evidence: >
+      This is a free curated reference with no operational cost; its value is entirely in the
+      developer time saved, which is significant for teams standardizing across multiple repositories.
+  r:
+    value: 8
+    evidence: >
+      Well-tested examples from real projects are consistently applicable; the patterns
+      for test conventions and dependency management transferred well across most of our stacks.
+  x:
+    value: 6
+    evidence: >
+      Better CLAUDE.md files improve the effectiveness of all Claude Code sessions and tools;
+      the composability benefit is indirect but pervasive across all Claude Code workflows.
+  f:
+    value: 10
+    evidence: >
+      No setup; browse, copy, adapt; the collection is pure documentation with no tooling
+      requirements and the examples are annotated with context explaining each pattern's purpose.
+verdict: >
+  Awesome-claude-md is an essential reference for engineering teams setting up Claude Code
+  at scale; the curated examples save significant time for polyglot organizations, though
+  coverage of Go and infrastructure-as-code stacks is thinner than web development stacks.
+conflict_of_interest: none

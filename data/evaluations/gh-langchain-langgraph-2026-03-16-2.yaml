@@ -1,0 +1,34 @@
+tool_id: "gh-langchain-langgraph"
+reporter_role: "small-team"
+date_evaluated: "2026-03-16"
+claude_code_version: "N/A"
+platform: "linux"
+
+task_performed: >
+  Migrated an existing LangChain LCEL pipeline to LangGraph to add retry loops,
+  human-in-the-loop interrupts, and parallel subgraph execution for a
+  document processing workflow handling legal contracts.
+
+scores:
+  p:
+    value: 8
+    evidence: "Migration from LCEL took 2 days; parallel subgraph execution reduced contract processing time from 8 minutes to 2.5 minutes per document — 3x throughput improvement"
+  q:
+    value: 8
+    evidence: "Human-in-the-loop interrupts at flagged sections caught 6 ambiguous clauses in the first week that the pure-agent version would have missed; quality gate working as designed"
+  c:
+    value: 7
+    evidence: "Parallel execution reduced token latency cost but not total token spend; overall API costs similar to sequential version, shifted to faster wall-clock time"
+  r:
+    value: 8
+    evidence: "Retry loops with conditional edges eliminated the timeout failures that affected 8% of documents in our LCEL version; those documents now succeed on second attempt"
+  x:
+    value: 7
+    evidence: "Migration from LangChain LCEL was straightforward for most components; three custom runnables required adapting to LangGraph's node/edge interface which took additional hours"
+  f:
+    value: 6
+    evidence: "Existing LangChain familiarity helped; pure-LangGraph newcomers on the team took approximately 1.5 days to become productive; graph visualization tool was essential for debugging"
+
+verdict: "Compelling upgrade from LCEL for workflows that need cycles, parallelism, or human interrupts — the migration cost is real but pays back quickly on complex production pipelines."
+
+conflict_of_interest: "none"

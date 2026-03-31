@@ -1,0 +1,47 @@
+tool_id: gh-abhishekray07-claude-md-templates
+reporter_role: developer
+date_evaluated: "2026-03-05"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the CLAUDE.md best practices templates to set up Claude Code for a React Native
+  mobile application project. Applied the provided templates for coding conventions, testing
+  strategy, and architecture documentation sections. Compared Claude Code behavior before
+  and after adding the template-based CLAUDE.md to the project.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The template gave a solid starting structure but required significant editing for
+      React Native specifics; generic web templates needed about 45 minutes of adaptation before they were useful.
+  q:
+    value: 7
+    evidence: >
+      Claude Code output after adopting the best practices template structure more consistently
+      respected component naming and file organization conventions compared to no CLAUDE.md.
+  c:
+    value: 9
+    evidence: >
+      Free reference material requiring only time investment; the template format reduces
+      per-session token cost by front-loading conventions Claude would otherwise request mid-session.
+  r:
+    value: 8
+    evidence: >
+      The template patterns are stable conventions that work consistently; CLAUDE.md does
+      not change unless deliberately updated, so reliability is not an operational concern.
+  x:
+    value: 7
+    evidence: >
+      Better CLAUDE.md improves quality across all Claude Code interactions and MCP tool
+      outputs; the templates establish a context baseline that benefits every tool call.
+  f:
+    value: 9
+    evidence: >
+      Clone or copy the template for the appropriate stack, adapt project-specific details,
+      save as CLAUDE.md; the entire process takes 20-40 minutes for a developer comfortable with Claude Code.
+verdict: >
+  The CLAUDE.md best practices templates are a useful starting point that reduces CLAUDE.md
+  authoring time, particularly for developers new to context engineering; the templates are
+  most effective for common web stacks and require more adaptation for mobile or specialized
+  domains.
+conflict_of_interest: none

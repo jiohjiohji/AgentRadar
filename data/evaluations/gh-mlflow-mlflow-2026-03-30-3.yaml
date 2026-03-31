@@ -1,0 +1,47 @@
+tool_id: gh-mlflow-mlflow
+reporter_role: developer
+date_evaluated: "2026-03-30"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used MLflow to track Claude API experiments for a production content moderation system
+  during a prompt optimization sprint. Logged 30 prompt variants with their evaluation
+  scores, parameters, and sample outputs. Used the MLflow compare view to select the
+  best-performing prompt for production deployment.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The comparison view across 30 prompt variants that would have required spreadsheet
+      management was available immediately in the MLflow UI; the optimization sprint took 2 days instead of 4.
+  q:
+    value: 7
+    evidence: >
+      Logged metrics accurately tracked our custom precision and recall scores; the artifact
+      logging for sample outputs enabled qualitative review alongside quantitative comparison.
+  c:
+    value: 7
+    evidence: >
+      MLflow local mode is free; the only cost is Claude API for experiments which would
+      be incurred regardless of tracking tool; MLflow adds no cost while adding significant tracking value.
+  r:
+    value: 8
+    evidence: >
+      Local MLflow server was stable throughout the 2-day sprint with no data loss;
+      the experiment comparison UI was consistently responsive even with 30 experiments logged.
+  x:
+    value: 7
+    evidence: >
+      Python SDK integration with the Anthropic SDK required only a few mlflow.start_run
+      context managers wrapping the experiment code; no complex integration work needed.
+  f:
+    value: 8
+    evidence: >
+      pip install mlflow and mlflow ui; the tracking server starts with one command and
+      the Python tracking API is intuitive for developers familiar with logging patterns.
+verdict: >
+  MLflow is the right experiment tracking tool for a prompt optimization sprint; it reduces
+  the cognitive overhead of comparing many prompt variants and produces a searchable record
+  of every experiment that can inform future optimization work; local mode is accessible
+  without infrastructure investment for individual developer use.
+conflict_of_interest: none

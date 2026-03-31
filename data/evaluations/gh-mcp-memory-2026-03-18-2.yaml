@@ -1,0 +1,47 @@
+tool_id: gh-mcp-memory
+reporter_role: researcher
+date_evaluated: "2026-03-18"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Tested the memory MCP as a research note accumulator: over 10 days, Claude stored key
+  findings, author names, and paper relationships as entities and observations. Evaluated
+  whether the knowledge graph could surface connections between stored facts that Claude
+  had not explicitly been told about in a given session.
+scores:
+  p:
+    value: 5
+    evidence: >
+      The tool saved some re-reading of previous notes, but manually constructing the entity
+      schema for academic knowledge graphs added overhead that partially offset the retrieval benefit.
+  q:
+    value: 5
+    evidence: >
+      The graph stored what was explicitly told to it correctly, but cross-entity relationship
+      inference was not possible; Claude had to be told which entities were related rather than discovering it.
+  c:
+    value: 7
+    evidence: >
+      Retrieval queries are cheap since they return only the specific entities requested;
+      the main cost was the initial population sessions which were token-intensive for bulk entity creation.
+  r:
+    value: 8
+    evidence: >
+      The JSON file storage was completely reliable over 10 days; entities persisted correctly
+      and were retrievable in subsequent sessions without any data integrity issues.
+  x:
+    value: 5
+    evidence: >
+      Integration with the filesystem MCP to import research notes as entities required
+      a custom parsing step that was awkward to express in the entity-observation schema.
+  f:
+    value: 8
+    evidence: >
+      Extremely easy to start: no configuration beyond the MCP entry and immediately
+      usable for storing first entities through natural language tool calls in Claude Code.
+verdict: >
+  The memory MCP is useful for structured fact persistence across sessions but falls short
+  as a research knowledge management tool due to lack of semantic search and relationship
+  inference; it is most effective for well-bounded domains with a pre-defined entity taxonomy
+  rather than exploratory, open-ended research knowledge accumulation.
+conflict_of_interest: none

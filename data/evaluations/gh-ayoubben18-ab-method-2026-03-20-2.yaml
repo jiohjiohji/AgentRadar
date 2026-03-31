@@ -1,0 +1,48 @@
+tool_id: gh-ayoubben18-ab-method
+reporter_role: researcher
+date_evaluated: "2026-03-20"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Explored AB-method for structuring multi-step research workflows in Claude Code. Applied
+  the mission-driven subagent concept to a literature review pipeline: one subagent for search,
+  one for reading and summarizing, one for synthesis. Compared against unstructured multi-step
+  prompting to assess whether the mission framing added measurable discipline.
+scores:
+  p:
+    value: 5
+    evidence: >
+      The mission structure provided useful task decomposition guidance, saving some prompt
+      iteration time, but the stale templates needed 20 minutes of updating before the first
+      successful pipeline run.
+  q:
+    value: 6
+    evidence: >
+      When the mission boundaries held, each subagent stayed on topic and produced focused
+      output; the synthesis subagent in particular benefited from the scoped role definition.
+  c:
+    value: 6
+    evidence: >
+      No framework overhead beyond the mission template tokens themselves; a well-written
+      mission added about 500 tokens per subagent call, a modest and acceptable overhead.
+  r:
+    value: 5
+    evidence: >
+      The approach's reliability depends entirely on Claude Code's subagent execution,
+      not the AB-method itself; the stale templates introduce variability through outdated syntax.
+  x:
+    value: 5
+    evidence: >
+      The mission-driven approach is compatible with any tool set and composes naturally
+      with MCP tools when the mission template references them explicitly.
+  f:
+    value: 5
+    evidence: >
+      Getting started required reading the README carefully and updating several prompt
+      templates; researchers unfamiliar with Claude Code subagent syntax will need additional research.
+verdict: >
+  AB-method offers a thoughtful conceptual framework for mission-driven agents that is worth
+  studying, but the stale implementation state means it requires meaningful adaptation work
+  before use; researchers and developers comfortable with Claude Code should extract the
+  conceptual ideas and implement them with current syntax rather than using templates verbatim.
+conflict_of_interest: none

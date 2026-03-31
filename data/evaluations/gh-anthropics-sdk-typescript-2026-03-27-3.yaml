@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-sdk-typescript
+reporter_role: student
+date_evaluated: "2026-03-27"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Built a study assistant Chrome extension using the Anthropic TypeScript SDK for a
+  web development course project. The extension reads selected text on web pages and
+  uses Claude to generate explanations, summaries, and practice questions. Used the
+  SDK for API calls from a background service worker.
+scores:
+  p:
+    value: 8
+    evidence: >
+      SDK simplified the Chrome extension API integration to under 50 lines; without the
+      SDK, raw API calls and response parsing would have doubled the implementation time for an unfamiliar API.
+  q:
+    value: 9
+    evidence: >
+      The TypeScript types guided my tool use implementation correctly without needing to
+      look up the API reference repeatedly; the IDE autocomplete from the types was essentially live documentation.
+  c:
+    value: 8
+    evidence: >
+      No overhead cost from the SDK; as a student, I used the SDK's token counting
+      utilities to estimate costs before running expensive operations, keeping my monthly spend predictable.
+  r:
+    value: 10
+    evidence: >
+      The extension ran without library-level errors for 3 weeks of personal use; every
+      issue I encountered was my own code rather than SDK bugs.
+  x:
+    value: 8
+    evidence: >
+      Works in a Chrome extension service worker context with one configuration adjustment
+      for the browser environment; the SDK is not exclusively Node.js which was essential for this use case.
+  f:
+    value: 10
+    evidence: >
+      npm install and first completion in under 5 minutes; TypeScript IntelliSense made
+      the API feel self-documenting from the first import, requiring minimal external documentation reading.
+verdict: >
+  The TypeScript SDK delivers an exceptional developer experience for students building
+  browser-based Claude integrations; the type-driven API exploration makes it more accessible
+  than documentation-only approaches, and the browser environment support makes it suitable
+  for Chrome extension and other non-Node.js TypeScript environments.
+conflict_of_interest: none

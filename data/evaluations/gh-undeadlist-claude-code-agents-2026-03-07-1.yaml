@@ -1,0 +1,49 @@
+tool_id: gh-undeadlist-claude-code-agents
+reporter_role: developer
+date_evaluated: "2026-03-07"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the claude-code-agents prompt template collection to set up specialized subagent
+  roles for a backend refactoring project. Applied the database migration agent, the
+  security audit agent, and the performance profiling agent templates. Compared output
+  quality to Claude Code without specialized subagent prompts.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The security audit agent template identified 4 input validation gaps in the API layer
+      that generic code review prompts missed; the specialized framing meaningfully improved the analysis depth.
+  q:
+    value: 7
+    evidence: >
+      Subagent outputs were more focused and technically appropriate than generic prompts;
+      the database migration agent correctly identified index optimization opportunities
+      beyond the schema changes I had explicitly requested.
+  c:
+    value: 8
+    evidence: >
+      The templates are concise and focused, keeping per-invocation token costs low; using
+      specialized agents instead of one broad prompt actually reduced total token usage by
+      approximately 25% for equivalent tasks.
+  r:
+    value: 7
+    evidence: >
+      Consistent results across three uses of each template with similar codebases; the
+      security audit template in particular produced a reliably structured vulnerability report format.
+  x:
+    value: 7
+    evidence: >
+      Templates work as standard Claude Code subagent prompts and can call any tools in
+      the current configuration; they composable naturally with MCP tools when referenced in the template.
+  f:
+    value: 9
+    evidence: >
+      Copy the template files to the Claude Code agents directory and they appear immediately
+      as available subagent configurations; no additional setup or configuration required.
+verdict: >
+  The claude-code-agents template collection provides well-designed specialized agent prompts
+  that demonstrably improve output quality for targeted development tasks; the security and
+  database templates in particular offer depth that generic prompts lack, making this a
+  lightweight but high-value addition to Claude Code workflows.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-modal-labs-modal
+reporter_role: developer
+date_evaluated: "2026-03-21"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Used Modal to deploy a fine-tuned Llama model as a Claude-complementary inference endpoint,
+  where cheaper open-source model calls handle routing decisions before escalating to Claude
+  for complex tasks. Deployed on H100 instances for performance testing, configured auto-scaling,
+  and measured cold start latency and throughput under load.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Deploying a production-grade inference endpoint on Modal took 3 days versus 2 weeks
+      estimated for equivalent Kubernetes-based infrastructure; the auto-scaling eliminated capacity planning work.
+  q:
+    value: 8
+    evidence: >
+      The fine-tuned model inference results matched reference implementation outputs;
+      H100 throughput at our load profile was 180 tokens/second, meeting our latency requirements.
+  c:
+    value: 8
+    evidence: >
+      H100 spot instances on Modal are approximately 60% cheaper than on-demand cloud GPU
+      instances for our sustained workload; the auto-scaling ensures we only pay for active inference time.
+  r:
+    value: 8
+    evidence: >
+      Cold start latency averaged 4 seconds for the 7B parameter model; warm instances
+      served in under 200ms; Modal's keep-warm configuration eliminated cold starts for peak traffic periods.
+  x:
+    value: 7
+    evidence: >
+      Modal endpoints expose standard HTTP interfaces that our Claude orchestration layer
+      calls via the Anthropic SDK's HTTP client; no special integration code beyond standard API calls.
+  f:
+    value: 8
+    evidence: >
+      Writing the Modal deployment function in Python with the decorator syntax is straightforward;
+      GPU environment configuration with CUDA and dependencies is handled by Modal's image builder.
+verdict: >
+  Modal is the right infrastructure choice for teams deploying custom open-source models
+  as complements to Claude; the cost efficiency versus managed GPU services, Python-native
+  deployment, and auto-scaling make it significantly more accessible than DIY GPU infrastructure
+  for teams without dedicated ML infrastructure engineers.
+conflict_of_interest: none

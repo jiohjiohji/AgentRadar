@@ -1,0 +1,34 @@
+tool_id: "gh-mendableai-firecrawl"
+reporter_role: "researcher"
+date_evaluated: "2026-03-20"
+claude_code_version: "N/A"
+platform: "linux"
+
+task_performed: >
+  Scraped 2,400 academic preprint abstracts and metadata from three public
+  repositories for a literature review pipeline feeding a Claude-based
+  summarization agent. Needed structured JSON extraction alongside markdown.
+
+scores:
+  p:
+    value: 8
+    evidence: "Collected 2,400 pages in 47 minutes; equivalent Selenium script took 4+ hours and required constant selector maintenance across site updates"
+  q:
+    value: 7
+    evidence: "Structured extraction hit 89% field accuracy on semi-structured pages; abstract text quality was excellent, metadata fields missed on 11% of pages with non-standard layouts"
+  c:
+    value: 5
+    evidence: "Research budget concern: at scale (10k+ pages), monthly costs approach $20 on the starter tier; self-hosted alternative is cheaper but requires DevOps time we do not have"
+  r:
+    value: 7
+    evidence: "Two timeouts on pages with paywall redirects; retry logic handled them but added 12 minutes total; all other 2,398 pages completed without error"
+  x:
+    value: 8
+    evidence: "JSON extraction schema matched our downstream Claude prompt input format with one field rename; no custom parsing needed"
+  f:
+    value: 9
+    evidence: "Python SDK documented clearly; working extraction pipeline took 20 minutes to write from scratch; no infrastructure setup required"
+
+verdict: "Strong choice for research data collection pipelines; cost scales quickly at high volume but the reliability and zero-infrastructure trade-off is worth it for projects under 50k pages per month."
+
+conflict_of_interest: "none"

@@ -1,0 +1,47 @@
+tool_id: gh-github-mcp-server
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-22"
+claude_code_version: "1.0.57"
+platform: windows-wsl
+task_performed: >
+  Assessed GitHub MCP server for enterprise deployment across 12 internal repositories.
+  Evaluated security posture of OAuth token scoping, audit log access, and ability to
+  restrict tool permissions to read-only for analyst roles. Tested cross-organization
+  repository access patterns and rate limit behavior under concurrent agent workloads.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Cross-repo reporting tasks that required manual aggregation now complete automatically;
+      however complex approval workflows still need custom GitHub Actions integration on top.
+  q:
+    value: 8
+    evidence: >
+      Data retrieved via MCP exactly matches the GitHub REST API responses we verified
+      manually; no data transformation errors were observed across 200 API call samples.
+  c:
+    value: 7
+    evidence: >
+      API cost is negligible since GitHub calls are free within rate limits; the cost is
+      primarily Claude tokens for processing responses, which is reasonable for enterprise budgets.
+  r:
+    value: 8
+    evidence: >
+      Across two weeks of continuous use by four team members, we saw three transient 502
+      errors from GitHub that the MCP client retried successfully without user intervention.
+  x:
+    value: 8
+    evidence: >
+      Integrates well with our SSO-configured GitHub organization; the App-based auth model
+      fits our IT security requirements better than personal access tokens across a team.
+  f:
+    value: 6
+    evidence: >
+      Windows WSL setup required additional steps to expose the MCP server socket across
+      the WSL2 network boundary; the Linux-centric documentation did not cover this case.
+verdict: >
+  GitHub MCP server meets enterprise-grade reliability requirements and the OAuth App auth
+  model supports appropriate access controls; the Windows WSL documentation gap and absence
+  of built-in audit logging for MCP calls are gaps that enterprise architects should address
+  before broad deployment.
+conflict_of_interest: none

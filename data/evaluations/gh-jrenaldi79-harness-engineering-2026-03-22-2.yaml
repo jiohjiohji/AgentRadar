@@ -1,0 +1,47 @@
+tool_id: gh-jrenaldi79-harness-engineering
+reporter_role: team-lead
+date_evaluated: "2026-03-22"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Piloted the harness-engineering bootstrap for standardizing project setup across a team
+  of 8 engineers starting 3 new projects simultaneously. Each project lead used the
+  bootstrap to generate their project's initial context engineering scaffold. Compared
+  the resulting CLAUDE.md quality and consistency across the three projects.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Three project CLAUDE.md files were produced in parallel in an afternoon; without the
+      bootstrap, setting up three projects' context engineering would have consumed three separate half-day sessions.
+  q:
+    value: 6
+    evidence: >
+      Quality varied with how thoroughly each project lead answered the bootstrap's questions;
+      the most detailed responses produced the best CLAUDE.md, confirming garbage-in-garbage-out dynamics.
+  c:
+    value: 8
+    evidence: >
+      Bootstrap cost is purely engineer time; the downstream token savings from well-structured
+      CLAUDE.md files make this a high-ROI investment for projects that will run for months.
+  r:
+    value: 7
+    evidence: >
+      The bootstrap produced structurally consistent outputs across all three projects; the
+      variation in quality was driven by input detail rather than inconsistency in the tool itself.
+  x:
+    value: 6
+    evidence: >
+      The bootstrapped context files integrate with standard Claude Code configurations;
+      no MCP-specific guidance was included in the generated outputs, which was a gap for our MCP-heavy team.
+  f:
+    value: 7
+    evidence: >
+      Each project lead got to first output in 25-35 minutes; the main friction was the
+      number of questions to answer and ambiguity about what level of detail the bootstrap needed.
+verdict: >
+  Harness-engineering bootstrap is a strong tool for teams starting multiple projects
+  simultaneously; it enforces consistency in context engineering quality across projects
+  and reduces the per-project setup time meaningfully; teams should establish clear input
+  quality standards to maximize the value of the generated output.
+conflict_of_interest: none

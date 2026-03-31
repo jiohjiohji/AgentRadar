@@ -1,0 +1,46 @@
+tool_id: gh-jrenaldi79-harness-engineering
+reporter_role: student
+date_evaluated: "2026-03-30"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the harness-engineering bootstrap to set up context engineering for a machine learning
+  course project implementing a text classification system. Tested whether the bootstrap's
+  questions and generated output made sense for a research/ML project context, and whether
+  the resulting CLAUDE.md improved Claude Code's assistance on model training tasks.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The bootstrap generated a useful initial structure in about 20 minutes, saving me
+      from writing a CLAUDE.md from scratch; some generated sections were too product-focused for an ML project.
+  q:
+    value: 5
+    evidence: >
+      The generated CLAUDE.md captured my Python environment and data conventions well but
+      generated empty boilerplate for sections like deployment and CI/CD that are irrelevant to a research project.
+  c:
+    value: 9
+    evidence: >
+      No cost beyond time; the resulting CLAUDE.md reduced my per-session token usage
+      because Claude Code no longer needed me to re-explain the project structure each session.
+  r:
+    value: 7
+    evidence: >
+      The bootstrap produced consistent output when I re-ran it with the same inputs; the
+      tool itself is reliable, the quality just depends on the relevance of input questions to the project type.
+  x:
+    value: 6
+    evidence: >
+      The generated context files integrated cleanly with Claude Code's standard workflow;
+      no MCP-specific or agent-specific guidance was generated, which was a small gap.
+  f:
+    value: 7
+    evidence: >
+      Getting started required understanding what the bootstrap needed and answering the
+      questions thoughtfully; the process was intuitive but the ML-project-specific terminology was occasionally awkward.
+verdict: >
+  Harness-engineering bootstrap is a useful starting point for students setting up Claude Code
+  projects, though it is tuned toward product development contexts; ML and research students
+  will need to prune irrelevant generated sections and add research-specific conventions manually.
+conflict_of_interest: none

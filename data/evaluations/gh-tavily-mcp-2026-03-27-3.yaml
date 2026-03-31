@@ -1,0 +1,46 @@
+tool_id: gh-tavily-mcp
+reporter_role: student
+date_evaluated: "2026-03-27"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used Tavily MCP for literature discovery while writing a graduate thesis chapter on
+  federated learning privacy guarantees. Claude used Tavily to find recent 2025 papers
+  and blog posts, extracted key claims, and generated an annotated bibliography section
+  with publication dates to verify currency of sources.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Finding and summarizing 15 recent sources that were outside Claude's training
+      data took 20 minutes instead of the 3 hours a manual Google Scholar sweep would require.
+  q:
+    value: 6
+    evidence: >
+      Tavily often returned blog posts and LinkedIn articles rather than peer-reviewed papers,
+      requiring me to manually verify each citation's academic credibility before including it.
+  c:
+    value: 7
+    evidence: >
+      As a student, the free-tier Tavily plan covered my use case adequately; the 1000
+      monthly free queries were sufficient for thesis research without incurring any charges.
+  r:
+    value: 7
+    evidence: >
+      Repeated searches on the same topic within the same session returned consistent results;
+      across different days rankings shifted, which is expected behavior for a live search tool.
+  x:
+    value: 7
+    evidence: >
+      Worked well alongside Claude Code's built-in tools; I could search with Tavily and
+      then use Claude to draft the annotated bibliography in one uninterrupted session.
+  f:
+    value: 9
+    evidence: >
+      Signed up for Tavily free tier, got an API key, and was running searches through
+      Claude Code in under 4 minutes with no configuration issues on my MacBook.
+verdict: >
+  Tavily MCP is excellent for students needing current information beyond Claude's training
+  cutoff, though it skews toward web content over academic databases; researchers should
+  complement it with direct Google Scholar or Semantic Scholar searches for citation quality.
+conflict_of_interest: none

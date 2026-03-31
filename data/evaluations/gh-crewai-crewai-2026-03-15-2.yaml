@@ -1,0 +1,34 @@
+tool_id: "gh-crewai-crewai"
+reporter_role: "enterprise-architect"
+date_evaluated: "2026-03-15"
+claude_code_version: "N/A"
+platform: "ubuntu"
+
+task_performed: >
+  Evaluated CrewAI Enterprise for automating a multi-step compliance document
+  review workflow: ingestion agent, regulatory mapping agent, gap analysis agent,
+  and remediation suggestion agent across a corpus of 40 policy documents.
+
+scores:
+  p:
+    value: 7
+    evidence: "Compliance review cycle reduced from 3 days to 6 hours for the 40-document corpus; however, human review of agent outputs added 2 additional hours before results were usable"
+  q:
+    value: 6
+    evidence: "Regulatory mapping agent accuracy was 78% against our expert benchmark; gap analysis produced useful starting points but missed nuanced cross-regulation interactions in 22% of cases"
+  c:
+    value: 4
+    evidence: "Enterprise plan pricing plus token costs for 4-agent crews on 40 documents totaled approximately $180 for the test; cost-per-document is high relative to specialized compliance tools"
+  r:
+    value: 7
+    evidence: "Crew completed all 40 documents without failure; agent handoffs occasionally produced formatting inconsistencies that required post-processing to normalize"
+  x:
+    value: 6
+    evidence: "Integration with our document management system required custom connectors that took 2 days to build; CrewAI's tool interface is flexible but not pre-built for enterprise document systems"
+  f:
+    value: 5
+    evidence: "Enterprise setup required coordination with CrewAI support and took 3 days including SSO configuration; self-hosted open-source version easier to start but lacks enterprise features"
+
+verdict: "Promising for compliance automation but accuracy gaps and enterprise integration effort mean it augments rather than replaces expert review at this maturity level."
+
+conflict_of_interest: "none"

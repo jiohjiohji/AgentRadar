@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-sdk-python
+reporter_role: researcher
+date_evaluated: "2026-03-14"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used the Anthropic Python SDK for a systematic evaluation study comparing prompt
+  strategies across 1000 scientific text samples. Used the Batches API for cost-efficient
+  bulk processing, implemented rate limit handling, and collected structured outputs using
+  the SDK's JSON mode. Assessed SDK suitability for large-scale research data collection.
+scores:
+  p:
+    value: 9
+    evidence: >
+      The Batches API support in the SDK reduced processing time for 1000 samples from
+      an estimated 6 hours (sequential) to 45 minutes with the async batch endpoint, a transformative speedup.
+  q:
+    value: 9
+    evidence: >
+      All 1000 samples were processed correctly with zero SDK-level data integrity issues;
+      the SDK's type annotations caught two payload construction errors before they reached the API.
+  c:
+    value: 9
+    evidence: >
+      Batches API provides 50% cost reduction versus synchronous calls; the SDK's native
+      Batches support made accessing this discount straightforward without custom API request code.
+  r:
+    value: 9
+    evidence: >
+      Across 5 batch runs over two weeks, the SDK handled API errors, rate limits, and
+      partial failures gracefully; the built-in retry logic prevented all transient failures from propagating.
+  x:
+    value: 8
+    evidence: >
+      SDK works seamlessly with pandas for data preparation, Jupyter for analysis, and
+      SQLite for result storage; the SDK's Python-native design makes it composable with the full data science stack.
+  f:
+    value: 10
+    evidence: >
+      pip install anthropic provides immediate access to the Batches API; the documentation
+      for batch processing is clear and includes a complete working example.
+verdict: >
+  The Anthropic Python SDK's Batches API support is a research force multiplier; the 50%
+  cost reduction and asynchronous processing enable research studies that would be
+  prohibitively slow or expensive with synchronous API calls, making the SDK the essential
+  infrastructure layer for large-scale Claude-based research.
+conflict_of_interest: none

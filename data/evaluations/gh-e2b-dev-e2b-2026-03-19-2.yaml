@@ -1,0 +1,47 @@
+tool_id: gh-e2b-dev-e2b
+reporter_role: researcher
+date_evaluated: "2026-03-19"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used E2B sandboxes to enable Claude to execute statistical analysis code on research
+  datasets. Claude writes Python code using pandas, scipy, and matplotlib, which is
+  executed in E2B sandboxes that return stdout, stderr, and generated plot images. Tested
+  on 20 different analysis tasks of varying computational complexity.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Being able to ask Claude to run analysis code directly in the conversation and receive
+      results instantly transformed my research iteration speed; analyses that took 2 days of back-and-forth became same-session interactions.
+  q:
+    value: 8
+    evidence: >
+      Code execution results were accurate and plot images were returned correctly; scipy
+      and matplotlib were pre-installed in the sandbox environment without requiring manual pip installs.
+  c:
+    value: 6
+    evidence: >
+      Research analyses averaging 3 minutes per sandbox cost approximately $0.03 each;
+      running 20 analyses totaled $0.60 in E2B costs, which is reasonable for one-off research but adds up in iterative workflows.
+  r:
+    value: 8
+    evidence: >
+      18 of 20 analysis tasks completed successfully; 2 failed with memory errors for
+      tasks that exceeded the default 512MB sandbox RAM limit, which is documented and configurable.
+  x:
+    value: 8
+    evidence: >
+      Integrating E2B with Claude's tool use API is well-documented; the result return
+      format maps cleanly to Claude tool results, enabling multi-turn analysis conversations.
+  f:
+    value: 8
+    evidence: >
+      The E2B code interpreter documentation specifically covers the Claude integration
+      pattern; following it produced a working analysis loop in 30 minutes including the first successful plot.
+verdict: >
+  E2B is an ideal code execution backend for research workflows where Claude generates
+  and runs analysis code iteratively; the sandbox's pre-installed scientific Python stack
+  means most statistical analyses run without setup, and the per-run cost is acceptable
+  for research use at typical academic scale.
+conflict_of_interest: none

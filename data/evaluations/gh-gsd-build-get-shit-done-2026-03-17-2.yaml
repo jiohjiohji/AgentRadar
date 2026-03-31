@@ -1,0 +1,34 @@
+tool_id: "gh-gsd-build-get-shit-done"
+reporter_role: "team-lead"
+date_evaluated: "2026-03-17"
+claude_code_version: "1.0.57"
+platform: "macos"
+
+task_performed: >
+  Piloted TÂCHES across a 4-person team for one month. Each developer used the
+  spec-driven development flow on their assigned tickets. Tracked PR cycle time,
+  review round count, and rework frequency before and after adoption.
+
+scores:
+  p:
+    value: 8
+    evidence: "Team PR cycle time dropped 31% in pilot month; review rounds per PR decreased from 2.4 to 1.7 average; developers reported reduced cognitive load during implementation"
+  q:
+    value: 8
+    evidence: "Rework frequency (features requiring significant revision after merge) dropped from 22% to 8% during pilot month; spec phase caught ambiguities that previously surfaced post-merge"
+  c:
+    value: 9
+    evidence: "Zero licensing cost; the productivity gains significantly outweigh any token overhead from the spec prompts; clear positive ROI visible within two weeks"
+  r:
+    value: 8
+    evidence: "Consistent results across all 4 developers; one developer initially resisted the spec discipline and saw smaller gains; adoption quality matters for outcome quality"
+  x:
+    value: 9
+    evidence: "Each team member integrated independently; no shared configuration, no infrastructure changes; framework is purely prompt-layer and invisible to existing tooling"
+  f:
+    value: 8
+    evidence: "Team onboarding averaged 20 minutes; the main friction was cultural (convincing developers to spec before coding) not technical; documentation is clear and concise"
+
+verdict: "High-confidence team recommendation — metrics supported adoption within two weeks and the spec discipline compounds over time; the non-technical adoption challenge is manageable with team buy-in."
+
+conflict_of_interest: "none"

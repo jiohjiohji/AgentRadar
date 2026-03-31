@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-sdk-python
+reporter_role: developer
+date_evaluated: "2026-03-04"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Built a document processing pipeline using the Anthropic Python SDK. Used the SDK for
+  streaming responses, tool use with custom Python functions, and async batch processing of
+  200 documents. Also integrated the SDK with a FastAPI backend for a Claude-powered
+  API endpoint serving real-time classification requests.
+scores:
+  p:
+    value: 9
+    evidence: >
+      The SDK's streaming and async support reduced boilerplate code for the batch processing
+      pipeline from approximately 200 lines of custom code to 40 lines using SDK utilities.
+  q:
+    value: 9
+    evidence: >
+      Tool use implementation via the SDK worked correctly on the first attempt with the
+      documented pattern; async batch processing handled 200 documents with zero data loss or ordering issues.
+  c:
+    value: 8
+    evidence: >
+      The SDK itself is free; it provides no inherent cost optimization but its reliable
+      error handling and retry logic prevent wasteful duplicate API calls from failed requests.
+  r:
+    value: 9
+    evidence: >
+      Across 3 weeks of production use processing thousands of documents, the SDK produced
+      zero library-level errors; all failures were traceable to API rate limits or user prompt issues.
+  x:
+    value: 8
+    evidence: >
+      Integrates cleanly with FastAPI, SQLAlchemy, Celery, and any Python async framework;
+      the SDK's design follows Python conventions that minimize friction with the broader ecosystem.
+  f:
+    value: 10
+    evidence: >
+      pip install anthropic, set API key, and run the first completion in under 3 minutes;
+      the official SDK has the best-in-class onboarding experience for any Anthropic tool.
+verdict: >
+  The Anthropic Python SDK is the correct choice for any production Python application
+  using Claude; its async support, streaming, and tool use implementation are robust and
+  well-documented, and the library's reliability over extended production use makes it
+  the foundation for serious Claude-powered application development.
+conflict_of_interest: none

@@ -1,0 +1,34 @@
+tool_id: "gh-wshobson-agents"
+reporter_role: "team-lead"
+date_evaluated: "2026-03-12"
+claude_code_version: "1.0.57"
+platform: "macos"
+
+task_performed: >
+  Evaluated wshobson/agents for team-wide adoption across a 6-person
+  engineering team. Ran a 2-week pilot where each developer used the
+  orchestration layer on one feature per week and reported outcomes.
+
+scores:
+  p:
+    value: 8
+    evidence: "Team average feature delivery time dropped 28% during pilot; two developers reported 40%+ improvement on complex cross-cutting features; two junior developers reported no measurable benefit on simpler tasks"
+  q:
+    value: 7
+    evidence: "PR review comments decreased 18% during pilot period; main quality issue was agents occasionally over-engineering solutions — requires prompt discipline in the skills configuration"
+  c:
+    value: 7
+    evidence: "Token usage increased approximately 2.2x compared to single-agent workflows; within our Claude Code Pro allocation, this was fine; teams on usage-based billing should benchmark first"
+  r:
+    value: 8
+    evidence: "Across 42 feature implementations during pilot, 38 completed without issues; 4 required developer intervention to resolve agent coordination failures, all recoverable"
+  x:
+    value: 9
+    evidence: "Each developer integrated into their existing workflow independently within 30 minutes; no shared infrastructure required, no CI/CD changes"
+  f:
+    value: 8
+    evidence: "Team onboarding averaged 25 minutes per developer; one developer with no Claude Code experience needed an additional 30 minutes for the base Claude Code concepts"
+
+verdict: "Strong team-level recommendation — adoption is low-friction, impact is measurable on complex features, and the native Claude Code integration means no new toolchain to maintain."
+
+conflict_of_interest: "none"

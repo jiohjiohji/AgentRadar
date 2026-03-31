@@ -1,0 +1,46 @@
+tool_id: gh-browsermcp-mcp
+reporter_role: developer
+date_evaluated: "2026-03-04"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Attempted to use BrowserMCP for web automation tasks similar to Playwright MCP. Tested
+  basic page navigation, form filling, and screenshot capture. Noted the repository was
+  archived in April 2025 and investigated what functionality remains operational, what
+  dependencies are outdated, and whether a migration to Playwright MCP is straightforward.
+scores:
+  p:
+    value: 3
+    evidence: >
+      Basic navigation worked during testing but development is frozen; any productivity gains
+      are offset by the risk of depending on an unmaintained tool that may break with browser updates.
+  q:
+    value: 4
+    evidence: >
+      Screenshot quality and DOM access worked for simple static pages, but dynamic React
+      apps showed rendering gaps that Playwright MCP handles correctly due to its maintained CDP integration.
+  c:
+    value: 5
+    evidence: >
+      Token costs were similar to Playwright MCP for equivalent tasks; the issue is not
+      cost but the lack of ongoing maintenance making any investment in this tool a sunk cost risk.
+  r:
+    value: 3
+    evidence: >
+      Two out of five test sessions encountered errors related to the outdated Puppeteer
+      version bundled with the archived repository; browser compatibility issues are increasing over time.
+  x:
+    value: 4
+    evidence: >
+      The MCP protocol interface still functions, so it technically composes with other MCP
+      tools, but the unstable underlying browser automation layer makes it unreliable in pipelines.
+  f:
+    value: 4
+    evidence: >
+      Installation worked but required downgrading Node.js to a version compatible with
+      the archived dependencies; modern Node 22 environments are not supported.
+verdict: >
+  BrowserMCP was archived in April 2025 and should not be used for new projects; users
+  seeking browser automation via MCP should migrate directly to Playwright MCP, which is
+  actively maintained, better documented, and handles modern browser features correctly.
+conflict_of_interest: none

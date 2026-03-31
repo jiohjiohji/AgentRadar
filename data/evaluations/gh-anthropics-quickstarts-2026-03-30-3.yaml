@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-quickstarts
+reporter_role: small-team
+date_evaluated: "2026-03-30"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used Anthropic quickstarts as the architectural foundation for a startup's first three
+  Claude-powered features: a content moderation agent, a support ticket classifier, and
+  a product description generator. Evaluated how well the quickstart patterns scale from
+  prototype to early production with a small engineering team.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Each feature went from zero to prototype in under a day using the relevant quickstart;
+      without the quickstarts, the team estimated each would take 3-4 days of research and setup.
+  q:
+    value: 8
+    evidence: >
+      Quickstart architecture patterns held up through early production use; the production-ready
+      error handling and retry logic in the quickstarts prevented common failure modes from reaching users.
+  c:
+    value: 8
+    evidence: >
+      Free starting code that prevents expensive architectural mistakes; one quickstart's
+      cost-conscious chunking pattern reduced our document processing costs by 40% compared to our naive first implementation.
+  r:
+    value: 9
+    evidence: >
+      All three features built on quickstarts have run reliably for 6 weeks of production
+      use; no API compatibility issues and the patterns have not required changes as the API evolved.
+  x:
+    value: 7
+    evidence: >
+      Quickstarts are self-contained but extensible; integrating them with our PostgreSQL
+      database and Redis caching layer required connecting the quickstart patterns to our infrastructure.
+  f:
+    value: 9
+    evidence: >
+      The quickstart provides a working starting point with minimal setup; each feature
+      required under 30 minutes to go from quickstart to our customized version.
+verdict: >
+  Anthropic quickstarts are a startup-friendly foundation for building production Claude
+  features; the production-quality code base and correct API patterns reduce early mistakes
+  that are expensive to fix later, making them one of the most cost-effective investments
+  a small team can make when adopting Claude.
+conflict_of_interest: none

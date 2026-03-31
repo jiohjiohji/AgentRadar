@@ -1,0 +1,50 @@
+tool_id: gh-mlflow-mlflow
+reporter_role: researcher
+date_evaluated: "2026-03-12"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used MLflow's LLM evaluation features to track and compare Claude prompt experiments
+  for a named entity recognition task. Logged prompts, parameters, and model outputs as
+  MLflow runs, used the LLM-as-judge evaluation with Claude to score outputs, and compared
+  experiment results across 8 different prompt strategies in the MLflow UI.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Experiment tracking with MLflow reduced the time spent manually comparing prompt
+      strategy results from spreadsheets to a visual comparison in the MLflow UI; each experiment run
+      was automatically logged without additional code.
+  q:
+    value: 7
+    evidence: >
+      LLM-as-judge evaluation produced consistent quality scores that correlated with
+      human judgments on 85% of evaluated outputs; the remaining 15% were borderline cases where
+      Claude's judgment differed from domain expert assessment.
+  c:
+    value: 6
+    evidence: >
+      MLflow itself is free; the LLM-as-judge feature uses Claude API calls for scoring
+      which add evaluation cost on top of the experiment API costs; plan for 2x the experiment
+      token budget when using automated LLM evaluation.
+  r:
+    value: 8
+    evidence: >
+      MLflow's experiment tracking was consistently reliable across 8 experiments over two
+      weeks; the MLflow server showed no downtime and artifact storage worked correctly.
+  x:
+    value: 7
+    evidence: >
+      MLflow integrates with the broader ML ecosystem (scikit-learn, Hugging Face, Python SDKs);
+      connecting Claude API calls to MLflow tracking required about 20 lines of logging code.
+  f:
+    value: 7
+    evidence: >
+      pip install mlflow and the tracking server starts with one command; configuring
+      the LLM evaluation features required reading documentation beyond the quickstart.
+verdict: >
+  MLflow is a solid experiment tracking platform for LLM prompt engineering studies that
+  need systematic comparison across strategies; the LLM-as-judge evaluation adds automated
+  quality assessment capability, though researchers should account for the doubled API cost
+  when using evaluation alongside experiment runs.
+conflict_of_interest: none

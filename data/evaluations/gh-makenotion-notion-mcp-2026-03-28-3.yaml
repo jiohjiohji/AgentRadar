@@ -1,0 +1,46 @@
+tool_id: gh-makenotion-notion-mcp
+reporter_role: team-lead
+date_evaluated: "2026-03-28"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Evaluated Notion MCP for team onboarding automation: new hire pages are created automatically
+  when a new entry is added to an HR Notion database. Claude reads the new hire details, creates
+  a personalized onboarding checklist page from a template, and links it to the team wiki.
+  Tested with 5 simulated new-hire entries across different departments.
+scores:
+  p:
+    value: 7
+    evidence: >
+      HR coordinators previously spent 30-45 minutes per new hire creating and populating
+      onboarding pages; this workflow reduces it to under 5 minutes of review and approval.
+  q:
+    value: 8
+    evidence: >
+      Personalization was accurate across all 5 test cases; department-specific checklist
+      items were correctly inserted and page titles and property fields matched the HR database.
+  c:
+    value: 8
+    evidence: >
+      Each new-hire page creation consumed around 3k tokens; at current pricing this is
+      negligible cost for an onboarding task that delivers clear HR process value.
+  r:
+    value: 7
+    evidence: >
+      Four of five runs completed without issue; one run failed because a template page
+      was temporarily locked by another editor, which is a Notion concurrency constraint not an MCP bug.
+  x:
+    value: 6
+    evidence: >
+      The workflow is self-contained within Notion MCP; adding a Slack notification when
+      the page is created required switching to a second MCP tool and separate Claude session.
+  f:
+    value: 7
+    evidence: >
+      Onboarding the Notion integration for a new workspace required careful permission
+      scoping to avoid giving the integration access to sensitive HR databases beyond its scope.
+verdict: >
+  Notion MCP handles templated page creation workflows reliably and delivers meaningful time
+  savings for HR and team operations; multi-tool workflows that span Notion and other platforms
+  require additional coordination, but within Notion it performs well for structured creation tasks.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-avifenesh-agentsys
+reporter_role: student
+date_evaluated: "2026-03-26"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used AgentSys as a learning accelerator for a capstone project, employing the documentation
+  generation agent, the code refactoring agent, and the API design agent. Compared output
+  quality to writing prompts manually as a student with intermediate Claude Code experience.
+  Focused on Python backend code for a REST API project.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The pre-built agents saved time on tedious tasks like generating docstrings and writing
+      boilerplate API handlers; I estimate 3 hours saved over the project week on those tasks alone.
+  q:
+    value: 7
+    evidence: >
+      Documentation agent output quality was good for straightforward functions; the refactoring
+      agent correctly simplified 4 out of 5 targeted functions and flagged one as too complex to safely refactor.
+  c:
+    value: 6
+    evidence: >
+      As a student on the free Claude tier, the orchestration token overhead was noticeable;
+      I hit rate limits faster using AgentSys agents than with direct prompts for the same work.
+  r:
+    value: 7
+    evidence: >
+      Consistent results across my test sessions; the agents behaved predictably when given
+      well-structured code and deteriorated gracefully with requests outside the template assumptions.
+  x:
+    value: 6
+    evidence: >
+      The agents worked with my project's file structure when I configured the filesystem
+      plugin correctly; initial configuration required reading the plugin documentation carefully.
+  f:
+    value: 5
+    evidence: >
+      Setup took about an hour including reading docs and debugging a Python version conflict
+      with one of the plugins; not as quick as using Claude Code directly with no setup.
+verdict: >
+  AgentSys is a helpful scaffold for students learning structured AI-assisted development;
+  it abstracts prompt engineering behind clear agent interfaces, though the token overhead
+  and setup complexity may frustrate students on free-tier API limits or without prior
+  command-line tooling experience.
+conflict_of_interest: none

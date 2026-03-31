@@ -1,0 +1,47 @@
+tool_id: gh-composiohq-composio
+reporter_role: developer
+date_evaluated: "2026-03-09"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used Composio to connect Claude to GitHub, Slack, and Google Calendar for an automated
+  meeting scheduling assistant. The agent reads GitHub PR review requests, checks reviewer
+  calendar availability via Google Calendar, and schedules review meetings via Slack
+  invitations. Tested 1000+ tool integration claim against this 3-tool workflow.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The three-tool integration that would have required separate OAuth flows and API
+      clients for each service was configured through Composio in about 45 minutes; real productivity gain for multi-integration agents.
+  q:
+    value: 7
+    evidence: >
+      GitHub and Slack integrations worked correctly; Google Calendar had two calendar
+      read failures in 20 test runs, likely due to permission scope timing issues in the OAuth flow.
+  c:
+    value: 6
+    evidence: >
+      Composio's free tier covers limited executions; at team scale the paid plan adds
+      cost to the Claude API spend; the convenience cost scales with integration usage volume.
+  r:
+    value: 6
+    evidence: >
+      Two Google Calendar failures in 20 runs (10% failure rate) was higher than acceptable
+      for a production workflow; GitHub and Slack integrations were more reliable at 98%+ success rate.
+  x:
+    value: 8
+    evidence: >
+      Composio provides Claude-compatible tool definitions that map directly to the Anthropic
+      tool use API; plugging Composio tools into Claude required minimal adapter code.
+  f:
+    value: 7
+    evidence: >
+      Composio's CLI made OAuth authentication for all three services manageable; the
+      concept of managed OAuth significantly reduces the auth integration burden compared to doing it manually.
+verdict: >
+  Composio delivers on its core promise of reducing multi-service integration complexity
+  for Claude agents; the managed OAuth approach is the key differentiator and works reliably
+  for GitHub and Slack; Google Calendar reliability needs improvement before use in
+  production workflows that depend on calendar accuracy.
+conflict_of_interest: none

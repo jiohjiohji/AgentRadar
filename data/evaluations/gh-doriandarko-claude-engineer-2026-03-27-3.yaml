@@ -1,0 +1,47 @@
+tool_id: gh-doriandarko-claude-engineer
+reporter_role: student
+date_evaluated: "2026-03-27"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Discovered Claude Engineer in a tutorial blog post and attempted to use it for a web
+  scraping project before learning it was archived in December 2024. Compared experience
+  with Claude Code to understand why the tool was superseded and what it offered that
+  Claude Code now handles natively.
+scores:
+  p:
+    value: 2
+    evidence: >
+      Spent 45 minutes setting up a tool that was superseded by Claude Code before it
+      could complete the scraping task; the comparison with Claude Code revealed Claude Code
+      accomplishes the same tasks with less setup in half the time.
+  q:
+    value: 4
+    evidence: >
+      The basic web scraping scaffolding Claude Engineer generated was correct Python code;
+      the quality limitation is the tool loop's inability to iterate based on runtime errors the way Claude Code does.
+  c:
+    value: 4
+    evidence: >
+      Uses the same Anthropic API as Claude Code but with an inefficient custom loop that
+      makes more API calls per task; students will consume budget faster than with Claude Code.
+  r:
+    value: 3
+    evidence: >
+      Two crashes during testing on macOS Sonoma due to dependency issues; the tool
+      was clearly not designed for or tested on macOS Sonoma given its December 2024 archival.
+  x:
+    value: 1
+    evidence: >
+      No integration with any current Claude Code extension, MCP tool, or agent framework;
+      it is a hermetically sealed tool from a pre-MCP era.
+  f:
+    value: 4
+    evidence: >
+      README installation steps worked with an older Python version; macOS system Python
+      was too new for some dependencies and required pyenv setup to run reliably.
+verdict: >
+  Students and developers discovering Claude Engineer through older tutorials should skip it
+  entirely and use Claude Code directly; the native Claude Code experience is faster to set up,
+  more reliable, and more capable across every dimension that Claude Engineer attempted to address.
+conflict_of_interest: none

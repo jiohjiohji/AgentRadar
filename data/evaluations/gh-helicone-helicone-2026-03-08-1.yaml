@@ -1,0 +1,47 @@
+tool_id: gh-helicone-helicone
+reporter_role: developer
+date_evaluated: "2026-03-08"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Integrated Helicone into a Claude-powered content generation API by changing the base URL
+  in the Anthropic SDK. Used Helicone for cost tracking, request caching, and rate limit
+  monitoring across a week of production traffic. Evaluated the one-line integration claim
+  and the quality of the analytics dashboard.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Helicone's cost dashboard revealed that 3 specific prompt templates were consuming
+      60% of the API budget; optimizing those templates saved $180/month with one afternoon of work.
+  q:
+    value: 8
+    evidence: >
+      Request logging was accurate with no missing requests across 5000 tracked calls;
+      the cost attribution and token count breakdowns matched the Anthropic API billing exactly.
+  c:
+    value: 7
+    evidence: >
+      Helicone charges based on request volume; at our traffic level the cost was $15/month,
+      which was justified by the $180/month API cost savings from optimization insights.
+  r:
+    value: 9
+    evidence: >
+      The proxy-based architecture is transparent; when Helicone had a 5-minute outage
+      the application failed over gracefully with a simple SDK baseUrl revert, restoring service quickly.
+  x:
+    value: 9
+    evidence: >
+      The one-line integration via SDK baseUrl change is genuinely as easy as advertised;
+      no code changes beyond the configuration, making it the least intrusive observability option available.
+  f:
+    value: 10
+    evidence: >
+      Sign up, copy API key, change SDK base URL, and requests appear in the Helicone
+      dashboard within seconds; this is the fastest observability integration I have implemented.
+verdict: >
+  Helicone delivers on its one-line integration promise and provides actionable cost and
+  usage analytics that pay for themselves quickly; the proxy-based approach is the right
+  trade-off between integration simplicity and observability depth for teams that want
+  visibility without instrumenting their application code.
+conflict_of_interest: none

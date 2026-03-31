@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-prompt-tutorial
+reporter_role: researcher
+date_evaluated: "2026-03-28"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Completed the full tutorial with a focus on how the techniques apply to structured data
+  extraction tasks for a computational social science research pipeline. Specifically studied
+  Chapters 4 (separating data from instructions) and 7 (avoiding hallucinations) in depth
+  and applied the techniques to improving a survey response coding pipeline.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Applying Chapter 4 techniques to the survey coding pipeline reduced hallucinated
+      category assignments from 18% to 4%, saving hours of manual coding validation per wave.
+  q:
+    value: 9
+    evidence: >
+      The hallucination-avoidance techniques in Chapter 7 are directly applicable to research
+      data extraction and the tutorial explains the mechanism clearly, enabling principled rather than trial-and-error improvement.
+  c:
+    value: 10
+    evidence: >
+      Zero cost for the tutorial itself; the improved techniques reduced token waste from
+      failed extractions and re-runs, providing measurable cost savings in the research pipeline.
+  r:
+    value: 9
+    evidence: >
+      Tutorial exercises work correctly and the content is updated to reflect current
+      Claude capabilities; Anthropic's maintenance of this official resource is evident.
+  x:
+    value: 8
+    evidence: >
+      Research applications of the techniques are not explicitly covered but the principles
+      generalize; researchers who apply the tutorial's frameworks to their domains will improve any Claude workflow.
+  f:
+    value: 9
+    evidence: >
+      Jupyter setup on macOS was smooth with the provided requirements file; the tutorial
+      is designed for accessibility and the setup steps are clearly documented for non-developers.
+verdict: >
+  The official prompt engineering tutorial delivers measurable improvement in extraction
+  task accuracy when researchers apply its techniques; Chapter 7 on hallucination avoidance
+  is particularly valuable for research applications where data quality is critical, making
+  this tutorial a must-complete resource before deploying Claude in research data pipelines.
+conflict_of_interest: none

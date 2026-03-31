@@ -1,0 +1,47 @@
+tool_id: gh-korotovsky-slack-mcp
+reporter_role: small-team
+date_evaluated: "2026-03-19"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Evaluated Slack MCP for a 6-person startup to automate weekly team updates. Claude
+  collects status messages posted in #weekly-updates over the past 7 days, generates
+  a consolidated team progress report, and sends it to a designated Slack channel.
+  Also tested sending formatted messages with blocks and channel member listing.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Weekly report assembly improved, but the tool's inability to read user profile
+      details meant the reports lacked attribution context, requiring manual identification of contributors.
+  q:
+    value: 5
+    evidence: >
+      Slack's message format with mention IDs, emoji codes, and rich text markup was
+      not cleanly handled; Claude produced some garbled output from messages containing
+      many formatting elements, requiring manual cleanup.
+  c:
+    value: 7
+    evidence: >
+      Token consumption for weekly digest generation was modest, around 3k per run;
+      the Slack API itself has no per-call cost, keeping total expense low for a small team.
+  r:
+    value: 5
+    evidence: >
+      We hit two API timeout errors over 4 weeks of use and one authentication token
+      expiry that required regenerating the bot token; stability was acceptable but not seamless.
+  x:
+    value: 5
+    evidence: >
+      The tool works as a standalone Slack interface but does not compose well with our
+      project management tools; building a Slack-to-Linear integration required a separate bespoke approach.
+  f:
+    value: 4
+    evidence: >
+      The Slack developer portal, permission scopes, workspace installation, and token
+      management took over an hour for a non-developer team member to configure correctly.
+verdict: >
+  Slack MCP is functional for basic message reading and posting workflows but the setup
+  complexity relative to value delivered makes it hard to recommend for small non-technical
+  teams; engineering teams comfortable with Slack app configuration will find it more accessible.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-browserbase-stagehand
+reporter_role: developer
+date_evaluated: "2026-03-07"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used Stagehand to build an AI-native web automation workflow for monitoring competitor
+  product pages. The agent used Stagehand's act() and extract() methods to navigate,
+  interact with dropdowns, and extract pricing data from 10 competitor sites. Evaluated
+  Stagehand's AI-native approach versus raw Playwright for the same task.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Writing the Stagehand automation took 2 hours versus an estimated 6 hours for equivalent
+      raw Playwright scripts; the natural language act() instructions eliminated most selector engineering.
+  q:
+    value: 8
+    evidence: >
+      Stagehand correctly navigated and extracted data from 9 of 10 competitor sites;
+      the one failure was a site using an unusual custom overlay that confused the visual element identification.
+  c:
+    value: 6
+    evidence: >
+      Stagehand's AI-native approach uses LLM calls for element identification on each
+      act() call; a 10-site scraping run consumed approximately 15k additional tokens beyond the data extraction itself.
+  r:
+    value: 7
+    evidence: >
+      The 90% success rate was consistent across three weekly monitoring runs; the same
+      site that failed the first time continued to fail, suggesting a deterministic issue rather than flakiness.
+  x:
+    value: 7
+    evidence: >
+      Stagehand composes with the broader Node.js ecosystem and outputs structured data
+      that integrates with our existing data pipeline; it is not MCP-native but works in Claude Code workflows via CLI.
+  f:
+    value: 8
+    evidence: >
+      npm install @browserbasehq/stagehand and the first working automation runs within
+      30 minutes including Browserbase account setup; the documentation includes complete working examples.
+verdict: >
+  Stagehand's AI-native browser automation approach delivers significant automation code
+  reduction compared to traditional selector-based approaches; the additional LLM token cost
+  per operation is the key trade-off, making it best suited for complex automations where
+  the code savings outweigh the recurring token overhead.
+conflict_of_interest: none
