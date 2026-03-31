@@ -1,65 +1,60 @@
-# TASK: [TASK_NAME]
-# Date: [DATE] | Phase: [0/1/2/3/4/5]
-# Status: IN_PROGRESS | DONE
-# Archived to: tasks/completed/[DATE]-[TASK_NAME].md when done
-
----
+# TASK: phase-0-seed-dataset
+# Date: 2026-03-31 | Phase: 0
+# Status: IN_PROGRESS
 
 ## MUSK 5-RULES PRE-CHECK
-# Complete ALL FIVE before any agent starts work. No exceptions.
 
 ### Rule 1 — Is this requirement legitimate?
-Who specifically asked for this: [name or "Phase N plan"]
-What breaks without it: [specific answer]
-Decision: PROCEED | DELETE
+Who asked for this: Phase 0 plan (the data is the product)
+What breaks without it: Nothing exists to evaluate, compare, or discover. Zero value.
+Decision: PROCEED
 
 ### Rule 2 — What can be deleted first?
-Parts of the current codebase this task touches: [list or NONE]
-What can be removed before we start: [list or NONE]
-Minimum viable version of this task: [description]
+Remove nothing — this is the first task. Start clean.
+Minimum viable version: 10 tool profiles (not 50). Start with 10 and validate quality before scaling.
 
 ### Rule 3 — Simplest implementation?
-First instinct approach: [natural first thought]
-Simpler approach: [what we should actually do]
-Chosen approach: [chosen and why]
+First instinct: write all 50 profiles in one session
+Simpler approach: write 10 profiles, validate all 10, then write 10 more in batches
+Chosen approach: batches of 10. Quality over speed.
 
 ### Rule 4 — What slowed last time?
-Check tasks/completed/ for similar tasks.
-Blocker identified: [from history or NONE]
-Prevention: [specific action or N/A]
+No history yet. First task.
+Prevention: N/A
 
 ### Rule 5 — What to automate?
-Repeatable part of this task: [description or NONE]
-Where the automation goes: [AGENTS.md skill / GitHub Action / script / slash command]
+After writing 10 profiles manually, identify any fields that can be auto-populated from GitHub API.
+This will become the auto-triage script (Phase 1).
 
 ---
 
 ## TASK BREAKDOWN
 
-### Gemini Agent Jobs (Antigravity Manager — run in parallel)
-- [ ] Agent 1: [deliverable] | Acceptance: [testable criteria]
-- [ ] Agent 2: [deliverable] | Acceptance: [testable criteria]
-- [ ] Agent 3: [deliverable] | Acceptance: [testable criteria]
-# Max 5 parallel agents. Each gets ONE job, not a list of jobs.
+### Gemini Agent Jobs (run in parallel)
+- [ ] Agent 1: Generate profiles for GitHub MCP, Filesystem MCP | Acceptance: validate_yaml.py PASS
+- [ ] Agent 2: Generate profiles for Playwright MCP, Tavily MCP | Acceptance: validate_yaml.py PASS
+- [ ] Agent 3: Generate profiles for wshobson/agents, AgentSys | Acceptance: validate_yaml.py PASS
+- [ ] Agent 4: Generate profiles for TACHES, Conductor | Acceptance: validate_yaml.py PASS
+- [ ] Agent 5: Generate profiles for Context Engineering Kit, Claude Code PM | Acceptance: validate_yaml.py PASS
 
-### tdd-guard Gate (automatic — no manual step needed)
-- Tests pass: [test command, e.g. pytest tests/test_crawler.py]
-- YAML validation: [python scripts/validate_yaml.py if applicable]
-- Coverage ≥80%: [enforced by tdd-guard automatically]
+### tdd-guard Gate
+- Validation: python scripts/validate_yaml.py data/tools/
+- All 10 profiles pass with zero errors
 
-### Claude Code Review (only AFTER tdd-guard passes)
-Review files: [list specific files — NOT "the whole project"]
-Quality gate: [what must be true to PASS]
-Update AGENTS.md: YES | NO | [what to add]
+### Claude Code Review
+Review files: data/tools/ (all 10 profiles)
+Quality gate: All 12 fields present; scores are null (not invented); status computed from real last-commit dates
+Update AGENTS.md: YES — add any patterns found in the first batch
 
 ---
 
 ## DONE WHEN
-- [ ] All Gemini agent jobs complete
-- [ ] tdd-guard gate: PASS
+- [ ] 10 tool profiles in data/tools/
+- [ ] All 10 pass validate_yaml.py with zero errors
 - [ ] Claude review: PASS
-- [ ] DECISIONS.md updated (if new decision made)
-- [ ] AGENTS.md updated (Rule 5 automation, new forbidden patterns)
-- [ ] TASK.md status: DONE
-- [ ] Archived: tasks/completed/[DATE]-[TASK_NAME].md
-- [ ] Committed: git commit -m "[type]: [description]"
+- [ ] /iterate command run and AGENTS.md updated
+- [ ] TASK.md archived
+- [ ] Committed
+
+## NEXT TASK
+phase-0-seed-dataset-batch-2 (tools 11-20)

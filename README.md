@@ -6,10 +6,9 @@ Discover, compare, and evaluate Claude Code and MCP agentic workflow tools.
 
 ```
 AgentRadar/
-├── AGENTS.md                 # Agent constitution — routing, constraints, decisions
-├── CLAUDE.md                 # Claude Code session context
-├── TASK.md                   # Active task ticket
-├── RULES.md                  # Post-task iteration gate
+├── AGENTS.md                 # Agent constitution — routing, constraints, forbidden patterns
+├── CLAUDE.md                 # Claude Code session context and quality standards
+├── TASK.md                   # Active task ticket (Musk 5-rules template)
 ├── DECISIONS.md              # Architectural decisions log
 ├── requirements.txt          # Python dependencies
 │
@@ -34,11 +33,10 @@ AgentRadar/
 │
 ├── tests/                    # Python test suite (pytest)
 ├── tasks/completed/          # Archived task records
-├── docs/                     # Planning and specification documents
 │
 ├── .claude/                  # Claude Code configuration
 │   ├── commands/             # Slash commands (/new-tool, /iterate, etc.)
-│   └── skills/               # Reusable agent skills
+│   └── skills/               # Reusable agent skills (yaml-profile, eval-report, versus-page, musk-review)
 │
 └── .github/                  # GitHub configuration
     ├── workflows/            # CI/CD (agnix, YAML validation, tests)

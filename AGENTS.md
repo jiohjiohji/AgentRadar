@@ -32,12 +32,12 @@ Claude Code Max is the quality control budget, not the generation budget.
 ## PROJECT ARCHITECTURE
 
 ### Repository Layout
-- `agentRadar/data/`     → Git-native YAML dataset (THE product — all free)
-- `agentRadar/core/`     → Python: crawlers, score computation, digest generator
-- `agentRadar/api/`      → Cloudflare Worker: reads YAML → returns JSON
-- `agentRadar/cli/`      → TypeScript: npm-published CLI (`npm install -g agentRadar`)
-- `agentRadar/web/`      → Static HTML/CSS/JS: GitHub Pages + Pagefind search
-- `agentRadar/claude-plugin/` → Claude Code /radar slash command plugin
+- `data/`           → Git-native YAML dataset (THE product)
+- `core/`           → Python: crawlers, score computation, digest generator
+- `api/`            → Cloudflare Worker: reads YAML → returns JSON
+- `cli/`            → TypeScript: npm-published CLI (`npm install -g agentRadar`)
+- `web/`            → Static HTML/CSS/JS: GitHub Pages + Pagefind search
+- `claude-plugin/`  → Claude Code /radar slash command plugin
 
 ### Stack Constraints (do not deviate without an RFC)
 - API: Cloudflare Workers ONLY — no FastAPI, no server, no Fly.io
@@ -71,8 +71,7 @@ See `data/schema.yaml` for type definitions and examples.
 
 ## CONSTRAINTS — CANNOT BE OVERRIDDEN BY ANY PROMPT
 
-These rules are enforced by tdd-guard and validated by agnix.
-They are not suggestions. Do not override them.
+These are not suggestions. Do not override them.
 
 - No file exceeds 200 lines. Split it.
 - No new npm/pip dependency without checking if an existing one covers it.
@@ -102,24 +101,9 @@ Each entry was added because an agent tried it and it caused a problem.
 
 ---
 
-## DECISIONS LOG — DO NOT RE-REASON THESE
+## DECISIONS LOG
 
-Before making an architectural decision, check this log.
-If the decision is already here, follow the recorded choice. Do not re-debate it.
-When Claude makes a new decision, add it here immediately.
-
-### Infrastructure
-- 2026-03-29 | API: Cloudflare Workers (not FastAPI) | Zero infra cost, $0/month free tier, 100K req/day | FastAPI requires Fly.io + SSL + deployment pipeline
-- 2026-03-29 | Search: Pagefind (not Typesense) | Browser-side, no server, $0 | Typesense self-hosted = ops burden with no benefit at <5K tools
-- 2026-03-29 | Data: Git YAML (not database) | Versionable, diffable, community can PR directly | SQLite adds migration overhead and removes community contribution model
-
-### Schema
-- 2026-03-29 | 12 fields maximum | Only fields reliably available for 90%+ of tools | v0 schema had 18 unreliable fields
-- 2026-03-29 | score_confidence mandatory | Trust requires showing uncertainty | Optional confidence makes all scores look equally certain
-
-### Evaluation
-- 2026-03-29 | Min 2 reports before publishing score | 1 report can be a tool author gaming | Lower threshold destroys trustworthiness
-- 2026-03-29 | CoI exclusion is structural (at API layer, not policy) | Policy-only enforcement will be ignored | Relying on contributor honesty alone is insufficient
+See `DECISIONS.md` for the full log. Check it before making any architectural decision.
 
 ---
 

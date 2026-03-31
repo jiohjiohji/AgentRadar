@@ -30,7 +30,7 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 
 ### Tooling
 2026-03-29 | tdd-guard enforces tests before Claude review | Phase 0 | Eliminates an entire class of Claude review failures; saves Claude tokens on trivially broken code | Manual test enforcement: forgets; prompt-based enforcement: ignored when under time pressure
-2026-03-29 | claude-context-mode for all review sessions | Phase 0 | 98% context reduction = 10x cheaper Claude sessions | Loading full data/ directory: burns context on files Claude doesn't need
+2026-03-31 | claude-context-mode deferred — package does not exist on npm | Phase 0 | Originally planned for 98% context reduction; not available as published package | Will revisit when a real context compression tool is available
 
 ---
 

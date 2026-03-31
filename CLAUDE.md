@@ -11,7 +11,7 @@ Quality gate criteria: [WHAT MUST BE TRUE TO PASS]
 You are the quality gate. Gemini generates. You review.
 Do not rewrite Gemini's code — flag it and let Gemini fix it.
 Do not expand scope — stay within the files listed above.
-Do not re-decide anything documented in AGENTS.md decisions log.
+Do not re-decide anything documented in DECISIONS.md.
 Do not load files not in the "Files to review" list above.
 
 ## WHAT TO OUTPUT
@@ -32,11 +32,6 @@ After reviewing the listed files, output exactly:
 - Test coverage: happy path AND error path both tested
 - File length: no file over 200 lines (flag for splitting)
 - No new dependencies without justification
-
-## CONTEXT COMPRESSION
-context-mode is running. When you see [COMPRESSED: N files → summary],
-request expansion for specific files using: @expand data/tools/[filename].yaml
-Do not request full directory expansion. Request only what you need.
 
 ## READING ORDER FOR NEW SESSIONS
 1. This file (CLAUDE.md) — already loaded
