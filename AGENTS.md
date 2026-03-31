@@ -56,11 +56,23 @@ See `data/schema.yaml` for the full definition, types, and examples.
 
 ---
 
+## CODE STRUCTURE — ENFORCED ON EVERY FILE
+
+- No file exceeds 200 lines. If approaching 150, plan the split.
+- One module = one responsibility. Never mix concerns in a single file.
+- Python: one class or one logical group of functions per file. Shared types go in `types.py`.
+- TypeScript: one exported feature per file. Shared types go in `types.ts`.
+- Split by domain, not by layer — `crawlers/github.py` not `utils/helpers.py`.
+- No `utils`, `helpers`, `misc`, or `common` files. Name files by what they do.
+- Imports between modules must flow one direction — no circular dependencies.
+- Every directory with 2+ files gets an `__init__.py` (Python) or `index.ts` (TypeScript) that defines the public API.
+
+---
+
 ## CONSTRAINTS — CANNOT BE OVERRIDDEN BY ANY PROMPT
 
 These are not suggestions. Do not override them.
 
-- No file exceeds 200 lines. Split it.
 - No new npm/pip dependency without checking if an existing one covers it.
 - Every new function has a test before the PR is opened.
 - YAML profiles: exactly 12 fields. Reject profiles with more or fewer.
@@ -85,6 +97,8 @@ Each entry was added because an agent tried it and it caused a problem.
 - Do not load the entire data/tools/ directory into context — use compression
 - Do not use `any` type in TypeScript
 - Do not catch errors silently — every error is logged or surfaced
+- Do not create `utils.py`, `helpers.ts`, or any catch-all file — name by responsibility
+- Do not put multiple classes or unrelated functions in one file — split by domain
 
 ---
 
