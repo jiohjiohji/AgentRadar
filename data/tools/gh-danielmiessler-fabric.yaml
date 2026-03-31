@@ -1,18 +1,30 @@
-id: "gh-danielmiessler-fabric"
-name: "Fabric"
-source_url: "https://github.com/danielmiessler/fabric"
+id: gh-danielmiessler-fabric
+name: Fabric
+source_url: https://github.com/danielmiessler/fabric
 category: prompt-library
 pricing: free
 license: MIT
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 8.0
+  q: 7.3
+  c: 8.7
+  r: 8.3
+  x: 7.3
+  f: 7.3
+  composite: 7.8
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.8
+  benchmark_version: '1.0'
 tags:
-  - prompt-library
-  - modular
-  - crowdsourced
-  - patterns
-  - cli
-  - augmentation
+- prompt-library
+- modular
+- crowdsourced
+- patterns
+- cli
+- augmentation
 versus_refs: []

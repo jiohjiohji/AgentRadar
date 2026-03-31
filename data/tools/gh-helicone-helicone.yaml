@@ -1,17 +1,29 @@
-id: "gh-helicone-helicone"
-name: "Helicone"
-source_url: "https://github.com/Helicone/helicone"
+id: gh-helicone-helicone
+name: Helicone
+source_url: https://github.com/Helicone/helicone
 category: eval-observability
 pricing: freemium
 license: Apache-2.0
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 7.3
+  q: 7.7
+  c: 7.0
+  r: 8.0
+  x: 8.7
+  f: 9.0
+  composite: 8.0
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.0
+  benchmark_version: '1.0'
 tags:
-  - observability
-  - caching
-  - monitoring
-  - llm-gateway
-  - one-line-integration
+- observability
+- caching
+- monitoring
+- llm-gateway
+- one-line-integration
 versus_refs: []

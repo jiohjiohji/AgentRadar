@@ -1,18 +1,30 @@
-id: "gh-composiohq-composio"
-name: "Composio"
-source_url: "https://github.com/ComposioHQ/composio"
+id: gh-composiohq-composio
+name: Composio
+source_url: https://github.com/ComposioHQ/composio
 category: complementary
 pricing: freemium
 license: MIT
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 6.7
+  q: 6.7
+  c: 5.7
+  r: 6.7
+  x: 7.7
+  f: 6.3
+  composite: 6.6
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 6.6
+  benchmark_version: '1.0'
 tags:
-  - agent-tools
-  - integrations
-  - authentication
-  - toolkits
-  - action-execution
-  - multi-agent
+- agent-tools
+- integrations
+- authentication
+- toolkits
+- action-execution
+- multi-agent
 versus_refs: []

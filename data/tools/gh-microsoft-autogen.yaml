@@ -1,17 +1,29 @@
-id: "gh-microsoft-autogen"
-name: "AutoGen"
-source_url: "https://github.com/microsoft/autogen"
+id: gh-microsoft-autogen
+name: AutoGen
+source_url: https://github.com/microsoft/autogen
 category: orchestration
 pricing: free
 license: CC-BY-4.0
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 7.7
+  q: 7.3
+  c: 5.3
+  r: 6.7
+  x: 6.7
+  f: 5.0
+  composite: 6.5
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 6.5
+  benchmark_version: '1.0'
 tags:
-  - multi-agent
-  - orchestration
-  - microsoft
-  - conversational-agents
-  - agentic-ai
+- multi-agent
+- orchestration
+- microsoft
+- conversational-agents
+- agentic-ai
 versus_refs: []

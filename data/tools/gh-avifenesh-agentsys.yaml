@@ -1,19 +1,31 @@
-id: "gh-avifenesh-agentsys"
-name: "AgentSys"
-source_url: "https://github.com/avifenesh/AgentSys"
+id: gh-avifenesh-agentsys
+name: AgentSys
+source_url: https://github.com/avifenesh/AgentSys
 category: claude-plugin
 pricing: free
 license: MIT
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 6.7
+  q: 6.3
+  c: 5.7
+  r: 7.0
+  x: 6.3
+  f: 5.3
+  composite: 6.2
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 6.2
+  benchmark_version: '1.0'
 tags:
-  - multi-agent
-  - plugins
-  - skills
-  - automation
-  - claude-code-native
-  - opencode
-  - cursor
+- multi-agent
+- plugins
+- skills
+- automation
+- claude-code-native
+- opencode
+- cursor
 versus_refs: []

@@ -1,17 +1,29 @@
-id: "gh-mcp-memory"
-name: "Memory MCP"
-source_url: "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+id: gh-mcp-memory
+name: Memory MCP
+source_url: https://github.com/modelcontextprotocol/servers/tree/main/src/memory
 category: mcp-server
 pricing: free
 license: MIT
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 5.7
+  q: 6.0
+  c: 7.3
+  r: 7.3
+  x: 5.3
+  f: 8.0
+  composite: 6.6
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 6.6
+  benchmark_version: '1.0'
 tags:
-  - memory
-  - knowledge-graph
-  - persistence
-  - long-term-memory
-  - reference-implementation
+- memory
+- knowledge-graph
+- persistence
+- long-term-memory
+- reference-implementation
 versus_refs: []

@@ -1,18 +1,30 @@
-id: "gh-undeadlist-claude-code-agents"
-name: "Claude Code Agents (undeadlist)"
-source_url: "https://github.com/undeadlist/claude-code-agents"
+id: gh-undeadlist-claude-code-agents
+name: Claude Code Agents (undeadlist)
+source_url: https://github.com/undeadlist/claude-code-agents
 category: claude-plugin
 pricing: free
 license: MIT
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 7.0
+  q: 7.0
+  c: 8.0
+  r: 7.7
+  x: 7.0
+  f: 9.3
+  composite: 7.7
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.7
+  benchmark_version: '1.0'
 tags:
-  - subagents
-  - prompt-templates
-  - parallel
-  - code-audit
-  - task-tool
-  - claude-code-native
+- subagents
+- prompt-templates
+- parallel
+- code-audit
+- task-tool
+- claude-code-native
 versus_refs: []

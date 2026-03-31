@@ -1,18 +1,30 @@
-id: "gh-langchain-langgraph"
-name: "LangGraph"
-source_url: "https://github.com/langchain-ai/langgraph"
+id: gh-langchain-langgraph
+name: LangGraph
+source_url: https://github.com/langchain-ai/langgraph
 category: orchestration
 pricing: freemium
 license: MIT
 status: active
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 8.3
+  q: 8.0
+  c: 7.0
+  r: 8.0
+  x: 7.7
+  f: 5.7
+  composite: 7.5
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.5
+  benchmark_version: '1.0'
 tags:
-  - graph-based
-  - orchestration
-  - stateful-agents
-  - langchain
-  - cycles
-  - resilient
+- graph-based
+- orchestration
+- stateful-agents
+- langchain
+- cycles
+- resilient
 versus_refs: []

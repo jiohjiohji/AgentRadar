@@ -1,16 +1,28 @@
-id: "gh-browsermcp-mcp"
-name: "Browser MCP"
-source_url: "https://github.com/BrowserMCP/mcp"
+id: gh-browsermcp-mcp
+name: Browser MCP
+source_url: https://github.com/BrowserMCP/mcp
 category: mcp-server
 pricing: free
 license: Apache-2.0
 status: archived
-scores: null
-score_confidence: null
-score_history: []
+scores:
+  p: 2.3
+  q: 3.3
+  c: 4.3
+  r: 2.3
+  x: 3.3
+  f: 3.0
+  composite: 3.1
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 3.1
+  benchmark_version: '1.0'
 tags:
-  - browser-automation
-  - headless-browser
-  - web-interaction
-  - chromium
+- browser-automation
+- headless-browser
+- web-interaction
+- chromium
 versus_refs: []
