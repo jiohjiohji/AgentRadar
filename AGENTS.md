@@ -58,14 +58,11 @@ See `data/schema.yaml` for the full definition, types, and examples.
 
 ## CODE STRUCTURE — ENFORCED ON EVERY FILE
 
-- No file exceeds 200 lines. If approaching 150, plan the split.
+- No file exceeds 400 lines. At 300, evaluate whether a split improves clarity — only split if it does.
 - One module = one responsibility. Never mix concerns in a single file.
-- Python: one class or one logical group of functions per file. Shared types go in `types.py`.
-- TypeScript: one exported feature per file. Shared types go in `types.ts`.
 - Split by domain, not by layer — `crawlers/github.py` not `utils/helpers.py`.
 - No `utils`, `helpers`, `misc`, or `common` files. Name files by what they do.
 - Imports between modules must flow one direction — no circular dependencies.
-- Every directory with 2+ files gets an `__init__.py` (Python) or `index.ts` (TypeScript) that defines the public API.
 
 ---
 
