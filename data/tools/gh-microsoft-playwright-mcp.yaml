@@ -28,4 +28,8 @@ tags:
 - headless-browser
 - microsoft
 - official
-versus_refs: []
+versus_refs:
+- id: gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp
+  verdict_short: Playwright MCP is the only viable choice; BrowserMCP is archived
+    and increasingly broken
+  valid_until: '2026-06-29'

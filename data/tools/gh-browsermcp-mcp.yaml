@@ -25,4 +25,7 @@ tags:
 - headless-browser
 - web-interaction
 - chromium
-versus_refs: []
+versus_refs:
+- id: gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp
+  verdict_short: BrowserMCP is archived (April 2025); migrate to Playwright MCP
+  valid_until: '2026-06-29'

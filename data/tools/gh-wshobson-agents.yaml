@@ -27,4 +27,8 @@ tags:
 - claude-code-native
 - skills
 - subagents
-versus_refs: []
+versus_refs:
+- id: gh-wshobson-agents-vs-gh-avifenesh-agentsys
+  verdict_short: wshobson/agents wins on composability (9.0) and setup friction (8.0)
+    for Claude Code native workflows
+  valid_until: '2026-06-29'

@@ -28,4 +28,8 @@ tags:
 - claude-code-native
 - opencode
 - cursor
-versus_refs: []
+versus_refs:
+- id: gh-wshobson-agents-vs-gh-avifenesh-agentsys
+  verdict_short: AgentSys suits teams wanting pre-built agent templates; wshobson/agents
+    better for Claude Code–native workflows
+  valid_until: '2026-06-29'

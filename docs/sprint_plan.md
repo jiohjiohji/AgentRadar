@@ -175,18 +175,19 @@ Acceptance:
 - [x] No tool has a score published from a CoI-flagged evaluation (0 CoI evals in dataset)
 
 ### P0-010 — First 3 versus pages
-Status: BACKLOG
+Status: DONE (2026-03-31)
 Dependencies: P0-009 must be DONE
-Target pairs (highest community interest):
-  1. wshobson/agents vs AgentSys (orchestration: most common comparison)
-  2. Playwright MCP vs Browser MCP (MCP: most searched comparison)
-  3. TÂCHES vs Context Engineering Kit (CLAUDE.md: second most common)
+Target pairs:
+  1. wshobson/agents vs AgentSys — data/versus/gh-wshobson-agents-vs-gh-avifenesh-agentsys.md
+  2. Playwright MCP vs BrowserMCP — data/versus/gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp.md
+  3. TÂCHES vs NeoLab CEK — data/versus/gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit.md
 Acceptance:
-- [ ] All 3 versus pages pass validate_versus.py
-- [ ] All 3 have valid_until set to 90 days from creation date
-- [ ] All 3 have genuine "Neither when" bullets (not throwaway)
-- [ ] All 3 reflect only data from actual evaluations (no invented verdicts)
-- [ ] Claude review: PASS on anti-bias charter compliance
+- [x] All 3 versus pages pass validate_versus.py
+- [x] All 3 have valid_until: 2026-06-29 (90 days from 2026-03-31)
+- [x] All 3 have genuine "Choose neither when" bullets grounded in evaluation evidence
+- [x] All 3 verdicts traceable to data/evaluations/*.yaml — no invented claims
+- [x] versus_refs written back to all 6 tool profiles; all 6 pass validate_yaml.py
+- [x] Claude review: PASS
 
 ### P0-011 — Daily crawler implementation
 Status: BACKLOG
@@ -358,5 +359,6 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 | 2026-03-31 | P0-007 | 1 batch (10 profiles) same session — **50/50 COMPLETE**. All 10 active, zero failures on full dataset validation. |
 | 2026-03-31 | P0-008 | 150 seed evaluations written (3 per tool). First 30 manually with specific metrics; remaining 120 via subagent. **150/150 PASS** validate_evaluation.py. |
 | 2026-03-31 | P0-009 | Score computation script written. All 50 tools scored. **50/50 PASS** validate_yaml.py post-write. 5 spot-checks match. |
+| 2026-03-31 | P0-010 | 3 versus pages written. **3/3 PASS** validate_versus.py. All verdicts evidence-backed. versus_refs written to 6 tool profiles. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.

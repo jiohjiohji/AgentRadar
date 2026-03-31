@@ -26,4 +26,8 @@ tags:
 - spec-driven-development
 - claude-code-native
 - workflow
-versus_refs: []
+versus_refs:
+- id: gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit
+  verdict_short: TÂCHES wins on planning-phase productivity (8.7); CEK better for
+    team context standardisation
+  valid_until: '2026-06-29'

@@ -27,4 +27,8 @@ tags:
 - multi-agent-compatible
 - opencode
 - cursor
-versus_refs: []
+versus_refs:
+- id: gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit
+  verdict_short: CEK suited for team context standardisation; TÂCHES better for spec-driven
+    feature development
+  valid_until: '2026-06-29'
