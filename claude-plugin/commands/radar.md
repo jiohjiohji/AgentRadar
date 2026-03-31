@@ -13,21 +13,30 @@ If no arguments are provided, or the subcommand is `help`, print the usage block
 
 Read the current project to detect existing tools and stack. Recommend 1–3 tools that fill gaps.
 
-**Step 1 — detect the project stack**
+**Step 1 — detect the project stack and infer style**
 
 Read these files if they exist (use Read tool, do not error if missing):
 - `package.json` → extract `dependencies` and `devDependencies` keys
 - `requirements.txt` → extract package names (first token on each line, before `==` or `>=`)
 - `pyproject.toml` → extract `[project].dependencies` or `[tool.poetry.dependencies]`
 - `.mcp.json` or `.claude/mcp.json` → extract MCP server names already installed
-- `CLAUDE.md` → scan for tool names and section headers
+- `CLAUDE.md` → scan for tool names, section headers, and agent-related patterns
 - `.claude/commands/` → list filenames (already-installed Claude Code plugins)
 
-Summarize what you found: language(s), framework hints, which tool categories are already covered.
+**If no dependencies or MCP servers are found**, read any `.md` files in the project root (PRD.md, README.md, CLAUDE.md, SPEC.md, etc.). Extract technology keywords and domain signals: frameworks (React, Next.js, Python, TypeScript), domains (browser testing, web scraping, notifications), and tool names mentioned.
+
+**Infer the development style:**
+- 3+ MCP servers, 3+ claude commands, or agent/orchestration patterns in a substantial CLAUDE.md → **full-agent user** → prioritize composability (`x` score) and multi-agent compatibility
+- Minimal or no config files, just docs, < 5 deps → **vibe coder** → prioritize setup friction (`f` score) and zero-config tools
+- Moderate deps with some config → **balanced** → weight both equally
+
+**If truly no files exist** (empty project): recommend `gh-mcp-filesystem` (universal MCP), `gh-gsd-build-get-shit-done` (CLAUDE.md framework), and `gh-anthropics-sdk-python` (starter SDK). Label: "No project files found — here are recommended starter tools."
+
+Summarize what you found: language(s), framework hints, which tool categories are already covered, inferred style.
 
 **Step 2 — fetch the index**
 
-Fetch the index URL. Parse the JSON. You now have all 50 tools with category, status, tags, and optional composite score.
+Fetch the index URL. Parse the JSON. You now have all 50 tools with category, status, tags, composite score, f_score (setup friction), and x_score (composability). The f and x scores drive the style-adaptive ranking.
 
 **Step 3 — identify gaps**
 
@@ -40,12 +49,16 @@ For each tool category, check if the project already has something covering it:
 
 Categories with no existing coverage = gaps.
 
-**Step 4 — rank candidates for each gap**
+**Step 4 — rank candidates for each gap (style-adaptive)**
 
 Ranking (in order):
 1. `status: active` > `status: stale` — never recommend `archived`
-2. Tag overlap with detected stack (more matching tags = higher rank)
-3. `composite` score as tiebreaker (when both status and tag overlap are equal)
+2. Tag overlap with detected stack AND intent signals from markdown (more matching tags = higher rank)
+3. Style-adaptive fit bonus:
+   - **Vibe coder**: prefer tools with high `f` score (setup friction ≥ 8 = low friction)
+   - **Full-agent user**: prefer tools with high `x` score (composability ≥ 8)
+   - **Balanced**: weight both `f` and `x` equally
+4. A newer tool with fewer stars but better fit for the user's style SHOULD beat an established tool that doesn't fit
 
 **Step 5 — output 1–3 recommendations**
 
@@ -67,7 +80,7 @@ If no gaps exist: "Your project looks well-covered. Run `/radar check` to audit 
 
 Arguments after `suggest` are the developer's stated need (e.g., "browser testing", "I need to add MCP tools").
 
-**Step 1 — read project context** (same detection as scan step 1, but abbreviated — just capture language, framework, and already-installed categories)
+**Step 1 — read project context** (same detection as scan step 1, but abbreviated — capture language, framework, already-installed categories, and inferred style)
 
 **Step 2 — fetch the index**
 
@@ -79,9 +92,9 @@ Tokenize the stated need. Score each tool by:
 - Name match = +1 point
 - Penalty: `status: stale` = -1, `status: archived` = disqualify
 
-**Step 4 — check compatibility**
+**Step 4 — check compatibility and apply style**
 
-Filter out tools that would conflict with the detected stack (e.g., if the project is Python-only, down-rank JavaScript-only MCP servers).
+Filter out tools that would conflict with the detected stack (e.g., if the project is Python-only, down-rank JavaScript-only MCP servers). Apply the same style-adaptive fit bonus as scan: vibe coders get tools with high `f`, agent users get tools with high `x`.
 
 **Step 5 — output 1–3 matches**
 

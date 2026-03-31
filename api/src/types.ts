@@ -6,10 +6,14 @@ export interface ToolSummary {
   tags: string[];
   pricing: string;
   composite: number | null;
+  f_score: number | null;
+  x_score: number | null;
   eval_count: number;
   confidence: "low" | "medium" | "high" | null;
   versus_refs: string[];
 }
+
+export type UserStyle = "vibe" | "agent" | "balanced";
 
 export interface ToolsIndex {
   schema_version: string;

@@ -36,6 +36,8 @@ def load_tool(path: Path) -> dict:
         "tags": profile.get("tags") or [],
         "pricing": profile["pricing"],
         "composite": scores.get("composite"),
+        "f_score": scores.get("f"),
+        "x_score": scores.get("x"),
         "eval_count": scores.get("eval_count", 0),
         "confidence": profile.get("score_confidence"),
         "versus_refs": [v["id"] for v in versus],

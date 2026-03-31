@@ -1,6 +1,6 @@
 # AgentRadar — Product Requirements Document
-# Version: 1.1 | Owner: Jihoon | Status: APPROVED
-# Last updated: 2026-04-01 — pivot: /radar plugin PRIMARY, CLI secondary, scores as tiebreaker
+# Version: 1.2 | Owner: Jihoon | Status: APPROVED
+# Last updated: 2026-04-01 — Phase 1 complete. /radar plugin PRIMARY, CLI secondary, scores as tiebreaker
 # Feed this to Claude at session start for any product, feature, or UI work.
 
 ---
@@ -13,13 +13,15 @@ signal where developers actually work — inside their terminal, Claude Code ses
 and IDE.
 
 **The core value proposition in one sentence:**
-When a developer finds two tools that look identical, AgentRadar gives them an honest,
-evidence-backed answer in under 60 seconds without leaving their terminal.
+AgentRadar reads your project, infers whether you're a vibe coder or agent architect,
+and recommends tools that fit your style — not generic top-10 lists.
 
 **What makes it different from existing solutions:**
 Every existing solution (GitHub MCP Registry, awesome-claude-code, mcp-gateway-registry)
-solves the discovery problem — what tools exist. AgentRadar solves the signal problem —
-which tool to pick, why, and what it will cost in tokens.
+solves the discovery problem — what tools exist. AgentRadar solves the fit problem —
+which tool matches YOUR project, YOUR development style, and YOUR tolerance for setup friction.
+Style-adaptive ranking: vibe coders get low-friction tools (high f_score), agent architects
+get composable tools (high x_score). Intent extraction reads your PRD/README when no deps exist.
 
 ---
 
@@ -111,13 +113,7 @@ external alternatives; compliance team asks about security and governance
 I can discover what exists without leaving GitHub.
 - Acceptance: 50 tool profiles publicly accessible in agentRadar/data repo
 - Acceptance: Each profile has all 12 required schema fields
-- Acceptance: Scores are null (not invented) until evaluations exist
-
-**US-002** As a developer, I want to submit a tool for evaluation so that tools I
-discover are included in the dataset.
-- Acceptance: GitHub issue template takes under 5 minutes to complete
-- Acceptance: Submission is acknowledged and triaged within 24 hours
-- Acceptance: Auto-triage score is computed within 1 hour of submission
+- Acceptance: Each profile has curated scores across 6 dimensions
 
 ### Phase 1 — Signal
 
@@ -125,7 +121,7 @@ discover are included in the dataset.
 don't have to know what I'm missing.
 - Acceptance: `/radar scan` reads project context and outputs 1–3 gap recommendations
 - Acceptance: Ranking uses status + stars + tag overlap — not scores
-- Acceptance: Tools with no evaluations are surfaced when category/tags match
+- Acceptance: Tools with no scores are surfaced when category/tags match
 
 **US-004** As a developer, I want to describe a need and get compatible matches so that
 I can find the right tool without manual research.
@@ -148,10 +144,10 @@ so that I know when a tool I depend on improves or degrades.
 ### Phase 2 — Intelligence
 
 **US-007** As a developer, I want to see automated benchmark scores alongside
-community scores so that I can distinguish subjective opinions from objective measurements.
+curated scores so that I can distinguish curated assessments from objective measurements.
 - Acceptance: Tools with automated benchmark scores show a distinct [BENCHMARK] badge
 - Acceptance: Benchmark version is displayed alongside scores
-- Acceptance: Community scores and benchmark scores are shown separately
+- Acceptance: Curated scores and benchmark scores are shown separately
 
 **US-008** As a team lead, I want a dashboard of my team's tool stack so that I can
 see health signals without asking each developer individually.
@@ -176,16 +172,10 @@ changed >1.0 since the page was written
 
 ### Phase 4 — Governance
 
-**US-011** As a community contributor, I want my contributions to be acknowledged so
-that I am motivated to continue evaluating tools over time.
-- Acceptance: Every merged evaluation report lists the contributor's role and month/year
-- Acceptance: Top contributors are featured in the weekly digest
-- Acceptance: Contributions are permanently attributed in the public record
-
-**US-012** As an enterprise customer, I want to evaluate internal tools privately so
+**US-011** As an enterprise customer, I want to evaluate internal tools privately so
 that competitive tooling information does not become public.
-- Acceptance: Private evaluations are stored in a separate, access-controlled namespace
-- Acceptance: Private evaluation results are never visible in public APIs or search
+- Acceptance: Private tool profiles are stored in a separate, access-controlled namespace
+- Acceptance: Private profiles are never visible in public APIs or search
 - Acceptance: Enterprise customers can compare private tools against public tools
 
 ---
@@ -259,12 +249,10 @@ Only features with Value ≥ 4 AND Effort ≤ 3 are in Phase 0–1. Others wait.
 
 ### Phase 0 (Day 10)
 - 100 GitHub stars on agentRadar/data
-- 5+ organic evaluation reports submitted without prompting
 - 3 versus pages published and accessible
 
 ### Phase 1 End (Week 8)
 - 500+ /radar plugin installs
-- 50+ organic evaluations
 - 10 paying Pro subscribers ($90 MRR)
 
 ### Phase 2 End (Month 6)
@@ -275,13 +263,13 @@ Only features with Value ≥ 4 AND Effort ≤ 3 are in Phase 0–1. Others wait.
 
 ### Year 1 (Month 12)
 - $64K ARR
-- 1,000+ community evaluations
+- 400+ tool profiles
 - 25+ versus pages
 - AgentRadar mentioned in at least one Anthropic community post
 
 ### Year 3
 - ~$1M ARR
-- 2,000+ evaluated tools
+- 2,000+ tool profiles
 - 500+ versus pages indexed by Google
 - AgentRadar scores embedded in at least one major registry
 
@@ -293,7 +281,7 @@ The following will be raised repeatedly. They are out of scope.
 
 | Suggestion | Why It's Out of Scope |
 |---|---|
-| "Add AI-generated reviews" | Destroys the trust model; community evaluations from practitioners is the product |
+| "Add AI-generated reviews" | Destroys the trust model; curated scores backed by real usage data is the product |
 | "Rate tools with stars instead of scores" | Stars hide dimensional differences; 6-dimension scores are the differentiator |
 | "Build a tool marketplace" | Scope creep; we evaluate tools, we don't distribute them |
 | "Add social features (likes, follows)" | Not the use case; gamification reduces signal quality |

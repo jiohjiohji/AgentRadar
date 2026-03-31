@@ -19,8 +19,8 @@ Ticket status: BACKLOG → IN_PROGRESS → DONE → BLOCKED (with reason)
 ---
 
 ## PHASE 0 — DATA FOUNDATION
-**Goal:** Public dataset live with 50 tools, 150 seed evaluations, 3 versus pages
-**Exit criteria:** 100 GitHub stars, 5 organic evaluations, community posts live
+**Goal:** Public dataset live with 50 tool profiles, curated scores, 3 versus pages
+**Exit criteria:** 100 GitHub stars, community posts live
 **Status:** DONE — all 12 tickets complete. 3 community posts pending manual publish (Discord/Reddit/Dev.to).
 
 ### P0-001 — Project scaffolding and tool installation
@@ -90,7 +90,7 @@ Acceptance:
 - [ ] Post in Anthropic Discord #claude-code — MANUAL
 - [ ] Post in Reddit r/ClaudeAI — MANUAL
 - [ ] Publish Dev.to article — MANUAL
-Exit criteria (100 stars, 5 organic evals) are lagging indicators measured post-launch, not blockers.
+Exit criteria (100 stars) are lagging indicators measured post-launch, not blockers.
 
 ---
 
@@ -102,7 +102,7 @@ Exit criteria (100 stars, 5 organic evals) are lagging indicators measured post-
 
 ### P1-001 — Claude Code `/radar` plugin (PRIMARY entry point)
 Status: DONE (2026-04-01)
-Notes: tools-index.json generated (50 tools, one fetch). Stars deferred — ranking uses status + tag overlap + composite score as proxy. Single radar.md routes all subcommands via $ARGUMENTS. postinstall.js auto-installs to ~/.claude/commands/. CI enforces index stays current.
+Notes: tools-index.json generated (50 tools, one fetch). Ranking is style-adaptive: inferStyle() classifies user as vibe/agent/balanced, fitBonus rewards high f_score (vibe) or x_score (agent). Intent signals extracted from markdown when no deps found. Single radar.md routes all subcommands via $ARGUMENTS. postinstall.js auto-installs to ~/.claude/commands/. CI enforces index stays current.
 Acceptance:
 - [x] `/radar scan` — reads current project, outputs 1–3 recommendations with "why this fits you"
 - [x] `/radar suggest [need]` — "I need browser testing" → compatible matches for current stack
@@ -110,7 +110,7 @@ Acceptance:
 - [x] `/radar setup [tool-id]` — agent installs and configures the tool inside the session
 - [x] `/radar show [tool-id]` — full profile, scores if available, versus page link if exists
 - [x] Plugin installable via npm install -g @agentRadar/claude-plugin
-- [x] Ranking logic: status + tag overlap + composite score (stars added when crawler enriches profiles)
+- [x] Ranking logic: style-adaptive fitBonus (f_score for vibe, x_score for agent) + status + tag overlap + intent signals
 
 ### P1-002 — Cloudflare Worker API (Git-backed)
 Status: DONE (2026-04-01, pending manual wrangler deploy by Jihoon)
@@ -262,5 +262,7 @@ Key factors:
 - Pro tier (P1-007) used Web Crypto API for Stripe HMAC — no npm dep, no SDK
 
 Total tests: 47 (20 api + 27 cli). Zero test failures after initial threshold bug fixed in matchTool.
+
+Post-P1 addition: style-adaptive ranking (intent.ts, fitBonus in ranking.ts). Added intent extraction from markdown, developer style inference (vibe/agent/balanced), and f_score/x_score to tools-index.json. Tests grew to 69 (49 cli + 20 api).
 
 Manual steps remaining (Jihoon): wrangler deploy + Stripe + Buttondown + CLOUDFLARE_API_TOKEN secret + 3 community posts.

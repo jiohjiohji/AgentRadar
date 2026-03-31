@@ -10,6 +10,8 @@ function tool(overrides: Partial<ToolSummary> & { id: string }): ToolSummary {
     tags: [],
     pricing: "free",
     composite: 7.0,
+    f_score: 7.0,
+    x_score: 7.0,
     eval_count: 3,
     confidence: "medium",
     versus_refs: [],

@@ -11,7 +11,7 @@
 
 import { matchTool } from "./check.js";
 import { rankTools } from "./ranking.js";
-import type { DetectedTool, RankResult, ScanReport, ToolSummary } from "./types.js";
+import type { DetectedTool, RankResult, ScanReport, ToolSummary, UserStyle } from "./types.js";
 
 /** All categories that exist in the dataset. */
 const ALL_CATEGORIES = [
@@ -52,6 +52,8 @@ function inferCoveredCategories(
 function recommendForGaps(
   gapCategories: string[],
   allTools: ToolSummary[],
+  intentSignals: string[],
+  style: UserStyle,
   limit: number
 ): RankResult[] {
   const seen = new Set<string>();
@@ -59,7 +61,7 @@ function recommendForGaps(
 
   for (const category of gapCategories) {
     const categoryTools = allTools.filter((t) => t.category === category);
-    const ranked = rankTools(categoryTools, "", category, 1);
+    const ranked = rankTools(categoryTools, intentSignals.join(","), category, 1, style);
     const top = ranked[0];
     if (top && !seen.has(top.tool.id)) {
       seen.add(top.tool.id);
@@ -75,11 +77,13 @@ export function runScan(
   detected: DetectedTool[],
   tools: ToolSummary[],
   projectName: string,
-  limit = 3
+  limit = 3,
+  intentSignals: string[] = [],
+  style: UserStyle = "balanced"
 ): ScanReport {
   const coveredCategories = inferCoveredCategories(detected, tools);
   const gapCategories = ALL_CATEGORIES.filter((c) => !coveredCategories.has(c));
-  const recommendations = recommendForGaps(gapCategories, tools, limit);
+  const recommendations = recommendForGaps(gapCategories, tools, intentSignals, style, limit);
 
   return {
     project: projectName,
@@ -87,6 +91,8 @@ export function runScan(
     covered_categories: [...coveredCategories].sort(),
     gap_categories: gapCategories,
     recommendations,
+    intent_signals: intentSignals,
+    style,
   };
 }
 
@@ -95,10 +101,11 @@ export function runSuggest(
   need: string,
   detected: DetectedTool[],
   tools: ToolSummary[],
-  limit = 3
+  limit = 3,
+  style: UserStyle = "balanced"
 ): RankResult[] {
   // Build a stack string from detected tool categories for context.
   const coveredCategories = inferCoveredCategories(detected, tools);
   const stack = [...coveredCategories].join(",");
-  return rankTools(tools, stack, need, limit);
+  return rankTools(tools, stack, need, limit, style);
 }

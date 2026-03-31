@@ -13,6 +13,7 @@ import chalk from "chalk";
 import * as path from "node:path";
 import * as fs from "node:fs";
 import { detectInstalledTools } from "./detect.js";
+import { extractIntentSignals, inferStyle } from "./intent.js";
 import { fetchIndex } from "./fetch.js";
 import { runCheck } from "./check.js";
 import { runScan, runSuggest } from "./scan.js";
@@ -86,7 +87,10 @@ program
         fetchIndex(),
       ]);
 
-      const report = runScan(detected, index.tools, projectName);
+      const allTags = [...new Set(index.tools.flatMap((t) => t.tags))];
+      const intentSignals = extractIntentSignals(cwd, allTags);
+      const style = inferStyle(detected, cwd);
+      const report = runScan(detected, index.tools, projectName, 3, intentSignals, style);
 
       if (opts.json) {
         console.log(JSON.stringify(report, null, 2));
@@ -100,6 +104,12 @@ program
       );
       console.log();
 
+      console.log(chalk.dim("Style:   ") + report.style);
+      if (report.intent_signals.length > 0) {
+        console.log(
+          chalk.dim("Intent:  ") + report.intent_signals.join(", ")
+        );
+      }
       if (report.covered_categories.length > 0) {
         console.log(
           chalk.dim("Covered: ") + report.covered_categories.join(", ")
@@ -119,6 +129,11 @@ program
           )
         );
       } else {
+        if (detected.length === 0 && intentSignals.length === 0) {
+          console.log(
+            chalk.dim("No project files found — here are recommended starter tools.\n")
+          );
+        }
         console.log(chalk.bold("Recommendations:"));
         printRankResults(report.recommendations);
       }
@@ -145,7 +160,8 @@ program
         fetchIndex(),
       ]);
 
-      const results = runSuggest(need, detected, index.tools);
+      const style = inferStyle(detected, cwd);
+      const results = runSuggest(need, detected, index.tools, 3, style);
 
       if (opts.json) {
         console.log(JSON.stringify({ need, results }, null, 2));

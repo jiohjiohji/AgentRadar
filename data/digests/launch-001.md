@@ -9,13 +9,13 @@ status: draft
 
 Welcome to the first AgentRadar digest.
 
-AgentRadar is a community dataset of Claude Code and MCP tools — and the foundation for a CLI that reads your project context before telling you what tools to use. Every score in this dataset was reported by a real developer who ran a specific task and wrote down what happened. No vendor benchmarks. No synthetic data.
+AgentRadar is a curated dataset of Claude Code and MCP tools — and the plugin + CLI that reads your project context before telling you what tools to use. Every tool is scored across 6 dimensions. No vendor benchmarks. No synthetic data.
 
 The dataset is public on GitHub: github.com/jiohjiohji/AgentRadar
 
 ---
 
-## What AgentRadar will do (in active development)
+## What AgentRadar does
 
 If you're in Claude Code, add the plugin and type:
 
@@ -32,13 +32,13 @@ For CI, the standalone `check` command runs as a health check with exit codes.
 
 The insight: most tool discovery requires you to already know what you're looking for. `/radar` reads your project first — your package.json, MCP config, .claude/ — and tells you what's missing.
 
-The plugin is Phase 1. The dataset is live now.
+The plugin, CLI, and API are built. The dataset is live now.
 
 ---
 
 ## Top 5 tools in the dataset
 
-Ranked by composite score across 6 dimensions (p/q/c/r/x/f). All at medium confidence (3 evaluations each).
+Ranked by composite score across 6 dimensions (p/q/c/r/x/f).
 
 **1. Anthropic Python SDK — 8.19**
 sdk-pattern · MIT · active
@@ -83,7 +83,7 @@ This is the kind of tradeoff `suggest` will surface automatically: if your proje
 
 ## How scores work
 
-Six dimensions, 0–10 each, reported by community evaluators:
+Six dimensions, 0–10 each:
 
 | Key | Dimension |
 |-----|-----------|
@@ -94,17 +94,11 @@ Six dimensions, 0–10 each, reported by community evaluators:
 | x | Composability — integration with other tools |
 | f | Setup Friction — time from install to working result |
 
-Every score shows a confidence level (low / medium / high). Scores with fewer than 3 reports are explicitly labeled low-confidence.
+Every score shows a confidence level (low / medium / high).
 
 ---
 
-## Contribute
-
-If you've used a tool in this dataset on a real task, submit an evaluation. It takes about 10 minutes and directly improves the dataset that will power `scan` recommendations.
-
-Submit via GitHub Issues: github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml
-
-Star the repo to follow Phase 1 progress: github.com/jiohjiohji/AgentRadar
+Star the repo: github.com/jiohjiohji/AgentRadar
 
 —
 AgentRadar · Unsubscribe

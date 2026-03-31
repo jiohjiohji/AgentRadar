@@ -1,8 +1,8 @@
 # Community Post Drafts — AgentRadar Launch
 
 Status: READY TO POST — repo is public, posts updated 2026-04-01.
-Product framing: /radar Claude Code plugin is the primary entry point. Dataset is live now. CLI is secondary (CI/non-session contexts).
-Note: Do NOT lead with scores or ranking tables — scores are tiebreaker signal, not the product.
+Product framing: /radar reads your project, infers your development style (vibe coder vs agent architect), and recommends tools that fit YOU — not generic top-10 lists. Plugin is primary entry point. CLI is secondary (CI/non-session).
+Note: Do NOT lead with scores or ranking tables. Lead with "reads your project" and "adapts to your style".
 
 ---
 
@@ -17,7 +17,7 @@ Hey — built something that might be useful here.
 **AgentRadar** — add the plugin to Claude Code, then:
 
 ```
-/radar scan          reads your project, tells you what tools you're missing
+/radar scan          reads your project (or just your PRD), recommends tools that fit your style
 /radar suggest "browser testing"   compatible matches for your stack
 /radar check         flags archived/stale tools in your current setup
 /radar setup [id]    agent installs and configures the tool for you
@@ -25,11 +25,9 @@ Hey — built something that might be useful here.
 
 No separate install. You're already in Claude Code.
 
-The dataset powering it is live now: 50 tool profiles, 150 community evaluations, 3 head-to-head comparison pages. The plugin is Phase 1 (in active development).
+Powered by an open dataset: 50 tool profiles with curated scores across 6 dimensions, 3 head-to-head comparison pages. Plugin, CLI, and API are all built — pending first public deploy.
 
 GitHub: github.com/jiohjiohji/AgentRadar
-
-If you've used any of these tools on a real task and want to add an evaluation, takes about 10 minutes: github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml
 
 ---
 
@@ -70,9 +68,9 @@ Run periodically or add to CI. Flags archived repos and tools with active mainta
 Agent installs and configures the tool inside your Claude Code session — adds to MCP config, updates CLAUDE.md, installs deps.
 
 **Current state:**
-- Dataset live now: 50 tool profiles, 150 community evaluations, 3 versus pages (head-to-head comparisons)
-- `/radar` plugin in active development (Phase 1)
-- Matching logic based on category, tags, stack compatibility, and maintenance status — not averaged scores
+- Dataset live: 50 tool profiles with curated scores, 3 versus pages (head-to-head comparisons)
+- `/radar` plugin, CLI, and Cloudflare Worker API are built — deploying now
+- Matching logic based on category, tags, stack compatibility, and maintenance status — scores as tiebreaker
 
 **GitHub:** github.com/jiohjiohji/AgentRadar
 
@@ -133,9 +131,9 @@ The part I'm most excited about: the agent installs and configures the recommend
 
 ### The dataset behind it
 
-The plugin is Phase 1 (in active development). What's live now is the dataset it uses: 50 tool profiles across 9 categories — mcp-server, claude-plugin, claudemd-framework, orchestration, prompt-library, sdk-pattern, ide-integration, eval-observability, complementary.
+The plugin, CLI, and API are built. The dataset behind them: 50 tool profiles across 9 categories — mcp-server, claude-plugin, claudemd-framework, orchestration, prompt-library, sdk-pattern, ide-integration, eval-observability, complementary.
 
-Each profile has category, tags, maintenance status (active/stale/archived), pricing, license, and community evaluation scores where available. The matching logic uses category + tag overlap + maintenance status — scores are a tiebreaker, not the ranking mechanism.
+Each profile has category, tags, maintenance status (active/stale/archived), pricing, license, and curated scores across 6 dimensions. The matching logic uses category + tag overlap + maintenance status — scores are a tiebreaker, not the ranking mechanism.
 
 The dataset is plain YAML in the repo. No API required to use it directly.
 
@@ -144,12 +142,6 @@ The dataset is plain YAML in the repo. No API required to use it directly.
 - [Playwright MCP vs BrowserMCP](https://github.com/jiohjiohji/AgentRadar/blob/main/data/versus/gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp.md) — BrowserMCP is archived; Playwright MCP is the only viable choice
 - [wshobson/agents vs AgentSys](https://github.com/jiohjiohji/AgentRadar/blob/main/data/versus/gh-wshobson-agents-vs-gh-avifenesh-agentsys.md) — different tradeoffs on composability vs pre-built skills
 - [TÂCHES vs context-engineering-kit](https://github.com/jiohjiohji/AgentRadar/blob/main/data/versus/gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit.md)
-
-### Contribute
-
-If you've used any of the 50 tools on a real task, submit an evaluation. The form asks for specific scores with evidence sentences and a one-sentence verdict — not "great tool, would recommend."
-
-[Evaluation Report →](https://github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml)
 
 **GitHub:** [jiohjiohji/AgentRadar](https://github.com/jiohjiohji/AgentRadar)
 

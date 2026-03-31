@@ -6,7 +6,7 @@
  * Archived tools are never returned.
  */
 
-import type { RankResult, ToolSummary } from "./types.js";
+import type { RankResult, ToolSummary, UserStyle } from "./types.js";
 
 const STATUS_SCORE: Record<string, number> = {
   active: 10,
@@ -34,6 +34,25 @@ function overlapCount(query: string[], targets: string[]): number {
 }
 
 /**
+ * Compute a style-adaptive bonus based on f (setup friction) and x (composability).
+ */
+function computeFitBonus(tool: ToolSummary, style: UserStyle): number {
+  if (tool.eval_count < 2) return 0;
+
+  const f = tool.f_score ?? 0;
+  const x = tool.x_score ?? 0;
+
+  switch (style) {
+    case "vibe":
+      return f * 0.5;
+    case "agent":
+      return x * 0.5;
+    case "balanced":
+      return (f + x) * 0.25;
+  }
+}
+
+/**
  * Rank tools for a given stack and/or need query.
  * Returns up to `limit` results, excluding archived tools.
  *
@@ -41,12 +60,14 @@ function overlapCount(query: string[], targets: string[]): number {
  * @param stack     Comma-separated categories/tags already present in the project
  * @param need      Natural language query (e.g. "browser testing")
  * @param limit     Max results (default 3)
+ * @param style     User style: vibe (low friction), agent (composability), balanced
  */
 export function rankTools(
   tools: ToolSummary[],
   stack: string,
   need: string,
-  limit = 3
+  limit = 3,
+  style: UserStyle = "balanced"
 ): RankResult[] {
   const stackTokens = tokenize(stack);
   const needTokens = tokenize(need);
@@ -62,17 +83,20 @@ export function rankTools(
     const categoryMatch =
       overlapCount(needTokens, tokenize(tool.category)) * 3;
     const nameMatch = overlapCount(needTokens, tokenize(tool.name)) * 1;
-    const compositeBonus =
-      tool.composite !== null && tool.eval_count >= 2 ? tool.composite * 0.3 : 0;
+    const fitBonus = computeFitBonus(tool, style);
 
     const score =
-      statusScore + tagOverlap + categoryMatch + nameMatch + compositeBonus;
+      statusScore + tagOverlap + categoryMatch + nameMatch + fitBonus;
 
     const reasons: string[] = [];
     if (statusScore === 10) reasons.push("actively maintained");
     if (tagOverlap > 0) reasons.push(`${tagOverlap / 2} matching tag(s)`);
-    if (compositeBonus > 0)
-      reasons.push(`score ${tool.composite?.toFixed(1)} (${tool.confidence})`);
+    if (fitBonus > 0 && tool.composite !== null)
+      reasons.push(`score ${tool.composite.toFixed(1)} (${tool.confidence})`);
+    if (style === "vibe" && tool.f_score !== null && tool.f_score >= 8)
+      reasons.push("low setup friction");
+    if (style === "agent" && tool.x_score !== null && tool.x_score >= 8)
+      reasons.push("high composability");
 
     results.push({
       tool,

@@ -9,6 +9,8 @@ function tool(overrides: Partial<ToolSummary> & { id: string; category: string }
     tags: [],
     pricing: "free",
     composite: 7.0,
+    f_score: 7.0,
+    x_score: 7.0,
     eval_count: 3,
     confidence: "medium",
     versus_refs: [],
@@ -77,6 +79,54 @@ describe("runScan", () => {
     const tools = [tool({ id: "gh-arc", category: "mcp-server", status: "archived" })];
     const report = runScan([], tools, "proj");
     expect(report.recommendations).toHaveLength(0);
+  });
+});
+
+// ── style-adaptive scan ───────────────────────────────────────────────────
+
+describe("runScan — style-adaptive", () => {
+  it("vibe style prefers high f_score tools", () => {
+    const tools = [
+      tool({ id: "low-f", category: "mcp-server", f_score: 4.0, x_score: 9.0 }),
+      tool({ id: "high-f", category: "mcp-server", f_score: 10.0, x_score: 4.0 }),
+    ];
+    const report = runScan([], tools, "proj", 3, [], "vibe");
+    expect(report.recommendations[0]?.tool.id).toBe("high-f");
+  });
+
+  it("agent style prefers high x_score tools", () => {
+    const tools = [
+      tool({ id: "low-x", category: "orchestration", f_score: 10.0, x_score: 3.0 }),
+      tool({ id: "high-x", category: "orchestration", f_score: 4.0, x_score: 9.0 }),
+    ];
+    const report = runScan([], tools, "proj", 3, [], "agent");
+    expect(report.recommendations[0]?.tool.id).toBe("high-x");
+  });
+
+  it("intent signals boost tools with matching tags", () => {
+    const tools = [
+      tool({ id: "browser-tool", category: "mcp-server", tags: ["browser-automation", "testing"], f_score: 6.0, x_score: 6.0 }),
+      tool({ id: "generic-tool", category: "mcp-server", tags: ["filesystem"], f_score: 10.0, x_score: 9.0 }),
+    ];
+    // Intent says browser-automation — should beat the generic tool despite lower scores
+    const report = runScan([], tools, "proj", 3, ["browser-automation", "testing"], "vibe");
+    expect(report.recommendations[0]?.tool.id).toBe("browser-tool");
+  });
+
+  it("includes intent_signals and style in report", () => {
+    const report = runScan([], [], "proj", 3, ["react", "slack"], "vibe");
+    expect(report.intent_signals).toEqual(["react", "slack"]);
+    expect(report.style).toBe("vibe");
+  });
+
+  it("empty project with no signals returns recommendations", () => {
+    const tools = [
+      tool({ id: "t1", category: "mcp-server" }),
+      tool({ id: "t2", category: "claudemd-framework" }),
+      tool({ id: "t3", category: "sdk-pattern" }),
+    ];
+    const report = runScan([], tools, "proj", 3, [], "vibe");
+    expect(report.recommendations.length).toBeGreaterThan(0);
   });
 });
 

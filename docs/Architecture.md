@@ -1,5 +1,5 @@
 # AgentRadar — System Architecture
-# Version: 1.0 | Owner: Jihoon | Status: APPROVED
+# Version: 1.1 | Owner: Jihoon | Status: APPROVED | Updated: 2026-04-01 (Phase 1 complete)
 # Feed this to Claude for any infrastructure, API, or system design work.
 
 ---
@@ -37,7 +37,7 @@ is understood before it is automated.
 │                                                                              │
 │  agentRadar/data (public GitHub repo)                                        │
 │  ├── data/tools/*.yaml          12-field tool profiles                       │
-│  ├── data/evaluations/*.yaml    Community evaluation reports                │
+│  ├── data/evaluations/*.yaml    Evaluation backing data (scores derived)    │
 │  ├── data/versus/*.md           Head-to-head comparison pages               │
 │  ├── data/benchmarks/           Task definitions + gold outputs             │
 │  └── data/digests/*.md          Weekly intelligence digest archive          │
@@ -231,10 +231,10 @@ async function checkRateLimit(apiKey, limit) {
 search → ApiClient.searchTools(query) → format as table
 show   → ApiClient.getTool(id) → format as profile
 compare → ApiClient.getTool(id1) + getTool(id2) + getVersus(id1,id2) → format
-top    → ApiClient.listTools(filters) → format as table (ranked by status + stars, not scores)
+top    → ApiClient.listTools(filters) → format as table (ranked by status + style-adaptive fitBonus)
 new    → ApiClient.listTools({since: N days}) → format
 watch  → check Pro key → ApiClient.addWebhook(toolId, email) → confirm
-suggest → keyword index (local) → filter by category + tags + stack compatibility → rank by status + stars → format
+suggest → keyword index (local) → filter by category + tags + stack + intent signals → rank by status + style-adaptive fitBonus → format
 ```
 
 **Offline behaviour:**
@@ -270,14 +270,9 @@ if (network unavailable AND no cache):
 
 ## 4. Data Flow Diagrams
 
-### Community Evaluation Flow
+### Score Update Flow
 ```
-Developer submits evaluation via GitHub issue
-  → GitHub issue template validates required fields
-  → Maintainer reviews within 48 hours:
-      CoI declared? → Flag, do not exclude
-      Schema valid? → Merge as data/evaluations/[id].yaml
-      Evidence vague? → Request revision before merge
+Evaluation data updated (by maintainer)
   → Merge triggers GitHub Actions:
       Score recomputed for affected tool
       If score delta ≥0.01: score_history updated

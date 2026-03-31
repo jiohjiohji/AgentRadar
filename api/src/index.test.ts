@@ -20,6 +20,8 @@ function makeTool(overrides: Partial<ToolSummary> = {}): ToolSummary {
     tags: ["browser", "automation"],
     pricing: "free",
     composite: 8.0,
+    f_score: 7.0,
+    x_score: 7.0,
     eval_count: 3,
     confidence: "medium",
     versus_refs: [],
@@ -72,23 +74,23 @@ describe("rankTools", () => {
     expect(rankTools(tools, "", "", 1)).toHaveLength(1);
   });
 
-  it("uses composite as tiebreaker when status and tags are equal", () => {
+  it("uses fit scores as tiebreaker when status and tags are equal", () => {
     const tools = [
-      makeTool({ id: "low", composite: 4.0, eval_count: 3 }),
-      makeTool({ id: "high", composite: 9.0, eval_count: 3 }),
+      makeTool({ id: "low-fit", f_score: 4.0, x_score: 4.0, eval_count: 3 }),
+      makeTool({ id: "high-fit", f_score: 9.0, x_score: 9.0, eval_count: 3 }),
     ];
     const results = rankTools(tools, "", "");
-    expect(results[0]?.tool.id).toBe("high");
+    expect(results[0]?.tool.id).toBe("high-fit");
   });
 
-  it("ignores composite when eval_count < 2", () => {
+  it("ignores fit bonus when eval_count < 2", () => {
     const base = makeTool({ tags: [], status: "active" });
     const tools = [
-      { ...base, id: "unscored", composite: 9.9, eval_count: 1 },
-      { ...base, id: "scored", composite: 7.0, eval_count: 3 },
+      { ...base, id: "unscored", f_score: 9.9, x_score: 9.9, eval_count: 1 },
+      { ...base, id: "scored", f_score: 7.0, x_score: 7.0, eval_count: 3 },
     ];
-    // Both active, no tag overlap — only composite differentiates.
-    // unscored has eval_count < 2 so composite is ignored; scored has composite bonus.
+    // Both active, no tag overlap — only fit bonus differentiates.
+    // unscored has eval_count < 2 so fit bonus is 0; scored has fit bonus.
     const results = rankTools(tools, "", "");
     expect(results[0]?.tool.id).toBe("scored");
   });
