@@ -89,6 +89,16 @@ def main():
         # Validate all files if no specific file given
         paths = list(Path('data/tools').glob('*.yaml'))
 
+    # If a directory is passed, glob for yaml files inside it
+    expanded = []
+    for path in paths:
+        p = Path(path)
+        if p.is_dir():
+            expanded.extend(p.glob('*.yaml'))
+        else:
+            expanded.append(p)
+    paths = expanded
+
     all_passed = True
     for path in paths:
         p = Path(path)
