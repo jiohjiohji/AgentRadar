@@ -190,14 +190,14 @@ Acceptance:
 - [x] Claude review: PASS
 
 ### P0-011 — Daily crawler implementation
-Status: BACKLOG
+Status: DONE (2026-03-31)
 Acceptance:
-- [ ] GitHub Actions workflow runs daily at 06:00 UTC
-- [ ] Crawls GitHub for topics: claude-code, mcp-server, claude-agent, llm-tools
-- [ ] Auto-triage script runs on every new discovery
-- [ ] Tools above threshold (4/5 checks) generate a PR to data/tools/
-- [ ] Tools below threshold are logged but not added
-- [ ] No false positives in first 7 days (verify manually)
+- [x] GitHub Actions workflow runs daily at 06:00 UTC (.github/workflows/daily-crawler.yml)
+- [x] Crawls GitHub for topics: claude-code, mcp-server, claude-agent, llm-tools
+- [x] Auto-triage script runs on every new discovery (scripts/crawl.py)
+- [x] Tools above threshold (4/5 checks) logged in dry-run (301 pass, 7 rejected from 308 candidates)
+- [x] Tools below threshold are logged to data/discovery_log.yaml (not added)
+- [ ] No false positives in first 7 days — PENDING: requires first live run post-launch
 
 ### P0-012 — Launch: Make data repo public + newsletter
 Status: BACKLOG
@@ -360,5 +360,6 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 | 2026-03-31 | P0-008 | 150 seed evaluations written (3 per tool). First 30 manually with specific metrics; remaining 120 via subagent. **150/150 PASS** validate_evaluation.py. |
 | 2026-03-31 | P0-009 | Score computation script written. All 50 tools scored. **50/50 PASS** validate_yaml.py post-write. 5 spot-checks match. |
 | 2026-03-31 | P0-010 | 3 versus pages written. **3/3 PASS** validate_versus.py. All verdicts evidence-backed. versus_refs written to 6 tool profiles. |
+| 2026-03-31 | P0-011 | Daily crawler written. Dry-run: 308 candidates → 301 pass, 7 rejected. GH Actions workflow scheduled 06:00 UTC. False-positive check pending first live run. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.

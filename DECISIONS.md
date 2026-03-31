@@ -38,6 +38,7 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 2026-03-31 | Unverifiable tools are substituted, never invented | P0-004 | ClaudoPro Directory could not be found on GitHub; inventing a profile would violate the no-invented-data constraint | Leaving a gap: breaks the batch-of-10 contract; using invented data: violates core trust guarantee. Substitute rule: same category, verified repo, note pivot in commit and sprint_plan.md
 2026-03-31 | `orchestration` for general frameworks, `claude-plugin` for Claude Code–native only | P0-005 | CrewAI, AutoGen, LangGraph support Claude but were not built for it; mixing them into claude-plugin pollutes search and versus page matching | One combined category: breaks discovery — users searching for Claude Code plugins don't want general LLM frameworks
 2026-03-31 | GitHub NOASSERTION license stored as null | P0-006 | GitHub returns NOASSERTION when it detects a license file but cannot match a known SPDX ID; null is the correct schema value — do not invent an SPDX string | Storing "NOASSERTION" as-is: not a valid SPDX string, breaks any downstream license filtering
+2026-03-31 | Versus pages are markdown files, not YAML | P0-010 | validate_versus.py checks for markdown sections (## Quick Answer, ## Score Comparison, etc.) and YAML frontmatter valid_until field; the format is `.md` with frontmatter, stored in data/versus/ | YAML-only: harder to read and write for human contributors; markdown renders directly on GitHub
 
 ---
 

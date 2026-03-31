@@ -1,0 +1,46 @@
+name: Daily Tool Crawler
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC every day
+  workflow_dispatch:        # allow manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    name: Discover new tools
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Configure git
+        run: |
+          git config user.name "agentRadar-crawler[bot]"
+          git config user.email "crawler@agentRadar.dev"
+
+      - name: Run crawler
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/crawl.py
+
+      - name: Commit discovery log if updated
+        run: |
+          if git diff --quiet data/discovery_log.yaml 2>/dev/null; then
+            echo "No new rejected tools to log"
+          else
+            git add data/discovery_log.yaml
+            git commit -m "chore: update discovery log [skip ci]"
+            git push
+          fi
