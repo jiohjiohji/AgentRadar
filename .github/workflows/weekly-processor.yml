@@ -1,0 +1,43 @@
+name: Weekly Processor
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday at 06:00 UTC
+  workflow_dispatch:       # Run manually from Actions tab
+
+jobs:
+  process:
+    name: Refresh statuses + generate digest draft
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run weekly processor
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python scripts/weekly_processor.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "AgentRadar Bot"
+          git config user.email "bot@agentRadar.dev"
+          git add data/tools/*.yaml data/tools-index.json data/digests/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(weekly): status refresh + digest draft $(date -u +%Y-%m-%d)"
+            git push
+          fi

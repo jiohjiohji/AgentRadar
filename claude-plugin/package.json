@@ -1,0 +1,17 @@
+{
+  "name": "@agentRadar/claude-plugin",
+  "version": "0.1.0",
+  "description": "AgentRadar /radar plugin for Claude Code — scan your project, get tool recommendations without leaving your session",
+  "keywords": ["claude-code", "claude-plugin", "mcp", "agentRadar", "developer-tools"],
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "files": [
+    "commands/",
+    "scripts/postinstall.js"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

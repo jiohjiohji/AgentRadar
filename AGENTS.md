@@ -1,5 +1,5 @@
 # AgentRadar Agent Constitution
-# Version: 1.2 | Updated: 2026-03-31
+# Version: 1.3 | Updated: 2026-04-01
 
 ## PRODUCT DIRECTION
 
@@ -18,7 +18,7 @@ Three commands map to the developer lifecycle:
    Reads package.json, requirements.txt, .claude/, CLAUDE.md, MCP config.
    Detects your stack, what tools you already use, and what gaps exist.
    Outputs: "You have X, you're missing Y, here's what fits your setup."
-   Ranking: status (active/stale/archived) + GitHub stars + tag overlap. Not scores.
+   Ranking: status (active/stale/archived) + tag overlap + composite score (proxy until stars in schema).
 
 2. **`suggest`** (hit a wall or want to improve)
    Context-aware — reads your project first, then matches your query.
@@ -40,16 +40,32 @@ in suggest (tiebreaker) and versus pages (evidence-backed verdicts). Never block
 ## PROJECT ARCHITECTURE
 
 ### Repository Layout
-- `data/`           → Git-native YAML dataset (THE product)
-- `core/`           → Python: crawlers, score computation, digest generator
-- `api/`            → Cloudflare Worker: reads YAML → returns JSON
-- `cli/`            → TypeScript: npm-published CLI (`npm install -g agentRadar`)
-- `web/`            → Static HTML/CSS/JS: GitHub Pages + Pagefind search
-- `claude-plugin/`  → Claude Code /radar slash command plugin
+- `data/`            → Git-native YAML dataset (THE product)
+  - `tools/`         → One YAML per tool (50 profiles)
+  - `evaluations/`   → Community evaluation reports
+  - `versus/`        → Head-to-head comparison markdown files
+  - `tools-index.json` → Auto-generated compact index (run `scripts/build_index.py`)
+- `scripts/`         → Python: crawl.py, score_computation.py, build_index.py, build_site.py, weekly_processor.py, validate_*.py
+- `api/`             → Cloudflare Worker (TypeScript): tools/match/versus/pro routes + rate limiting
+  - `src/index.ts`   → Route dispatcher
+  - `src/ranking.ts` → Authoritative ranking logic (status + tag overlap + composite)
+  - `src/pro.ts`     → Stripe checkout, webhook, KV watchlist
+- `cli/`             → TypeScript CLI (`npm install -g agentRadar`)
+  - `src/detect.ts`  → Project detection (package.json, MCP config, .claude/)
+  - `src/check.ts`   → check command logic (match + classify + report)
+  - `src/scan.ts`    → scan + suggest command logic
+  - `src/ranking.ts` → CLI copy of api/src/ranking.ts — keep in sync
+  - `src/watch.ts`   → watch command (Pro watchlist)
+- `web/`             → Static HTML/CSS/JS: `scripts/build_site.py` → `web/dist/` → GitHub Pages
+- `claude-plugin/`   → Claude Code /radar slash command plugin
+  - `commands/radar.md` → Single file handles all 5 subcommands via $ARGUMENTS
+- `templates/`       → Drop-in GitHub Actions templates for users (agentRadar-check.yml)
 
 ### Stack Constraints (do not deviate without an RFC)
 - API: Cloudflare Workers — no FastAPI, no server, no Fly.io
 - Data: Git YAML — no SQLite, no Postgres, no database
+- Pro API keys: Cloudflare KV (PRO_KEYS namespace) — no Redis, no Fauna
+- Payments: Stripe — no Paddle, no LemonSqueezy
 - Search: Pagefind — browser-side, no server
 - Email: Buttondown API — no Mailchimp, no SendGrid
 - CLI: TypeScript + Commander.js

@@ -23,6 +23,22 @@ jobs:
             echo "No tool profiles yet — skipping validation"
           fi
 
+  build-index:
+    name: Build Tools Index
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - run: python scripts/build_index.py
+      - run: |
+          if ! git diff --quiet data/tools-index.json; then
+            echo "ERROR: data/tools-index.json is out of date. Run 'python scripts/build_index.py' and commit."
+            exit 1
+          fi
+
   test:
     name: Run Tests
     runs-on: ubuntu-latest

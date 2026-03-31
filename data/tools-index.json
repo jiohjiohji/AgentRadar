@@ -1,0 +1,949 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-04-01",
+  "count": 50,
+  "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
+  "tools": [
+    {
+      "id": "gh-abhishekray07-claude-md-templates",
+      "name": "Claude.md Templates",
+      "category": "claudemd-framework",
+      "status": "active",
+      "tags": [
+        "CLAUDE.md",
+        "templates",
+        "best-practices"
+      ],
+      "pricing": "free",
+      "composite": 7.8,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-anthropics-cookbook",
+      "name": "Anthropic Cookbook",
+      "category": "prompt-library",
+      "status": "active",
+      "tags": [
+        "prompt-library",
+        "recipes",
+        "notebooks",
+        "official",
+        "anthropic",
+        "examples"
+      ],
+      "pricing": "free",
+      "composite": 8.7,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-anthropics-prompt-tutorial",
+      "name": "Anthropic Prompt Engineering Tutorial",
+      "category": "prompt-library",
+      "status": "active",
+      "tags": [
+        "prompt-engineering",
+        "tutorial",
+        "official",
+        "anthropic",
+        "interactive",
+        "notebooks"
+      ],
+      "pricing": "free",
+      "composite": 8.7,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-anthropics-quickstarts",
+      "name": "Anthropic Quickstarts",
+      "category": "sdk-pattern",
+      "status": "active",
+      "tags": [
+        "sdk",
+        "starter",
+        "official",
+        "anthropic",
+        "deployable",
+        "examples"
+      ],
+      "pricing": "free",
+      "composite": 8.4,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-anthropics-sdk-python",
+      "name": "Anthropic Python SDK",
+      "category": "sdk-pattern",
+      "status": "active",
+      "tags": [
+        "sdk",
+        "python",
+        "official",
+        "anthropic",
+        "api-client"
+      ],
+      "pricing": "free",
+      "composite": 8.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-anthropics-sdk-typescript",
+      "name": "Anthropic TypeScript SDK",
+      "category": "sdk-pattern",
+      "status": "active",
+      "tags": [
+        "sdk",
+        "typescript",
+        "official",
+        "anthropic",
+        "api-client"
+      ],
+      "pricing": "free",
+      "composite": 8.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-arize-ai-phoenix",
+      "name": "Arize Phoenix",
+      "category": "eval-observability",
+      "status": "active",
+      "tags": [
+        "observability",
+        "evaluation",
+        "tracing",
+        "llm-evals",
+        "open-telemetry",
+        "ai-monitoring"
+      ],
+      "pricing": "free",
+      "composite": 7.5,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-atlassian-mcp-server",
+      "name": "Atlassian MCP Server",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "jira",
+        "confluence",
+        "project-management",
+        "issue-tracking",
+        "atlassian",
+        "official"
+      ],
+      "pricing": "free",
+      "composite": 6.3,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-avifenesh-agentsys",
+      "name": "AgentSys",
+      "category": "claude-plugin",
+      "status": "active",
+      "tags": [
+        "multi-agent",
+        "plugins",
+        "skills",
+        "automation",
+        "claude-code-native",
+        "opencode",
+        "cursor"
+      ],
+      "pricing": "free",
+      "composite": 6.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": [
+        "gh-wshobson-agents-vs-gh-avifenesh-agentsys"
+      ]
+    },
+    {
+      "id": "gh-ayoubben18-ab-method",
+      "name": "AB Method",
+      "category": "claudemd-framework",
+      "status": "stale",
+      "tags": [
+        "subagents",
+        "mission-driven",
+        "incremental",
+        "claude-code-native",
+        "workflow"
+      ],
+      "pricing": "free",
+      "composite": 5.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-berriai-litellm",
+      "name": "LiteLLM",
+      "category": "sdk-pattern",
+      "status": "active",
+      "tags": [
+        "sdk",
+        "multi-provider",
+        "proxy",
+        "openai-compatible",
+        "cost-tracking",
+        "gateway"
+      ],
+      "pricing": "freemium",
+      "composite": 8.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-browserbase-stagehand",
+      "name": "Stagehand",
+      "category": "complementary",
+      "status": "active",
+      "tags": [
+        "browser-automation",
+        "ai-native",
+        "web-interaction",
+        "stagehand",
+        "browserbase",
+        "agents"
+      ],
+      "pricing": "freemium",
+      "composite": 6.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-browsermcp-mcp",
+      "name": "Browser MCP",
+      "category": "mcp-server",
+      "status": "archived",
+      "tags": [
+        "browser-automation",
+        "headless-browser",
+        "web-interaction",
+        "chromium"
+      ],
+      "pricing": "free",
+      "composite": 3.1,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": [
+        "gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp"
+      ]
+    },
+    {
+      "id": "gh-composiohq-composio",
+      "name": "Composio",
+      "category": "complementary",
+      "status": "active",
+      "tags": [
+        "agent-tools",
+        "integrations",
+        "authentication",
+        "toolkits",
+        "action-execution",
+        "multi-agent"
+      ],
+      "pricing": "freemium",
+      "composite": 6.6,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-crewai-crewai",
+      "name": "CrewAI",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "multi-agent",
+        "role-playing-agents",
+        "orchestration",
+        "autonomous-workflow",
+        "crews"
+      ],
+      "pricing": "freemium",
+      "composite": 6.6,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-dair-ai-pe-guide",
+      "name": "Prompt Engineering Guide",
+      "category": "prompt-library",
+      "status": "active",
+      "tags": [
+        "prompt-engineering",
+        "guide",
+        "resources",
+        "RAG",
+        "agents",
+        "multi-llm"
+      ],
+      "pricing": "free",
+      "composite": 8.5,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-danielmiessler-fabric",
+      "name": "Fabric",
+      "category": "prompt-library",
+      "status": "active",
+      "tags": [
+        "prompt-library",
+        "modular",
+        "crowdsourced",
+        "patterns",
+        "cli",
+        "augmentation"
+      ],
+      "pricing": "free",
+      "composite": 7.8,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-doriandarko-claude-engineer",
+      "name": "Claude Engineer",
+      "category": "claude-plugin",
+      "status": "archived",
+      "tags": [
+        "autonomous-coding",
+        "cli",
+        "tool-use",
+        "self-expanding",
+        "software-development"
+      ],
+      "pricing": "free",
+      "composite": 3.0,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-e2b-dev-e2b",
+      "name": "E2B",
+      "category": "complementary",
+      "status": "active",
+      "tags": [
+        "code-sandbox",
+        "secure-execution",
+        "ai-agents",
+        "runtime",
+        "enterprise"
+      ],
+      "pricing": "freemium",
+      "composite": 7.4,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-gemini-cli-conductor",
+      "name": "Conductor",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "spec-driven-development",
+        "workflow",
+        "planning",
+        "implementation",
+        "gemini-cli",
+        "multi-agent"
+      ],
+      "pricing": "free",
+      "composite": 6.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-github-mcp-server",
+      "name": "GitHub MCP Server",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "github",
+        "code-management",
+        "pull-requests",
+        "issues",
+        "repositories",
+        "git",
+        "official"
+      ],
+      "pricing": "free",
+      "composite": 7.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-gsd-build-get-shit-done",
+      "name": "T\u00c2CHES (Get Shit Done)",
+      "category": "claudemd-framework",
+      "status": "active",
+      "tags": [
+        "meta-prompting",
+        "context-engineering",
+        "spec-driven-development",
+        "claude-code-native",
+        "workflow"
+      ],
+      "pricing": "free",
+      "composite": 8.7,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": [
+        "gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit"
+      ]
+    },
+    {
+      "id": "gh-helicone-helicone",
+      "name": "Helicone",
+      "category": "eval-observability",
+      "status": "active",
+      "tags": [
+        "observability",
+        "caching",
+        "monitoring",
+        "llm-gateway",
+        "one-line-integration"
+      ],
+      "pricing": "freemium",
+      "composite": 8.0,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-ithiria894-claude-code-workflows",
+      "name": "Awesome Claude Code Workflows",
+      "category": "claudemd-framework",
+      "status": "active",
+      "tags": [
+        "CLAUDE.md",
+        "hooks",
+        "workflows",
+        "skills",
+        "MCP",
+        "recipes",
+        "curated"
+      ],
+      "pricing": "free",
+      "composite": 8.0,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-jeffallan-claude-skills",
+      "name": "Fullstack Dev Skills",
+      "category": "claude-plugin",
+      "status": "active",
+      "tags": [
+        "skills",
+        "fullstack",
+        "pair-programming",
+        "claude-code-native",
+        "frontend",
+        "backend"
+      ],
+      "pricing": "free",
+      "composite": 8.1,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-jerhadf-linear-mcp",
+      "name": "Linear MCP Server",
+      "category": "mcp-server",
+      "status": "archived",
+      "tags": [
+        "linear",
+        "project-management",
+        "issue-tracking",
+        "engineering-workflow"
+      ],
+      "pricing": "free",
+      "composite": 4.0,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-josix-awesome-claude-md",
+      "name": "Awesome Claude.md",
+      "category": "claudemd-framework",
+      "status": "active",
+      "tags": [
+        "CLAUDE.md",
+        "templates",
+        "best-practices",
+        "curated",
+        "onboarding"
+      ],
+      "pricing": "free",
+      "composite": 7.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-jrenaldi79-harness-engineering",
+      "name": "Harness Engineering",
+      "category": "claudemd-framework",
+      "status": "active",
+      "tags": [
+        "CLAUDE.md",
+        "context-engineering",
+        "mechanical-enforcement",
+        "best-practices",
+        "bootstrap"
+      ],
+      "pricing": "free",
+      "composite": 6.8,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-korotovsky-slack-mcp",
+      "name": "Slack MCP Server",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "slack",
+        "messaging",
+        "team-communication",
+        "notifications",
+        "channels"
+      ],
+      "pricing": "free",
+      "composite": 5.3,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-langchain-langgraph",
+      "name": "LangGraph",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "graph-based",
+        "orchestration",
+        "stateful-agents",
+        "langchain",
+        "cycles",
+        "resilient"
+      ],
+      "pricing": "freemium",
+      "composite": 7.5,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-langfuse-langfuse",
+      "name": "Langfuse",
+      "category": "eval-observability",
+      "status": "active",
+      "tags": [
+        "observability",
+        "evals",
+        "tracing",
+        "prompt-management",
+        "llm-metrics",
+        "open-source"
+      ],
+      "pricing": "freemium",
+      "composite": 8.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-makenotion-notion-mcp",
+      "name": "Notion MCP Server",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "notion",
+        "knowledge-management",
+        "notes",
+        "pages",
+        "databases",
+        "official"
+      ],
+      "pricing": "free",
+      "composite": 6.7,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-mcp-filesystem",
+      "name": "Filesystem MCP",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "filesystem",
+        "file-management",
+        "local-files",
+        "built-in",
+        "reference-implementation"
+      ],
+      "pricing": "free",
+      "composite": 8.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-mcp-memory",
+      "name": "Memory MCP",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "memory",
+        "knowledge-graph",
+        "persistence",
+        "long-term-memory",
+        "reference-implementation"
+      ],
+      "pricing": "free",
+      "composite": 6.6,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-mendableai-firecrawl",
+      "name": "Firecrawl",
+      "category": "complementary",
+      "status": "active",
+      "tags": [
+        "web-scraping",
+        "llm-ready",
+        "markdown-conversion",
+        "crawling",
+        "structured-data",
+        "ai-agents"
+      ],
+      "pricing": "freemium",
+      "composite": 7.6,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-microsoft-autogen",
+      "name": "AutoGen",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "multi-agent",
+        "orchestration",
+        "microsoft",
+        "conversational-agents",
+        "agentic-ai"
+      ],
+      "pricing": "free",
+      "composite": 6.5,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-microsoft-playwright-mcp",
+      "name": "Playwright MCP",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "browser-automation",
+        "testing",
+        "web-scraping",
+        "playwright",
+        "headless-browser",
+        "microsoft",
+        "official"
+      ],
+      "pricing": "free",
+      "composite": 7.0,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": [
+        "gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp"
+      ]
+    },
+    {
+      "id": "gh-microsoft-promptflow",
+      "name": "Promptflow",
+      "category": "prompt-library",
+      "status": "active",
+      "tags": [
+        "prompt-engineering",
+        "testing",
+        "evaluation",
+        "deployment",
+        "microsoft",
+        "llm-apps"
+      ],
+      "pricing": "free",
+      "composite": 6.8,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-mlflow-mlflow",
+      "name": "MLflow",
+      "category": "eval-observability",
+      "status": "active",
+      "tags": [
+        "evaluation",
+        "observability",
+        "ml-ops",
+        "experiment-tracking",
+        "model-registry",
+        "llm-monitoring"
+      ],
+      "pricing": "free",
+      "composite": 7.3,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-modal-labs-modal",
+      "name": "Modal",
+      "category": "complementary",
+      "status": "active",
+      "tags": [
+        "serverless",
+        "gpu-compute",
+        "python",
+        "cloud-functions",
+        "ai-infrastructure"
+      ],
+      "pricing": "freemium",
+      "composite": 7.9,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-neolab-context-engineering-kit",
+      "name": "Context Engineering Kit",
+      "category": "claude-plugin",
+      "status": "active",
+      "tags": [
+        "context-engineering",
+        "skills",
+        "quality",
+        "multi-agent-compatible",
+        "opencode",
+        "cursor"
+      ],
+      "pricing": "free",
+      "composite": 6.5,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": [
+        "gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit"
+      ]
+    },
+    {
+      "id": "gh-openai-swarm",
+      "name": "OpenAI Swarm",
+      "category": "orchestration",
+      "status": "archived",
+      "tags": [
+        "multi-agent",
+        "orchestration",
+        "lightweight",
+        "educational",
+        "openai",
+        "handoffs"
+      ],
+      "pricing": "free",
+      "composite": 5.1,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-ranaroussi-cc-bridge",
+      "name": "CC Bridge",
+      "category": "claude-plugin",
+      "status": "stale",
+      "tags": [
+        "api-compatibility",
+        "openai-compatible",
+        "claude-code-cli",
+        "bridge"
+      ],
+      "pricing": "free",
+      "composite": 4.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-ruvnet-ruflo",
+      "name": "Ruflo (claude-flow)",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "swarm-intelligence",
+        "orchestration",
+        "claude-native",
+        "multi-agent",
+        "distributed",
+        "SPARC"
+      ],
+      "pricing": "free",
+      "composite": 7.1,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-ryanmac-code-conductor",
+      "name": "Code Conductor",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "parallel-agents",
+        "orchestration",
+        "github-native",
+        "worktrees",
+        "claude-code-native"
+      ],
+      "pricing": "free",
+      "composite": 5.8,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-tavily-mcp",
+      "name": "Tavily MCP",
+      "category": "mcp-server",
+      "status": "active",
+      "tags": [
+        "web-search",
+        "research",
+        "search-api",
+        "real-time-data",
+        "tavily"
+      ],
+      "pricing": "freemium",
+      "composite": 7.2,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-undeadlist-claude-code-agents",
+      "name": "Claude Code Agents (undeadlist)",
+      "category": "claude-plugin",
+      "status": "active",
+      "tags": [
+        "subagents",
+        "prompt-templates",
+        "parallel",
+        "code-audit",
+        "task-tool",
+        "claude-code-native"
+      ],
+      "pricing": "free",
+      "composite": 7.7,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-vercel-ai",
+      "name": "Vercel AI SDK",
+      "category": "sdk-pattern",
+      "status": "active",
+      "tags": [
+        "sdk",
+        "typescript",
+        "streaming",
+        "nextjs",
+        "vercel",
+        "multi-provider",
+        "react"
+      ],
+      "pricing": "free",
+      "composite": 8.6,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-wandb-weave",
+      "name": "W&B Weave",
+      "category": "eval-observability",
+      "status": "active",
+      "tags": [
+        "evaluation",
+        "tracing",
+        "wandb",
+        "llm-apps",
+        "datasets",
+        "monitoring"
+      ],
+      "pricing": "freemium",
+      "composite": 7.6,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": []
+    },
+    {
+      "id": "gh-wshobson-agents",
+      "name": "Claude Code Agents",
+      "category": "orchestration",
+      "status": "active",
+      "tags": [
+        "multi-agent",
+        "orchestration",
+        "workflow",
+        "claude-code-native",
+        "skills",
+        "subagents"
+      ],
+      "pricing": "free",
+      "composite": 8.0,
+      "eval_count": 3,
+      "confidence": "medium",
+      "versus_refs": [
+        "gh-wshobson-agents-vs-gh-avifenesh-agentsys"
+      ]
+    }
+  ]
+}
