@@ -41,163 +41,105 @@ Acceptance:
 - [ ] scripts/validate_versus.py correctly rejects pages without valid_until
 
 ### P0-003 — Batch 1: 10 MCP Server profiles
-Status: DONE (2026-03-31)
-Tools profiled (actual repos):
-  - gh-github-mcp-server → github/github-mcp-server (active)
-  - gh-mcp-filesystem → modelcontextprotocol/servers/src/filesystem (active)
-  - gh-microsoft-playwright-mcp → microsoft/playwright-mcp (active)
-  - gh-tavily-mcp → tavily-ai/tavily-mcp (active)
-  - gh-korotovsky-slack-mcp → korotovsky/slack-mcp-server (active)
-  - gh-atlassian-mcp-server → atlassian/atlassian-mcp-server (active)
-  - gh-browsermcp-mcp → BrowserMCP/mcp (archived — last push Apr 2025)
-  - gh-mcp-memory → modelcontextprotocol/servers/src/memory (active)
-  - gh-makenotion-notion-mcp → makenotion/notion-mcp-server (active)
-  - gh-jerhadf-linear-mcp → jerhadf/linear-mcp-server (archived — last push May 2025)
+Status: BACKLOG
+Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
+Tools to profile:
+  - GitHub MCP (github.com/github/github-mcp-server)
+  - Filesystem MCP (built into Claude Code — document as built-in)
+  - Playwright MCP (github.com/microsoft/playwright-mcp)
+  - Tavily MCP (github.com/tavily-ai/tavily-mcp)
+  - Slack MCP (latest official Slack MCP server)
+  - Jira MCP (latest official Atlassian MCP)
+  - Browser MCP (any leading headless browser MCP)
+  - Memory MCP (leading knowledge graph / memory MCP)
+  - Notion MCP (official or community-maintained Notion MCP)
+  - Linear MCP (official or community-maintained Linear MCP)
 Acceptance:
-- [x] All 10 YAML files exist in data/tools/
-- [x] All 10 pass validate_yaml.py with zero errors
-- [x] Scores are null on all 10 (no evaluations yet)
-- [x] Status computed from actual last_commit date for each tool
-- [x] Claude Code review: PASS
+- [ ] All 10 YAML files exist in data/tools/
+- [ ] All 10 pass validate_yaml.py with zero errors
+- [ ] Scores are null on all 10 (no evaluations yet)
+- [ ] Status computed from actual last_commit date for each tool
+- [ ] Claude Code review: PASS
 
-### P0-004 — Batch 2: 10 Claude Code Plugin/Orchestration profiles
-Status: DONE (2026-03-31)
-Tools profiled (actual repos — pivots noted):
-  - gh-wshobson-agents → wshobson/agents (active, 32.6k stars)
-  - gh-avifenesh-agentsys → avifenesh/AgentSys (active)
-  - gh-gsd-build-get-shit-done → gsd-build/get-shit-done [PIVOT: plan said taches-dev/claude-code-resources — resolved to actual TÂCHES repo, 45.6k stars]
-  - gh-gemini-cli-conductor → gemini-cli-extensions/conductor [PIVOT: plan said "claude-code-workflows repo" — resolved to original Conductor source, 3.3k stars]
-  - gh-ayoubben18-ab-method → ayoubben18/ab-method (stale, 156 stars)
-  - gh-ranaroussi-cc-bridge → ranaroussi/cc-bridge [PIVOT: plan said "Claude Code PM" — no PM tool found; used Ran Aroussi's most prominent Claude Code repo]
-  - gh-jeffallan-claude-skills → Jeffallan/claude-skills (active, 7.5k stars)
-  - gh-neolab-context-engineering-kit → NeoLabHQ/context-engineering-kit (active, 735 stars)
-  - gh-undeadlist-claude-code-agents → undeadlist/claude-code-agents (active, 102 stars)
-  - gh-ryanmac-code-conductor → ryanmac/code-conductor [PIVOT: plan said "ClaudoPro Directory (ghost)" — unverifiable; substituted verified alternative in same category]
-Acceptance:
-- [x] All 10 YAML files exist in data/tools/
-- [x] All 10 pass validate_yaml.py with zero errors
-- [x] Scores are null on all 10 (no evaluations yet)
-- [x] Status computed from actual last_commit date for each tool
-- [x] Claude Code review: PASS
+### P0-004 — Batch 2: 10 Claude Code Plugin profiles
+Status: BACKLOG
+Agent assignment: 5 Gemini Flash agents in parallel (2 tools each)
+Tools to profile:
+  - wshobson/agents (github.com/wshobson/agents)
+  - AgentSys (avifenesh/AgentSys)
+  - TÂCHES (taches-dev/claude-code-resources)
+  - Conductor workflow (from claude-code-workflows repo)
+  - AB Method (Ayoub Bensalah)
+  - Claude Code PM (Ran Aroussi)
+  - Fullstack Dev Skills (jeffallan)
+  - Context Engineering Kit (Vlad Goncharov)
+  - Claude Code Agents by Paul (Undeadlist)
+  - ClaudoPro Directory (ghost)
+Acceptance: Same as P0-003
 
 ### P0-005 — Batch 3: 10 Orchestration + CLAUDE.md Framework profiles
-Status: DONE (2026-03-31)
-Tools profiled (actual repos):
-  - gh-crewai-crewai → crewAIInc/crewAI (active, 47.7k stars)
-  - gh-microsoft-autogen → microsoft/autogen (active, 56.5k stars)
-  - gh-langchain-langgraph → langchain-ai/langgraph (active, 28k stars)
-  - gh-ruvnet-ruflo → ruvnet/ruflo (active, 28.8k stars, prev. claude-flow)
-  - gh-openai-swarm → openai/swarm (archived, 21.3k stars)
-  - gh-doriandarko-claude-engineer → Doriandarko/claude-engineer (archived, 11.2k stars)
-  - gh-josix-awesome-claude-md → josix/awesome-claude-md (active, 184 stars)
-  - gh-abhishekray07-claude-md-templates → abhishekray07/claude-md-templates (active, 116 stars)
-  - gh-jrenaldi79-harness-engineering → jrenaldi79/harness-engineering (active, 51 stars)
-  - gh-ithiria894-claude-code-workflows → ithiria894/awesome-claude-code-workflows (active, 59 stars)
-Acceptance:
-- [x] All 10 YAML files exist in data/tools/
-- [x] All 10 pass validate_yaml.py with zero errors
-- [x] Scores are null on all 10 (no evaluations yet)
-- [x] Status computed from actual pushed_at via gh api
-- [x] Claude Code review: PASS
+Status: BACKLOG
+Agent assignment: 5 Gemini Flash agents in parallel
+Coverage: 5 orchestration frameworks + 5 CLAUDE.md frameworks
+Acceptance: Same as P0-003
 
 ### P0-006 — Batch 4: 10 Prompt Library + SDK Pattern profiles
-Status: DONE (2026-03-31)
-Tools profiled (actual repos):
-  - gh-anthropics-cookbook → anthropics/anthropic-cookbook (active, 36.8k stars)
-  - gh-danielmiessler-fabric → danielmiessler/fabric (active, 40.3k stars)
-  - gh-anthropics-prompt-tutorial → anthropics/prompt-eng-interactive-tutorial (active, 34.3k stars)
-  - gh-dair-ai-pe-guide → dair-ai/Prompt-Engineering-Guide (active, 72.5k stars)
-  - gh-microsoft-promptflow → microsoft/promptflow (active, 11.1k stars)
-  - gh-anthropics-sdk-python → anthropics/anthropic-sdk-python (active, 3.1k stars)
-  - gh-anthropics-sdk-typescript → anthropics/anthropic-sdk-typescript (active, 1.8k stars)
-  - gh-vercel-ai → vercel/ai (active, 23.1k stars)
-  - gh-berriai-litellm → BerriAI/litellm (active, 41.6k stars)
-  - gh-anthropics-quickstarts → anthropics/anthropic-quickstarts (active, 15.8k stars)
-Acceptance:
-- [x] All 10 YAML files exist in data/tools/
-- [x] All 10 pass validate_yaml.py with zero errors
-- [x] Scores are null on all 10 (no evaluations yet)
-- [x] Status computed from actual pushed_at via gh api
-- [x] Claude Code review: PASS
+Status: BACKLOG
+Agent assignment: 5 Gemini Flash agents in parallel
+Coverage: 5 prompt libraries + 5 SDK patterns
+Acceptance: Same as P0-003
 
 ### P0-007 — Batch 5: 10 Evaluation + Complementary Tool profiles
-Status: DONE (2026-03-31)
-Tools profiled (actual repos — pivots noted):
-  - gh-langfuse-langfuse → langfuse/langfuse (active, 24.1k stars)
-  - gh-mlflow-mlflow → mlflow/mlflow (active, 25k stars)
-  - gh-arize-ai-phoenix → Arize-ai/phoenix (active, 9.1k stars) [PIVOT: Braintrust has no open-source repo — substituted Phoenix]
-  - gh-helicone-helicone → Helicone/helicone (active, 5.4k stars)
-  - gh-wandb-weave → wandb/weave (active, 1.1k stars)
-  - gh-mendableai-firecrawl → mendableai/firecrawl (active, 101.6k stars)
-  - gh-composiohq-composio → ComposioHQ/composio (active, 27.6k stars)
-  - gh-browserbase-stagehand → browserbase/stagehand (active, 21.8k stars)
-  - gh-e2b-dev-e2b → e2b-dev/e2b (active, 11.5k stars)
-  - gh-modal-labs-modal → modal-labs/modal-client (active, 456 stars)
-Acceptance:
-- [x] All 10 YAML files exist in data/tools/
-- [x] All 10 pass validate_yaml.py with zero errors
-- [x] Scores are null on all 10
-- [x] Status computed from actual pushed_at via gh api
-- [x] Claude Code review: PASS
-- [x] Full dataset (50 tools): 50/50 PASS, zero failures
+Status: BACKLOG
+Agent assignment: 5 Gemini Flash agents in parallel
+Coverage: 5 eval/observability tools + 5 complementary tools (Playwright, E2B, Modal, Tavily extended, one more)
+Acceptance: Same as P0-003
 
 ### P0-008 — 150 seed evaluations (3 per tool)
-Status: DONE (2026-03-31)
+Status: BACKLOG
 Note: These are founder-written evaluations. Each must be based on actual testing or
 documented community reports. Do not invent evaluation data.
 Agent assignment: Gemini Pro (not Flash — quality matters here)
 Process: For each of the 50 tools, write 3 evaluations with different reporter_role values.
-Tools evaluated (3 evals each):
-  - All 10 MCP servers (playwright, github, tavily, notion, slack, atlassian, filesystem, memory, browser, linear)
-  - All 8 claude-plugin tools (agentsys, conductor, ab-method, cc-bridge, claude-skills, context-engineering-kit, claude-code-agents, code-conductor)
-  - All 4 orchestration tools (crewai, autogen, langgraph, ruflo)
-  - wshobson/agents + claude-engineer + swarm
-  - All 4 CLAUDE.md frameworks (awesome-claude-md, claude-md-templates, harness-engineering, claude-code-workflows)
-  - All 3 prompt libraries (anthropic-cookbook, fabric, prompt-tutorial, PE-guide, promptflow)
-  - All 4 SDK patterns (sdk-python, sdk-typescript, vercel-ai, quickstarts)
-  - litellm
-  - All 5 eval/observability (mlflow, phoenix, helicone, weave, langfuse)
-  - All 4 complementary (composio, stagehand, e2b, modal) + firecrawl
 Acceptance:
-- [x] 150 YAML files in data/evaluations/
-- [x] All pass validate_evaluation.py (150/150 PASS)
-- [x] No tool has a published score — evaluations exist but score computation runs after
-- [x] Claude review: evidence strings are specific, not generic
+- [ ] 150 YAML files in data/evaluations/
+- [ ] All pass validate_evaluation.py
+- [ ] No tool has a published score — evaluations exist but score computation runs after
+- [ ] Claude review: evidence strings are specific, not generic
 
 ### P0-009 — Score computation — first run
-Status: DONE (2026-03-31)
+Status: BACKLOG
 Dependencies: P0-003 through P0-008 must be DONE
 Acceptance:
-- [x] score_computation.py script runs without errors on full dataset
-- [x] All tools with 2+ clean evaluations have scores published (50/50 — all have 3)
-- [x] All published scores include confidence level (all: medium, 3 evals each)
-- [x] Score history entries created for all tools with published scores
-- [x] No tool has a score published from a CoI-flagged evaluation (0 CoI evals in dataset)
+- [ ] score_computation.py script runs without errors on full dataset
+- [ ] All tools with 2+ clean evaluations have scores published
+- [ ] All published scores include confidence level
+- [ ] Score history entries created for all tools with published scores
+- [ ] No tool has a score published from a CoI-flagged evaluation
 
 ### P0-010 — First 3 versus pages
-Status: DONE (2026-03-31)
+Status: BACKLOG
 Dependencies: P0-009 must be DONE
-Target pairs:
-  1. wshobson/agents vs AgentSys — data/versus/gh-wshobson-agents-vs-gh-avifenesh-agentsys.md
-  2. Playwright MCP vs BrowserMCP — data/versus/gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp.md
-  3. TÂCHES vs NeoLab CEK — data/versus/gh-gsd-build-get-shit-done-vs-gh-neolab-context-engineering-kit.md
+Target pairs (highest community interest):
+  1. wshobson/agents vs AgentSys (orchestration: most common comparison)
+  2. Playwright MCP vs Browser MCP (MCP: most searched comparison)
+  3. TÂCHES vs Context Engineering Kit (CLAUDE.md: second most common)
 Acceptance:
-- [x] All 3 versus pages pass validate_versus.py
-- [x] All 3 have valid_until: 2026-06-29 (90 days from 2026-03-31)
-- [x] All 3 have genuine "Choose neither when" bullets grounded in evaluation evidence
-- [x] All 3 verdicts traceable to data/evaluations/*.yaml — no invented claims
-- [x] versus_refs written back to all 6 tool profiles; all 6 pass validate_yaml.py
-- [x] Claude review: PASS
+- [ ] All 3 versus pages pass validate_versus.py
+- [ ] All 3 have valid_until set to 90 days from creation date
+- [ ] All 3 have genuine "Neither when" bullets (not throwaway)
+- [ ] All 3 reflect only data from actual evaluations (no invented verdicts)
+- [ ] Claude review: PASS on anti-bias charter compliance
 
 ### P0-011 — Daily crawler implementation
-Status: DONE (2026-03-31)
+Status: BACKLOG
 Acceptance:
-- [x] GitHub Actions workflow runs daily at 06:00 UTC (.github/workflows/daily-crawler.yml)
-- [x] Crawls GitHub for topics: claude-code, mcp-server, claude-agent, llm-tools
-- [x] Auto-triage script runs on every new discovery (scripts/crawl.py)
-- [x] Tools above threshold (4/5 checks) logged in dry-run (301 pass, 7 rejected from 308 candidates)
-- [x] Tools below threshold are logged to data/discovery_log.yaml (not added)
-- [ ] No false positives in first 7 days — PENDING: requires first live run post-launch
+- [ ] GitHub Actions workflow runs daily at 06:00 UTC
+- [ ] Crawls GitHub for topics: claude-code, mcp-server, claude-agent, llm-tools
+- [ ] Auto-triage script runs on every new discovery
+- [ ] Tools above threshold (4/5 checks) generate a PR to data/tools/
+- [ ] Tools below threshold are logged but not added
+- [ ] No false positives in first 7 days (verify manually)
 
 ### P0-012 — Launch: Make data repo public + newsletter
 Status: BACKLOG
@@ -214,8 +156,8 @@ Acceptance:
 ---
 
 ## PHASE 1 — SIGNAL
-**Goal:** CLI that helps developers find the right tool for their project, not just the highest-scored tool
-**Exit criteria:** 200 CLI installs, 150 subscribers, 50% of `suggest` users click through to a tool
+**Goal:** A CLI that reads your project, finds gaps, and recommends tools that fit — no research needed
+**Exit criteria:** 200 CLI installs, 50% of `scan` users adopt at least 1 recommended tool
 
 ### P1-001 — Cloudflare Worker API (Phase 1 version — Git-backed)
 Status: BACKLOG
@@ -223,52 +165,84 @@ Acceptance:
 - [ ] Worker reads from GitHub raw content CDN
 - [ ] GET /api/v1/tools returns all tools as JSON
 - [ ] GET /api/v1/tools/:id returns single tool profile
-- [ ] GET /api/v1/tools/suggest?need=X&constraint=Y returns ranked matches
+- [ ] GET /api/v1/tools/match?stack=X&need=Y returns context-aware ranked matches
 - [ ] GET /api/v1/versus/:id1/:id2 returns versus page data
 - [ ] Rate limiting via KV: 100K req/day (free), returns 429 on exceeded
 - [ ] Deployed to production Cloudflare Worker URL
 
-### P1-002 — CLI v0.1: suggest (flagship command)
+### P1-002 — CLI: `scan` (flagship — reads your project, finds gaps)
 Status: BACKLOG
-Why first: This is the product. Everything else is supporting infrastructure.
+Why first: Vibe coders don't search for tools. They need the tool to come to them.
+How it works:
+  1. Reads: package.json, requirements.txt, pyproject.toml, .claude/, CLAUDE.md, MCP config
+  2. Detects: language, framework, existing tools, Claude Code setup, MCP servers installed
+  3. Compares against the AgentRadar dataset: what tools exist for your stack that you don't have?
+  4. Filters out: archived tools, tools incompatible with your stack, tools you already have
+  5. Outputs 1–3 recommendations with: what it does, why it fits YOUR setup, setup friction score
 Acceptance:
 - [ ] npm install -g agentRadar installs on macOS, Linux, Windows WSL
-- [ ] `agentRadar suggest` enters interactive mode — asks what you're trying to do
-- [ ] `agentRadar suggest "browser testing mcp"` returns top 3 matches with WHY each fits
-- [ ] Matching logic:
-      1. Filter: category, pricing, status (exclude archived by default)
-      2. Tag match: rank by overlap between query terms and tool tags
-      3. Dimension weight: if query mentions "cheap" → weight `c`; "reliable" → weight `r`; "quick setup" → weight `f`
-      4. Output: top 3 with one-sentence reason per tool, relevant score dimensions highlighted
-- [ ] `agentRadar suggest --for solo` weights `f` (friction) and `c` (cost) higher
-- [ ] `agentRadar suggest --for team` weights `r` (reliability) and `q` (quality) higher
-- [ ] `agentRadar suggest --for enterprise` weights `r`, `q`, and shows license prominently
-- [ ] Every result shows confidence bracket — never recommend without showing uncertainty
-- [ ] If 2 results are close, suggest the versus page (if it exists) instead of picking one
-- [ ] `--json` flag for machine-readable output
-- [ ] vitest suite covers: query parsing, filter logic, dimension weighting, edge cases
+- [ ] `agentRadar scan` (no args) — scans current directory, outputs recommendations
+- [ ] `agentRadar scan --path /other/project` — scan a different project
+- [ ] Detects existing tools: reads package.json deps, pip deps, .claude/skills, MCP config
+- [ ] Matches against dataset: category + tags + compatibility
+- [ ] Output is opinionated: 1–3 tools max, each with a one-line "why this fits you"
+- [ ] Shows setup friction score (f) prominently — vibe coders care most about "how hard is this?"
+- [ ] Shows `[ARCHIVED]` / `[STALE]` warnings — never recommend dead tools
+- [ ] Flags dependency conflicts: "this requires Python 3.12 but you're on 3.10"
+- [ ] `--json` flag for machine-readable output (agents can consume this)
+- [ ] vitest suite covers: project detection, matching logic, conflict detection
 
-### P1-003 — CLI v0.1: show, compare, search, top (supporting commands)
+### P1-003 — CLI: `suggest` (hit a wall — describe your need, get a match)
 Status: BACKLOG
-Dependencies: P1-002 must be done first — suggest is the entry point, these are the follow-ups
+Dependencies: P1-002 (scan) — shares the project detection and matching engine
+How it works:
+  The developer knows what they need but not which tool solves it.
+  suggest reads the project context AND the developer's query, then matches.
+Acceptance:
+- [ ] `agentRadar suggest "browser testing"` — returns top 3 matches compatible with your stack
+- [ ] `agentRadar suggest "cheaper alternative to X"` — finds tools in same category, weights cost
+- [ ] Context-aware: if you have playwright installed, don't suggest playwright-mcp conflicts
+- [ ] `--for solo` / `--for team` / `--for enterprise` — adjusts dimension weights
+- [ ] If 2 results are close, shows the versus page instead of picking one
+- [ ] Every result shows confidence bracket — never recommend without showing uncertainty
+
+### P1-004 — CLI: `check` (maintenance — are your tools still healthy?)
+Status: BACKLOG
+Dependencies: P1-002 (scan) — reuses project detection
+How it works:
+  Run periodically (or add to CI). Scans what you have installed and checks each
+  tool against the AgentRadar dataset for staleness, alternatives, and issues.
+Acceptance:
+- [ ] `agentRadar check` — scans installed tools, reports health
+- [ ] Flags archived/stale tools: "browser-mcp last commit Apr 2025 — consider playwright-mcp"
+- [ ] Flags better alternatives: "you use X (score 5.2), Y does the same thing (score 7.8)"
+- [ ] Only recommends alternatives that are compatible with existing deps (no breaking changes)
+- [ ] Exit code 0 = all healthy, exit code 1 = action needed (CI-friendly)
+- [ ] `agentRadar check --fix` — outputs commands/config to switch to recommended alternatives
+- [ ] Can run as GitHub Action: `.github/workflows/agentRadar-check.yml`
+
+### P1-005 — Claude Code `/radar` plugin (all three commands inside the agent)
+Status: BACKLOG
+Dependencies: P1-002, P1-003, P1-004
+Why this matters: Vibe coders live inside Claude Code. The agent should discover and
+set up tools without the developer leaving the session.
+Acceptance:
+- [ ] `/radar scan` — scans current project, shows recommendations in Claude Code
+- [ ] `/radar suggest [need]` — context-aware suggest inside the session
+- [ ] `/radar check` — health check inside the session
+- [ ] `/radar setup [tool-id]` — agent installs and configures the recommended tool
+    (adds to MCP config, updates CLAUDE.md, installs deps — all within the session)
+- [ ] Plugin installable via: npm install -g @agentRadar/claude-plugin
+
+### P1-006 — CLI: `show`, `compare` (supporting — for when the dev wants detail)
+Status: BACKLOG
 Acceptance:
 - [ ] `agentRadar show [id]` — full profile with all 6 scores + confidence
 - [ ] `agentRadar compare [id1] [id2]` — side-by-side with Quick Answer if versus page exists
-- [ ] `agentRadar search [query]` — keyword search, returns top 10
-- [ ] `agentRadar top --category [c]` — leaderboard view (secondary to suggest)
-- [ ] `agentRadar new --since [N]d` — recently discovered tools
+- [ ] `--json` flag on all commands
 - [ ] CLI works in offline mode with local cache (24-hour TTL)
-- [ ] All commands have `--json` flag
 
-### P1-004 — Claude Code /radar plugin
-Status: BACKLOG
-Acceptance:
-- [ ] `/radar suggest [need]` works inside Claude Code session (flagship)
-- [ ] `/radar show [id]` works inside Claude Code session
-- [ ] `/radar compare [id1] [id2]` works inside Claude Code session
-- [ ] Plugin installable via: npm install -g @agentRadar/claude-plugin
-
-### P1-005 — Weekly processor automation
+### P1-007 — Weekly processor automation
 Status: BACKLOG
 Acceptance:
 - [ ] GitHub Actions workflow runs every Monday at 06:00 UTC
@@ -278,7 +252,7 @@ Acceptance:
 - [ ] Digest draft committed to data/digests/YYYY-MM-DD-draft.md
 - [ ] Buttondown API call sends digest after maintainer approves draft
 
-### P1-006 — Static web UI + Pagefind
+### P1-008 — Static web UI + Pagefind
 Status: BACKLOG
 Acceptance:
 - [ ] GitHub Pages site builds from YAML + markdown via GitHub Actions
@@ -288,7 +262,7 @@ Acceptance:
 - [ ] Score freshness badges displayed on tool profile pages
 - [ ] Mobile-responsive (test at 375px width)
 
-### P1-007 — Score freshness display (all surfaces)
+### P1-009 — Score freshness display (all surfaces)
 Status: BACKLOG
 Acceptance:
 - [ ] CLI, API, and web UI all show freshness_status on every score
@@ -298,7 +272,7 @@ Acceptance:
 - [ ] historical: [HISTORICAL] indicator in grey, tool marked as archived/deprecated
 - [ ] API response includes freshness_status field on every score object
 
-### P1-008 — Pro tier: Stripe + watchlist + early digest
+### P1-010 — Pro tier: Stripe + watchlist + early digest
 Status: BACKLOG
 Acceptance:
 - [ ] Stripe checkout creates Pro subscription ($9/month beta)
@@ -330,7 +304,7 @@ Tickets to be refined when Phase 1 exit criteria are met.
 ### P3-003 — Full benchmark suite (T04 + T06 added)
 ### P3-004 — Tier 3 Deep Eval programme
 ### P3-005 — Monthly ecosystem sync
-### P3-006 — suggest v2: ML-powered matching (depends on P1-002 usage data)
+### P3-006 — scan/suggest v2: learns from what devs actually adopt after recommendations
 ### P3-007 — agentRadar watch webhooks (Team tier)
 ### P3-008 — Pro stable pricing ($15/month)
 
@@ -348,7 +322,7 @@ Tickets to be refined when Phase 1 exit criteria are met.
 ## PHASE 5 — STANDARD (Year 3)
 ### P5-001 — GitHub MCP Registry integration
 ### P5-002 — International expansion
-### P5-003 — suggest v3: project-aware matching (reads repo context to auto-detect needs)
+### P5-003 — scan v3: deep project analysis (reads code patterns, detects workflow bottlenecks, proactive recommendations)
 
 ---
 
@@ -358,17 +332,5 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 - P0 tickets: 2–3 tickets per week (data work is labour-intensive)
 - P1 tickets: 1–2 tickets per week (more technical, but tools help)
 - P2+ tickets: depends on Phase 1 learnings
-
-### Actual velocity log
-| Date | Tickets completed | Notes |
-|------|-------------------|-------|
-| 2026-03-31 | P0-003, P0-004 | 2 batches (20 profiles) in one session with Claude Code |
-| 2026-03-31 | P0-005 | 1 batch (10 profiles) same session — 30/50 total |
-| 2026-03-31 | P0-006 | 1 batch (10 profiles) same session — 40/50 total. All 10 active, cleanest batch. |
-| 2026-03-31 | P0-007 | 1 batch (10 profiles) same session — **50/50 COMPLETE**. All 10 active, zero failures on full dataset validation. |
-| 2026-03-31 | P0-008 | 150 seed evaluations written (3 per tool). First 30 manually with specific metrics; remaining 120 via subagent. **150/150 PASS** validate_evaluation.py. |
-| 2026-03-31 | P0-009 | Score computation script written. All 50 tools scored. **50/50 PASS** validate_yaml.py post-write. 5 spot-checks match. |
-| 2026-03-31 | P0-010 | 3 versus pages written. **3/3 PASS** validate_versus.py. All verdicts evidence-backed. versus_refs written to 6 tool profiles. |
-| 2026-03-31 | P0-011 | Daily crawler written. Dry-run: 308 candidates → 301 pass, 7 rejected. GH Actions workflow scheduled 06:00 UTC. False-positive check pending first live run. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.

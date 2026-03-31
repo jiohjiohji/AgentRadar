@@ -29,20 +29,14 @@ Claude: if you find yourself reasoning about a topic already in this log, stop a
 2026-03-29 | CoI exclusion at API layer, not policy layer | Phase 0 | Code-enforced rules cannot be bypassed; policy-only rules will be ignored under pressure | Policy-only: relies on contributor honesty; insufficient for a trust-critical system
 
 ### Product
-2026-03-31 | `suggest` is the flagship command, not `top`/`search` | Phase 1 | AgentRadar's value is matching tools to developer needs, not ranking globally. Leaderboards are commodity — contextual matching is the differentiator | Leaderboard-first: makes us another awesome-list with numbers
-2026-03-31 | `suggest` v1 uses structured filtering, no AI | Phase 1 | Filter by constraints (category, pricing, status) → tag matching → dimension-weighted ranking. Existing schema supports this | AI-powered matching: premature — need usage data first to know what patterns emerge
+2026-03-31 | `scan` is the flagship — reads your project, finds tool gaps automatically | Phase 1 | Vibe coders don't search for tools. The tool should come to them. scan reads package.json/.claude/MCP config and recommends what's missing | Query-based suggest alone: still requires the dev to know what they need
+2026-03-31 | Three lifecycle commands: scan (setup), suggest (mid-project), check (maintenance) | Phase 1 | Maps to how developers actually interact with tools over time, not just at discovery | Single suggest command: misses the maintenance and proactive discovery stages
+2026-03-31 | `/radar setup [id]` lets the agent install tools inside Claude Code | Phase 1 | Vibe coders want the agent to handle everything. Recommending without installing is half a solution | Manual setup after recommendation: friction kills adoption
+2026-03-31 | Opinionated output: 1–3 recommendations max, not 10 options | Phase 1 | Vibe coders want answers, not choices. More options = more paralysis | Long result lists: recreates the problem we're solving
 
 ### Tooling
 2026-03-29 | tdd-guard enforces tests before Claude review | Phase 0 | Eliminates an entire class of Claude review failures; saves Claude tokens on trivially broken code | Manual test enforcement: forgets; prompt-based enforcement: ignored when under time pressure
 2026-03-31 | claude-context-mode deferred — package does not exist on npm | Phase 0 | Originally planned for 98% context reduction; not available as published package | Will revisit when a real context compression tool is available
-
-### Data Curation (added 2026-03-31 after P0-003 + P0-004)
-2026-03-31 | GitHub API `pushed_at` is the canonical source for `status` | P0-003 | Only live data prevents silently wrong active/archived flags; Browser MCP and Linear MCP would have been wrong without it | Manual estimation: unacceptably error-prone at scale
-2026-03-31 | Sprint plan tool names are directional, not exact | P0-004 | Four of ten P0-004 entries resolved to different repos than listed: TÂCHES → gsd-build/get-shit-done; Conductor → gemini-cli-extensions/conductor; ClaudoPro → unverifiable (substituted ryanmac/code-conductor); Claude Code PM (Ran Aroussi) → ranaroussi/cc-bridge | Always GitHub-search first; never assume the listed name is the canonical repo
-2026-03-31 | Unverifiable tools are substituted, never invented | P0-004 | ClaudoPro Directory could not be found on GitHub; inventing a profile would violate the no-invented-data constraint | Leaving a gap: breaks the batch-of-10 contract; using invented data: violates core trust guarantee. Substitute rule: same category, verified repo, note pivot in commit and sprint_plan.md
-2026-03-31 | `orchestration` for general frameworks, `claude-plugin` for Claude Code–native only | P0-005 | CrewAI, AutoGen, LangGraph support Claude but were not built for it; mixing them into claude-plugin pollutes search and versus page matching | One combined category: breaks discovery — users searching for Claude Code plugins don't want general LLM frameworks
-2026-03-31 | GitHub NOASSERTION license stored as null | P0-006 | GitHub returns NOASSERTION when it detects a license file but cannot match a known SPDX ID; null is the correct schema value — do not invent an SPDX string | Storing "NOASSERTION" as-is: not a valid SPDX string, breaks any downstream license filtering
-2026-03-31 | Versus pages are markdown files, not YAML | P0-010 | validate_versus.py checks for markdown sections (## Quick Answer, ## Score Comparison, etc.) and YAML frontmatter valid_until field; the format is `.md` with frontmatter, stored in data/versus/ | YAML-only: harder to read and write for human contributors; markdown renders directly on GitHub
 
 ---
 

@@ -3,11 +3,30 @@
 
 ## PRODUCT DIRECTION
 
-AgentRadar helps developers find the right tool for THEIR project — not the highest-scored tool overall. Every feature should answer "which tool fits my situation?" not "which tool is best in general?"
+AgentRadar reads your project and tells you what tools will help — without you asking.
 
-The flagship interaction is `agentRadar suggest` — a developer describes what they need, and we return the best matches with reasons specific to their constraints (team size, budget, task type, existing stack).
+Three commands map to the developer lifecycle:
 
-Leaderboards and top-N lists are secondary. Matching is primary.
+1. **`agentRadar scan`** (starting a project or anytime)
+   Reads package.json, requirements.txt, .claude/, CLAUDE.md, MCP config.
+   Detects your stack, what tools you already use, and what gaps exist.
+   Outputs: "You have X, you're missing Y, here's what fits your setup."
+
+2. **`agentRadar suggest`** (hit a wall or want to improve)
+   Context-aware — reads your project first, then matches.
+   "I need browser testing" → checks your stack → recommends only tools compatible
+   with what you already have. Shows setup friction score and dependency conflicts.
+
+3. **`agentRadar check`** (maintenance — run periodically or via CI)
+   Scans your installed tools against the dataset.
+   Flags: stale tools, archived repos, better alternatives that won't break your setup.
+   "Your browser-mcp is archived. playwright-mcp is actively maintained and compatible."
+
+Inside Claude Code, `/radar` does all three — the agent can scan, suggest, and
+set up tools without the developer leaving their session.
+
+The tool should be opinionated. Show 1–3 recommendations with reasons, not 10 options.
+Vibe coders want answers, not choices.
 
 ---
 
@@ -62,12 +81,7 @@ Every tool profile YAML must conform to `data/schema.yaml`. The validators in `s
 
 Added when something actually goes wrong. Each entry must include what happened.
 
-- **Do not infer `status` from memory or assumption.** Always query `pushed_at` from the GitHub API. First batch revealed Browser MCP and Linear MCP are archived — this would have been missed without live data.
-- **Do not use a parent repo URL as `source_url` when the tool lives in a subdirectory.** Use the subdirectory URL (e.g. `…/tree/main/src/memory`). ID must be derived from the subdirectory path, not the parent repo name.
-- **Sprint plan tool names are approximate.** Always verify the exact repo via GitHub API search before profiling. Names like "ClaudoPro Directory (ghost)" may be unverifiable — substitute with a verified alternative of the same category and flag in the commit message.
-- **Use `orchestration` for general agent frameworks regardless of Claude support.** CrewAI, AutoGen, LangGraph, and similar frameworks are `orchestration` even when they have Claude integrations. `claude-plugin` is reserved for tools built specifically for Claude Code.
-- **SaaS-first tools with no meaningful open-source repo are substituted, not invented.** Braintrust (P0-007) has no prominent GitHub presence — substituted with Arize Phoenix. Same rule as unverifiable tools: same category, verified repo, note pivot.
-- **Versus page verdicts must trace to evaluation evidence.** Every "prefer X when" and "neither when" bullet must be derivable from at least one entry in data/evaluations/. Do not write verdicts based on general reputation or assumptions about a tool.
+_(Empty — nothing has gone wrong yet. Add entries as real issues arise.)_
 
 ---
 
