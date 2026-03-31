@@ -93,9 +93,4 @@ fields:
       verdict_short: string
       valid_until: string (YYYY-MM-DD)
 
-# ANTI-BIAS RULES (enforced by validate_yaml.py)
-anti_bias:
-  - "Tool authors cannot evaluate their own tools. CoI field is mandatory on every evaluation."
-  - "Score changes >±0.5 require 3+ independent data points."
-  - "All tools in a category run identical benchmark tasks."
-  - "valid_until must be set on all versus_refs entries."
+# Anti-bias rules are defined in AGENTS.md and enforced by the validation scripts.
