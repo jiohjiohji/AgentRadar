@@ -56,13 +56,13 @@ See `data/schema.yaml` for the full definition, types, and examples.
 
 ---
 
-## CODE STRUCTURE — ENFORCED ON EVERY FILE
+## CODE STRUCTURE
 
-- No file exceeds 400 lines. At 300, evaluate whether a split improves clarity — only split if it does.
-- One module = one responsibility. Never mix concerns in a single file.
-- Split by domain, not by layer — `crawlers/github.py` not `utils/helpers.py`.
-- No `utils`, `helpers`, `misc`, or `common` files. Name files by what they do.
-- Imports between modules must flow one direction — no circular dependencies.
+- **One responsibility per file.** A file should be describable in one sentence without "and".
+- **Split when a file serves multiple callers for different reasons** — not at an arbitrary line count.
+- **Name by domain** — `crawlers/github.py`, `scores/compute.py`, not `utils.py` or `helpers.ts`.
+- **No circular dependencies** between modules. Imports flow one direction.
+- **When in doubt, keep it together.** A cohesive 400-line file beats four 100-line files that constantly cross-import.
 
 ---
 
