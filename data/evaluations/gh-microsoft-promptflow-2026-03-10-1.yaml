@@ -1,0 +1,47 @@
+tool_id: gh-microsoft-promptflow
+reporter_role: developer
+date_evaluated: "2026-03-10"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Used Microsoft PromptFlow to build, test, and evaluate a multi-step customer feedback
+  classification pipeline using Claude via the Anthropic provider. Created a DAG flow
+  with preprocessing, classification, and post-processing nodes. Ran batch evaluation
+  on 200 labeled examples and compared PromptFlow's evaluation features to manual testing.
+scores:
+  p:
+    value: 7
+    evidence: >
+      PromptFlow's visual DAG builder and batch evaluation runner reduced the time to build
+      and test the pipeline from an estimated 3 days to 1.5 days, primarily through structured evaluation tooling.
+  q:
+    value: 7
+    evidence: >
+      The evaluation framework correctly computed precision and recall metrics across the
+      200-example batch; the visualization of per-node outputs in failed cases was particularly helpful for debugging.
+  c:
+    value: 6
+    evidence: >
+      PromptFlow itself is open source and free; running 200-example evaluations through
+      Claude consumes significant API budget that must be planned for; the framework does not reduce token costs.
+  r:
+    value: 7
+    evidence: >
+      The Anthropic provider in PromptFlow was well-maintained at evaluation time; the
+      flow ran all 200 examples without a framework-level failure, though 3 Claude API timeouts required retry.
+  x:
+    value: 6
+    evidence: >
+      PromptFlow composes with Azure services naturally but integrating it with the Claude
+      Code ecosystem required custom work; it operates as a separate development environment rather than a Claude Code extension.
+  f:
+    value: 6
+    evidence: >
+      pip install and VS Code extension setup were smooth; configuring the Anthropic connection
+      required finding the community Anthropic provider documentation separate from the main PromptFlow docs.
+verdict: >
+  PromptFlow is a mature pipeline development and evaluation framework that integrates
+  well with Claude via the Anthropic provider; its evaluation tooling is the primary
+  differentiator over direct SDK use, making it most valuable for teams building classification
+  or structured output pipelines that require rigorous batch evaluation.
+conflict_of_interest: none

@@ -1,0 +1,48 @@
+tool_id: gh-ryanmac-code-conductor
+reporter_role: team-lead
+date_evaluated: "2026-03-20"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Evaluated Code Conductor for team-scale parallel development: had 4 engineers each
+  running their own Claude Code subagents coordinated through the Code Conductor
+  orchestrator. Tested on a feature sprint with 8 independent tickets, 2 per engineer,
+  to evaluate how the GitHub coordination model scales with team participation.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Parallel execution across 4 engineers accelerated task throughput, but orchestrator
+      state synchronization caused delays when multiple subagents committed to shared files
+      in the same hour.
+  q:
+    value: 7
+    evidence: >
+      Individual ticket implementations were high quality; code review found fewer structural
+      issues than our baseline because subagents followed the orchestrator's architecture constraints.
+  c:
+    value: 4
+    evidence: >
+      Eight simultaneous Claude Code sessions at peak represented a significant API spend;
+      our team's API cost doubled during the sprint compared to sequential working patterns.
+  r:
+    value: 6
+    evidence: >
+      Three of eight subagent tasks completed without intervention; the other five required
+      at least one manual action to resolve merge conflicts or clarify ambiguous task decomposition.
+  x:
+    value: 7
+    evidence: >
+      The GitHub integration model is sound and works with standard branch and PR workflows;
+      teams already using GitHub will find the coordination layer conceptually familiar.
+  f:
+    value: 5
+    evidence: >
+      Team-scale setup required coordinating orchestrator access across 4 engineers and
+      establishing shared worktree naming conventions; the documentation covers solo use better than team use.
+verdict: >
+  Code Conductor's GitHub-based parallel coordination model is innovative but the team-scale
+  experience reveals friction points around merge conflict management and orchestrator state
+  synchronization; it delivers speed benefits for independent tasks but teams should expect
+  manual intervention when tasks share code or interfaces.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-openai-swarm
+reporter_role: developer
+date_evaluated: "2026-03-15"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Evaluated OpenAI Swarm as a baseline for implementing a similar multi-agent handoff
+  system on top of Anthropic's API. Studied the handoff mechanism, context variable passing,
+  and function-to-agent routing patterns. Attempted to port the customer service example to
+  use Claude Sonnet via the Anthropic Python SDK.
+scores:
+  p:
+    value: 3
+    evidence: >
+      Swarm itself was not used in production; the study of its patterns informed the
+      design of our custom implementation, providing indirect productivity value through design insight.
+  q:
+    value: 5
+    evidence: >
+      The pattern study revealed that Swarm's context variable approach is simpler than
+      alternatives; the quality insight gained was real but required manual porting to Anthropic's API.
+  c:
+    value: 5
+    evidence: >
+      Using the examples cost minimal OpenAI API tokens; the real cost was developer time
+      spent porting patterns, which was worthwhile as a design exercise but not a direct tool benefit.
+  r:
+    value: 4
+    evidence: >
+      One example failed due to an OpenAI SDK method that was renamed after Swarm's archival;
+      the frozen codebase will accumulate more such failures over time as the OpenAI SDK evolves.
+  x:
+    value: 2
+    evidence: >
+      Swarm is tightly coupled to the OpenAI client and context model; using its patterns
+      with Anthropic's API requires rewriting the agent handoff logic from scratch.
+  f:
+    value: 7
+    evidence: >
+      pip install and example execution were smooth on Ubuntu; the OpenAI API key requirement
+      is the only prerequisite and the README clearly explains the setup.
+verdict: >
+  OpenAI Swarm serves as a useful design reference for multi-agent systems but should not
+  be adopted as a production dependency; developers building Anthropic-based multi-agent
+  systems should study Swarm's handoff patterns conceptually and implement equivalent logic
+  using the Anthropic SDK directly.
+conflict_of_interest: none

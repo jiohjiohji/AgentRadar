@@ -1,0 +1,48 @@
+tool_id: gh-composiohq-composio
+reporter_role: small-team
+date_evaluated: "2026-03-20"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Evaluated Composio for a 4-person startup building a Claude-powered sales assistant.
+  Tested integrations with Salesforce, HubSpot, and Gmail to enable Claude to read CRM
+  data, log meeting notes, and draft follow-up emails. Evaluated whether Composio's
+  managed integrations reduced the time-to-production versus manual OAuth implementation.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The Salesforce integration alone would have taken 2 weeks to implement with direct
+      OAuth and API code; Composio had it working in 2 hours, a significant time-to-market acceleration.
+  q:
+    value: 6
+    evidence: >
+      Salesforce and Gmail integrations worked well; HubSpot data retrieval was missing
+      some custom field mappings that were present in the CRM but not exposed through Composio's abstraction layer.
+  c:
+    value: 6
+    evidence: >
+      For a startup, Composio's paid plan adds a meaningful monthly cost; the build-versus-buy
+      analysis favors Composio for Salesforce at our scale but becomes less clear for simpler integrations.
+  r:
+    value: 7
+    evidence: >
+      Gmail and Salesforce integrations ran without failures across our two-week evaluation;
+      one OAuth token refresh failure for HubSpot required a manual re-authentication that
+      disrupted an automated daily workflow.
+  x:
+    value: 8
+    evidence: >
+      Composio tool definitions integrate cleanly with Claude's tool use API; a Claude
+      agent can call Composio tools alongside custom tools in the same request without special handling.
+  f:
+    value: 7
+    evidence: >
+      Composio CLI walked through OAuth authentication for each service; Salesforce was
+      the most complex with sandbox vs production URL configuration, but Composio's UI guided through it.
+verdict: >
+  Composio delivers meaningful time savings for multi-CRM agent integrations where the
+  alternative is implementing OAuth and API clients from scratch; the abstraction layer
+  costs some custom field flexibility but for standard CRM operations the convenience
+  justifies the subscription cost for startups focused on speed to market.
+conflict_of_interest: none

@@ -1,0 +1,29 @@
+id: gh-crewai-crewai
+name: CrewAI
+source_url: https://github.com/crewAIInc/crewAI
+category: orchestration
+pricing: freemium
+license: MIT
+status: active
+scores:
+  p: 7.7
+  q: 6.7
+  c: 5.0
+  r: 6.7
+  x: 7.0
+  f: 6.3
+  composite: 6.6
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 6.6
+  benchmark_version: '1.0'
+tags:
+- multi-agent
+- role-playing-agents
+- orchestration
+- autonomous-workflow
+- crews
+versus_refs: []

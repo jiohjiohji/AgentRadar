@@ -1,0 +1,47 @@
+tool_id: gh-jerhadf-linear-mcp
+reporter_role: developer
+date_evaluated: "2026-03-05"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Tested the Linear MCP server (archived May 2025) for managing issues in a Linear
+  workspace. Attempted to query open issues, create new tickets from bug reports, and
+  update issue statuses. Assessed which operations still work and which are broken
+  due to Linear API changes since the repository was archived.
+scores:
+  p:
+    value: 4
+    evidence: >
+      Issue querying worked for basic cases, saving maybe 5 minutes versus using the Linear
+      UI directly, but broken API endpoints for attachments and cycles made it incomplete for real workflows.
+  q:
+    value: 4
+    evidence: >
+      Issue reading was accurate but the Linear GraphQL schema has evolved since archival;
+      3 out of 8 write operations failed with schema validation errors on fields that no longer exist.
+  c:
+    value: 5
+    evidence: >
+      Linear API is free within usage limits so cost is just Claude tokens; those are wasted
+      when API calls fail mid-session, making the effective cost higher than it appears.
+  r:
+    value: 3
+    evidence: >
+      Reliability has degraded since archival as Linear's API evolves; across 10 test
+      sessions, 4 included at least one failed GraphQL mutation due to schema drift.
+  x:
+    value: 4
+    evidence: >
+      The MCP interface still functions structurally, but composing it in workflows that
+      depend on write operations is risky given the schema drift failures.
+  f:
+    value: 6
+    evidence: >
+      Initial setup with Linear API key was straightforward; friction arises only when
+      deprecated operations are attempted and produce unhelpful error messages.
+verdict: >
+  The Linear MCP server is in functional decline since its May 2025 archival; read operations
+  work for simple queries but write operations fail with increasing frequency as Linear's
+  GraphQL schema diverges from the archived implementation; teams should build a replacement
+  or use Linear's official API directly rather than depending on this tool.
+conflict_of_interest: none

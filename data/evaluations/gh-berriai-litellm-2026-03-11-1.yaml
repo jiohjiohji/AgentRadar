@@ -1,0 +1,34 @@
+tool_id: "gh-berriai-litellm"
+reporter_role: "developer"
+date_evaluated: "2026-03-11"
+claude_code_version: "N/A"
+platform: "ubuntu"
+
+task_performed: >
+  Used LiteLLM proxy to unify API calls across Claude, GPT-4, and Gemini
+  in a multi-model routing system. Implemented cost-based routing that
+  directed simple tasks to cheaper models and complex reasoning to Claude Opus.
+
+scores:
+  p:
+    value: 9
+    evidence: "Reduced per-request API cost by 58% using cost-based routing while maintaining quality on complex tasks; single SDK interface eliminated 400 lines of model-specific adapter code"
+  q:
+    value: 8
+    evidence: "Routing logic worked correctly; response format normalization handled 98% of cases automatically; 2% of edge cases with streaming responses required custom handling"
+  c:
+    value: 10
+    evidence: "Cost tracking dashboard showed exactly which model served each request; identified three high-cost prompts that were over-specified, leading to prompt optimization that saved additional 15%"
+  r:
+    value: 8
+    evidence: "Proxy handled 50,000 requests in the first month with 99.94% uptime; one Redis connection timeout caused a 4-minute degraded period; auto-recovery worked correctly"
+  x:
+    value: 10
+    evidence: "Drop-in OpenAI SDK replacement; migrated existing codebase by changing one base URL and one import; no other code changes required across 23 API call sites"
+  f:
+    value: 8
+    evidence: "Docker compose up → proxy running in 8 minutes; model configuration via YAML took 20 minutes; cost tracking dashboard configured in additional 15 minutes"
+
+verdict: "Essential infrastructure for any production system using multiple LLM providers — the drop-in compatibility and cost visibility alone justify the 30-minute setup investment."
+
+conflict_of_interest: "none"

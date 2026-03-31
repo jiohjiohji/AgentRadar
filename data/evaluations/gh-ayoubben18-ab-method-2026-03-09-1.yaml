@@ -1,0 +1,47 @@
+tool_id: gh-ayoubben18-ab-method
+reporter_role: developer
+date_evaluated: "2026-03-09"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Tested the AB-method mission-driven subagent approach for a multi-step data pipeline task.
+  The methodology assigns Claude Code a clear mission with defined roles for subagents.
+  Evaluated how the approach handles task decomposition, subagent coordination, and whether
+  the stale November 2025 state of the repository affects practical usability.
+scores:
+  p:
+    value: 5
+    evidence: >
+      The mission framing helped clarify complex task decomposition, but the stale documentation
+      referenced Claude Code features and prompt patterns that have evolved since November 2025.
+  q:
+    value: 5
+    evidence: >
+      Subagent outputs were reasonable but the mission structure templates needed manual
+      updating to match current Claude Code subagent invocation syntax before they would run correctly.
+  c:
+    value: 6
+    evidence: >
+      The methodology itself adds no API cost; token usage reflects the complexity of the
+      mission rather than framework overhead, which is appropriate for a lightweight prompt approach.
+  r:
+    value: 5
+    evidence: >
+      Mission-driven prompts produced consistent subagent delegation in 7 of 10 trials;
+      3 trials had subagents that ignored the mission boundaries and ran outside their assigned scope.
+  x:
+    value: 5
+    evidence: >
+      The approach works with any Claude Code tool configuration since it is prompt-based;
+      however, it does not leverage MCP tools or native Claude Code features beyond basic subagent calls.
+  f:
+    value: 6
+    evidence: >
+      Reading the README and adapting the mission template to a current use case took about
+      30 minutes; the stale syntax required cross-referencing with current Claude Code documentation.
+verdict: >
+  The AB-method provides a useful conceptual framework for mission-driven subagent coordination,
+  but the November 2025 stale state means prompt templates need updating before use; the ideas
+  are valuable but practitioners should treat this as inspiration rather than a ready-to-use
+  framework given the drift from current Claude Code capabilities.
+conflict_of_interest: none

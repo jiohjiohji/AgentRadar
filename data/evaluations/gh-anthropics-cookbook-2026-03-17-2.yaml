@@ -1,0 +1,34 @@
+tool_id: "gh-anthropics-cookbook"
+reporter_role: "researcher"
+date_evaluated: "2026-03-17"
+claude_code_version: "N/A"
+platform: "linux"
+
+task_performed: >
+  Surveyed the Anthropic Cookbook as a research reference for a paper on
+  production LLM agent patterns. Specifically examined the agent loop,
+  tool-use chaining, and retrieval augmentation notebooks for reproducibility.
+
+scores:
+  p:
+    value: 7
+    evidence: "Cookbook accelerated literature review of Claude-specific patterns; most notebooks reproducible in under 10 minutes, saving significant setup time compared to reconstructing patterns from documentation alone"
+  q:
+    value: 8
+    evidence: "Examples reflect current API capabilities accurately; prompt engineering patterns are well-motivated with comments; a few notebooks lack error handling examples that would strengthen their educational value"
+  c:
+    value: 10
+    evidence: "Free, MIT-licensed, no usage constraints; as a research reference there is no cost beyond API token usage for running examples"
+  r:
+    value: 8
+    evidence: "All 12 notebooks tested were runnable without modification; 2 notebooks had minor dependency version conflicts with current library releases that required one-line fixes"
+  x:
+    value: 7
+    evidence: "Patterns are Claude API focused; adapting to research frameworks required some translation work; cookbook does not cover LangChain or LlamaIndex integration patterns"
+  f:
+    value: 10
+    evidence: "Browsable on GitHub without any installation; Colab links work immediately; no environment setup required to explore patterns"
+
+verdict: "Authoritative reference for Claude API patterns — particularly valuable for researchers needing reproducible baselines; coverage gaps in framework integrations are the main limitation."
+
+conflict_of_interest: "none"

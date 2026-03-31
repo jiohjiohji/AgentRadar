@@ -1,0 +1,34 @@
+tool_id: "gh-microsoft-autogen"
+reporter_role: "researcher"
+date_evaluated: "2026-03-07"
+claude_code_version: "N/A"
+platform: "ubuntu"
+
+task_performed: >
+  Used AutoGen's GroupChat and AssistantAgent primitives to build a
+  multi-agent code review system: a planner, three specialized reviewer
+  agents (security, performance, style), and an aggregator. Integrated with Claude API.
+
+scores:
+  p:
+    value: 7
+    evidence: "Multi-reviewer code review time reduced from 45 minutes (human team) to 8 minutes; however, framework setup and prompt tuning took approximately 12 hours before results were reliable"
+  q:
+    value: 7
+    evidence: "Security and performance reviews matched senior engineer assessments on 73% of findings; style review missed project-specific conventions not captured in system prompts"
+  c:
+    value: 5
+    evidence: "GroupChat with 4 agents generates significant back-and-forth token overhead; a 200-line code review consumed approximately 18,000 tokens, roughly 3x a direct single-prompt approach"
+  r:
+    value: 6
+    evidence: "GroupChat termination conditions required careful tuning; 4 of 20 test runs entered infinite loops before I added explicit round limits; stable after configuration changes"
+  x:
+    value: 6
+    evidence: "Claude API integration required patching the model client interface; AutoGen's primary design targets OpenAI models and Claude support felt second-class in several configuration areas"
+  f:
+    value: 5
+    evidence: "pip install straightforward; understanding the agent primitives required reading multiple documentation pages and examples; GroupChat configuration had unintuitive defaults that required debugging"
+
+verdict: "Powerful for complex multi-agent research workflows but the Claude integration requires extra work and token costs are high; best suited for teams already invested in the AutoGen ecosystem."
+
+conflict_of_interest: "none"

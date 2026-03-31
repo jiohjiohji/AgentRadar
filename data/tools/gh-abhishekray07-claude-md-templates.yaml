@@ -1,0 +1,27 @@
+id: gh-abhishekray07-claude-md-templates
+name: Claude.md Templates
+source_url: https://github.com/abhishekray07/claude-md-templates
+category: claudemd-framework
+pricing: free
+license: null
+status: active
+scores:
+  p: 6.3
+  q: 6.7
+  c: 9.7
+  r: 8.7
+  x: 7.0
+  f: 8.7
+  composite: 7.8
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.8
+  benchmark_version: '1.0'
+tags:
+- CLAUDE.md
+- templates
+- best-practices
+versus_refs: []

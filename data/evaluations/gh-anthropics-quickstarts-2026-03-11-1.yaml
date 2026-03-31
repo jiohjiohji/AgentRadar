@@ -1,0 +1,48 @@
+tool_id: gh-anthropics-quickstarts
+reporter_role: developer
+date_evaluated: "2026-03-11"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used the Anthropic quickstarts repository to bootstrap a customer service agent application.
+  Started from the customer service agent starter, adapted the tool definitions for a SaaS
+  product's specific operations (account lookup, order history, refund initiation), and deployed
+  it as a FastAPI service. Evaluated time-to-working-prototype and code quality.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Starting from the quickstart reduced the time to a working customer service agent
+      prototype from an estimated 2 days to 4 hours; the agent architecture and tool definition
+      patterns were directly applicable with minor domain customization.
+  q:
+    value: 8
+    evidence: >
+      Quickstart code is production-quality with proper error handling, retry logic, and
+      structured logging; it is significantly above the quality of typical tutorial code that requires rewriting.
+  c:
+    value: 9
+    evidence: >
+      Free official starter code; the well-structured patterns reduce development time and
+      prevent costly architectural mistakes that would require refactoring later.
+  r:
+    value: 9
+    evidence: >
+      Quickstart code is maintained by Anthropic and tested against current API versions;
+      no compatibility issues were encountered and the examples reflected current best practices.
+  x:
+    value: 8
+    evidence: >
+      Quickstarts are framework-specific but the tool definitions and agent patterns translate
+      across frameworks; the FastAPI version composed well with our existing infrastructure.
+  f:
+    value: 9
+    evidence: >
+      git clone, pip install requirements.txt, set API key, and the agent runs immediately;
+      Anthropic has invested in making quickstarts genuinely quick to start.
+verdict: >
+  Anthropic quickstarts are a high-quality starting point for production application development;
+  the code quality is noticeably better than typical GitHub starter templates, the patterns
+  reflect current Anthropic best practices, and the time savings from having a working
+  architecture to adapt rather than build from scratch are substantial.
+conflict_of_interest: none

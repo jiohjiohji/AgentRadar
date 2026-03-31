@@ -1,0 +1,47 @@
+tool_id: gh-ithiria894-claude-code-workflows
+reporter_role: researcher
+date_evaluated: "2026-03-30"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Applied workflow recipes from the collection to academic research tasks: used the literature
+  analysis workflow for processing paper abstracts, the data exploration workflow for initial
+  dataset examination, and the writing review workflow for proofreading analysis sections.
+  Evaluated how well software-development-oriented recipes adapted to research contexts.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Literature analysis and writing review recipes required minor wording adaptations
+      but saved meaningful time; the data exploration recipe mapped well to research dataset tasks.
+  q:
+    value: 6
+    evidence: >
+      Research-adapted recipes produced structured outputs; the writing review workflow
+      was particularly effective at identifying unclear arguments and inconsistent terminology.
+  c:
+    value: 10
+    evidence: >
+      Free reference with no operational cost; time saved on research tasks translates
+      directly to reduced research timeline without any financial cost.
+  r:
+    value: 8
+    evidence: >
+      Recipes worked consistently across different papers and datasets; the structured
+      approach ensured Claude covered the same analytical dimensions each time.
+  x:
+    value: 7
+    evidence: >
+      Works with standard Claude Code tools including Tavily MCP for live literature search;
+      the workflow recipes are tool-agnostic and compose with any Claude Code configuration.
+  f:
+    value: 10
+    evidence: >
+      No setup required; researchers can find and apply recipes immediately without any
+      technical prerequisites beyond Claude Code itself.
+verdict: >
+  The workflow collection is applicable beyond software development when users adapt the
+  recipes for research contexts; the literature analysis and writing review recipes in
+  particular transfer well, demonstrating that the collection's value extends to any
+  knowledge worker using Claude Code.
+conflict_of_interest: none

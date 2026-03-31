@@ -1,0 +1,30 @@
+id: gh-langfuse-langfuse
+name: Langfuse
+source_url: https://github.com/langfuse/langfuse
+category: eval-observability
+pricing: freemium
+license: null
+status: active
+scores:
+  p: 8.0
+  q: 8.3
+  c: 8.3
+  r: 8.7
+  x: 8.0
+  f: 8.0
+  composite: 8.2
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.2
+  benchmark_version: '1.0'
+tags:
+- observability
+- evals
+- tracing
+- prompt-management
+- llm-metrics
+- open-source
+versus_refs: []

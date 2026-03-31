@@ -1,0 +1,48 @@
+tool_id: gh-arize-ai-phoenix
+reporter_role: developer
+date_evaluated: "2026-03-06"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Integrated Arize Phoenix for observability of a Claude-powered RAG (retrieval-augmented
+  generation) pipeline for a legal document Q&A system. Traced every Claude API call with
+  span details, measured retrieval quality using Phoenix's built-in evaluators, and used
+  the UI to identify document chunks that consistently produced low-quality answers.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Debugging a retrieval quality issue that manifested as incorrect answers on certain
+      document types took 2 hours with Phoenix traces versus an estimated 2 days of print
+      statement debugging; the trace visualization was the critical enabler.
+  q:
+    value: 8
+    evidence: >
+      Phoenix's built-in RAG evaluators (relevance, faithfulness, hallucination) correctly
+      identified 4 problem document chunk patterns that manual spot-checking had missed over two weeks.
+  c:
+    value: 7
+    evidence: >
+      Phoenix cloud is free up to a usage limit that covered our evaluation workload;
+      self-hosted option is fully free; tracing overhead adds minimal latency and no API cost.
+  r:
+    value: 8
+    evidence: >
+      Phoenix instrumentation with OpenTelemetry ran without errors across 3 weeks of development;
+      the tracing data was consistently captured and the UI displayed spans correctly.
+  x:
+    value: 8
+    evidence: >
+      Phoenix's OpenTelemetry-based instrumentation works with any Python Claude application
+      by adding a few lines; it integrates with LangChain, LlamaIndex, and direct Anthropic SDK calls.
+  f:
+    value: 8
+    evidence: >
+      pip install arize-phoenix, add 3 lines of instrumentation code, and traces appear
+      in the UI immediately; the auto-instrumentation for the Anthropic SDK is particularly easy.
+verdict: >
+  Arize Phoenix is the most practical observability tool for Claude RAG pipelines; its
+  built-in RAG evaluators surface retrieval quality issues that are invisible without
+  tracing, and the setup friction is low enough that it should be included from day one
+  of any production RAG system development.
+conflict_of_interest: none

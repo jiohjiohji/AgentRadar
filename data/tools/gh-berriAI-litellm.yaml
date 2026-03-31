@@ -1,0 +1,30 @@
+id: gh-berriai-litellm
+name: LiteLLM
+source_url: https://github.com/BerriAI/litellm
+category: sdk-pattern
+pricing: freemium
+license: null
+status: active
+scores:
+  p: 8.3
+  q: 7.7
+  c: 8.3
+  r: 8.0
+  x: 9.7
+  f: 7.3
+  composite: 8.2
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.2
+  benchmark_version: '1.0'
+tags:
+- sdk
+- multi-provider
+- proxy
+- openai-compatible
+- cost-tracking
+- gateway
+versus_refs: []

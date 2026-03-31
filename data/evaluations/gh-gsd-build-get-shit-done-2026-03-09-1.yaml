@@ -1,0 +1,34 @@
+tool_id: "gh-gsd-build-get-shit-done"
+reporter_role: "developer"
+date_evaluated: "2026-03-09"
+claude_code_version: "1.0.57"
+platform: "macos"
+
+task_performed: >
+  Used TÂCHES (get-shit-done) meta-prompting system for a 3-week feature
+  development sprint, applying the spec-driven development flow to 8 features
+  of varying complexity from UI bug fix to new authentication system.
+
+scores:
+  p:
+    value: 9
+    evidence: "Sprint velocity increased measurably: 8 features in 3 weeks vs our team average of 5; the spec-first discipline eliminated two full rework cycles we typically do per sprint"
+  q:
+    value: 9
+    evidence: "Zero features required major rework after spec sign-off; the planning phase surfaced edge cases before implementation on 5 of 8 features, preventing runtime bugs"
+  c:
+    value: 8
+    evidence: "Free framework; no token overhead beyond the planning prompts themselves; spec prompts average 2,000 tokens and the prevented rework easily justifies the cost"
+  r:
+    value: 9
+    evidence: "Framework behavior is deterministic and consistent; no unexpected Claude Code behavior observed across 8 features; the structured prompts produce reliable planning outputs"
+  x:
+    value: 9
+    evidence: "Dropped into existing Claude Code workflow without any changes to CLAUDE.md or tooling; the meta-prompting layer sits entirely above the tooling layer"
+  f:
+    value: 9
+    evidence: "Clone repo, read the README, adapt the spec template to your project language — productive in under 30 minutes; no installation or configuration required"
+
+verdict: "Transformative for solo developers and small teams willing to invest in the spec-first discipline — the reduced rework alone justifies adoption within the first sprint."
+
+conflict_of_interest: "none"

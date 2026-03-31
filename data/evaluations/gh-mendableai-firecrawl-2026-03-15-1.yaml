@@ -1,0 +1,34 @@
+tool_id: "gh-mendableai-firecrawl"
+reporter_role: "developer"
+date_evaluated: "2026-03-15"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Used Firecrawl API to scrape 800 product documentation pages across three
+  SaaS sites for a RAG pipeline. Needed clean markdown output with working
+  relative links resolved and JavaScript-rendered content captured.
+
+scores:
+  p:
+    value: 9
+    evidence: "Replaced 3 weeks of custom scraper maintenance; Firecrawl handled JS rendering automatically, cutting data collection time from 2 days to 90 minutes"
+  q:
+    value: 8
+    evidence: "Markdown output was clean on 94% of pages; 6% had malformed table conversions requiring post-processing regex fix"
+  c:
+    value: 6
+    evidence: "At roughly $0.002 per page crawled on the paid tier, 800 pages cost $1.60; comparable to running a Puppeteer instance on a $6/month VPS but without the ops overhead"
+  r:
+    value: 8
+    evidence: "Zero failures on 800-page batch; rate limiting kicked in twice but auto-retried correctly; one page returned empty content due to bot detection"
+  x:
+    value: 9
+    evidence: "Dropped into existing LangChain RAG pipeline with a single API call change; output format was directly compatible with our chunking step"
+  f:
+    value: 9
+    evidence: "API key → first successful crawl in under 4 minutes; Python SDK install and first result required zero config beyond the key"
+
+verdict: "Best-in-class for production RAG data collection where JavaScript rendering and clean markdown conversion matter — the setup time advantage over self-hosted solutions is decisive for small teams."
+
+conflict_of_interest: "none"

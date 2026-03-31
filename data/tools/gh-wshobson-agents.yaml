@@ -1,0 +1,34 @@
+id: gh-wshobson-agents
+name: Claude Code Agents
+source_url: https://github.com/wshobson/agents
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 8.7
+  q: 7.7
+  c: 7.0
+  r: 7.7
+  x: 9.0
+  f: 8.0
+  composite: 8.0
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.0
+  benchmark_version: '1.0'
+tags:
+- multi-agent
+- orchestration
+- workflow
+- claude-code-native
+- skills
+- subagents
+versus_refs:
+- id: gh-wshobson-agents-vs-gh-avifenesh-agentsys
+  verdict_short: wshobson/agents wins on composability (9.0) and setup friction (8.0)
+    for Claude Code native workflows
+  valid_until: '2026-06-29'

@@ -1,0 +1,47 @@
+tool_id: gh-atlassian-mcp-server
+reporter_role: team-lead
+date_evaluated: "2026-03-05"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the Atlassian MCP server to automate sprint planning preparation: Claude queried
+  the Jira backlog for unestimated tickets, grouped them by component, drafted acceptance
+  criteria for the top 10 stories using Confluence documentation as context, and updated
+  ticket descriptions in Jira with the generated criteria.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Sprint prep work that took a team lead 2-3 hours per sprint was compressed to 40
+      minutes including review; the Jira and Confluence integration in one MCP was the key enabler.
+  q:
+    value: 7
+    evidence: >
+      Acceptance criteria drafted by Claude were technically sound and matched Confluence
+      context well; product stakeholders requested rewrites on 3 of 10 tickets for business language.
+  c:
+    value: 6
+    evidence: >
+      Reading Confluence pages for context adds significant token overhead; a sprint prep
+      session with 10 tickets and 5 Confluence pages consumed around 15k tokens, roughly $0.90.
+  r:
+    value: 7
+    evidence: >
+      JQL query results and Confluence page reads were consistent across test runs; one
+      Jira authentication refresh mid-session caused a tool call failure that required restarting.
+  x:
+    value: 7
+    evidence: >
+      The unified Atlassian MCP covering both Jira and Confluence in one server avoids
+      the need for two separate integrations; this is a significant composability advantage.
+  f:
+    value: 6
+    evidence: >
+      Atlassian API token creation and the OAuth configuration for cloud instances required
+      navigating the Atlassian developer console for about 30 minutes before the first query worked.
+verdict: >
+  Atlassian MCP server is a strong tool for teams deeply invested in the Jira/Confluence
+  ecosystem, particularly for sprint planning workflows that span both products; token costs
+  scale with Confluence page volume and the OAuth setup has friction, but the combined integration
+  delivers clear productivity gains for engineering teams.
+conflict_of_interest: none

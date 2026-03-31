@@ -1,0 +1,30 @@
+id: gh-mendableai-firecrawl
+name: Firecrawl
+source_url: https://github.com/mendableai/firecrawl
+category: complementary
+pricing: freemium
+license: AGPL-3.0
+status: active
+scores:
+  p: 8.0
+  q: 7.7
+  c: 5.7
+  r: 7.3
+  x: 8.3
+  f: 8.7
+  composite: 7.6
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.6
+  benchmark_version: '1.0'
+tags:
+- web-scraping
+- llm-ready
+- markdown-conversion
+- crawling
+- structured-data
+- ai-agents
+versus_refs: []

@@ -1,0 +1,47 @@
+tool_id: gh-dair-ai-pe-guide
+reporter_role: student
+date_evaluated: "2026-03-27"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used the DAIR.AI PE guide as the primary study resource for a graduate course on large
+  language model applications. Read and worked through examples from 8 technique sections
+  over two weeks. Applied techniques to three course assignments: a text summarization
+  pipeline, a structured information extraction task, and a code generation evaluation.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Assignment scores improved after applying guide techniques; the few-shot examples
+      section in particular transformed my summarization pipeline from inconsistent to reliably structured output.
+  q:
+    value: 9
+    evidence: >
+      The guide is academically rigorous with citations to original papers; as a grad student
+      needing to understand the evidence base for techniques, the citation quality is exceptional.
+  c:
+    value: 10
+    evidence: >
+      Free and fully open-access; as a student with no budget for course materials, the
+      guide provides graduate-level PE education at zero cost.
+  r:
+    value: 9
+    evidence: >
+      Content is consistently high quality across all sections I read; the active maintenance
+      means techniques are presented in their current state rather than their original 2022 formulations.
+  x:
+    value: 8
+    evidence: >
+      Everything learned from the guide applies directly to Claude Code usage; it is the
+      theoretical foundation that makes practical Claude Code work more principled.
+  f:
+    value: 10
+    evidence: >
+      Immediately accessible online with no setup; the table of contents makes it easy to
+      navigate to specific technique sections relevant to current work.
+verdict: >
+  The DAIR.AI PE guide is the best free educational resource for developing principled
+  prompt engineering skills; its academic rigor, comprehensive technique coverage, and
+  active maintenance make it superior to blog posts and tutorials for students and
+  practitioners who want to understand the reasoning behind effective prompting.
+conflict_of_interest: none

@@ -1,0 +1,34 @@
+tool_id: "gh-danielmiessler-fabric"
+reporter_role: "developer"
+date_evaluated: "2026-03-10"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Used Fabric's extract_wisdom and summarize patterns to process a backlog of
+  120 technical conference talks and blog posts, piping output into a personal
+  knowledge base. Also built a custom pattern for code review feedback extraction.
+
+scores:
+  p:
+    value: 8
+    evidence: "Processed 120 articles in a single evening that would have taken 3-4 days to manually summarize; custom pattern authoring took 25 minutes once I understood the template structure"
+  q:
+    value: 8
+    evidence: "extract_wisdom output consistently surfaced non-obvious insights; in spot-checking 20 outputs against source material, all key ideas were captured and no significant hallucinations found"
+  c:
+    value: 8
+    evidence: "Uses your own API key so cost is pass-through; running 120 summarizations via Claude Haiku cost approximately $0.40 total — dramatically cheaper than any hosted alternative"
+  r:
+    value: 9
+    evidence: "Zero failures across 120 runs; pattern execution is deterministic and the CLI piping model means failures are immediately visible and easily re-run"
+  x:
+    value: 8
+    evidence: "Piped output directly into Obsidian markdown files via shell script; the Unix-philosophy design made integration trivial"
+  f:
+    value: 8
+    evidence: "Go binary installed in 2 minutes; first pattern ran in under 5 minutes; custom pattern creation required reading one example pattern file"
+
+verdict: "Exceptional value for personal knowledge management and content processing pipelines — the modular pattern system and bring-your-own-key model make it the most cost-efficient option for high-volume text processing."
+
+conflict_of_interest: "none"

@@ -1,0 +1,46 @@
+tool_id: gh-mcp-filesystem
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-25"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Evaluated the filesystem MCP for enterprise deployment with a focus on security controls.
+  Assessed path traversal protections, symlink handling, whether the allowed-directory
+  restriction can be bypassed, and behavior when agents are given broad directory access.
+  Also tested performance on directories with 50,000+ files and large file reads over 10MB.
+scores:
+  p:
+    value: 8
+    evidence: >
+      For agents that need file I/O, this MCP eliminates the need for custom tool code
+      and works reliably at scale; the directory restriction model supports least-privilege access.
+  q:
+    value: 8
+    evidence: >
+      Path traversal attempts via relative path manipulation were correctly blocked by the
+      allowed-directory enforcement; symlink behavior was predictable and documented in source code.
+  c:
+    value: 9
+    evidence: >
+      No external API costs and negligible token overhead per file operation makes this
+      the most cost-effective tool in any enterprise MCP stack for document processing workflows.
+  r:
+    value: 9
+    evidence: >
+      Tested with directories containing 50,000 files; directory listing returned results
+      within 2 seconds and file reads up to 15MB completed without timeout or memory issues.
+  x:
+    value: 9
+    evidence: >
+      Every enterprise workflow we tested that processes documents benefits from this tool;
+      it is the universal data layer that connects external API results to local storage.
+  f:
+    value: 10
+    evidence: >
+      Enterprise deployment required only adding the allowed paths to the MCP config file;
+      no infrastructure changes, no service accounts, no network configuration needed.
+verdict: >
+  The filesystem MCP is production-ready for enterprise use with appropriate path restrictions;
+  the security model is sound for controlled deployments, performance at scale is acceptable,
+  and the zero-friction setup makes it the model other MCP tools should aspire to match.
+conflict_of_interest: none

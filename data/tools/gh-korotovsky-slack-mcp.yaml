@@ -1,0 +1,29 @@
+id: gh-korotovsky-slack-mcp
+name: Slack MCP Server
+source_url: https://github.com/korotovsky/slack-mcp-server
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 5.7
+  q: 5.7
+  c: 6.7
+  r: 5.3
+  x: 4.7
+  f: 4.0
+  composite: 5.3
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 5.3
+  benchmark_version: '1.0'
+tags:
+- slack
+- messaging
+- team-communication
+- notifications
+- channels
+versus_refs: []

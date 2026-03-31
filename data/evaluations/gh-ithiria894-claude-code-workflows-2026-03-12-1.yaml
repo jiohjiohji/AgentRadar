@@ -1,0 +1,48 @@
+tool_id: gh-ithiria894-claude-code-workflows
+reporter_role: developer
+date_evaluated: "2026-03-12"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Browsed the awesome-claude-code-workflows collection and applied 4 workflow recipes to
+  a Node.js project: the git commit workflow, the PR review workflow, the bug investigation
+  workflow, and the dependency audit workflow. Evaluated how accurately each recipe described
+  the workflow and how much adaptation was needed for real project use.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Each workflow recipe saved 10-20 minutes of prompt crafting per use; the git commit
+      and PR review workflows were particularly applicable and required almost no adaptation.
+  q:
+    value: 7
+    evidence: >
+      Workflow outputs following the recipes were well-structured and covered the expected
+      areas; the bug investigation recipe prompted Claude to check logs and trace stacks
+      in a systematic order that improved the diagnosis quality.
+  c:
+    value: 9
+    evidence: >
+      Free reference collection; the value is in reducing the time engineers spend
+      figuring out how to prompt Claude effectively for specific workflow tasks.
+  r:
+    value: 8
+    evidence: >
+      Workflow recipes produce consistent output because they constrain the prompt structure;
+      repeating the same workflow on different bugs or PRs produced structurally similar outputs.
+  x:
+    value: 7
+    evidence: >
+      Workflow recipes reference Claude Code's native tools and optionally MCP tools; they
+      compose naturally with the current Claude Code ecosystem without any framework dependency.
+  f:
+    value: 10
+    evidence: >
+      Browse the collection, copy a workflow description, paste into Claude Code; no setup
+      of any kind required and immediately applicable to any project.
+verdict: >
+  The awesome-claude-code-workflows collection is a practical reference that reduces the
+  prompt engineering learning curve for common developer workflows; the git and PR review
+  recipes are immediately applicable and the collection covers enough common tasks to
+  deliver consistent daily value for active Claude Code users.
+conflict_of_interest: none

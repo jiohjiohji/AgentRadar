@@ -1,0 +1,46 @@
+tool_id: gh-makenotion-notion-mcp
+reporter_role: small-team
+date_evaluated: "2026-03-07"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used Notion MCP to automate weekly team status updates. Claude read task database entries
+  updated in the past 7 days, summarized progress per project, created a new weekly summary
+  page in Notion, and populated it with structured content blocks including headers, bullet
+  points, and linked page references to source tasks.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Weekly status page creation that previously took 45 minutes of copy-pasting from task
+      views now takes 8 minutes including human review of the Claude-generated draft.
+  q:
+    value: 7
+    evidence: >
+      The summaries captured task status accurately but occasionally missed context from
+      inline comments on tasks, since the MCP reads page properties rather than comment threads.
+  c:
+    value: 7
+    evidence: >
+      Token usage was moderate; reading 30 task pages and writing the summary page consumed
+      roughly 5k tokens, keeping the weekly automation cost well under $0.50.
+  r:
+    value: 6
+    evidence: >
+      Notion API occasionally returned stale cached data for recently edited pages; two
+      out of eight weekly runs required a manual re-run after waiting a few minutes for consistency.
+  x:
+    value: 6
+    evidence: >
+      The Notion MCP works in isolation but does not compose as naturally with other MCP
+      tools as GitHub or filesystem; Notion's block schema requires verbose tool calls to build rich pages.
+  f:
+    value: 7
+    evidence: >
+      OAuth integration setup required navigating Notion's developer portal to create an
+      integration and share the target workspace; documentation was adequate but had some gaps.
+verdict: >
+  Notion MCP is a practical automation layer for teams already invested in Notion, particularly
+  for recurring page creation tasks; it is less effective for reading inline comment data and
+  the block-level write API is verbose, but the time savings on structured reporting are real.
+conflict_of_interest: none

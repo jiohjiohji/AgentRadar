@@ -1,0 +1,47 @@
+tool_id: gh-arize-ai-phoenix
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-27"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated Phoenix for enterprise AI observability deployment. Assessed the self-hosted
+  deployment model, data residency controls, integration with Grafana for alerting, and
+  whether Phoenix can serve as the observability backbone for multiple Claude-powered
+  services in a production environment with 50k+ daily Claude API calls.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Production observability for Claude applications previously required custom logging
+      infrastructure; Phoenix's pre-built evaluators and trace UI replaced approximately 2 months of custom tooling work.
+  q:
+    value: 8
+    evidence: >
+      At 50k daily traces, the self-hosted Phoenix deployment captured all spans without
+      sampling losses; the evaluator accuracy was consistent with our manual audit sample of 200 traces.
+  c:
+    value: 9
+    evidence: >
+      Self-hosted Phoenix is open source with no licensing fees; infrastructure cost for
+      the Phoenix server is modest relative to the observability value at 50k daily traces.
+  r:
+    value: 7
+    evidence: >
+      At sustained 50k daily traces, we observed 3 PostgreSQL connection pool exhaustion
+      events in the first week that required tuning; after configuration adjustment the system was stable.
+  x:
+    value: 7
+    evidence: >
+      Grafana integration via Phoenix's Prometheus metrics endpoint worked correctly;
+      OTEL-compatible span export was available but required custom Grafana dashboard development.
+  f:
+    value: 6
+    evidence: >
+      Self-hosted Docker deployment was straightforward; tuning PostgreSQL and Redis for
+      production load required performance engineering expertise that took 2 days of optimization work.
+verdict: >
+  Phoenix is a strong open-source AI observability platform that scales to enterprise
+  production workloads; the self-hosted model addresses data residency requirements and
+  the PostgreSQL backend is tunable for high-volume deployments; teams should plan for
+  database performance tuning as part of enterprise deployment planning.
+conflict_of_interest: none

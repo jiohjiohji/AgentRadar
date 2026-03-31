@@ -1,60 +1,71 @@
-# TASK: phase-0-seed-dataset
+# TASK: p0-012-launch
 # Date: 2026-03-31 | Phase: 0
-# Status: IN_PROGRESS
+# Status: BACKLOG
 
 ## MUSK 5-RULES PRE-CHECK
 
 ### Rule 1 — Is this requirement legitimate?
-Who asked for this: Phase 0 plan (the data is the product)
-What breaks without it: Nothing exists to evaluate, compare, or discover. Zero value.
+Who asked for this: Sprint plan P0-012 — the repo is private and no one can use the data yet.
+What breaks without it: Phase 0 exit criteria (100 stars, 5 organic evals, newsletter launched) are all gated on the repo being public.
 Decision: PROCEED
 
 ### Rule 2 — What can be deleted first?
-Remove nothing — this is the first task. Start clean.
-Minimum viable version: 10 tool profiles (not 50). Start with 10 and validate quality before scaling.
+Launch is primarily configuration and writing tasks, not code. No new scripts needed.
+Do NOT build a web UI, CLI, or API before making the data public — the data IS the product at launch.
 
 ### Rule 3 — Simplest implementation?
-First instinct: write all 50 profiles in one session
-Simpler approach: write 10 profiles, validate all 10, then write 10 more in batches
-Chosen approach: batches of 10. Quality over speed.
+1. README.md — explains dataset, schema, contribution guide, link to schema.yaml
+2. Make repo public (manual GitHub UI step — flag for Jihoon to approve)
+3. Buttondown account + first digest draft
+4. Post in 3 communities: Anthropic Discord #claude-code, Reddit r/ClaudeAI, Dev.to
 
 ### Rule 4 — What slowed last time?
-No history yet. First task.
-Prevention: N/A
+Nothing blocked P0-011. Risk here: README quality — a poor README means no organic contributions. Write it to answer the three questions every developer asks first:
+  1. What is this?
+  2. How do I find a tool?
+  3. How do I submit an evaluation?
 
 ### Rule 5 — What to automate?
-After writing 10 profiles manually, identify any fields that can be auto-populated from GitHub API.
-This will become the auto-triage script (Phase 1).
+Community posts are one-time manual actions. The only automation candidate is Buttondown digest publishing — wire up after first manual send confirms format.
 
 ---
 
-## TASK BREAKDOWN
+## DELIVERABLES
 
-### Gemini Agent Jobs (run in parallel)
-- [ ] Agent 1: Generate profiles for GitHub MCP, Filesystem MCP | Acceptance: validate_yaml.py PASS
-- [ ] Agent 2: Generate profiles for Playwright MCP, Tavily MCP | Acceptance: validate_yaml.py PASS
-- [ ] Agent 3: Generate profiles for wshobson/agents, AgentSys | Acceptance: validate_yaml.py PASS
-- [ ] Agent 4: Generate profiles for TACHES, Conductor | Acceptance: validate_yaml.py PASS
-- [ ] Agent 5: Generate profiles for Context Engineering Kit, Claude Code PM | Acceptance: validate_yaml.py PASS
+### 1. README.md (root)
+Required sections:
+- What is AgentRadar (2 sentences)
+- Quick start: how to find a tool / read a score
+- Schema overview: link to data/schema.yaml and Data_Model.md
+- How to contribute: evaluation submission process, PR template
+- Scoring dimensions (p/q/c/r/x/f) — one-line each
+- Link to versus pages
+- Badge: validate status from GitHub Actions
 
-### tdd-guard Gate
-- Validation: python scripts/validate_yaml.py data/tools/
-- All 10 profiles pass with zero errors
+### 2. Make repo public
+This is a manual step — Jihoon must approve before proceeding.
+Flag this step explicitly in the launch checklist.
 
-### Claude Code Review
-Review files: data/tools/ (all 10 profiles)
-Quality gate: All 12 fields present; scores are null (not invented); status computed from real last-commit dates
-Update AGENTS.md: YES — add any patterns found in the first batch
+### 3. Buttondown newsletter
+- Account created at buttondown.com with AgentRadar branding
+- Confirmed double-opt-in is enabled
+- First digest draft written (top 5 tools by composite score, 1 versus highlight)
+
+### 4. Community posts
+- Anthropic Discord #claude-code
+- Reddit r/ClaudeAI
+- Dev.to article (title: "AgentRadar: Open dataset of 50 Claude Code tools with community scores")
 
 ---
 
-## DONE WHEN
-- [ ] 10 tool profiles in data/tools/
-- [ ] All 10 pass validate_yaml.py with zero errors
-- [ ] Claude review: PASS
-- [ ] /iterate command run and AGENTS.md updated
-- [ ] TASK.md archived
-- [ ] Committed
+## ACCEPTANCE CRITERIA
+- [ ] README.md written and covers all 4 required sections
+- [ ] validate.yml badge renders correctly in README
+- [ ] data/CONTRIBUTING.md written (evaluation submission process)
+- [ ] Repo made public (Jihoon approval required before this step)
+- [ ] Buttondown account created, first digest draft written
+- [ ] 3 community posts drafted (ready to post on launch day)
+- [ ] Claude review: PASS on README clarity
 
 ## NEXT TASK
-phase-0-seed-dataset-batch-2 (tools 11-20)
+p1-001-cloudflare-worker (Phase 1 begins)

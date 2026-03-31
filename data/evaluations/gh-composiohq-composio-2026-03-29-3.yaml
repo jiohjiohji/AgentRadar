@@ -1,0 +1,47 @@
+tool_id: gh-composiohq-composio
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-29"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Assessed Composio for enterprise adoption across a 200-person organization. Evaluated
+  the security model for managed OAuth tokens, audit logging of agent actions across
+  integrated systems, data handling for sensitive CRM and email content, and the enterprise
+  plan's SLA guarantees for production agent workflows.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Composio would accelerate multi-tool agent development, but enterprise security review
+      added 6 weeks of evaluation time that offset the development time savings for our first use case.
+  q:
+    value: 7
+    evidence: >
+      Integration quality for tested services was good; the abstraction layer was acceptable
+      for standard operations but exposed gaps for custom enterprise field mappings in Salesforce and Workday.
+  c:
+    value: 5
+    evidence: >
+      Enterprise plan pricing at our scale is a significant budget item; the build-versus-buy
+      analysis at 200-user scale favors a custom integration layer for high-volume use cases.
+  r:
+    value: 7
+    evidence: >
+      Enterprise SLA documentation claims 99.9% uptime; during our 3-week evaluation period
+      we observed one 15-minute outage that affected one integration but not others concurrently.
+  x:
+    value: 7
+    evidence: >
+      Claude tool definition export worked correctly and the tools composed with our custom
+      tools without conflicts; enterprise SSO integration for the Composio dashboard was available.
+  f:
+    value: 5
+    evidence: >
+      Enterprise onboarding required custom contract negotiation, security questionnaire
+      completion, and SSO configuration; the sales-assisted enterprise process added 3 weeks before technical testing.
+verdict: >
+  Composio shows promise for enterprise agent integration but the enterprise procurement
+  process is lengthy, pricing at scale is significant, and the abstraction layer has gaps
+  for highly customized enterprise data models; organizations with standard SaaS integrations
+  will find it more compelling than those with heavily customized enterprise platforms.
+conflict_of_interest: none

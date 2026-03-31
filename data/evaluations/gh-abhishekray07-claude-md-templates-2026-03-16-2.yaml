@@ -1,0 +1,47 @@
+tool_id: gh-abhishekray07-claude-md-templates
+reporter_role: small-team
+date_evaluated: "2026-03-16"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Used CLAUDE.md templates to create consistent project context files across three
+  repositories in a startup: a Python backend API, a TypeScript frontend, and a
+  shared infrastructure Terraform project. Evaluated template quality across stacks and
+  how much adaptation was needed per project.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Setting up three CLAUDE.md files from templates took 2 hours total versus an estimated
+      5-6 hours from scratch; the Python and TypeScript templates were directly applicable.
+  q:
+    value: 7
+    evidence: >
+      The Python and TypeScript templates produced measurably better Claude Code adherence
+      to project conventions; the Terraform template was thin and provided minimal improvement over no CLAUDE.md.
+  c:
+    value: 10
+    evidence: >
+      Free to use with no operational cost; the time investment in CLAUDE.md setup pays
+      back in reduced per-session token usage from not repeating conventions in prompts.
+  r:
+    value: 9
+    evidence: >
+      Once committed to the repo, CLAUDE.md templates provide completely reliable context
+      loading; there are no runtime dependencies that could cause failures.
+  x:
+    value: 7
+    evidence: >
+      The well-structured CLAUDE.md improves quality across all Claude Code tool interactions
+      and MCP tool outputs consistently; better context benefits the entire tool stack.
+  f:
+    value: 9
+    evidence: >
+      No setup beyond reading and adapting a template file; can be completed in one sitting
+      without any technical tooling prerequisites beyond a text editor.
+verdict: >
+  The CLAUDE.md templates collection is a practical time saver for teams setting up multiple
+  Claude Code projects simultaneously; Python and TypeScript templates are strong, infrastructure
+  templates need improvement, but overall the collection reduces the CLAUDE.md authoring burden
+  for common stacks.
+conflict_of_interest: none

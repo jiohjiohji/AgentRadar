@@ -1,0 +1,46 @@
+tool_id: gh-jerhadf-linear-mcp
+reporter_role: team-lead
+date_evaluated: "2026-03-28"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Performed a full capability audit of the archived Linear MCP server for a team
+  considering adopting it despite the archived status. Tested all documented tool operations
+  (issue CRUD, team listing, cycle queries, label management) against a live Linear workspace
+  to identify which remain functional and which have broken due to API drift.
+scores:
+  p:
+    value: 3
+    evidence: >
+      Of 12 documented operations, 7 worked correctly for basic cases; 5 either failed
+      outright or returned incomplete data, limiting practical use to read-only scenarios.
+  q:
+    value: 4
+    evidence: >
+      Team listing and issue reads were accurate; issue creation succeeded but silently
+      dropped custom fields that Linear made required after the MCP's last update.
+  c:
+    value: 4
+    evidence: >
+      Debugging failed operations consumed more team time than the successful operations saved;
+      the hidden cost of maintaining a workaround list for broken operations is substantial.
+  r:
+    value: 3
+    evidence: >
+      Reliability is on a downward trend correlated with Linear's release cadence; at
+      the current rate of API changes, more than half of operations will be broken within 6 months.
+  x:
+    value: 4
+    evidence: >
+      Composability with other tools is acceptable for read-only use, but write operations
+      that fail partway through a pipeline leave data in an inconsistent state with no rollback.
+  f:
+    value: 5
+    evidence: >
+      Setup is quick with an API key, but the effective friction includes time spent
+      identifying which operations are broken before each use, which erodes the initial ease.
+verdict: >
+  This archived Linear MCP server is not recommended for adoption even by teams willing to
+  accept some maintenance burden; the mismatch between documented capabilities and actual
+  Linear API schema is too large to patch without effectively rewriting the MCP from scratch.
+conflict_of_interest: none

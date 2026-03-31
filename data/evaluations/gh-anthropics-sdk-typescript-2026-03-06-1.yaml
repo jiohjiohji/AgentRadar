@@ -1,0 +1,48 @@
+tool_id: gh-anthropics-sdk-typescript
+reporter_role: developer
+date_evaluated: "2026-03-06"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Built a Claude-powered customer support bot using the Anthropic TypeScript SDK, integrated
+  into a Next.js application with streaming responses via Server-Sent Events. Implemented
+  multi-turn conversations, tool use for database lookups, and typed response parsing.
+  Used the SDK's type definitions to ensure type safety throughout the application.
+scores:
+  p:
+    value: 9
+    evidence: >
+      TypeScript type definitions eliminated an entire class of runtime errors; the typed
+      tool use schemas caught 4 payload format issues at compile time that would have caused
+      API errors in a dynamically typed implementation.
+  q:
+    value: 9
+    evidence: >
+      Streaming implementation worked correctly on the first attempt; the SSE integration
+      with Next.js API routes using the SDK's stream helper was clean and matched the documented pattern.
+  c:
+    value: 8
+    evidence: >
+      The SDK adds no cost overhead; type safety reduces debugging time which has indirect
+      cost benefits; no streaming or tool use cost surprises were encountered over 2 weeks of development.
+  r:
+    value: 9
+    evidence: >
+      SDK performed reliably across 3 weeks of development and staging testing; zero
+      library-level failures and the error handling pattern correctly surfaced API errors to the application layer.
+  x:
+    value: 9
+    evidence: >
+      Integrates naturally with Next.js, React, and the full TypeScript ecosystem; npm
+      install and first use was seamless with no peer dependency conflicts on a standard Next.js stack.
+  f:
+    value: 10
+    evidence: >
+      npm install @anthropic-ai/sdk, set the API key, and first completion ran in under
+      3 minutes; the TypeScript type inference guides usage without requiring external documentation.
+verdict: >
+  The Anthropic TypeScript SDK is the correct foundation for any TypeScript or Next.js
+  application using Claude; its comprehensive type definitions and streaming support are
+  production quality, and the type system integration provides a development experience
+  that significantly reduces debugging compared to raw HTTP implementations.
+conflict_of_interest: none

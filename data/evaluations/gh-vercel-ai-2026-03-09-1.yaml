@@ -1,0 +1,47 @@
+tool_id: gh-vercel-ai
+reporter_role: developer
+date_evaluated: "2026-03-09"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used the Vercel AI SDK to build a real-time chat interface with streaming responses from
+  Claude in a Next.js 14 App Router application. Implemented useChat hook for the frontend,
+  server actions for the API layer, and multi-model support allowing runtime switching between
+  Claude Sonnet and Haiku. Also tested tool use integration with the AI SDK's tool framework.
+scores:
+  p:
+    value: 9
+    evidence: >
+      The useChat hook eliminated roughly 200 lines of custom streaming and state management
+      code; the complete chat interface with streaming and history was working in under 4 hours.
+  q:
+    value: 8
+    evidence: >
+      Streaming worked flawlessly in the Next.js App Router environment; tool use via
+      the AI SDK's tool wrapper worked correctly though it requires a thin adapter layer for Claude's tool format.
+  c:
+    value: 8
+    evidence: >
+      The AI SDK adds no API cost; its streaming implementation is efficient and the
+      provider-agnostic architecture means no switching cost if model providers change pricing.
+  r:
+    value: 8
+    evidence: >
+      Across 4 weeks of development and user testing the SDK performed consistently; one
+      minor breaking change in a minor version update required a one-line fix to the API route.
+  x:
+    value: 9
+    evidence: >
+      Designed for the Vercel and Next.js ecosystem; integrates with Vercel's deployment
+      pipeline, Edge Runtime, and server actions natively; composing it with other Next.js features requires no adapter code.
+  f:
+    value: 9
+    evidence: >
+      npx create-next-app with the AI template provides a working Claude chat app in under
+      5 minutes; the quickstart template is production-quality and requires minimal modification.
+verdict: >
+  The Vercel AI SDK is the best choice for Next.js developers building Claude-powered chat
+  or streaming interfaces; its useChat hook and streaming infrastructure dramatically reduce
+  the implementation burden and the provider abstraction layer provides flexibility for
+  future model switching without application layer changes.
+conflict_of_interest: none

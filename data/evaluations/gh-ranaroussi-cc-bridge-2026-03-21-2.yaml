@@ -1,0 +1,47 @@
+tool_id: gh-ranaroussi-cc-bridge
+reporter_role: researcher
+date_evaluated: "2026-03-21"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Investigated CC-Bridge as a way to use Claude Code CLI within automated research experiment
+  pipelines that call the Anthropic API programmatically. Tested whether CC-Bridge could
+  act as a transparent proxy for batch inference calls while maintaining Claude Code's
+  tool use capabilities in the bridged sessions.
+scores:
+  p:
+    value: 3
+    evidence: >
+      The pipeline integration failed for tool-use calls, which are essential for research
+      automation; the 2 of 5 experiments that completed were simple text completions that
+      do not justify the bridge complexity.
+  q:
+    value: 4
+    evidence: >
+      Text completion accuracy through the bridge matched direct API calls in the 2 working
+      cases; tool use response format mismatches made quality assessment impossible for those cases.
+  c:
+    value: 5
+    evidence: >
+      Research cost considerations favor the bridge if session reuse can reduce per-token
+      billing, but the reliability issues make actual cost savings speculative and unverifiable.
+  r:
+    value: 3
+    evidence: >
+      2 of 5 batch inference tasks completed; the 60% failure rate is unacceptable for
+      research pipelines that run overnight and need to produce complete datasets.
+  x:
+    value: 4
+    evidence: >
+      The bridge is designed for composability with SDK applications but the API drift
+      limits which SDK capabilities actually work through it in practice.
+  f:
+    value: 6
+    evidence: >
+      Installing the bridge and running the first test was quick; diagnosing failures
+      required reading CC-Bridge source code to trace where field mappings diverged from current SDK.
+verdict: >
+  CC-Bridge is not suitable for research pipelines that require reliable tool use or streaming
+  responses; the stale January 2026 implementation cannot keep pace with Anthropic API evolution
+  and the 60% failure rate in tool-use scenarios is a fundamental blocker for automated workflows.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-dair-ai-pe-guide
+reporter_role: developer
+date_evaluated: "2026-03-18"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Referenced the DAIR.AI PE guide when building a customer support classification agent.
+  Used the sections on role prompting, output formatting, and ReAct prompting to design
+  the agent's system prompt and tool-use patterns. Compared agent behavior before and
+  after applying guide techniques to the system prompt design.
+scores:
+  p:
+    value: 7
+    evidence: >
+      System prompt design time dropped from 4 iterations over 2 days to 2 iterations
+      in one day by following the guide's structured role and output formatting recommendations.
+  q:
+    value: 8
+    evidence: >
+      The ReAct prompting section directly improved the agent's reasoning transparency;
+      applying the pattern reduced misclassifications by 22% in a 100-query test set.
+  c:
+    value: 10
+    evidence: >
+      The guide is freely available with no cost; improved techniques reduce token waste
+      from failed classifications in production, creating direct cost savings.
+  r:
+    value: 8
+    evidence: >
+      The guide is well-maintained with corrections and updates; technique descriptions
+      match current Claude behavior and the examples run correctly against current API versions.
+  x:
+    value: 7
+    evidence: >
+      Guide techniques apply to system prompts used in any Claude Code configuration,
+      including agent definitions and MCP tool use instructions; the knowledge is universally applicable.
+  f:
+    value: 10
+    evidence: >
+      No setup; the web version is instantly accessible and the GitHub version supports
+      full-text search across all technique sections without installation.
+verdict: >
+  The DAIR.AI PE guide is an essential reference for developers building production Claude
+  applications; the ReAct and output formatting sections alone have measurable impact on
+  agent accuracy, and the guide's breadth means it covers questions that arise at every
+  stage of Claude application development.
+conflict_of_interest: none

@@ -1,0 +1,34 @@
+tool_id: "gh-anthropics-cookbook"
+reporter_role: "student"
+date_evaluated: "2026-03-25"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Used the Anthropic Cookbook as the primary learning resource for building
+  a first AI application: a document Q&A system using RAG. Followed the
+  embeddings and retrieval notebooks sequentially over two evenings.
+
+scores:
+  p:
+    value: 9
+    evidence: "Built a working RAG system in approximately 4 hours across two sessions; without the cookbook I estimate it would have taken 2-3 days of documentation reading and trial and error"
+  q:
+    value: 9
+    evidence: "Every code example worked correctly; the progressive complexity from simple to advanced patterns made the learning curve manageable; concepts well explained in notebook prose"
+  c:
+    value: 9
+    evidence: "Free learning resource; the embeddings notebook taught me to use text-embedding-3-small instead of larger models, saving approximately 80% on embedding costs for my project"
+  r:
+    value: 9
+    evidence: "All notebooks ran successfully on first attempt in Colab; dependencies were clearly specified; one notebook used a deprecated parameter name but still executed correctly"
+  x:
+    value: 8
+    evidence: "Patterns I learned transferred directly to my project; RAG notebook structure became the skeleton of my production code with minimal changes"
+  f:
+    value: 10
+    evidence: "No installation needed to start; Colab link, API key, first output in under 5 minutes; the fastest possible path from zero to working example"
+
+verdict: "The best starting point for Claude API development regardless of experience level — the progressive examples and working code dramatically accelerate the learning curve."
+
+conflict_of_interest: "none"

@@ -1,0 +1,47 @@
+tool_id: gh-microsoft-promptflow
+reporter_role: researcher
+date_evaluated: "2026-03-30"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used PromptFlow for a research study comparing prompt engineering strategies for
+  scientific abstract classification. Built three DAG flows with different prompting
+  strategies, ran them against a 500-abstract benchmark dataset, and used PromptFlow's
+  evaluation framework to compare precision, recall, and F1 across strategies.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Running systematic comparisons of three prompt strategies against 500 abstracts would
+      have taken two days manually; PromptFlow's batch runner and comparison views compressed it to 4 hours.
+  q:
+    value: 8
+    evidence: >
+      The evaluation metrics and statistical comparison outputs were publication-ready;
+      the per-class breakdown in the evaluation dashboard directly informed the analysis section of the paper.
+  c:
+    value: 6
+    evidence: >
+      500-abstract batch evaluation consumed significant Claude API budget; researchers
+      should estimate costs carefully before running large batches, as PromptFlow does not reduce token costs.
+  r:
+    value: 8
+    evidence: >
+      All three flows completed their full 500-abstract batches without framework failures
+      across two study replication runs on separate days.
+  x:
+    value: 6
+    evidence: >
+      PromptFlow operates as a self-contained pipeline tool; integrating its outputs with
+      our Jupyter analysis environment required a custom export step from PromptFlow's result format.
+  f:
+    value: 6
+    evidence: >
+      Local installation on Ubuntu 22.04 was smooth; configuring the Anthropic connection
+      required reading community documentation rather than the main PromptFlow docs which focus on Azure OpenAI.
+verdict: >
+  PromptFlow is an effective research tool for systematic prompt strategy comparison;
+  its batch evaluation and visualization capabilities reduce the manual work of experiment
+  replication and metric computation; researchers should budget API costs carefully and
+  plan for a custom export step to integrate results with analysis tools.
+conflict_of_interest: none

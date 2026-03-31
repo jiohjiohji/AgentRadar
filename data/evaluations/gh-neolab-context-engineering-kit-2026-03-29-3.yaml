@@ -1,0 +1,49 @@
+tool_id: gh-neolab-context-engineering-kit
+reporter_role: researcher
+date_evaluated: "2026-03-29"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Evaluated the context engineering kit for a data science research codebase in Python.
+  Tested the skills for data pipeline documentation, experiment configuration management,
+  and results interpretation. Assessed how well the hand-crafted skills generalize from
+  their apparent software engineering origin to a research computing context.
+scores:
+  p:
+    value: 5
+    evidence: >
+      The data pipeline documentation skill saved time on a well-structured pipeline but
+      struggled with research code's irregular structure; overhead from adapting skills
+      reduced the net productivity gain.
+  q:
+    value: 5
+    evidence: >
+      Documentation output quality was good for standard data loading functions but poor for
+      statistical analysis functions where the skill template prompted Claude for engineering
+      rather than scientific description conventions.
+  c:
+    value: 7
+    evidence: >
+      Once adapted, the skills kept per-task token usage modest; the adaptation investment
+      is a one-time cost that improves efficiency for subsequent uses of the same skill.
+  r:
+    value: 7
+    evidence: >
+      Skills produced consistent output across repeated uses in the research codebase once
+      the template mismatch issues were resolved through customization.
+  x:
+    value: 6
+    evidence: >
+      No conflicts with my research tool stack; the skills are standalone prompt templates
+      and integrate passively with whatever tools are configured in Claude Code.
+  f:
+    value: 7
+    evidence: >
+      Installation was immediate; domain adaptation for a research context required about
+      2 hours of skill file editing to shift the language from engineering to research conventions.
+verdict: >
+  The NeoLab context engineering kit is built for software product development and requires
+  meaningful adaptation for research computing contexts; researchers willing to invest in
+  customizing the skill templates will find a useful structure, but the out-of-box templates
+  assume product engineering conventions that do not transfer well to scientific computing.
+conflict_of_interest: none

@@ -1,0 +1,34 @@
+tool_id: "gh-langchain-langgraph"
+reporter_role: "developer"
+date_evaluated: "2026-03-06"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Built a stateful customer support agent with LangGraph that handled
+  multi-turn conversations, routed between specialized sub-agents based on
+  intent, and maintained persistent state across sessions using a Postgres checkpointer.
+
+scores:
+  p:
+    value: 9
+    evidence: "Complex stateful agent that would have taken 2 weeks with custom state management built in 3 days; graph-based state model eliminated an entire class of session management bugs"
+  q:
+    value: 8
+    evidence: "Agent correctly maintained context across 15-turn conversations in testing; routing accuracy to specialized sub-agents was 91% on our test set of 200 support queries"
+  c:
+    value: 7
+    evidence: "Persistent state via Postgres adds infrastructure cost (~$15/month for a small Postgres instance) but eliminates expensive context re-loading on every turn; net positive for long-running agents"
+  r:
+    value: 8
+    evidence: "Zero state corruption failures in 3 weeks of testing; graph visualization helped debug a routing loop that would have been nearly impossible to trace in a non-graph architecture"
+  x:
+    value: 8
+    evidence: "Integrated with existing Claude API calls with minimal changes; LangGraph's graph structure was transparent enough that our team could debug agent behavior without LangGraph-specific expertise"
+  f:
+    value: 6
+    evidence: "Graph abstractions are powerful but require a conceptual shift from linear chain thinking; estimated 1 day of orientation before being productive; checkpointer setup required additional 2 hours"
+
+verdict: "Best framework for production stateful agents that require complex routing, cycles, or multi-session persistence — the graph model pays off significantly for non-trivial agent architectures."
+
+conflict_of_interest: "none"

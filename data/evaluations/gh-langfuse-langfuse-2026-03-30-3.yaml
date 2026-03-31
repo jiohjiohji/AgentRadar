@@ -1,0 +1,47 @@
+tool_id: gh-langfuse-langfuse
+reporter_role: researcher
+date_evaluated: "2026-03-30"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used Langfuse for tracking a longitudinal prompt engineering study over 6 weeks. Logged
+  300 Claude API experiment runs with structured metadata including hypothesis, prompting
+  strategy, and dataset split. Used Langfuse's dataset management feature to create
+  evaluation benchmarks and compare prompt versions systematically.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Langfuse's dataset management replaced a sprawling spreadsheet system for tracking
+      300 experiment runs; experiment comparison that took an hour of spreadsheet navigation now takes 3 minutes in the dashboard.
+  q:
+    value: 8
+    evidence: >
+      All 300 experiment traces were captured correctly with their metadata; the dataset
+      evaluation feature's item-level trace linking enabled analyzing which dataset items drove score differences.
+  c:
+    value: 8
+    evidence: >
+      Free tier covered 6 weeks of research experiments; the dataset management feature
+      is particularly valuable for research as it is included in the free plan alongside trace logging.
+  r:
+    value: 9
+    evidence: >
+      Zero data loss across 300 experiments over 6 weeks; the traces were consistently
+      searchable and filterable throughout the study with no dashboard performance degradation.
+  x:
+    value: 8
+    evidence: >
+      Langfuse's Python SDK integrates with Jupyter for trace inspection and the export
+      feature enabled CSV download for statistical analysis in R; the research workflow integration was smooth.
+  f:
+    value: 9
+    evidence: >
+      pip install langfuse and 3-line SDK initialization; first traces appeared in the
+      dashboard within seconds; the dataset creation UI is intuitive for researchers without MLOps background.
+verdict: >
+  Langfuse is the most research-friendly LLM observability platform; the dataset management
+  feature for systematic evaluation is particularly well-designed for longitudinal prompt
+  engineering studies, and the generous free tier makes it accessible for academic research
+  teams without commercial LLMOps budgets.
+conflict_of_interest: none

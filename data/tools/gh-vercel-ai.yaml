@@ -1,0 +1,31 @@
+id: gh-vercel-ai
+name: Vercel AI SDK
+source_url: https://github.com/vercel/ai
+category: sdk-pattern
+pricing: free
+license: null
+status: active
+scores:
+  p: 9.0
+  q: 8.0
+  c: 7.7
+  r: 8.3
+  x: 9.0
+  f: 9.3
+  composite: 8.6
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.6
+  benchmark_version: '1.0'
+tags:
+- sdk
+- typescript
+- streaming
+- nextjs
+- vercel
+- multi-provider
+- react
+versus_refs: []

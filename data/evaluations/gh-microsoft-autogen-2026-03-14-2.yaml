@@ -1,0 +1,34 @@
+tool_id: "gh-microsoft-autogen"
+reporter_role: "enterprise-architect"
+date_evaluated: "2026-03-14"
+claude_code_version: "N/A"
+platform: "linux"
+
+task_performed: >
+  Evaluated AutoGen for an enterprise document processing pipeline requiring
+  human-in-the-loop review at defined checkpoints. Built a 5-agent workflow
+  with UserProxy agents to pause for human approval before commit steps.
+
+scores:
+  p:
+    value: 8
+    evidence: "Document processing pipeline that required 6 analyst hours per batch now requires 1.5 hours of human review plus 20 minutes of automated processing — significant throughput improvement"
+  q:
+    value: 7
+    evidence: "Agent outputs met quality bar for 81% of document types; complex tables and cross-referenced regulations required additional human correction beyond the planned checkpoints"
+  c:
+    value: 5
+    evidence: "Enterprise deployment on Azure required AutoGen Studio setup; combined infrastructure and token costs at our document volume are approximately $800/month — higher than anticipated"
+  r:
+    value: 7
+    evidence: "Human-in-the-loop design mitigated most reliability concerns; pure agent segments completed without failure in 3-week pilot; one UserProxy timeout required process restart"
+  x:
+    value: 7
+    evidence: "Integrated with Azure Document Intelligence for preprocessing; AutoGen's tool calling interface handled the integration but required writing custom wrappers for each Azure service"
+  f:
+    value: 4
+    evidence: "Enterprise deployment with SSO, audit logging, and Azure integration took 4 days with dedicated DevOps support; not suitable for rapid prototyping in enterprise environments"
+
+verdict: "Viable for enterprise human-in-the-loop pipelines once deployed, but the setup complexity and cost justify this only for high-value, high-volume document processing workloads."
+
+conflict_of_interest: "none"

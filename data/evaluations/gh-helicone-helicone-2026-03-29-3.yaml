@@ -1,0 +1,48 @@
+tool_id: gh-helicone-helicone
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-29"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Assessed Helicone for enterprise deployment with data residency requirements. Evaluated
+  the self-hosted Helicone deployment option, data encryption in transit and at rest,
+  PII detection and masking capabilities, and compliance with our enterprise data handling
+  policy for LLM request logging.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Enterprise cost visibility and user-level attribution addressed a governance requirement
+      that would otherwise have required building custom logging infrastructure; the tool
+      saved estimated 4 weeks of custom development time.
+  q:
+    value: 7
+    evidence: >
+      Self-hosted deployment captured all requests correctly; the PII detection feature
+      masked 94% of detected PII patterns in request logs, with 6% false negatives on domain-specific terms.
+  c:
+    value: 7
+    evidence: >
+      Self-hosted Helicone eliminates per-request fees; infrastructure cost for the Helicone
+      server is modest and the observability value at enterprise scale justifies the operational overhead.
+  r:
+    value: 7
+    evidence: >
+      The self-hosted Docker deployment ran stably for 3 weeks post-configuration; initial
+      setup required tuning database connection limits similar to other high-volume proxy deployments.
+  x:
+    value: 8
+    evidence: >
+      Proxy-based architecture works transparently with all our services without code changes;
+      the custom properties API for tagging requests by department and use case integrated well with our metadata standards.
+  f:
+    value: 7
+    evidence: >
+      Self-hosted deployment was more involved than the cloud version; Docker Compose setup
+      with PostgreSQL and Redis took 4 hours including security hardening for enterprise standards.
+verdict: >
+  Helicone's self-hosted option is viable for enterprise deployments with data residency
+  requirements; the PII detection capability addresses a critical compliance concern and
+  the proxy architecture minimizes application code changes; teams should budget time for
+  security hardening of the self-hosted configuration before enterprise approval.
+conflict_of_interest: none

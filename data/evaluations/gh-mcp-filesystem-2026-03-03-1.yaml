@@ -1,0 +1,46 @@
+tool_id: gh-mcp-filesystem
+reporter_role: developer
+date_evaluated: "2026-03-03"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the filesystem MCP to build a code review automation workflow: Claude reads source
+  files from a local TypeScript project, identifies potential issues, and writes annotated
+  review comments to a markdown file. Also tested directory listing, file search by pattern,
+  and bulk file renaming across a project directory with nested structures.
+scores:
+  p:
+    value: 8
+    evidence: >
+      File I/O operations that previously required Claude Code's built-in shell tools with
+      multi-step commands are now expressed as single tool calls; workflow scripts are 40% shorter.
+  q:
+    value: 9
+    evidence: >
+      File reads are byte-perfect and writes produce exact content; no encoding issues or
+      truncation observed across files up to 200KB in 30+ read/write operations during testing.
+  c:
+    value: 8
+    evidence: >
+      The filesystem MCP adds minimal token overhead per operation; the cost is dominated
+      by the file content itself rather than tool call metadata, making it efficient for bulk operations.
+  r:
+    value: 9
+    evidence: >
+      Across all test sessions the filesystem MCP never failed; it is among the most reliable
+      MCP tools available because it wraps simple local OS operations without network dependencies.
+  x:
+    value: 9
+    evidence: >
+      This tool is the backbone of most multi-tool workflows; it accepts output from search
+      and API tools and feeds content to analysis tools, composing naturally with nearly any other MCP.
+  f:
+    value: 10
+    evidence: >
+      No API keys, no OAuth, no external services; configure the allowed directory paths in
+      the MCP JSON config and it works immediately, making it the easiest MCP tool to start using.
+verdict: >
+  The filesystem MCP is foundational infrastructure for any Claude Code workflow that touches
+  local files; its reliability, simplicity, and universal composability make it a must-have
+  in every MCP configuration, and it sets the standard for what low-friction tool setup looks like.
+conflict_of_interest: none

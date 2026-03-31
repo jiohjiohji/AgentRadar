@@ -1,0 +1,49 @@
+tool_id: gh-ranaroussi-cc-bridge
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-30"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Assessed CC-Bridge for enterprise deployment as a cost optimization layer that routes
+  SDK API calls through Claude Code CLI sessions. Evaluated security implications of the
+  proxy architecture, API stability for production use, and maintainability given the
+  stale January 2026 repository state.
+scores:
+  p:
+    value: 3
+    evidence: >
+      Enterprise applications relying on stable API contracts cannot depend on a bridge
+      with a 40-60% success rate for tool-use calls; the potential cost savings do not
+      compensate for the reliability risk in production environments.
+  q:
+    value: 3
+    evidence: >
+      API response format mismatches between CC-Bridge output and current Anthropic SDK
+      expectations would require application-side workarounds that add technical debt.
+  c:
+    value: 5
+    evidence: >
+      The cost optimization premise is sound in theory but the implementation instability
+      means any savings from session reuse would be offset by engineering time spent on
+      reliability workarounds and debugging.
+  r:
+    value: 2
+    evidence: >
+      For enterprise production use, a 60% success rate on tool-use requests is disqualifying;
+      the stale state with no clear maintenance commitment makes reliability projection worse over time.
+  x:
+    value: 3
+    evidence: >
+      The bridge cannot be safely integrated into enterprise application stacks without
+      custom error handling that effectively re-implements direct API access anyway.
+  f:
+    value: 5
+    evidence: >
+      Installation is quick but enterprise deployment requires security review of the proxy
+      architecture; the stale state complicates security assessment as code may have unpatched dependencies.
+verdict: >
+  CC-Bridge is not enterprise-ready due to API drift since its last January 2026 update;
+  the reliability profile, security assessment complexity, and absence of maintenance activity
+  disqualify it from production enterprise deployment; organizations should use the official
+  Anthropic SDK directly with standard infrastructure cost optimization approaches.
+conflict_of_interest: none

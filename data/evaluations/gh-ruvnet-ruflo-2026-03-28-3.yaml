@@ -1,0 +1,34 @@
+tool_id: "gh-ruvnet-ruflo"
+reporter_role: "small-team"
+date_evaluated: "2026-03-28"
+claude_code_version: "1.0.57"
+platform: "macos"
+
+task_performed: >
+  Used Ruflo for rapid prototyping: spinning up a 3-agent swarm to simultaneously
+  prototype a backend API, generate OpenAPI documentation, and write integration
+  tests for a new product feature, coordinated via the SPARC methodology.
+
+scores:
+  p:
+    value: 9
+    evidence: "Backend API, documentation, and tests produced in 80 minutes; doing these sequentially in Claude Code took approximately 3.5 hours in the previous sprint; parallel execution saved ~2.5 hours"
+  q:
+    value: 8
+    evidence: "OpenAPI spec matched the generated API code with no mismatches; integration tests covered 84% of endpoints on first pass; minor alignment issues between spec and tests on 2 edge case endpoints"
+  c:
+    value: 6
+    evidence: "Three-agent parallel run used 18,000 tokens; at our usage volume this is within the monthly allocation but adds up if used for every feature; selective use for complex features recommended"
+  r:
+    value: 8
+    evidence: "All three pipelines completed successfully across 6 prototype sessions; output coordination was clean; the SPARC methodology's structured handoffs prevented the context conflicts seen in less structured swarms"
+  x:
+    value: 9
+    evidence: "Integrated with existing Claude Code session context; agents could reference project files directly; no new tooling or configuration changes required in our development environment"
+  f:
+    value: 7
+    evidence: "SPARC methodology documentation is thorough; first multi-agent swarm productive in approximately 90 minutes; conceptual overhead of swarm configuration is the main barrier"
+
+verdict: "Excellent for complex feature prototyping where parallel workstreams save meaningful time — the SPARC methodology provides enough structure to make swarm coordination reliable."
+
+conflict_of_interest: "none"

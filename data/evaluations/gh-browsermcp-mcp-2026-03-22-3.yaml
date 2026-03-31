@@ -1,0 +1,46 @@
+tool_id: gh-browsermcp-mcp
+reporter_role: team-lead
+date_evaluated: "2026-03-22"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Evaluated BrowserMCP as part of a tooling audit to identify deprecated tools in use
+  across the team's Claude Code configurations. Tested remaining functionality against
+  current browser automation requirements, assessed migration effort to Playwright MCP,
+  and documented the decision for the team's tool deprecation register.
+scores:
+  p:
+    value: 2
+    evidence: >
+      Any tasks completed with BrowserMCP could be done faster with Playwright MCP due to
+      better reliability; the archived tool offers no productivity advantage over modern alternatives.
+  q:
+    value: 3
+    evidence: >
+      Output quality on the 3 pages that loaded successfully was acceptable, but the
+      17% success rate on our test corpus of 18 real-world sites makes it unsuitable for production.
+  c:
+    value: 4
+    evidence: >
+      The zero external API cost is technically attractive but irrelevant when the tool
+      fails frequently; the debugging time cost far exceeds any savings for our team.
+  r:
+    value: 2
+    evidence: >
+      Failed on 15 of 18 test sites including several simple static pages; the browser
+      engine version is incompatible with current TLS configurations on some sites.
+  x:
+    value: 3
+    evidence: >
+      The MCP interface is present but cannot be reliably included in automated pipelines
+      given the unpredictable failure rate; pipelines cannot retry around fundamental browser incompatibilities.
+  f:
+    value: 3
+    evidence: >
+      macOS Sonoma introduced security changes that block the browser automation approach
+      used by BrowserMCP unless System Preferences overrides are applied, adding setup complexity.
+verdict: >
+  BrowserMCP is archived, increasingly broken on modern operating systems, and has no
+  migration path or maintenance commitment; teams that have it in their configurations
+  should remove it immediately and replace it with Playwright MCP without further evaluation.
+conflict_of_interest: none

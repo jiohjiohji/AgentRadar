@@ -1,0 +1,34 @@
+tool_id: "gh-danielmiessler-fabric"
+reporter_role: "team-lead"
+date_evaluated: "2026-03-18"
+claude_code_version: "N/A"
+platform: "linux"
+
+task_performed: >
+  Evaluated Fabric for a team-wide content intelligence workflow: ingesting
+  competitor announcements, customer feedback threads, and engineering RFCs
+  into a structured summary layer feeding weekly leadership briefs.
+
+scores:
+  p:
+    value: 7
+    evidence: "Reduced weekly brief preparation from 4 hours to 45 minutes across the team; however, onboarding non-technical stakeholders to the CLI interface required a wrapper script"
+  q:
+    value: 7
+    evidence: "Pattern outputs were consistently good; team noted that the predefined patterns occasionally miss domain-specific context that our custom patterns addressed after two iteration cycles"
+  c:
+    value: 9
+    evidence: "No per-seat licensing; API costs for team's weekly usage totaled $3-7 per month depending on volume — orders of magnitude cheaper than enterprise AI writing tools"
+  r:
+    value: 8
+    evidence: "Stable across 6 weeks of daily use; one upstream API timeout in that period; the stateless CLI design means no state corruption risk"
+  x:
+    value: 7
+    evidence: "Integrated with our Slack-to-markdown pipeline via a simple cron job; required custom glue code but the inputs and outputs were standard enough to make this straightforward"
+  f:
+    value: 6
+    evidence: "Technical team members productive in under an hour; non-technical team members required a wrapper script and documentation; no GUI is a real barrier for broader adoption"
+
+verdict: "Strong for technical teams comfortable with CLI tools; the cost efficiency is unmatched but plan for a UX wrapper if you need adoption beyond engineering."
+
+conflict_of_interest: "none"

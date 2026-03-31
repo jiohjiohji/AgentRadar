@@ -1,0 +1,34 @@
+tool_id: "gh-crewai-crewai"
+reporter_role: "developer"
+date_evaluated: "2026-03-08"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Built a three-agent research crew: a web researcher, a data analyst, and a
+  report writer, to automate weekly competitive intelligence reports. Each agent
+  had distinct tools and the crew ran sequentially with shared context passing.
+
+scores:
+  p:
+    value: 8
+    evidence: "Weekly report that took 3 hours to produce manually now runs in 35 minutes unattended; saved approximately 2.5 hours per week after initial 6-hour setup investment"
+  q:
+    value: 7
+    evidence: "Report quality was good but inconsistent; the researcher agent occasionally returned outdated data when search tools hit rate limits; writer agent output required light editing on 3 of 5 weekly runs"
+  c:
+    value: 5
+    evidence: "Sequential crew with 3 agents consumed approximately 45,000 tokens per run; at Claude Sonnet pricing this is roughly $0.20/run but scales poorly for multiple reports or longer tasks"
+  r:
+    value: 6
+    evidence: "Completed successfully 4 of 5 weekly runs in the first month; one run stalled when a tool returned an unexpected format and the crew did not recover gracefully"
+  x:
+    value: 7
+    evidence: "Integrated with existing search and summarization tools using CrewAI's tool interface; required adapting tool wrappers to CrewAI's format which took approximately 2 hours"
+  f:
+    value: 7
+    evidence: "pip install and first crew running in about 45 minutes; multi-agent coordination concepts required reading documentation and two tutorial examples before producing working code"
+
+verdict: "Solid for well-scoped sequential multi-agent workflows; plan for higher token costs and add explicit error handling for tool failures before putting in production."
+
+conflict_of_interest: "none"

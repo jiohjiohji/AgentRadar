@@ -1,0 +1,30 @@
+id: gh-microsoft-promptflow
+name: Promptflow
+source_url: https://github.com/microsoft/promptflow
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 7.7
+  q: 7.7
+  c: 6.0
+  r: 7.7
+  x: 6.3
+  f: 5.7
+  composite: 6.8
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 6.8
+  benchmark_version: '1.0'
+tags:
+- prompt-engineering
+- testing
+- evaluation
+- deployment
+- microsoft
+- llm-apps
+versus_refs: []

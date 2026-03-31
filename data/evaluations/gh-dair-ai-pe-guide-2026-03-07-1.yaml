@@ -1,0 +1,47 @@
+tool_id: gh-dair-ai-pe-guide
+reporter_role: researcher
+date_evaluated: "2026-03-07"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used the DAIR.AI Prompt Engineering Guide as a reference for designing a multi-step
+  reasoning pipeline for automated legal document classification. Specifically studied
+  the Chain-of-Thought, Tree-of-Thought, and few-shot prompting sections. Applied the
+  techniques to Claude Sonnet and measured classification accuracy improvement.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The few-shot and chain-of-thought sections provided concrete patterns that improved
+      classification accuracy from 72% to 89% on the test set without any model fine-tuning.
+  q:
+    value: 8
+    evidence: >
+      The guide covers a comprehensive range of techniques with clear examples and citations
+      to original research; the quality of content is notably higher than casual blog posts on the topic.
+  c:
+    value: 10
+    evidence: >
+      Free, openly licensed reference guide; no operational cost and the improved prompting
+      techniques reduce token waste from unsuccessful attempts in production pipelines.
+  r:
+    value: 8
+    evidence: >
+      The guide is one of the most actively maintained PE resources; major technique sections
+      are updated as new research emerges and the GitHub history shows consistent editorial attention.
+  x:
+    value: 7
+    evidence: >
+      Techniques apply across all Claude Code use cases, MCP tool prompting, and multi-agent
+      designs; the guide's breadth makes it applicable to every layer of the Claude stack.
+  f:
+    value: 10
+    evidence: >
+      Web-accessible and GitHub-accessible; no setup of any kind required; researchers can
+      read specific sections relevant to their task without reading the full 200+ page guide.
+verdict: >
+  The DAIR.AI Prompt Engineering Guide is the most comprehensive freely available PE reference;
+  its research-citation depth makes it particularly valuable for researchers, and the breadth
+  of technique coverage means it remains relevant as a reference throughout the lifecycle
+  of any Claude-powered application.
+conflict_of_interest: none

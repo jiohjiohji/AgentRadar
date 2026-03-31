@@ -1,0 +1,46 @@
+tool_id: gh-tavily-mcp
+reporter_role: developer
+date_evaluated: "2026-03-16"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Integrated Tavily MCP into a competitive intelligence workflow where Claude monitors
+  mentions of our product and competitors across news and blog sources. Set up a daily
+  script invoking Claude Code with Tavily MCP to search, summarize, and append findings
+  to a running Markdown log file. Ran for two weeks to assess consistency.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Daily competitive monitoring dropped from 45 minutes of manual reading to a 5-minute
+      Claude session producing a summary, though the summaries sometimes need a quick edit.
+  q:
+    value: 6
+    evidence: >
+      Several days Tavily returned results from low-quality SEO blogs rather than authoritative
+      sources; adding site-filter parameters to queries improved relevance but required tuning.
+  c:
+    value: 5
+    evidence: >
+      Over 14 days of daily runs, Tavily API costs reached $8.40 and Claude costs added
+      another $4; the combined ~$12 monthly cost is fine for a team but not negligible.
+  r:
+    value: 6
+    evidence: >
+      Three times in two weeks the Tavily MCP server returned a 429 rate limit error during
+      peak morning hours, requiring a retry 10 minutes later to complete the daily run.
+  x:
+    value: 8
+    evidence: >
+      Chaining Tavily search results into a filesystem MCP write worked without special
+      handling; Claude naturally formatted results and wrote to the log file in one session.
+  f:
+    value: 9
+    evidence: >
+      Setup took under five minutes including API key creation on the Tavily dashboard;
+      no binary installations needed, just npx and a single environment variable.
+verdict: >
+  Tavily MCP works well for scheduled monitoring workflows but the combination of API costs
+  and occasional rate limiting means it requires some tuning before running reliably at
+  daily cadence; source quality filtering is necessary to avoid low-signal results.
+conflict_of_interest: none

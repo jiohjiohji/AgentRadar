@@ -1,0 +1,47 @@
+tool_id: gh-korotovsky-slack-mcp
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-29"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Assessed Slack MCP for enterprise security and compliance suitability. Evaluated
+  whether the MCP server can operate within Slack Enterprise Grid constraints, including
+  org-level token management, channel export restrictions, and audit log requirements.
+  Tested message retention policy interactions and data residency considerations.
+scores:
+  p:
+    value: 5
+    evidence: >
+      For specific read-and-summarize tasks it provides value, but enterprise Slack
+      workflows with approval chains and compliance hooks are not supported without significant custom code.
+  q:
+    value: 6
+    evidence: >
+      Data returned from the API was accurate when permissions allowed access; however,
+      Enterprise Grid DLP policies blocked some channel reads unexpectedly during evaluation.
+  c:
+    value: 6
+    evidence: >
+      The marginal Claude token cost is acceptable for enterprise budgets, but the
+      hidden cost of Slack bot token management and rotation overhead is non-trivial at scale.
+  r:
+    value: 5
+    evidence: >
+      Enterprise Grid rate limits are stricter than standard Slack plans; we hit
+      rate limits twice during load testing with 5 concurrent agent sessions reading different channels.
+  x:
+    value: 4
+    evidence: >
+      Integration with enterprise SSO and SCIM provisioning for bot accounts is not
+      addressed in the MCP server documentation, requiring custom infrastructure work to achieve.
+  f:
+    value: 3
+    evidence: >
+      Enterprise Grid app installation requires workspace admin approval and security
+      review cycles that added two weeks of lead time before the MCP could be tested in our environment.
+verdict: >
+  Slack MCP is not enterprise-ready without substantial additional security and compliance
+  engineering; the community-maintained codebase lacks the audit logging, Enterprise Grid
+  compatibility documentation, and token lifecycle management that enterprise architects require
+  before approving deployment at scale.
+conflict_of_interest: none

@@ -1,0 +1,34 @@
+tool_id: "gh-berriai-litellm"
+reporter_role: "small-team"
+date_evaluated: "2026-03-27"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Used LiteLLM to add automatic fallback from Claude to GPT-4o when
+  Claude API rate limits were hit during high-traffic periods. Tested
+  fallback behavior under load and validated response quality consistency.
+
+scores:
+  p:
+    value: 8
+    evidence: "Zero user-facing errors during peak load periods after LiteLLM fallback implementation; previously saw 2-3% error rate during traffic spikes that now route to GPT-4o transparently"
+  q:
+    value: 7
+    evidence: "Fallback responses from GPT-4o were functionally equivalent for our use case; one prompt format relied on Claude-specific XML tag behavior that required adjustment for cross-model compatibility"
+  c:
+    value: 7
+    evidence: "Fallback model (GPT-4o) has different pricing; added approximately 8% to monthly API spend but eliminated customer-facing errors that had conversion cost implications"
+  r:
+    value: 9
+    evidence: "Fallback triggered correctly on every rate limit event over 4 weeks of monitoring; automatic retry with exponential backoff worked as documented; no manual intervention required"
+  x:
+    value: 10
+    evidence: "Implemented the fallback configuration in 15 minutes by modifying the LiteLLM config YAML; zero application code changes required"
+  f:
+    value: 9
+    evidence: "Added LiteLLM to an existing system in under 30 minutes; fallback configuration was a single YAML block; immediate value from first deployment"
+
+verdict: "Highly recommended for any production system concerned about API reliability — the fallback configuration requires minutes to set up and provides immediate resilience value."
+
+conflict_of_interest: "none"

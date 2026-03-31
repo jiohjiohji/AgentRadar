@@ -1,0 +1,35 @@
+id: gh-microsoft-playwright-mcp
+name: Playwright MCP
+source_url: https://github.com/microsoft/playwright-mcp
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores:
+  p: 8.0
+  q: 7.3
+  c: 5.7
+  r: 7.0
+  x: 7.3
+  f: 6.7
+  composite: 7.0
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.0
+  benchmark_version: '1.0'
+tags:
+- browser-automation
+- testing
+- web-scraping
+- playwright
+- headless-browser
+- microsoft
+- official
+versus_refs:
+- id: gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp
+  verdict_short: Playwright MCP is the only viable choice; BrowserMCP is archived
+    and increasingly broken
+  valid_until: '2026-06-29'

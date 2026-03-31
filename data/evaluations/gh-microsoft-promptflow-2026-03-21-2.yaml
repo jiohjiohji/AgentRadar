@@ -1,0 +1,47 @@
+tool_id: gh-microsoft-promptflow
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-21"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated PromptFlow for enterprise AI pipeline deployment. Assessed its Azure integration
+  for managed compute, experiment tracking, and team collaboration features. Tested the
+  CI/CD integration for automated pipeline evaluation in a GitHub Actions workflow. Focused
+  on enterprise readiness for a team of 15 data scientists and ML engineers.
+scores:
+  p:
+    value: 8
+    evidence: >
+      The managed Azure deployment path eliminated significant infrastructure configuration
+      work for the team; pipelines that would take 2 weeks to productionize took 3 days with PromptFlow's Azure integration.
+  q:
+    value: 8
+    evidence: >
+      Evaluation metrics and visualization quality is enterprise-grade; the comparison
+      view for prompt variant testing gave the team clear quantitative evidence for prompt selection decisions.
+  c:
+    value: 6
+    evidence: >
+      PromptFlow compute on Azure adds infrastructure costs on top of LLM API costs;
+      budget for managed compute should be included in project cost planning alongside API expenses.
+  r:
+    value: 8
+    evidence: >
+      Azure-hosted PromptFlow showed strong reliability across two weeks of team use;
+      the managed service handled concurrency and job queueing without manual intervention.
+  x:
+    value: 7
+    evidence: >
+      Azure integration is strong; connecting PromptFlow to Azure ML experiments, Azure
+      Monitor, and GitHub Actions CI/CD worked with documented configuration, though it required Azure expertise.
+  f:
+    value: 5
+    evidence: >
+      Enterprise Azure setup (workspaces, compute clusters, connection management) requires
+      significant Azure knowledge; a new user without Azure background would need a week to get productive.
+verdict: >
+  PromptFlow is enterprise-ready for teams already invested in Azure infrastructure; its
+  evaluation tooling, managed compute, and CI/CD integration deliver genuine value at
+  enterprise scale; the Azure dependency and setup complexity make it unsuitable for teams
+  without Azure expertise or those using AWS/GCP as their primary cloud.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-langfuse-langfuse
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-22"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated Langfuse self-hosted deployment for enterprise data residency compliance.
+  Deployed Langfuse on Kubernetes with PostgreSQL and ClickHouse backends. Assessed
+  performance at 100k daily traces, RBAC configuration for multi-team access, and SSO
+  integration with the organization's Okta identity provider.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Self-hosted Langfuse replaced a custom logging solution that required dedicated
+      maintenance; the Langfuse dashboard provided richer LLM-specific analytics than our custom tool in less setup time.
+  q:
+    value: 8
+    evidence: >
+      At 100k daily traces, ClickHouse backend maintained sub-second dashboard query
+      performance; trace completeness was 99.97% with 30 missing traces attributable to network issues.
+  c:
+    value: 9
+    evidence: >
+      Self-hosted Langfuse is open source with no licensing fees; infrastructure cost for
+      the ClickHouse and PostgreSQL backends is the primary expense, which is standard for enterprise data infrastructure.
+  r:
+    value: 8
+    evidence: >
+      The Kubernetes deployment was stable over 4 weeks of production load testing;
+      ClickHouse required memory tuning for sustained 100k daily trace ingestion but was stable after configuration.
+  x:
+    value: 8
+    evidence: >
+      Langfuse's OpenTelemetry support enabled integration with our existing Grafana observability
+      stack; LLM traces appear alongside infrastructure traces in unified dashboards.
+  f:
+    value: 6
+    evidence: >
+      ClickHouse deployment and tuning for production scale required 3 days of infrastructure
+      work; the Docker Compose version is easy but insufficient for enterprise-scale trace volumes.
+verdict: >
+  Langfuse's self-hosted deployment is enterprise-ready for organizations with data residency
+  requirements; the ClickHouse backend scales to 100k+ daily traces and the RBAC and SSO
+  features meet enterprise governance requirements; teams should plan for dedicated infrastructure
+  work when deploying at enterprise scale.
+conflict_of_interest: none

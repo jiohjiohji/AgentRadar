@@ -1,0 +1,30 @@
+id: gh-anthropics-cookbook
+name: Anthropic Cookbook
+source_url: https://github.com/anthropics/anthropic-cookbook
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 8.0
+  q: 8.7
+  c: 9.3
+  r: 8.7
+  x: 7.7
+  f: 10.0
+  composite: 8.7
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.7
+  benchmark_version: '1.0'
+tags:
+- prompt-library
+- recipes
+- notebooks
+- official
+- anthropic
+- examples
+versus_refs: []

@@ -1,0 +1,29 @@
+id: gh-tavily-mcp
+name: Tavily MCP
+source_url: https://github.com/tavily-ai/tavily-mcp
+category: mcp-server
+pricing: freemium
+license: MIT
+status: active
+scores:
+  p: 7.7
+  q: 6.3
+  c: 6.0
+  r: 6.7
+  x: 7.7
+  f: 9.0
+  composite: 7.2
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.2
+  benchmark_version: '1.0'
+tags:
+- web-search
+- research
+- search-api
+- real-time-data
+- tavily
+versus_refs: []

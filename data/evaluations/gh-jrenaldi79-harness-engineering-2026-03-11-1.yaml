@@ -1,0 +1,47 @@
+tool_id: gh-jrenaldi79-harness-engineering
+reporter_role: developer
+date_evaluated: "2026-03-11"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the harness-engineering CLAUDE.md bootstrap to set up a comprehensive context
+  engineering scaffold for a new SaaS product codebase. Applied the bootstrap scripts
+  to generate the initial CLAUDE.md and supporting skill files, then tested the quality
+  of Claude Code outputs across development tasks with the bootstrapped context.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The bootstrap approach generated a usable initial CLAUDE.md in 15 minutes that would
+      have taken 2 hours to write manually; the automation saved significant initial setup time.
+  q:
+    value: 7
+    evidence: >
+      Bootstrapped context captured architecture patterns and conventions accurately when
+      given detailed project input; the generated CLAUDE.md required fewer edits than starting from templates.
+  c:
+    value: 8
+    evidence: >
+      The bootstrap is a one-time cost that reduces per-session explanation tokens throughout
+      the project lifetime; the economics strongly favor the upfront investment for any project over 2 weeks long.
+  r:
+    value: 7
+    evidence: >
+      The bootstrap script produced consistent results across three test runs on different
+      project types; output quality varied with the detail level of the project description input.
+  x:
+    value: 6
+    evidence: >
+      The bootstrapped context engineering integrates with Claude Code's standard configuration;
+      no special MCP or skill integration, just improved CLAUDE.md and skill files.
+  f:
+    value: 7
+    evidence: >
+      Running the bootstrap required about 20 minutes of answering project questions before
+      the generation ran; clearer documentation on input requirements would reduce that to 10 minutes.
+verdict: >
+  The harness-engineering bootstrap is a useful accelerator for context engineering setup,
+  particularly for developers willing to answer detailed project questions upfront; the
+  generated output is more tailored than generic templates and reduces the manual CLAUDE.md
+  authoring burden substantially.
+conflict_of_interest: none

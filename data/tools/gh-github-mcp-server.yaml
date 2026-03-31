@@ -1,0 +1,31 @@
+id: gh-github-mcp-server
+name: GitHub MCP Server
+source_url: https://github.com/github/github-mcp-server
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 8.0
+  q: 7.7
+  c: 7.3
+  r: 8.3
+  x: 8.7
+  f: 7.3
+  composite: 7.9
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.9
+  benchmark_version: '1.0'
+tags:
+- github
+- code-management
+- pull-requests
+- issues
+- repositories
+- git
+- official
+versus_refs: []

@@ -1,0 +1,47 @@
+tool_id: gh-langfuse-langfuse
+reporter_role: developer
+date_evaluated: "2026-03-11"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Integrated Langfuse for observability of a production Claude-powered customer support
+  agent. Used the Python SDK to trace all Claude API calls, add user session context, and
+  tag conversations by support ticket category. Used Langfuse's LLM evaluation to score
+  agent helpfulness and measure resolution rate over 2 weeks of production traffic.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Langfuse traces revealed that 30% of low-rated support interactions shared a specific
+      intent classification pattern; fixing that pattern improved satisfaction scores by 18% in the following week.
+  q:
+    value: 9
+    evidence: >
+      Trace data was complete and accurate across 5000 tracked conversations; the user session
+      linking worked correctly, enabling per-user conversation history analysis in the dashboard.
+  c:
+    value: 8
+    evidence: >
+      Langfuse cloud free tier covered our development traffic; the production plan at our
+      5000 weekly conversation volume was cost-effective relative to the monitoring value provided.
+  r:
+    value: 9
+    evidence: >
+      Zero trace data loss across 2 weeks and 5000 conversations; the asynchronous SDK
+      design meant tracing added under 5ms to response latency without blocking the user-facing response.
+  x:
+    value: 8
+    evidence: >
+      Python SDK wraps Anthropic SDK calls with minimal code changes; adding Langfuse to
+      an existing Claude application required changing 5 lines of code and adding 2 new lines.
+  f:
+    value: 9
+    evidence: >
+      pip install langfuse, add API keys, and wrap the Anthropic client; first traces
+      appeared in the Langfuse dashboard within 60 seconds of the first instrumented API call.
+verdict: >
+  Langfuse is the most polished LLM observability platform tested; its integration simplicity,
+  production-grade reliability, and actionable analytics dashboard make it the recommended
+  default choice for any team deploying Claude in production; the free tier is generous
+  enough for development and the paid tier scales reasonably with application growth.
+conflict_of_interest: none

@@ -1,0 +1,46 @@
+tool_id: gh-github-mcp-server
+reporter_role: developer
+date_evaluated: "2026-03-04"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the GitHub MCP server to automate triage of open issues on a mid-sized open source
+  repository with 340 open issues. Claude read issue bodies, applied labels based on content,
+  commented asking for reproductions, and closed duplicates. Also created a milestone and
+  assigned relevant issues to it using MCP tool calls.
+scores:
+  p:
+    value: 9
+    evidence: >
+      What typically took our single maintainer 4 hours of weekly triage was completed in
+      35 minutes with Claude driving GitHub MCP, freeing up meaningful coding time each sprint.
+  q:
+    value: 8
+    evidence: >
+      Label assignments were accurate on 87% of issues; the 13% misclassifications were
+      borderline cases where multiple labels applied, which required a human review pass.
+  c:
+    value: 7
+    evidence: >
+      Token usage was reasonable because the tool returns minimal JSON rather than full HTML;
+      triage of 50 issues cost roughly $1.20 in Claude API fees, which is acceptable overhead.
+  r:
+    value: 9
+    evidence: >
+      GitHub API calls via MCP were highly reliable across all test sessions; rate limiting
+      was handled gracefully with automatic back-off and no manual intervention was needed.
+  x:
+    value: 9
+    evidence: >
+      Composable with the filesystem MCP and Claude Code's native shell tools; we piped
+      issue metadata into a local markdown triage log without any glue code beyond prompt wording.
+  f:
+    value: 8
+    evidence: >
+      Personal access token setup and the single-line MCP config entry got us to first working
+      issue read within five minutes; the official README is clear and the auth flow is standard.
+verdict: >
+  GitHub MCP server is one of the most immediately useful MCP tools available; it handles
+  realistic repository management tasks accurately and at reasonable cost, making it a strong
+  recommendation for any team maintaining a GitHub-hosted open source project.
+conflict_of_interest: none

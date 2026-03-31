@@ -1,0 +1,47 @@
+tool_id: gh-josix-awesome-claude-md
+reporter_role: student
+date_evaluated: "2026-03-30"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the awesome-claude-md collection to create a CLAUDE.md for a semester-long software
+  engineering course project. The project is a Python Django web application. Selected
+  examples for Django conventions, testing with pytest, and API documentation standards,
+  then adapted them for the course's specific coding guidelines.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Writing a CLAUDE.md from scratch for a Django project would have taken me hours of
+      experimentation; using the collection examples I had a working CLAUDE.md in 30 minutes.
+  q:
+    value: 8
+    evidence: >
+      The Django-adjacent example I found was applicable and clearly explained each section's
+      purpose; Claude Code's behavior was noticeably more aligned to course conventions after adding the CLAUDE.md.
+  c:
+    value: 10
+    evidence: >
+      Completely free reference material; the investment is reading time rather than any
+      monetary cost, making it ideal for students on zero tooling budget.
+  r:
+    value: 8
+    evidence: >
+      The patterns I borrowed from the collection continued to work correctly throughout
+      the semester project; CLAUDE.md is static configuration so reliability is inherent.
+  x:
+    value: 6
+    evidence: >
+      The improved CLAUDE.md made all subsequent Claude Code interactions more accurate
+      for my project; the composability benefit extends to every tool call made in the session.
+  f:
+    value: 10
+    evidence: >
+      Browse the GitHub repo, find a relevant example, copy and adapt it; there is no
+      simpler or faster setup process for any tool I have used in my Claude Code workflow.
+verdict: >
+  The awesome-claude-md collection is the first place students should look when setting up
+  a Claude Code project; it provides battle-tested patterns with explanations that help
+  beginners understand why each section of a CLAUDE.md exists, accelerating both setup
+  and understanding.
+conflict_of_interest: none

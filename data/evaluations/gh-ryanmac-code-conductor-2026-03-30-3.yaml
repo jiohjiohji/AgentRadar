@@ -1,0 +1,48 @@
+tool_id: gh-ryanmac-code-conductor
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-30"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Assessed Code Conductor for enterprise adoption: evaluated the GitHub-based coordination
+  model's suitability for enterprise GitHub configurations (SSO, branch protection rules,
+  required reviewers), estimated API cost scaling for large teams, and analyzed security
+  implications of orchestrator access to multiple engineer worktrees.
+scores:
+  p:
+    value: 6
+    evidence: >
+      For greenfield parallel development sprints the time savings are real; for enterprise
+      projects with heavyweight branch protection and approval workflows, the gains narrow considerably.
+  q:
+    value: 7
+    evidence: >
+      Orchestrator-defined architecture constraints improve output consistency at scale;
+      this is a genuine quality benefit for enterprise codebases with strict architectural standards.
+  c:
+    value: 4
+    evidence: >
+      Enterprise-scale parallel execution (20+ concurrent subagents) would represent
+      substantial API spend that requires budget planning; the cost model is fundamentally
+      parallel rather than sequential.
+  r:
+    value: 5
+    evidence: >
+      Branch protection rules requiring CI passing before merge blocked automated subagent
+      PR merges; the orchestrator has no built-in CI wait logic, requiring custom GitHub Actions integration.
+  x:
+    value: 6
+    evidence: >
+      GitHub SSO worked with Code Conductor after configuring the personal access token with
+      SSO scope; the process was manual and per-engineer rather than automated.
+  f:
+    value: 5
+    evidence: >
+      Enterprise GitHub configurations required several workarounds not covered in the
+      documentation; an architect should budget a full day to adapt Code Conductor to enterprise GitHub policies.
+verdict: >
+  Code Conductor has architectural promise for enterprise parallel development but is not
+  yet enterprise-ready; branch protection integration, SSO token management, and CI pipeline
+  coordination are gaps that require custom engineering before it can operate in a
+  standard enterprise GitHub environment.
+conflict_of_interest: none

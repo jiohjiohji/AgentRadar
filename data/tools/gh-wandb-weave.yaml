@@ -1,0 +1,30 @@
+id: gh-wandb-weave
+name: W&B Weave
+source_url: https://github.com/wandb/weave
+category: eval-observability
+pricing: freemium
+license: Apache-2.0
+status: active
+scores:
+  p: 7.3
+  q: 7.7
+  c: 6.7
+  r: 8.0
+  x: 8.0
+  f: 8.0
+  composite: 7.6
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.6
+  benchmark_version: '1.0'
+tags:
+- evaluation
+- tracing
+- wandb
+- llm-apps
+- datasets
+- monitoring
+versus_refs: []

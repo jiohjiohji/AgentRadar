@@ -1,0 +1,29 @@
+id: gh-mcp-filesystem
+name: Filesystem MCP
+source_url: https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 7.7
+  q: 8.7
+  c: 8.7
+  r: 9.3
+  x: 9.0
+  f: 10.0
+  composite: 8.9
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 8.9
+  benchmark_version: '1.0'
+tags:
+- filesystem
+- file-management
+- local-files
+- built-in
+- reference-implementation
+versus_refs: []

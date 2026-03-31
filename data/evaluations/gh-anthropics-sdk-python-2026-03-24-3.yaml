@@ -1,0 +1,47 @@
+tool_id: gh-anthropics-sdk-python
+reporter_role: student
+date_evaluated: "2026-03-24"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Built a first Claude application using the Anthropic Python SDK: a literature summarizer
+  that takes PDF text as input and returns structured summaries with key findings, methods,
+  and limitations. Used tool use to format the output, implemented a simple conversation
+  loop, and deployed it as a command-line tool for personal research use.
+scores:
+  p:
+    value: 9
+    evidence: >
+      The SDK made building the summarizer fast; going from zero to a working command-line
+      tool took 3 hours including reading the documentation, which is remarkably fast for a first API integration.
+  q:
+    value: 9
+    evidence: >
+      Tool use for structured output worked exactly as documented; the type-safe response
+      handling caught an error in my schema definition before it caused runtime issues.
+  c:
+    value: 8
+    evidence: >
+      The SDK adds no overhead cost; my only expense is API tokens, and the SDK's clear
+      token counting utilities helped me understand and optimize my token usage as a student on a budget.
+  r:
+    value: 10
+    evidence: >
+      Over 4 weeks of daily personal use the SDK never produced a library-level error;
+      every failure was my own code or prompt logic, which the clear error messages helped me diagnose quickly.
+  x:
+    value: 8
+    evidence: >
+      SDK integrates naturally with PyPDF2 for PDF processing and typer for CLI development;
+      building a complete tool with the SDK and standard Python libraries required no unusual integration work.
+  f:
+    value: 10
+    evidence: >
+      pip install anthropic, export ANTHROPIC_API_KEY, and the first completion ran in
+      under 5 minutes; the quickstart documentation is the best I have encountered for any API client library.
+verdict: >
+  The Anthropic Python SDK is the best starting point for any Python developer building
+  their first Claude application; its documentation quality, type safety, and reliability
+  make it approachable for students while being robust enough for production use by
+  experienced developers.
+conflict_of_interest: none

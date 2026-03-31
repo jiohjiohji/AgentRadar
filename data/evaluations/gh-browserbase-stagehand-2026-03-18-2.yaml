@@ -1,0 +1,47 @@
+tool_id: gh-browserbase-stagehand
+reporter_role: team-lead
+date_evaluated: "2026-03-18"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated Stagehand for a QA automation use case: replacing a fragile Selenium test
+  suite with AI-native browser automation that does not break on minor UI changes. Tested
+  30 critical user journey tests converted from Selenium to Stagehand act() instructions.
+  Measured test reliability and maintenance burden over a 3-week period.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Converting 30 Selenium tests to Stagehand took 2 days versus writing new Selenium
+      tests from scratch at 1 day; the maintenance burden reduction was the compelling argument, not initial speed.
+  q:
+    value: 7
+    evidence: >
+      28 of 30 tests passed consistently; 2 tests on dynamically generated forms required
+      additional act() instruction specificity to reliably identify form fields.
+  c:
+    value: 5
+    evidence: >
+      Running 30 AI-native tests uses significantly more API tokens than headless browser
+      testing without LLM calls; at daily CI frequency the monthly Stagehand LLM cost was approximately $80.
+  r:
+    value: 8
+    evidence: >
+      Stagehand tests were resilient to 3 UI changes that broke equivalent Selenium tests;
+      the AI-native element identification handled minor DOM structure changes without test rewrites.
+  x:
+    value: 6
+    evidence: >
+      Stagehand integrates with standard Node.js test runners; connecting it to our GitHub
+      Actions CI pipeline required configuring Browserbase credentials as repository secrets.
+  f:
+    value: 7
+    evidence: >
+      npm install and first test running took 45 minutes including Browserbase account
+      setup and CI credential configuration; slightly more involved than plain Playwright setup.
+verdict: >
+  Stagehand delivers genuine resilience improvements for browser automation tests, reducing
+  maintenance burden from UI changes at the cost of higher per-run LLM token consumption;
+  teams with high-maintenance Selenium suites and complex UI interactions will find the
+  trade-off favorable; teams with simple stable UIs should stick with standard Playwright.
+conflict_of_interest: none

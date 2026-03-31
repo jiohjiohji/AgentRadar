@@ -1,0 +1,49 @@
+tool_id: gh-ryanmac-code-conductor
+reporter_role: developer
+date_evaluated: "2026-03-09"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used Code Conductor to orchestrate parallel Claude Code subagents via GitHub for a
+  medium-sized refactoring project. Set up the orchestrator to decompose a monolith into
+  3 microservices, with separate subagent worktrees for each service. Evaluated task
+  decomposition quality, subagent coordination, and GitHub-based state management.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Three services were developed in parallel, compressing roughly 3 days of sequential
+      work into about 1.5 days; the parallelism benefit was real but coordination overhead
+      consumed some of the savings.
+  q:
+    value: 6
+    evidence: >
+      Individual subagent outputs were solid, but inter-service interface consistency
+      required a manual reconciliation pass; automated coordination between subagents on
+      shared API contracts was limited.
+  c:
+    value: 5
+    evidence: >
+      Running three Claude Code sessions simultaneously tripled the concurrent token spend;
+      the parallelism saves wall clock time but not API cost, which is a trade-off to plan for.
+  r:
+    value: 6
+    evidence: >
+      Two of the three parallel subagents completed cleanly; one got stuck on a git conflict
+      in the shared types file and required manual intervention to resume.
+  x:
+    value: 7
+    evidence: >
+      GitHub serves as the coordination layer between subagents, which is an elegant design;
+      integration with existing GitHub workflows was natural and did not require separate infrastructure.
+  f:
+    value: 6
+    evidence: >
+      Setup required understanding the worktree model and configuring the orchestrator YAML;
+      documentation was helpful but getting the first parallel run working took about 90 minutes.
+verdict: >
+  Code Conductor delivers meaningful wall clock time savings for parallelizable coding tasks
+  by leveraging GitHub-based subagent coordination; the cost trade-off (parallel spend vs
+  time savings) and manual reconciliation of shared interfaces are the main considerations
+  for teams evaluating whether the approach fits their workflow.
+conflict_of_interest: none

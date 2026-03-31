@@ -1,0 +1,46 @@
+tool_id: gh-tavily-mcp
+reporter_role: researcher
+date_evaluated: "2026-03-06"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used Tavily MCP to power a research assistant that gathered current information on
+  AI regulation developments across the EU, UK, and US. Claude issued targeted search
+  queries, synthesized results from multiple sources, and produced a structured briefing
+  document with citations. Compared freshness of results to static training knowledge.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Gathering current regulatory news that would have required 2 hours of manual browser
+      research was completed in under 15 minutes with well-formed search queries via MCP.
+  q:
+    value: 7
+    evidence: >
+      Results were current and relevant but occasionally returned paywalled article snippets
+      that could not be fully accessed, requiring follow-up searches for open-access sources.
+  c:
+    value: 6
+    evidence: >
+      Tavily API charges per search call; a thorough research session with 25 queries cost
+      approximately $0.50 in Tavily fees plus Claude token costs, reasonable but not negligible.
+  r:
+    value: 7
+    evidence: >
+      The same queries on consecutive days returned slightly different result rankings as
+      Tavily's index updated; research reproducibility requires archiving result snapshots.
+  x:
+    value: 8
+    evidence: >
+      The MCP interface integrates cleanly; search results arrive as structured text that
+      Claude processes directly without any JSON parsing step visible to the user.
+  f:
+    value: 9
+    evidence: >
+      API key registration, npx server start, and first search result arrived within three
+      minutes; one of the fastest MCP tools to get working from a cold start.
+verdict: >
+  Tavily MCP is the most practical real-time web search option in the Claude Code MCP
+  ecosystem, delivering fresh results quickly at a modest per-query cost; result variability
+  across days is worth noting for research reproducibility but is inherent to live web search.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-github-mcp-server
+reporter_role: team-lead
+date_evaluated: "2026-03-13"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Configured GitHub MCP server for an engineering team to automate weekly release note
+  generation. Claude queried merged PRs since the last tag, grouped them by label into
+  features/fixes/chores, drafted a CHANGELOG entry, and opened a draft PR with the
+  changelog update. Tested on three consecutive sprint releases.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Release note drafting dropped from 90 minutes of manual work per release to under
+      10 minutes of Claude generation plus 5 minutes of human review and minor edits.
+  q:
+    value: 7
+    evidence: >
+      The drafted changelogs were accurate but lacked the narrative context our team prefers;
+      they read more like bullet dumps than polished release notes, requiring consistent editing.
+  c:
+    value: 8
+    evidence: >
+      Querying 60 PRs per release and generating the changelog consumed around 4k tokens,
+      making this one of the cheapest high-value automations we have in our Claude Code stack.
+  r:
+    value: 8
+    evidence: >
+      All three sprint releases produced well-structured output; one time the PR query missed
+      two hotfix commits merged directly to main, a data completeness issue not a reliability issue.
+  x:
+    value: 9
+    evidence: >
+      The MCP server slots into Claude Code seamlessly; we chain it with a filesystem write
+      to update CHANGELOG.md and then a shell tool to push the branch, all in one Claude session.
+  f:
+    value: 8
+    evidence: >
+      Installation via the official GitHub App OAuth route was cleaner than PAT; team members
+      onboarded within 10 minutes each using shared MCP config in the repo's .claude directory.
+verdict: >
+  GitHub MCP server delivers consistent value for release-workflow automation, particularly
+  PR querying and changelog generation; the output quality is functional but benefits from
+  human editing for polished communication, making it a productivity multiplier rather than
+  a complete replacement for human judgment.
+conflict_of_interest: none

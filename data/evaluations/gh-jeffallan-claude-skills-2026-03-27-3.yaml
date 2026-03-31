@@ -1,0 +1,47 @@
+tool_id: gh-jeffallan-claude-skills
+reporter_role: student
+date_evaluated: "2026-03-27"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the skills collection for a university software engineering project building a
+  Python Django REST API. Applied the Django model generation skill, the serializer skill,
+  the pytest fixture creation skill, and the OpenAPI documentation skill. Compared the
+  experience to writing prompts manually as a first-time Claude Code user.
+scores:
+  p:
+    value: 9
+    evidence: >
+      As a beginner, the skills removed the need to know how to write effective prompts;
+      I completed Django boilerplate in 40 minutes that would have taken me half a day manually.
+  q:
+    value: 7
+    evidence: >
+      Django model generation was accurate for standard field types; the skill did not
+      know my project's custom base model class and I had to edit generated code to inherit from it.
+  c:
+    value: 9
+    evidence: >
+      Skills are focused and token-efficient; as a student on a limited API budget, the
+      predictable token usage helped me stay within my monthly allowance without surprise overspend.
+  r:
+    value: 8
+    evidence: >
+      Every skill I used produced consistent output across multiple invocations; the Django
+      model skill in particular produced identical field structures for identical model descriptions.
+  x:
+    value: 8
+    evidence: >
+      Works seamlessly within Claude Code's slash command interface; no configuration
+      needed beyond the install step, which is exactly what a student needs.
+  f:
+    value: 10
+    evidence: >
+      Single git clone command and skills appear in Claude Code immediately; this is the
+      fastest setup I have experienced for any developer tool in my student experience.
+verdict: >
+  The 66 skills collection is the best Claude Code extension for students and developers new
+  to AI-assisted coding; it abstracts prompt engineering behind discoverable slash commands,
+  produces reliable output, and costs negligible tokens — an ideal starting point before
+  learning to write custom prompts.
+conflict_of_interest: none

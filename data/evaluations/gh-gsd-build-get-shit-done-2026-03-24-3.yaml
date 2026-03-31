@@ -1,0 +1,34 @@
+tool_id: "gh-gsd-build-get-shit-done"
+reporter_role: "small-team"
+date_evaluated: "2026-03-24"
+claude_code_version: "1.0.57"
+platform: "ubuntu"
+
+task_performed: >
+  Applied the TÂCHES context engineering system to a complex refactoring task:
+  migrating a monolithic Express API to a modular service architecture. Used
+  the spec and planning phases to map dependencies before any code changes.
+
+scores:
+  p:
+    value: 9
+    evidence: "Dependency mapping phase identified 14 hidden couplings in 2 hours that would have taken a week to discover through trial-and-error refactoring; total migration completed in 4 days vs 2-week estimate"
+  q:
+    value: 9
+    evidence: "Migration produced zero regressions in test suite; the spec phase forced documentation of all cross-module contracts before implementation, making the refactoring verifiable"
+  c:
+    value: 9
+    evidence: "Free framework; prevented rework savings far exceed any token cost; the 4-day vs 2-week timeline difference represents the most tangible ROI measure"
+  r:
+    value: 8
+    evidence: "Framework performed consistently across all phases; one planning output was over-engineered and required scoping down, but the framework itself behaved predictably throughout"
+  x:
+    value: 9
+    evidence: "Combined with Claude Code's existing file reading capabilities for dependency analysis; the framework layers cleanly above Claude Code's native tools"
+  f:
+    value: 9
+    evidence: "Adapted the spec template to a refactoring context in 15 minutes; the framework is flexible enough that the template worked well beyond its default feature-development use case"
+
+verdict: "Exceptional value for large refactoring tasks where scope definition is the hardest part — the spec and planning phases are where this framework earns its reputation."
+
+conflict_of_interest: "none"

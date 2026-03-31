@@ -1,0 +1,46 @@
+tool_id: gh-jeffallan-claude-skills
+reporter_role: team-lead
+date_evaluated: "2026-03-17"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Piloted the 66 skills collection with a 6-person full-stack team over two sprints. Tracked
+  which skills were adopted, how often they were used, whether teams modified skills for
+  local conventions, and what the overall impact was on code review quality and throughput.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Five engineers adopted at least 4 skills within the first sprint; the most popular
+      were test generation, API scaffolding, and documentation skills, each used 10+ times.
+  q:
+    value: 7
+    evidence: >
+      Code review feedback noted fewer structural issues in skill-generated code; one engineer
+      modified the API scaffolding skill to match our project conventions and shared it with the team.
+  c:
+    value: 8
+    evidence: >
+      Skills kept per-task token costs predictable and low; the concise skill format
+      prevented open-ended prompts that tend to generate verbose and expensive context windows.
+  r:
+    value: 8
+    evidence: >
+      Skills produced stable output across the team when used with similar inputs;
+      variation appeared when team members added different contextual details to skill calls.
+  x:
+    value: 8
+    evidence: >
+      Integrates cleanly with our team's Claude Code configuration; engineers can add
+      custom skills to the shared skills directory in the repo and all team members get them via git pull.
+  f:
+    value: 9
+    evidence: >
+      Team onboarding was under 10 minutes per person; the slash command interface is
+      intuitive and engineers immediately understood how to invoke skills from past Claude Code experience.
+verdict: >
+  The 66 skills collection is a strong team productivity tool that integrates naturally into
+  existing Claude Code workflows; the slash command interface reduces adoption friction and
+  the customizability of skill files allows teams to tailor the collection to their conventions
+  over time, making it a compounding investment.
+conflict_of_interest: none

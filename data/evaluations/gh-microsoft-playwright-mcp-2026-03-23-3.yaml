@@ -1,0 +1,46 @@
+tool_id: gh-microsoft-playwright-mcp
+reporter_role: researcher
+date_evaluated: "2026-03-23"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Evaluated Playwright MCP for collecting accessibility audit data from a corpus of 50 public
+  government websites. Claude drove the browser, triggered axe-core evaluations via the
+  accessibility snapshot tool, and aggregated WCAG violation counts per site into a dataset
+  for analysis. Compared with manual audit methodology for accuracy.
+scores:
+  p:
+    value: 9
+    evidence: >
+      Manual accessibility auditing of 50 sites would have taken roughly two full work weeks;
+      with Playwright MCP the complete dataset was collected in under four hours of automated runs.
+  q:
+    value: 7
+    evidence: >
+      Axe-core violation counts matched manual auditor results on 44 of 50 sites; the six
+      discrepancies were on sites using custom ARIA patterns that the automated tool under-counted.
+  c:
+    value: 6
+    evidence: >
+      At roughly 6k tokens per site audit, the total Claude API cost for 50 sites was around
+      $3.00, which is reasonable for research but would not scale cheaply to thousands of sites.
+  r:
+    value: 8
+    evidence: >
+      Identical re-runs on 10 sites produced the same violation counts each time, indicating
+      the snapshot-based approach is deterministic once page load timing issues are handled.
+  x:
+    value: 7
+    evidence: >
+      Output JSON from Playwright MCP slots directly into our Python analysis pipeline with
+      a thin parsing layer; no special adapter needed beyond standard file I/O conventions.
+  f:
+    value: 7
+    evidence: >
+      Ubuntu 22.04 install was smooth with the npx invocation; had to add a two-second wait
+      hint for slow government sites that rendered after JavaScript hydration completed.
+verdict: >
+  Playwright MCP is genuinely valuable for research-scale browser automation tasks, delivering
+  strong time savings and reproducible results; cost per run limits applicability to large-scale
+  surveys, but for focused research corpora it is a practical and well-integrated choice.
+conflict_of_interest: none

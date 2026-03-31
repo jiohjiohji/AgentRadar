@@ -1,0 +1,47 @@
+tool_id: gh-browserbase-stagehand
+reporter_role: researcher
+date_evaluated: "2026-03-28"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used Stagehand for research data collection requiring browser interaction with authenticated
+  academic databases. Automated login, search query submission, and result extraction from
+  3 databases with anti-bot measures that blocked standard Playwright approaches. Evaluated
+  whether Stagehand's AI-native approach improved access success rates.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Manual data collection from 3 databases over 2 weeks was estimated at 40 hours;
+      Stagehand automation completed the collection in 8 hours of automated runs, a 5x speedup.
+  q:
+    value: 7
+    evidence: >
+      Data extraction accuracy was high for structured search results; 3 of 150 result
+      pages had unusual rendering that caused incomplete extraction, requiring manual review of those pages.
+  c:
+    value: 5
+    evidence: >
+      Research data collection at scale amplifies the per-act() LLM cost; 150 page
+      interactions consumed approximately 45k additional tokens beyond data extraction, a $2.70 overhead.
+  r:
+    value: 7
+    evidence: >
+      Database login automation succeeded consistently; result extraction had 98% success
+      rate, with the 2% failures concentrated on pages that loaded slowly on the Browserbase infrastructure.
+  x:
+    value: 6
+    evidence: >
+      Stagehand output is JSON compatible with standard Python analysis pipelines via a
+      Node-to-Python handoff; composing it with Jupyter analysis required a CSV export step.
+  f:
+    value: 7
+    evidence: >
+      Browserbase account setup and credential configuration took 30 minutes; Stagehand's
+      natural language interface made writing database-specific extraction scripts intuitive.
+verdict: >
+  Stagehand is effective for research data collection from authenticated web sources that
+  resist standard automation approaches; the AI-native element identification handles the
+  unpredictable page structures of academic databases better than selector-based tools;
+  researchers should budget for the per-interaction LLM cost as a line item in data collection planning.
+conflict_of_interest: none

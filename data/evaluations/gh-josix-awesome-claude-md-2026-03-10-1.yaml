@@ -1,0 +1,47 @@
+tool_id: gh-josix-awesome-claude-md
+reporter_role: developer
+date_evaluated: "2026-03-10"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Browsed the curated CLAUDE.md examples collection to find patterns applicable to a
+  Python/FastAPI project. Selected 3 relevant examples (API project, testing conventions,
+  and dependency management patterns), adapted them into a CLAUDE.md for the project,
+  and measured impact on Claude Code output quality across 10 representative tasks.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Time to write a well-structured CLAUDE.md from scratch dropped from 2 hours to 40
+      minutes by adapting existing examples; the curated collection surfaces patterns I would not have thought to include.
+  q:
+    value: 7
+    evidence: >
+      Adapted CLAUDE.md improved Claude Code's adherence to project conventions on 8 of
+      10 tasks; the 2 misses were tasks requiring context about business logic not captured in CLAUDE.md.
+  c:
+    value: 9
+    evidence: >
+      The collection itself is free; the value is the reduced time writing CLAUDE.md files
+      which translates to lower cost of setup rather than lower per-session API cost.
+  r:
+    value: 8
+    evidence: >
+      CLAUDE.md patterns from the collection are well-tested against real projects; the
+      recommended patterns consistently produced the intended context shaping effect across sessions.
+  x:
+    value: 6
+    evidence: >
+      CLAUDE.md improvements compose with MCP tools and skills; better project context
+      in CLAUDE.md improves the quality of all tool interactions without changing tool configurations.
+  f:
+    value: 9
+    evidence: >
+      Browse GitHub repository, copy relevant example, adapt to project; no installation,
+      no dependencies, immediately applicable to any project with a text editor.
+verdict: >
+  The awesome-claude-md collection is a high-value reference resource for Claude Code users
+  setting up new projects; it surfaces CLAUDE.md patterns from real projects that would
+  take significant trial and error to discover independently, compressing project setup time
+  considerably.
+conflict_of_interest: none

@@ -1,0 +1,47 @@
+tool_id: gh-modal-labs-modal
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-29"
+claude_code_version: "N/A"
+platform: linux
+task_performed: >
+  Evaluated Modal for enterprise AI infrastructure. Assessed VPC networking options for
+  private model deployments, SOC 2 compliance posture, data residency controls for
+  processing sensitive enterprise data, and multi-team access management with spending limits.
+  Compared to self-managed Kubernetes GPU cluster for a 50-person AI platform team.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Modal's managed infrastructure eliminated the need for a dedicated platform engineer
+      to manage GPU Kubernetes clusters; the team redirected that engineering capacity to product features.
+  q:
+    value: 8
+    evidence: >
+      Deployment reproducibility across regions was consistent; the same Modal function
+      produced identical outputs when deployed in us-east-1 and eu-west-1 for data residency compliance.
+  c:
+    value: 7
+    evidence: >
+      At enterprise scale, Modal's compute costs are competitive with managed Kubernetes;
+      the hidden cost savings from eliminated platform engineering headcount make the economics strongly favorable.
+  r:
+    value: 8
+    evidence: >
+      Modal's SLA documentation and historical uptime data met our enterprise requirements;
+      the per-team spending limits and usage dashboards satisfied our FinOps team's governance requirements.
+  x:
+    value: 7
+    evidence: >
+      Modal integrates with our corporate GitHub, secrets management (HashiCorp Vault),
+      and CI/CD pipelines; the Python-based deployment fits our existing infrastructure-as-code practices.
+  f:
+    value: 7
+    evidence: >
+      Enterprise setup required VPC peering configuration and SSO integration; the Modal
+      enterprise team provided guided setup, completing the networking configuration in 2 days.
+verdict: >
+  Modal is enterprise-ready for GPU compute workloads and offers compelling economics
+  relative to self-managed GPU infrastructure when platform engineering overhead is included
+  in the cost comparison; the SOC 2 compliance, regional deployment options, and team
+  access controls meet enterprise requirements for most AI workloads.
+conflict_of_interest: none

@@ -1,0 +1,46 @@
+tool_id: gh-mcp-filesystem
+reporter_role: student
+date_evaluated: "2026-03-15"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Used the filesystem MCP to manage a research project's data files. Claude read CSV datasets
+  from a local directory, performed lightweight transformations described in plain English,
+  and wrote processed files to an output directory. Also used it to organize paper PDFs by
+  renaming them from hash strings to author-year-title format based on content inspection.
+scores:
+  p:
+    value: 7
+    evidence: >
+      File organization tasks that would take 30 minutes of manual renaming and directory
+      creation were completed in under 5 minutes with Claude directing file operations via MCP.
+  q:
+    value: 9
+    evidence: >
+      Every read and write operation was accurate; CSV files were read without any character
+      encoding issues and written files matched the exact transformations requested in prompts.
+  c:
+    value: 9
+    evidence: >
+      The MCP itself has zero API cost and the Claude token overhead per file operation is
+      minimal; this is the most cost-efficient tool in my stack for local file management tasks.
+  r:
+    value: 10
+    evidence: >
+      Over 6 weeks of daily use for research file management, the filesystem MCP never
+      produced an error or unexpected result; it is the most dependable tool I use with Claude Code.
+  x:
+    value: 9
+    evidence: >
+      Combined with Tavily MCP for downloading research data and Claude's analysis capabilities,
+      the filesystem MCP creates a complete research pipeline without any external infrastructure.
+  f:
+    value: 10
+    evidence: >
+      Configured in under 2 minutes by adding a single directory path to the MCP JSON;
+      no accounts, no keys, no dependencies beyond Node.js which was already installed.
+verdict: >
+  The filesystem MCP is essential for any Claude Code setup; it delivers perfectly reliable
+  local file operations with zero setup friction and negligible cost, forming the foundation
+  layer that all other MCP tools depend on for persisting and sharing data between steps.
+conflict_of_interest: none

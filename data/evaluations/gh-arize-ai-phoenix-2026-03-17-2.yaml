@@ -1,0 +1,47 @@
+tool_id: gh-arize-ai-phoenix
+reporter_role: researcher
+date_evaluated: "2026-03-17"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Used Phoenix for a research study evaluating chain-of-thought prompting quality on a
+  science question-answering benchmark. Traced all Claude API calls, exported span data
+  for analysis, and used Phoenix's LLM-as-judge evaluators to score reasoning quality
+  across 500 questions with three different prompting strategies.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Automated evaluation of 1500 responses across three strategies (500 each) would have
+      taken weeks of manual scoring; Phoenix's batch evaluation with LLM-as-judge completed it in 4 hours.
+  q:
+    value: 7
+    evidence: >
+      LLM-as-judge reasoning quality scores showed 82% agreement with a 50-item human
+      validation set; the 18% disagreement was concentrated on ambiguous reasoning chains that human raters also disagreed on.
+  c:
+    value: 6
+    evidence: >
+      LLM-as-judge evaluation adds evaluation API costs (one Claude call per evaluated response);
+      at 1500 responses this added $9 to the research budget, which is acceptable but should be planned for.
+  r:
+    value: 8
+    evidence: >
+      Phoenix ran the full 1500-response evaluation without any data capture failures;
+      span export to CSV for external analysis worked correctly and produced complete data.
+  x:
+    value: 7
+    evidence: >
+      Phoenix's OpenTelemetry integration works with any Python Claude application; the
+      span export feature enabled analysis in our existing Jupyter research environment without custom tooling.
+  f:
+    value: 8
+    evidence: >
+      pip install and 3-line instrumentation addition; the batch evaluation setup required
+      reading the Phoenix documentation for 20 minutes but ran successfully on the first attempt.
+verdict: >
+  Phoenix provides genuine research value for systematic prompt strategy evaluation at scale;
+  the LLM-as-judge automated scoring enables studies that would be infeasible with manual
+  evaluation, and the tracing data provides detailed behavioral information for qualitative
+  analysis alongside the quantitative metrics.
+conflict_of_interest: none

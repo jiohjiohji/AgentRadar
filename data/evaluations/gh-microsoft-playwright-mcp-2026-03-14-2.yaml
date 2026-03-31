@@ -1,0 +1,45 @@
+tool_id: gh-microsoft-playwright-mcp
+reporter_role: team-lead
+date_evaluated: "2026-03-14"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Directed Claude Code to use Playwright MCP for scraping competitor pricing pages weekly,
+  extracting product names and prices from dynamically rendered React tables, then writing
+  results to a CSV. Also validated login-wall bypass via session cookie injection.
+scores:
+  p:
+    value: 7
+    evidence: >
+      The weekly scraping job that previously took a junior dev half a day now runs
+      unattended in about 20 minutes, though manual review of edge-case rows is still needed.
+  q:
+    value: 8
+    evidence: >
+      Price extraction accuracy was 96% across 400 tested product rows; the four failures
+      were currency-format edge cases that required a post-processing normalization step.
+  c:
+    value: 5
+    evidence: >
+      Running 10 concurrent browser contexts consumed significant server RAM and Claude API
+      tokens simultaneously; cost per 1000 scraped rows was higher than a dedicated scraper.
+  r:
+    value: 6
+    evidence: >
+      Anti-scraping measures on one competitor site caused the agent to stall twice per week
+      on average, requiring a manual re-trigger; other sites were consistently reliable.
+  x:
+    value: 7
+    evidence: >
+      Worked well with our existing MCP stack; we pipe the CSV output into a downstream
+      filesystem MCP tool, and the handoff between tools was straightforward in Claude Code.
+  f:
+    value: 6
+    evidence: >
+      Linux headless setup required installing additional system deps (libgbm, libasound2)
+      not mentioned in the README, adding about 30 minutes of troubleshooting time.
+verdict: >
+  Playwright MCP handles dynamic-page scraping tasks effectively when sites cooperate, but
+  anti-bot measures and higher resource costs relative to lightweight scrapers make it better
+  suited to low-frequency, high-value extraction jobs than high-volume commodity scraping.
+conflict_of_interest: none

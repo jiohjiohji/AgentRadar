@@ -1,0 +1,47 @@
+tool_id: gh-openai-swarm
+reporter_role: student
+date_evaluated: "2026-03-25"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used OpenAI Swarm examples to learn multi-agent orchestration patterns for a graduate
+  AI systems course assignment. Ran the provided demos, studied the source code, and wrote
+  a comparative analysis of Swarm's handoff model versus CrewAI and LangGraph approaches.
+  Specifically looked at how context is passed between agents during handoffs.
+scores:
+  p:
+    value: 5
+    evidence: >
+      As an educational resource the examples were immediately productive for understanding
+      agent handoffs; the productivity value for building anything real is zero due to the archival status.
+  q:
+    value: 7
+    evidence: >
+      The example code clearly demonstrates the handoff pattern and the source code is
+      well-commented; this was the clearest implementation of function-based agent routing I studied in the course.
+  c:
+    value: 7
+    evidence: >
+      Running the examples cost pennies in OpenAI API fees; as a student, the low cost
+      to experiment with the examples made it one of the most accessible frameworks to learn from.
+  r:
+    value: 5
+    evidence: >
+      Most examples ran correctly for learning purposes; the failing example due to a
+      deprecated SDK method was actually educational, illustrating why production code needs active maintenance.
+  x:
+    value: 3
+    evidence: >
+      Swarm only composes within the OpenAI ecosystem; for students working with multiple
+      LLM providers, the tight OpenAI coupling limits its practical study value.
+  f:
+    value: 8
+    evidence: >
+      pip install openai-swarm and the examples run immediately with an OpenAI key;
+      the installation experience is genuinely beginner-friendly despite the archived state.
+verdict: >
+  OpenAI Swarm is one of the best educational resources for understanding multi-agent handoff
+  patterns; its clean code and well-structured examples make it ideal for learning, but
+  students should understand it is an archived reference implementation rather than a
+  framework to build upon for course projects or production work.
+conflict_of_interest: none

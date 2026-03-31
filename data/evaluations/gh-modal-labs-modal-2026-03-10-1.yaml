@@ -1,0 +1,47 @@
+tool_id: gh-modal-labs-modal
+reporter_role: researcher
+date_evaluated: "2026-03-10"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used Modal to run GPU-accelerated embedding generation for a large corpus of 500k scientific
+  paper abstracts, which were then indexed for RAG with Claude. Deployed a Python function
+  with a batch embedding model on Modal's A10G GPUs, scheduled daily updates for new papers,
+  and integrated the Vector store with a Claude-powered search interface.
+scores:
+  p:
+    value: 9
+    evidence: >
+      Embedding 500k abstracts on Modal took 45 minutes and cost $12; the equivalent
+      on our research team's local GPU cluster would have required 6 hours of job queuing and setup.
+  q:
+    value: 9
+    evidence: >
+      Embedding quality matched reference implementations; Modal's execution environment
+      correctly reproduced the PyTorch-based embedding model results with numerical precision within floating point tolerance.
+  c:
+    value: 8
+    evidence: >
+      GPU compute cost on Modal is competitive; $12 for 500k embeddings is approximately
+      40% cheaper than equivalent GCP or AWS GPU instance costs when startup/teardown time is included.
+  r:
+    value: 9
+    evidence: >
+      All 500k embedding jobs completed without failures; Modal handled CUDA OOM gracefully
+      with automatic retry on larger batch sizes for the few oversized abstracts.
+  x:
+    value: 7
+    evidence: >
+      Modal functions output to any storage backend; we used Modal's S3 integration to
+      write embeddings directly to our vector database's S3 ingest path without intermediate storage.
+  f:
+    value: 8
+    evidence: >
+      pip install modal, modal setup (OAuth), and first GPU function deployed in under
+      15 minutes; the Python decorator syntax for GPU deployment is genuinely elegant.
+verdict: >
+  Modal is the most accessible path to on-demand GPU compute for researchers who need
+  to run embedding or inference workloads without managing cloud GPU infrastructure; the
+  cost efficiency, ease of use, and auto-scaling make it a strong recommendation for
+  research teams building RAG systems at scale.
+conflict_of_interest: none

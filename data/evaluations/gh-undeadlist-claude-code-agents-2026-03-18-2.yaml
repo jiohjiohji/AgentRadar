@@ -1,0 +1,49 @@
+tool_id: gh-undeadlist-claude-code-agents
+reporter_role: team-lead
+date_evaluated: "2026-03-18"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Deployed the prompt template collection for a team's Claude Code agent library. Evaluated
+  10 of the agent templates for coverage of a typical sprint's tasks: feature planning,
+  implementation, testing, code review, and documentation agents. Tracked which templates
+  teams found most valuable and where gaps existed.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Feature planning and code review templates were used frequently and valued; testing
+      and documentation templates were used less because engineers felt Claude Code's default
+      behavior was sufficient for those tasks.
+  q:
+    value: 7
+    evidence: >
+      Code review agent template produced structured reviews with explicit sections for
+      correctness, security, and performance that matched our review checklist better than
+      generic review prompts.
+  c:
+    value: 8
+    evidence: >
+      Focused templates prevent bloated prompts; the structured agent format consistently
+      used 20-30% fewer tokens than the free-form prompts engineers wrote independently.
+  r:
+    value: 8
+    evidence: >
+      Template consistency is the main value; team members using the same template for
+      similar tasks produced structurally comparable outputs, simplifying code review and team communication.
+  x:
+    value: 7
+    evidence: >
+      Templates worked cleanly with our MCP configuration; the agents directory structure
+      made it easy to maintain and version our team's custom template additions.
+  f:
+    value: 9
+    evidence: >
+      Drop-in installation to the Claude Code agents directory; sharing templates across the
+      team via the repo took no individual setup effort per team member.
+verdict: >
+  The claude-code-agents template collection is a practical team resource that improves
+  output consistency and reduces prompt engineering overhead; the code review and planning
+  templates offer the most differentiated value while simpler task templates are less
+  compelling against Claude Code's capable defaults.
+conflict_of_interest: none

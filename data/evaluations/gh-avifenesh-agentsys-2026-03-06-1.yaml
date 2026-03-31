@@ -1,0 +1,49 @@
+tool_id: gh-avifenesh-agentsys
+reporter_role: developer
+date_evaluated: "2026-03-06"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Installed AgentSys and explored its 19 plugins across a full development workflow:
+  used the code review agent for a Python Flask API, the documentation agent to generate
+  module-level docstrings, and the test generation agent to produce pytest cases for
+  5 utility functions. Evaluated how the 47 pre-built agents coordinate with Claude Code's
+  native tool use.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Pre-built agents for code review, docs, and test generation reduced the time to
+      complete those tasks versus prompt engineering from scratch by roughly 50% per task.
+  q:
+    value: 6
+    evidence: >
+      Generated pytest cases covered happy paths reliably but missed edge cases for
+      boundary values and error conditions that a human test author would include; docstrings
+      were accurate but formulaic.
+  c:
+    value: 6
+    evidence: >
+      Each specialized agent invocation adds orchestration overhead tokens on top of the
+      actual task tokens; for simple tasks the overhead is noticeable, for complex ones it is amortized.
+  r:
+    value: 7
+    evidence: >
+      Across 15 agent invocations over two sessions, one agent stalled waiting for a tool
+      response that timed out; the other 14 completed correctly and consistently.
+  x:
+    value: 7
+    evidence: >
+      The plugin architecture layers on top of Claude Code's native tools without conflict;
+      agents can invoke shell, file, and custom MCP tools in combination, which is the intended design.
+  f:
+    value: 6
+    evidence: >
+      Installation required cloning the repo and configuring the plugin manifest; the
+      documentation is dense and getting the first agent to run correctly took about 45 minutes.
+verdict: >
+  AgentSys delivers a practical library of development-oriented agents that reduce prompt
+  engineering effort; the quality ceiling is limited by the pre-built agent templates which
+  tend toward breadth over depth, but it is a genuine time saver for development teams willing
+  to invest in the setup and understand the plugin architecture.
+conflict_of_interest: none

@@ -1,0 +1,48 @@
+tool_id: gh-openai-swarm
+reporter_role: researcher
+date_evaluated: "2026-03-04"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Studied and ran the OpenAI Swarm examples to understand its multi-agent handoff patterns.
+  Executed the triage agent, customer service agent, and weather agent demos. Adapted the
+  handoff pattern to use Anthropic's Python SDK instead of the OpenAI SDK as a learning
+  exercise. Evaluated the educational value of the framework for multi-agent architecture
+  patterns, noting the March 2025 archival.
+scores:
+  p:
+    value: 3
+    evidence: >
+      The example code ran correctly for educational purposes but the framework was archived
+      in March 2025 and has no production maintenance; productivity value is limited to learning.
+  q:
+    value: 6
+    evidence: >
+      The agent handoff patterns demonstrated in the examples are conceptually correct and
+      the code quality is high; as an educational resource the examples illustrate agent coordination clearly.
+  c:
+    value: 6
+    evidence: >
+      Using Swarm for learning costs only the OpenAI API tokens for running examples; as
+      a production framework the cost efficiency is irrelevant given its archived status.
+  r:
+    value: 5
+    evidence: >
+      Examples ran correctly against the OpenAI API version current at archival; some examples
+      showed deprecation warnings for OpenAI SDK features that have since been updated.
+  x:
+    value: 3
+    evidence: >
+      Swarm's handoff model is OpenAI-specific and requires the OpenAI client; adapting
+      patterns to other frameworks requires reimplementing the routing logic without Swarm code.
+  f:
+    value: 7
+    evidence: >
+      pip install and running examples worked immediately; as an OpenAI research project
+      the installation experience is polished even though the framework is no longer developed.
+verdict: >
+  OpenAI Swarm is valuable as an educational reference for multi-agent handoff patterns
+  and should be studied by developers designing agent coordination systems; it should not
+  be used in production given its March 2025 archival and OpenAI's recommendation to use
+  the Agents SDK instead.
+conflict_of_interest: none

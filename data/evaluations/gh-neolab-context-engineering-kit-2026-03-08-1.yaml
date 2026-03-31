@@ -1,0 +1,47 @@
+tool_id: gh-neolab-context-engineering-kit
+reporter_role: developer
+date_evaluated: "2026-03-08"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the NeoLab context engineering kit to set up a well-structured Claude Code workspace
+  for a Go microservices project. Applied the provided skills for architectural review,
+  dependency analysis, and service boundary validation. Compared output quality to generic
+  Claude prompts without context engineering structure.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The pre-configured context structure saved about an hour of CLAUDE.md writing; however,
+      the Go-specific skills needed significant adaptation from the defaults which assumed Python/JS projects.
+  q:
+    value: 6
+    evidence: >
+      Architectural review skill output was thoughtful but surface-level for Go microservices;
+      the skill templates clearly originated from web application contexts and needed domain tuning.
+  c:
+    value: 7
+    evidence: >
+      Context engineering kits front-load the investment in token-efficient prompts; once
+      configured, per-session costs were lower than our baseline generic prompting approach.
+  r:
+    value: 7
+    evidence: >
+      The skills produced consistent output quality when used with the provided context
+      structure; removing the context structure degraded output significantly, confirming its value.
+  x:
+    value: 6
+    evidence: >
+      The kit's skills are Claude Code slash commands that coexist with MCP tools; there
+      is no conflict but also no special integration that enhances MCP tool use.
+  f:
+    value: 7
+    evidence: >
+      Initial setup was well-documented; adapting skills from the provided defaults to
+      Go-specific patterns required reading each skill file and rewriting key prompt sections.
+verdict: >
+  The NeoLab context engineering kit provides a solid starting point for structured Claude Code
+  workspaces, particularly for JavaScript and Python web projects; Go and other ecosystem users
+  will need to invest in adapting the skills to their domain, reducing the out-of-box value
+  while still providing a useful structural framework.
+conflict_of_interest: none

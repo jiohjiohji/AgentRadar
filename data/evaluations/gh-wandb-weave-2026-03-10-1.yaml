@@ -1,0 +1,48 @@
+tool_id: gh-wandb-weave
+reporter_role: researcher
+date_evaluated: "2026-03-10"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Used Weights & Biases Weave to track and evaluate a Claude-powered information extraction
+  pipeline for scientific literature. Used Weave's @weave.op decorator to instrument the
+  pipeline's extraction functions, ran evaluations using Weave's Evaluation class with
+  custom scorers, and used the Weave UI to compare extraction quality across prompt versions.
+scores:
+  p:
+    value: 7
+    evidence: >
+      Weave's op decorator made instrumenting the pipeline non-intrusive; the evaluation
+      framework reduced the time to compare three extraction prompt strategies from 3 days to half a day.
+  q:
+    value: 8
+    evidence: >
+      Custom scorers using Claude as a judge produced accuracy metrics that agreed with
+      manual validation on 88% of test cases; the Weave UI's side-by-side comparison view
+      was the most useful quality analysis feature.
+  c:
+    value: 6
+    evidence: >
+      Weave's hosted service is free up to a generous limit; using Claude as a judge adds
+      evaluation API costs; at 300 evaluated samples the judge evaluation cost was approximately $3.50.
+  r:
+    value: 8
+    evidence: >
+      Weave captured all traces and evaluation results correctly across 2 weeks of use;
+      no data loss or instrumentation failures were observed even during rapid iteration.
+  x:
+    value: 8
+    evidence: >
+      The @weave.op decorator works on any Python function including Anthropic SDK calls;
+      it integrates with existing Python code without requiring framework-specific refactoring.
+  f:
+    value: 8
+    evidence: >
+      pip install weave, add decorator, and traces appear in the Weave UI; the zero-config
+      auto-instrumentation for common LLM patterns is a genuine setup friction reducer.
+verdict: >
+  Weave is a well-designed LLM development toolkit that combines tracing and structured
+  evaluation in one platform; its decorator-based instrumentation is the most non-intrusive
+  approach tested and the evaluation framework is flexible enough for custom research scoring
+  needs; a strong choice for researchers and teams already using Weights & Biases.
+conflict_of_interest: none

@@ -1,0 +1,30 @@
+id: gh-ruvnet-ruflo
+name: Ruflo (claude-flow)
+source_url: https://github.com/ruvnet/ruflo
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores:
+  p: 8.7
+  q: 7.3
+  c: 5.3
+  r: 7.3
+  x: 8.0
+  f: 6.3
+  composite: 7.1
+  eval_count: 3
+  last_computed: '2026-03-31'
+score_confidence: medium
+score_history:
+- date: '2026-03-31'
+  overall: 7.1
+  benchmark_version: '1.0'
+tags:
+- swarm-intelligence
+- orchestration
+- claude-native
+- multi-agent
+- distributed
+- SPARC
+versus_refs: []

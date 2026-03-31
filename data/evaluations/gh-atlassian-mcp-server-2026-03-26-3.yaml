@@ -1,0 +1,47 @@
+tool_id: gh-atlassian-mcp-server
+reporter_role: enterprise-architect
+date_evaluated: "2026-03-26"
+claude_code_version: "1.0.57"
+platform: windows-wsl
+task_performed: >
+  Evaluated Atlassian MCP server for enterprise deployment across a 500-person engineering
+  organization using Jira Data Center (self-hosted). Assessed API token management,
+  read/write permission boundaries, and compatibility with Jira Data Center vs Cloud
+  REST API versions. Tested compliance with internal data handling policies.
+scores:
+  p:
+    value: 6
+    evidence: >
+      Value for automation tasks exists, but Data Center API compatibility gaps limited
+      several planned automation workflows; about 30% of intended use cases required workarounds.
+  q:
+    value: 6
+    evidence: >
+      Data Center REST API v2 responses differed from Cloud v3 in field naming; the MCP
+      server is primarily developed against Cloud, causing 4 out of 10 field reads to return incorrect data.
+  c:
+    value: 7
+    evidence: >
+      Once working, the automation tasks run efficiently; the token cost is the primary
+      expense since Atlassian Data Center API calls are free within the self-hosted infrastructure.
+  r:
+    value: 5
+    evidence: >
+      Data Center-specific API paths caused intermittent failures that required manual
+      MCP server configuration overrides; reliability was noticeably lower than the Cloud variant.
+  x:
+    value: 5
+    evidence: >
+      Enterprise SSO via SAML for Jira Data Center is not supported by the MCP's auth model;
+      API token workarounds are needed, which conflicts with our corporate security policies.
+  f:
+    value: 4
+    evidence: >
+      Data Center deployment required custom base URL configuration and undocumented API
+      version flags; setup took two days of trial and error before stable operation was achieved.
+verdict: >
+  Atlassian MCP server is built primarily for Atlassian Cloud and the Data Center compatibility
+  is insufficient for enterprise self-hosted deployments; organizations on Jira Data Center
+  should expect significant configuration effort and partial functionality until the MCP
+  server explicitly supports Data Center API versions.
+conflict_of_interest: none

@@ -1,0 +1,48 @@
+tool_id: gh-makenotion-notion-mcp
+reporter_role: developer
+date_evaluated: "2026-03-18"
+claude_code_version: "1.0.57"
+platform: linux
+task_performed: >
+  Built a documentation pipeline where Claude uses Notion MCP to pull API reference pages
+  from a Notion wiki, transform them into OpenAPI-compatible YAML format, and write the
+  output to the local filesystem via the filesystem MCP. Tested on a 60-page internal
+  API documentation wiki covering 8 microservices.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The initial extraction of 60 pages saved roughly 4 hours versus manual copy-paste,
+      but the transformation step required significant prompt engineering to handle Notion's
+      rich text block format, offsetting some of the time savings.
+  q:
+    value: 6
+    evidence: >
+      Notion's block-level content model made it difficult for Claude to reliably extract
+      code samples from toggle blocks; roughly 15% of code examples were truncated or mis-formatted
+      in the output YAML and needed manual correction.
+  c:
+    value: 6
+    evidence: >
+      Processing 60 pages required about 40k tokens total, which cost around $2.50; acceptable
+      for a one-time migration but expensive if re-run frequently for incremental sync.
+  r:
+    value: 7
+    evidence: >
+      Consecutive runs on the same set of pages produced identical output, indicating the
+      MCP layer is consistent; variability came from Claude's formatting decisions, not the tool.
+  x:
+    value: 6
+    evidence: >
+      Chaining Notion MCP reads with filesystem MCP writes worked but required careful prompt
+      design; the two tools have different content models that Claude must bridge manually.
+  f:
+    value: 7
+    evidence: >
+      Linux setup was straightforward after finding the correct Node.js version requirement
+      in an issue thread; the main README did not specify the minimum Node version needed.
+verdict: >
+  Notion MCP is viable for documentation extraction pipelines but Notion's rich-text block
+  model creates friction when the target format is structured data like YAML; it works best
+  for content that maps directly to plain text rather than code-heavy technical documentation.
+conflict_of_interest: none

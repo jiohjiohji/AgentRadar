@@ -1,0 +1,34 @@
+tool_id: "gh-crewai-crewai"
+reporter_role: "small-team"
+date_evaluated: "2026-03-24"
+claude_code_version: "N/A"
+platform: "macos"
+
+task_performed: >
+  Built a content creation crew for a 4-person startup: SEO researcher, content
+  strategist, writer, and editor agents producing weekly blog posts from a topic
+  brief. Ran in parallel process mode to reduce latency.
+
+scores:
+  p:
+    value: 8
+    evidence: "Blog post production time dropped from 6 hours (2 people) to 90 minutes (one person reviewing agent output); team redirected 1.5 days per week to higher-value work"
+  q:
+    value: 7
+    evidence: "Final post quality rated 7/10 by team on average; editor agent caught most issues but tone inconsistency between writer and editor agent persisted across 3 of 8 posts"
+  c:
+    value: 6
+    evidence: "Monthly token cost for 4 weekly posts with 4-agent parallel crew is approximately $15-25 depending on post length; acceptable for our budget but worth monitoring at scale"
+  r:
+    value: 7
+    evidence: "7 of 8 posts completed successfully in first two months; one parallel execution deadlock required manual restart; issue reported on GitHub and appears to be a known bug"
+  x:
+    value: 8
+    evidence: "Connected to our CMS via a simple webhook; the parallel process output mapped cleanly to our existing editorial workflow with no structural changes needed"
+  f:
+    value: 7
+    evidence: "First working crew took about 2 hours to build following the quickstart; parallel process configuration required an additional hour of documentation reading"
+
+verdict: "Great fit for small teams doing high-volume content work — the parallel process mode meaningfully reduces latency and the ROI is clear within the first month."
+
+conflict_of_interest: "none"

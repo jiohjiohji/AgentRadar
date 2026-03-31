@@ -1,0 +1,46 @@
+tool_id: gh-browsermcp-mcp
+reporter_role: student
+date_evaluated: "2026-03-12"
+claude_code_version: "1.0.57"
+platform: ubuntu
+task_performed: >
+  Discovered BrowserMCP while researching browser automation MCP options and tried it for
+  a web scraping class project. Spent time attempting to install and configure it on Ubuntu,
+  comparing the experience to Playwright MCP which was recommended by the course instructor.
+  Documented the archived status and its practical implications for student projects.
+scores:
+  p:
+    value: 2
+    evidence: >
+      Lost two hours attempting to resolve dependency conflicts on Ubuntu before discovering
+      the repository was archived; switching to Playwright MCP took 10 minutes and worked immediately.
+  q:
+    value: 3
+    evidence: >
+      The tool partially navigated two test pages but failed on JavaScript-heavy sites;
+      the outdated headless browser layer does not support modern web APIs used by most sites.
+  c:
+    value: 4
+    evidence: >
+      The tool itself has no API cost, but the time wasted on failed setup and debugging
+      represents a real opportunity cost that outweighs any marginal savings over alternatives.
+  r:
+    value: 2
+    evidence: >
+      Failed on 3 of 5 test runs due to browser crashes; the archived state means these
+      stability issues will never be addressed and will worsen as browser APIs evolve.
+  x:
+    value: 3
+    evidence: >
+      MCP protocol layer is still present but the unreliable browser backend makes it
+      unsuitable for inclusion in any workflow that needs to complete reliably.
+  f:
+    value: 2
+    evidence: >
+      Ubuntu setup failed three times due to missing native dependencies not mentioned
+      in the README, which appears to have been last updated before the archival decision.
+verdict: >
+  BrowserMCP is effectively unusable for new projects as of its April 2025 archival;
+  students and developers should avoid it entirely and use Playwright MCP instead, which
+  offers a nearly identical interface with active maintenance and proper Ubuntu documentation.
+conflict_of_interest: none

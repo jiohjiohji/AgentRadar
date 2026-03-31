@@ -1,0 +1,47 @@
+tool_id: gh-doriandarko-claude-engineer
+reporter_role: developer
+date_evaluated: "2026-03-06"
+claude_code_version: "N/A"
+platform: macos
+task_performed: >
+  Tested Claude Engineer (archived December 2024) as a historical benchmark for autonomous
+  CLI coding assistants. Ran the tool against a simple Python script generation task and
+  a file editing task to see what still works. Compared its approach to current Claude Code
+  native capabilities to assess how much progress has been made since archival.
+scores:
+  p:
+    value: 2
+    evidence: >
+      Simple Python generation worked, but the December 2024 archival means the tool predates
+      many Claude Code improvements; Claude Code native mode performs the same tasks faster and more reliably.
+  q:
+    value: 4
+    evidence: >
+      Output quality for basic scripts was acceptable but the tool's context management is
+      primitive compared to current Claude Code; it loses context after a few tool calls in complex tasks.
+  c:
+    value: 4
+    evidence: >
+      The custom tool loop is less efficient than Claude Code's native tool use; it makes
+      redundant API calls to re-establish context that Claude Code manages natively.
+  r:
+    value: 3
+    evidence: >
+      Dependency on older Anthropic SDK patterns caused two crashes in five test sessions
+      due to deprecated API parameters that the archived code references.
+  x:
+    value: 2
+    evidence: >
+      Claude Engineer has no MCP support or composability with the current Claude Code ecosystem;
+      it predates MCP and operates as a standalone tool with no integration points.
+  f:
+    value: 5
+    evidence: >
+      pip install and first run worked after resolving one deprecated dependency; the
+      tooling is coherent for its era but lacks the configuration simplicity of modern alternatives.
+verdict: >
+  Claude Engineer is a historically interesting benchmark for how autonomous coding assistants
+  worked in 2024 but has no practical utility for current projects; Claude Code natively
+  subsumes all of its capabilities with superior context management, MCP integration,
+  and reliability; treat it as a museum piece rather than a tool.
+conflict_of_interest: none

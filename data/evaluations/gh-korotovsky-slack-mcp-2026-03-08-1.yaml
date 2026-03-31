@@ -1,0 +1,47 @@
+tool_id: gh-korotovsky-slack-mcp
+reporter_role: developer
+date_evaluated: "2026-03-08"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used Slack MCP to build an on-call incident digest: Claude reads the last 50 messages
+  from the #incidents channel, summarizes active incidents and their resolution status, and
+  posts a morning digest back to #ops-digest. Also tested reading thread replies and DM
+  channel listings to understand the tool's message access scope.
+scores:
+  p:
+    value: 6
+    evidence: >
+      The morning digest that the on-call rotation previously prepared manually in 20 minutes
+      is now automated, though the summaries occasionally miss context from long incident threads.
+  q:
+    value: 6
+    evidence: >
+      Reading flat channel messages worked well, but thread replies required separate API
+      calls per thread and Claude often lost context on multi-thread incidents in complex channels.
+  c:
+    value: 7
+    evidence: >
+      Reading 50 messages and posting a summary consumed about 4k tokens; the cost is
+      acceptable but grows quickly if multiple channels are scanned in each session.
+  r:
+    value: 6
+    evidence: >
+      The community-maintained MCP server had two breaking changes in the past month that
+      required manual config updates; it is not as stable as the official GitHub or Tavily MCPs.
+  x:
+    value: 5
+    evidence: >
+      Composing Slack MCP with other tools is possible but the Slack Bot token scoping
+      requires careful setup; cross-channel operations need separate permission grants per channel.
+  f:
+    value: 5
+    evidence: >
+      Setting up the Slack app, configuring bot scopes, installing to workspace, and linking
+      the OAuth token took about 40 minutes; the Slack API auth flow is more complex than most MCPs.
+verdict: >
+  Slack MCP delivers a useful automation layer for channel monitoring and posting, but the
+  complex Slack app setup, community-maintenance status, and thread-reading limitations mean
+  it requires more investment than comparable MCP tools; best suited for teams already
+  comfortable with Slack app development.
+conflict_of_interest: none

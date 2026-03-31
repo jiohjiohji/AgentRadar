@@ -1,0 +1,45 @@
+tool_id: gh-microsoft-playwright-mcp
+reporter_role: developer
+date_evaluated: "2026-03-05"
+claude_code_version: "1.0.57"
+platform: macos
+task_performed: >
+  Used the Playwright MCP server to automate end-to-end browser testing of a Next.js
+  e-commerce checkout flow. The agent navigated pages, filled forms, clicked buttons,
+  and captured screenshots at each step to verify UI state. Tested on Chrome and Firefox.
+scores:
+  p:
+    value: 8
+    evidence: >
+      Reduced manual QA time from roughly 3 hours per release to under 30 minutes by
+      letting Claude drive browser interactions directly without writing Playwright scripts.
+  q:
+    value: 7
+    evidence: >
+      Screenshots and DOM snapshots were accurate, though occasionally the agent mis-clicked
+      overlapping elements on mobile-viewport tests, requiring retry prompts to correct.
+  c:
+    value: 6
+    evidence: >
+      Token usage spiked when the agent looped on screenshot verification steps; each
+      full checkout flow consumed around 8k tokens, which adds up across many test runs.
+  r:
+    value: 7
+    evidence: >
+      Results were consistent across three consecutive runs on stable pages, but dynamic
+      ad overlays caused intermittent failures that required explicit dismiss instructions.
+  x:
+    value: 8
+    evidence: >
+      Integrates cleanly into Claude Code via the MCP protocol; no custom adapter needed
+      and tool calls appear natively in the Claude Code tool list after one-line config.
+  f:
+    value: 7
+    evidence: >
+      npx setup worked first try; only friction was ensuring the correct Chromium binary
+      path was set in the MCP config JSON before the server would start reliably.
+verdict: >
+  Playwright MCP is a strong choice for teams wanting AI-driven browser automation without
+  writing boilerplate; minor reliability gaps on dynamic UIs and above-average token costs
+  are the main trade-offs worth watching in production test pipelines.
+conflict_of_interest: none

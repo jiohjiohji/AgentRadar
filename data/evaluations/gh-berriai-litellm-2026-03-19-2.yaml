@@ -1,0 +1,34 @@
+tool_id: "gh-berriai-litellm"
+reporter_role: "enterprise-architect"
+date_evaluated: "2026-03-19"
+claude_code_version: "N/A"
+platform: "linux"
+
+task_performed: >
+  Evaluated LiteLLM Enterprise for centralizing AI API access across a
+  100-person engineering org. Tested RBAC, budget limits per team,
+  audit logging, and rate limiting across 8 departments using different models.
+
+scores:
+  p:
+    value: 8
+    evidence: "Consolidated billing from 8 separate team API keys to one central account; budget overage alerts prevented two departments from exceeding monthly allocations in the first month"
+  q:
+    value: 8
+    evidence: "Consistent response format across all models simplified downstream processing; audit logs captured all requests for compliance review without additional instrumentation"
+  c:
+    value: 8
+    evidence: "Enterprise license cost offset by 23% API cost reduction from centralized model routing and caching; positive ROI within 3 months at our request volume"
+  r:
+    value: 7
+    evidence: "Redis cluster dependency added operational complexity; one cache invalidation bug caused stale responses for 40 minutes before detection; requires dedicated ops attention"
+  x:
+    value: 9
+    evidence: "SSO integration via existing OIDC provider took 2 hours; RBAC policies mapped cleanly to existing team structure; no changes to consuming application code required"
+  f:
+    value: 5
+    evidence: "Enterprise deployment with HA Redis, SSO, and audit database took 5 days with dedicated DevOps; not appropriate for self-service team adoption without central infra support"
+
+verdict: "Strong enterprise AI gateway choice once deployed; the centralized cost visibility and RBAC are genuinely valuable at scale, but budget for a proper deployment engagement."
+
+conflict_of_interest: "none"

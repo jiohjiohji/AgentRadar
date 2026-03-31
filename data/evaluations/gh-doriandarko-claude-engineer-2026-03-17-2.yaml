@@ -1,0 +1,46 @@
+tool_id: gh-doriandarko-claude-engineer
+reporter_role: researcher
+date_evaluated: "2026-03-17"
+claude_code_version: "N/A"
+platform: ubuntu
+task_performed: >
+  Studied Claude Engineer as a case study in pre-native-tool-use AI coding assistants for
+  an AI tools research paper. Documented its tool loop architecture, file management approach,
+  and comparison to Claude Code's native capabilities. Also tested whether it could still
+  be installed and run in a current Ubuntu 24.04 environment.
+scores:
+  p:
+    value: 2
+    evidence: >
+      Installation succeeded but two of the four test tasks failed mid-execution; as a
+      research subject it was productive but as a coding assistant it is obsolete relative to Claude Code.
+  q:
+    value: 4
+    evidence: >
+      The tool demonstrated its original design intent clearly: it could generate and save
+      code files correctly in 2 of 4 tasks, making it useful as a research artifact.
+  c:
+    value: 3
+    evidence: >
+      Inefficient API call patterns from the archived code result in higher token usage
+      per task than Claude Code; the cost difference illustrates how much native tool use improved efficiency.
+  r:
+    value: 3
+    evidence: >
+      Ubuntu 24.04 introduced library incompatibilities; two tasks crashed due to a C extension
+      in a dependency that was compiled for Ubuntu 22.04 and produced segfaults on 24.04.
+  x:
+    value: 1
+    evidence: >
+      Zero composability with current Claude Code ecosystem; no MCP support, no slash commands,
+      no agent framework integration — it operates as a completely isolated tool.
+  f:
+    value: 4
+    evidence: >
+      Required creating a Python virtual environment with pinned older dependency versions
+      to work on Ubuntu 24.04; the setup is viable for research purposes but not for daily use.
+verdict: >
+  Claude Engineer is a valuable historical artifact for researchers studying the evolution of
+  AI coding assistants; its December 2024 archival came shortly after Claude Code's release,
+  which superseded it entirely; there is no use case for deploying it in current projects.
+conflict_of_interest: none
