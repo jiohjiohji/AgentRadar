@@ -1,0 +1,18 @@
+id: "gh-dair-ai-pe-guide"
+name: "Prompt Engineering Guide"
+source_url: "https://github.com/dair-ai/Prompt-Engineering-Guide"
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - prompt-engineering
+  - guide
+  - resources
+  - RAG
+  - agents
+  - multi-llm
+versus_refs: []

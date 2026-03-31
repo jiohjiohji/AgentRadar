@@ -1,0 +1,18 @@
+id: "gh-anthropics-prompt-tutorial"
+name: "Anthropic Prompt Engineering Tutorial"
+source_url: "https://github.com/anthropics/prompt-eng-interactive-tutorial"
+category: prompt-library
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - prompt-engineering
+  - tutorial
+  - official
+  - anthropic
+  - interactive
+  - notebooks
+versus_refs: []

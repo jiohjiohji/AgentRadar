@@ -1,0 +1,17 @@
+id: "gh-anthropics-sdk-typescript"
+name: "Anthropic TypeScript SDK"
+source_url: "https://github.com/anthropics/anthropic-sdk-typescript"
+category: sdk-pattern
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - sdk
+  - typescript
+  - official
+  - anthropic
+  - api-client
+versus_refs: []

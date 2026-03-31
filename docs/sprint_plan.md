@@ -101,10 +101,24 @@ Acceptance:
 - [x] Claude Code review: PASS
 
 ### P0-006 — Batch 4: 10 Prompt Library + SDK Pattern profiles
-Status: BACKLOG
-Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 prompt libraries + 5 SDK patterns
-Acceptance: Same as P0-003
+Status: DONE (2026-03-31)
+Tools profiled (actual repos):
+  - gh-anthropics-cookbook → anthropics/anthropic-cookbook (active, 36.8k stars)
+  - gh-danielmiessler-fabric → danielmiessler/fabric (active, 40.3k stars)
+  - gh-anthropics-prompt-tutorial → anthropics/prompt-eng-interactive-tutorial (active, 34.3k stars)
+  - gh-dair-ai-pe-guide → dair-ai/Prompt-Engineering-Guide (active, 72.5k stars)
+  - gh-microsoft-promptflow → microsoft/promptflow (active, 11.1k stars)
+  - gh-anthropics-sdk-python → anthropics/anthropic-sdk-python (active, 3.1k stars)
+  - gh-anthropics-sdk-typescript → anthropics/anthropic-sdk-typescript (active, 1.8k stars)
+  - gh-vercel-ai → vercel/ai (active, 23.1k stars)
+  - gh-berriai-litellm → BerriAI/litellm (active, 41.6k stars)
+  - gh-anthropics-quickstarts → anthropics/anthropic-quickstarts (active, 15.8k stars)
+Acceptance:
+- [x] All 10 YAML files exist in data/tools/
+- [x] All 10 pass validate_yaml.py with zero errors
+- [x] Scores are null on all 10 (no evaluations yet)
+- [x] Status computed from actual pushed_at via gh api
+- [x] Claude Code review: PASS
 
 ### P0-007 — Batch 5: 10 Evaluation + Complementary Tool profiles
 Status: BACKLOG
@@ -314,5 +328,6 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 |------|-------------------|-------|
 | 2026-03-31 | P0-003, P0-004 | 2 batches (20 profiles) in one session with Claude Code |
 | 2026-03-31 | P0-005 | 1 batch (10 profiles) same session — 30/50 total |
+| 2026-03-31 | P0-006 | 1 batch (10 profiles) same session — 40/50 total. All 10 active, cleanest batch. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.
