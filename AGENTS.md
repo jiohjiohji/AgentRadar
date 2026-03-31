@@ -1,5 +1,13 @@
 # AgentRadar Agent Constitution
-# Version: 1.1 | Updated: 2026-03-31
+# Version: 1.2 | Updated: 2026-03-31
+
+## PRODUCT DIRECTION
+
+AgentRadar helps developers find the right tool for THEIR project — not the highest-scored tool overall. Every feature should answer "which tool fits my situation?" not "which tool is best in general?"
+
+The flagship interaction is `agentRadar suggest` — a developer describes what they need, and we return the best matches with reasons specific to their constraints (team size, budget, task type, existing stack).
+
+Leaderboards and top-N lists are secondary. Matching is primary.
 
 ---
 
