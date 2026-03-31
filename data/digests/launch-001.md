@@ -1,80 +1,104 @@
 ---
 issue: 1
-title: "AgentRadar is live — 50 tools, 150 evaluations, zero synthetic scores"
+title: "AgentRadar: the dataset that reads your project before making a recommendation"
 date: 2026-03-31
 status: draft
 ---
 
-# AgentRadar is live — 50 tools, 150 evaluations, zero synthetic scores
+# AgentRadar: the dataset that reads your project before making a recommendation
 
 Welcome to the first AgentRadar digest.
 
-AgentRadar is a community dataset of Claude Code and MCP tools. Every number you see here was reported by a real developer who ran a specific task and wrote down what happened — time saved, token cost, failure rate, setup friction. No vendor benchmarks. No synthetic scores.
+AgentRadar is a community dataset of Claude Code and MCP tools — and the foundation for a CLI that reads your project context before telling you what tools to use. Every score in this dataset was reported by a real developer who ran a specific task and wrote down what happened. No vendor benchmarks. No synthetic data.
 
 The dataset is public on GitHub: github.com/jiohjiohji/AgentRadar
 
 ---
 
-## Top 5 tools this week
+## What AgentRadar will do (the CLI, in active development)
 
-Ranked by composite score across 6 dimensions (p/q/c/r/x/f). All confidence: medium (3 evaluations each).
+```bash
+agentRadar scan        # reads package.json, requirements.txt, .claude/, MCP config
+                       # detects your stack, finds tool gaps, outputs 1-3 recommendations
+agentRadar suggest "browser testing"  # matches against your existing setup
+agentRadar check       # flags stale tools, suggests active replacements
+```
+
+The insight behind it: most tool lists require you to know what you're looking for. `scan` reads your project first, then tells you what you're missing — without you having to ask.
+
+The CLI is Phase 1. The dataset is live now.
+
+---
+
+## Top 5 tools in the dataset
+
+Ranked by composite score across 6 dimensions (p/q/c/r/x/f). All at medium confidence (3 evaluations each).
 
 **1. Anthropic Python SDK — 8.19**
-Category: sdk-pattern · License: MIT
-The baseline against which everything else is measured. Evaluators consistently report it as the lowest-friction path to Claude API access, with predictable token behavior across 5-run tests.
+sdk-pattern · MIT · active
+The baseline. Evaluators report it as the lowest-friction path to Claude API access. Predictable token behavior across 5-run reliability tests. If you're building anything with Claude, you're already using this.
 
 **2. Filesystem MCP — 8.16**
-Category: mcp-server · License: MIT
-Highest composability score (9.1) of any MCP server in the dataset. Three independent evaluators integrated it with other MCP tools without conflict. Setup is under 5 minutes for anyone who has configured an MCP server before.
+mcp-server · MIT · active
+Highest composability score (9.1) of any tool in the dataset. Three evaluators independently integrated it with other MCP tools without conflict. Setup under 5 minutes.
 
 **3. Anthropic TypeScript SDK — 8.15**
-Category: sdk-pattern · License: MIT
-Parallel to the Python SDK but for TypeScript shops. Slightly lower cost-efficiency score reflects the overhead of the type system on token counts in streaming scenarios — evaluators flagged this as a minor tradeoff for the type safety.
+sdk-pattern · MIT · active
+Parallel to the Python SDK for TypeScript shops. Slightly lower cost-efficiency reflects the overhead of the type system on token counts in streaming scenarios — a minor tradeoff for type safety.
 
 **4. Anthropic Cookbook — 8.01**
-Category: prompt-library · License: MIT
-Not a tool — a reference library of patterns. Evaluators used it to reduce time spent on prompt scaffolding by an average of 35 minutes per new use case.
+prompt-library · MIT · active
+A reference library of patterns, not an installable tool. Evaluators used it to reduce time on prompt scaffolding by an average of 35 minutes per new use case.
 
-**5. Anthropic Prompt Engineering Tutorial — 8.00**
-Category: prompt-library · License: MIT
-The only entry in the dataset with a perfect reliability score (10.0) — it's documentation, so it doesn't break. Evaluators rated it the fastest path from "I know Claude exists" to "I have a working prompt."
+**5. TÂCHES (Get Shit Done) — 7.97**
+claudemd-framework · MIT · active
+The highest-scoring CLAUDE.md framework in the dataset. Evaluators report it substantially reduces context drift in long Claude Code sessions — the problem it was designed for.
 
 ---
 
 ## Versus highlight
 
-**wshobson/agents (8.0) vs AgentSys (6.2)**
+**Playwright MCP vs BrowserMCP**
 
-Two orchestration frameworks, very different tradeoffs.
+| Dimension | Playwright MCP | BrowserMCP |
+|-----------|----------------|------------|
+| Productivity | 8.0 | 7.0 |
+| Composability | 8.3 | 7.7 |
+| Setup Friction | 7.7 | 8.3 |
+| Composite | **7.9** | **7.5** |
 
-wshobson/agents wins on composability (9.0 vs 6.3) because it's designed around Claude Code's existing tool call patterns — you extend it rather than learn a new model. AgentSys has a richer pre-built skill catalog but requires learning its plugin manifest format before you can modify anything.
+Playwright MCP wins on productivity and composability; BrowserMCP wins on setup friction — it's the easier install if you want something working in under 10 minutes and don't need Playwright's full API surface.
 
-Verdict from the versus page: choose wshobson/agents if you're already in Claude Code and want multi-agent without a framework tax; choose AgentSys if you want pre-built skills and are willing to invest 2–3 hours upfront.
+This is the kind of tradeoff `suggest` will surface automatically: if your project already has Playwright installed, it won't recommend BrowserMCP.
 
-[Full comparison →](https://github.com/jiohjiohji/AgentRadar/blob/main/data/versus/gh-wshobson-agents-vs-gh-avifenesh-agentsys.md)
+[Full comparison →](https://github.com/jiohjiohji/AgentRadar/blob/main/data/versus/gh-microsoft-playwright-mcp-vs-gh-browsermcp-mcp.md)
 
 ---
 
 ## How scores work
 
-Six dimensions, 0–10 each:
+Six dimensions, 0–10 each, reported by community evaluators:
 
-- **p** Productivity — time saved on a real task
-- **q** Quality — output accuracy vs a baseline
-- **c** Cost Efficiency — token cost relative to benefit
-- **r** Reliability — consistency across 5+ runs
-- **x** Composability — ease of integrating with other tools
-- **f** Setup Friction — time from install to first working result
+| Key | Dimension |
+|-----|-----------|
+| p | Productivity — time saved on a real task |
+| q | Quality — output accuracy vs a baseline |
+| c | Cost Efficiency — token cost relative to benefit |
+| r | Reliability — consistency across 5+ runs |
+| x | Composability — integration with other tools |
+| f | Setup Friction — time from install to working result |
 
-Every score has a confidence level (low / medium / high). We never show a score without showing the confidence. Low-confidence scores (fewer than 3 reports) are clearly labeled.
+Every score shows a confidence level (low / medium / high). Scores with fewer than 3 reports are explicitly labeled low-confidence.
 
 ---
 
 ## Contribute
 
-If you've used a tool in this dataset on a real task in the last 30 days, your evaluation takes about 10 minutes and directly improves the dataset.
+If you've used a tool in this dataset on a real task, submit an evaluation. It takes about 10 minutes and directly improves the dataset that will power `scan` recommendations.
 
 Submit via GitHub Issues: github.com/jiohjiohji/AgentRadar/issues/new?template=evaluation-report.yml
+
+Star the repo to follow Phase 1 progress: github.com/jiohjiohji/AgentRadar
 
 —
 AgentRadar · Unsubscribe
