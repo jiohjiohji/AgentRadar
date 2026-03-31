@@ -1,0 +1,18 @@
+id: "gh-arize-ai-phoenix"
+name: "Arize Phoenix"
+source_url: "https://github.com/Arize-ai/phoenix"
+category: eval-observability
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - observability
+  - evaluation
+  - tracing
+  - llm-evals
+  - open-telemetry
+  - ai-monitoring
+versus_refs: []

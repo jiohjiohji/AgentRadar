@@ -1,0 +1,17 @@
+id: "gh-e2b-dev-e2b"
+name: "E2B"
+source_url: "https://github.com/e2b-dev/e2b"
+category: complementary
+pricing: freemium
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - code-sandbox
+  - secure-execution
+  - ai-agents
+  - runtime
+  - enterprise
+versus_refs: []

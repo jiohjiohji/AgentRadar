@@ -1,0 +1,17 @@
+id: "gh-modal-labs-modal"
+name: "Modal"
+source_url: "https://github.com/modal-labs/modal-client"
+category: complementary
+pricing: freemium
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - serverless
+  - gpu-compute
+  - python
+  - cloud-functions
+  - ai-infrastructure
+versus_refs: []

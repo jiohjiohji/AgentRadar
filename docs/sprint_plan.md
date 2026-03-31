@@ -121,10 +121,25 @@ Acceptance:
 - [x] Claude Code review: PASS
 
 ### P0-007 — Batch 5: 10 Evaluation + Complementary Tool profiles
-Status: IN_PROGRESS
-Agent assignment: 5 Gemini Flash agents in parallel
-Coverage: 5 eval/observability tools + 5 complementary tools
-Acceptance: Same as P0-003
+Status: DONE (2026-03-31)
+Tools profiled (actual repos — pivots noted):
+  - gh-langfuse-langfuse → langfuse/langfuse (active, 24.1k stars)
+  - gh-mlflow-mlflow → mlflow/mlflow (active, 25k stars)
+  - gh-arize-ai-phoenix → Arize-ai/phoenix (active, 9.1k stars) [PIVOT: Braintrust has no open-source repo — substituted Phoenix]
+  - gh-helicone-helicone → Helicone/helicone (active, 5.4k stars)
+  - gh-wandb-weave → wandb/weave (active, 1.1k stars)
+  - gh-mendableai-firecrawl → mendableai/firecrawl (active, 101.6k stars)
+  - gh-composiohq-composio → ComposioHQ/composio (active, 27.6k stars)
+  - gh-browserbase-stagehand → browserbase/stagehand (active, 21.8k stars)
+  - gh-e2b-dev-e2b → e2b-dev/e2b (active, 11.5k stars)
+  - gh-modal-labs-modal → modal-labs/modal-client (active, 456 stars)
+Acceptance:
+- [x] All 10 YAML files exist in data/tools/
+- [x] All 10 pass validate_yaml.py with zero errors
+- [x] Scores are null on all 10
+- [x] Status computed from actual pushed_at via gh api
+- [x] Claude Code review: PASS
+- [x] Full dataset (50 tools): 50/50 PASS, zero failures
 
 ### P0-008 — 150 seed evaluations (3 per tool)
 Status: BACKLOG
@@ -329,5 +344,6 @@ Expected delivery rate (solo founder, ~20 hrs/week):
 | 2026-03-31 | P0-003, P0-004 | 2 batches (20 profiles) in one session with Claude Code |
 | 2026-03-31 | P0-005 | 1 batch (10 profiles) same session — 30/50 total |
 | 2026-03-31 | P0-006 | 1 batch (10 profiles) same session — 40/50 total. All 10 active, cleanest batch. |
+| 2026-03-31 | P0-007 | 1 batch (10 profiles) same session — **50/50 COMPLETE**. All 10 active, zero failures on full dataset validation. |
 
 Track actual velocity in tasks/completed/ and adjust here quarterly.

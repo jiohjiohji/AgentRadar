@@ -1,0 +1,18 @@
+id: "gh-composiohq-composio"
+name: "Composio"
+source_url: "https://github.com/ComposioHQ/composio"
+category: complementary
+pricing: freemium
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - agent-tools
+  - integrations
+  - authentication
+  - toolkits
+  - action-execution
+  - multi-agent
+versus_refs: []

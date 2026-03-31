@@ -1,0 +1,18 @@
+id: "gh-browserbase-stagehand"
+name: "Stagehand"
+source_url: "https://github.com/browserbase/stagehand"
+category: complementary
+pricing: freemium
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - browser-automation
+  - ai-native
+  - web-interaction
+  - stagehand
+  - browserbase
+  - agents
+versus_refs: []

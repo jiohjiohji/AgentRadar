@@ -1,0 +1,18 @@
+id: "gh-mlflow-mlflow"
+name: "MLflow"
+source_url: "https://github.com/mlflow/mlflow"
+category: eval-observability
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+  - evaluation
+  - observability
+  - ml-ops
+  - experiment-tracking
+  - model-registry
+  - llm-monitoring
+versus_refs: []
