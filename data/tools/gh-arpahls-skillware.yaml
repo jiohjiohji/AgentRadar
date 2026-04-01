@@ -1,0 +1,20 @@
+id: gh-arpahls-skillware
+name: skillware
+source_url: http://arpa.systems
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- agentic ai
+- agentic framework
+- agentic workflows
+- ai agents
+- function calling
+- llm tools
+- skillware
+versus_refs: []
