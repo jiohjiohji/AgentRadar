@@ -1,0 +1,19 @@
+id: gh-mirascope-mirascope
+name: mirascope
+source_url: https://mirascope.com
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- artificial intelligence
+- developer tools
+- llm
+- llm agent
+- llm tools
+- python
+- typescript
+versus_refs: []
