@@ -1,0 +1,17 @@
+id: gh-samanhappy-mcphub
+name: mcphub
+source_url: https://docs.mcphub.app
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp gateway
+- mcp hub
+- mcp router
+- mcp server
+versus_refs: []
