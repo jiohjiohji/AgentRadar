@@ -1,0 +1,20 @@
+id: gh-ravitemer-mcphub-nvim
+name: mcphub.nvim
+source_url: https://ravitemer.github.io/mcphub.nvim/
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- avante
+- chatgpt
+- chatplugin
+- claude ai
+- codecompanion
+- llm
+- mcp
+- mcp client
+versus_refs: []
