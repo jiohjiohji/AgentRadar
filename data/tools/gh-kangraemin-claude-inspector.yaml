@@ -1,0 +1,20 @@
+id: gh-kangraemin-claude-inspector
+name: claude-inspector
+source_url: https://github.com/kangraemin/claude-inspector
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai tools
+- anthropic
+- claude
+- claude api
+- claude code
+- debugging
+- developer tools
+- electron
+versus_refs: []
