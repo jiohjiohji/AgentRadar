@@ -1,0 +1,16 @@
+id: gh-chen-zexi-vllm-cli
+name: vllm-cli
+source_url: https://github.com/Chen-zexi/vllm-cli
+category: complementary
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- llm
+- llm inference
+- llm tools
+- vllm
+versus_refs: []
