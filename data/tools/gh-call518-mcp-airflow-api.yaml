@@ -1,0 +1,20 @@
+id: gh-call518-mcp-airflow-api
+name: MCP-Airflow-API
+source_url: https://deepwiki.com/call518/MCP-Airflow-API
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agentic ai
+- ai agents
+- airflow api
+- airflow client
+- airflow rest api
+- apache airflow
+- dag management
+versus_refs: []
