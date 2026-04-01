@@ -1,0 +1,20 @@
+id: gh-dkondo-agent-tackle-box
+name: agent-tackle-box
+source_url: https://github.com/dkondo/agent-tackle-box
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent debugger
+- agent development
+- agent development environment
+- ai agents
+- debugger
+- debugging tools
+- langchain
+- langchain agent
+versus_refs: []
