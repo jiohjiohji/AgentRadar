@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gh-microsoft-playwright-mcp vs gh-browsermcp-mcp — AgentRadar</title>
+  <meta name="description" content="Head-to-head: gh-microsoft-playwright-mcp vs gh-browsermcp-mcp on AgentRadar">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-brand" href="/">AgentRadar</a>
+    <div class="nav-links">
+      <a href="/tools/">Tools</a>
+      <a href="/versus/">Versus</a>
+      <a href="https://github.com/jiohjiohji/AgentRadar" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+<main class="container">
+
+<div class="versus-header" data-pagefind-body>
+  <h1><a href="/tools/gh-microsoft-playwright-mcp.html">gh-microsoft-playwright-mcp</a></h1>
+  <span class="vs-divider">vs</span>
+  <h1><a href="/tools/gh-browsermcp-mcp.html">gh-browsermcp-mcp</a></h1>
+</div>
+<p style="color:var(--text-muted);font-size:0.85rem">Category: mcp-server · Valid until: 2026-06-29</p>
+<div class="prose" data-pagefind-body>
+  <h1>Playwright MCP vs BrowserMCP</h1>
+<h2>Quick Answer</h2>
+<p>
+<strong>Choose Playwright MCP</strong> for any new browser automation work. It is actively maintained by Microsoft and has a 7.0 composite score across reliability, quality, and productivity. 
+</p>
+<p>
+<strong>Do not use BrowserMCP</strong> for new projects. It was archived in April 2025, has a 3.1 composite score, fails on 15 of 18 tested sites, and has no migration path or active maintenance. 
+</p>
+<h2>Score Comparison</h2>
+<table>
+<tr><th>Dimension</th><th>Playwright MCP</th><th>BrowserMCP</th></tr>
+<tbody>
+<tr><td>Productivity (p)</td><td>8.0</td><td>2.3</td></tr>
+<tr><td>Quality (q)</td><td>7.3</td><td>3.3</td></tr>
+<tr><td>Cost Efficiency (c)</td><td>5.7</td><td>4.3</td></tr>
+<tr><td>Reliability (r)</td><td>7.0</td><td>2.3</td></tr>
+<tr><td>Composability (x)</td><td>7.3</td><td>3.3</td></tr>
+<tr><th>Setup Friction (f)</th><th>6.7</th><th>3.0</th></tr>
+<tr><th>**Composite**</th><th>**7.0**</th><th>**3.1**</th></tr>
+<tr><th>Confidence</th><th>medium (3 evals)</th><th>medium (3 evals)</th></tr>
+</tbody></table>
+<h2>Community Verdicts</h2>
+<p>
+<strong>Playwright MCP</strong> — 3 evaluations (developer, team-lead, researcher): 
+- Manual QA time cut from 3 hours to 30 minutes per release using AI-driven checkout flow testing 
+- 96% price extraction accuracy across 400 product rows in a weekly scraping job 
+- 50-site accessibility audit completed in hours vs 2 full workdays manually; axe-core counts matched manual auditor on 44 of 50 sites 
+- Main limitations: token cost spikes on screenshot-heavy loops; anti-scraping measures on 1 of 3 tested competitor sites caused stalls 
+- Linux headless setup requires additional system deps (libgbm, libasound2) 
+</p>
+<p>
+<strong>BrowserMCP</strong> — 3 evaluations (developer, student, team-lead): 
+- Archived April 2025; Puppeteer dependency unmaintained and increasingly incompatible with modern Node.js and OS versions 
+- Failed on 15 of 18 test sites; macOS Sonoma security changes block the browser automation approach used 
+- Student: &quot;lost two hours attempting to resolve dependency conflicts on Ubuntu before discovering the tool is archived&quot; 
+- Team lead evaluation was a tooling audit to identify deprecated tools for removal from team configurations 
+</p>
+<h2>Use Cases</h2>
+<p>
+<strong>Prefer Playwright MCP when:</strong> 
+- You need AI-driven browser automation: E2E testing, scraping dynamic JS-heavy pages, accessibility auditing at scale 
+- You want a maintained, Microsoft-backed MCP server that receives security updates 
+- Your target sites use modern JavaScript frameworks (React, Next.js, Vue) — Playwright handles these reliably 
+</p>
+<p>
+<strong>Prefer BrowserMCP when:</strong> 
+- There is no scenario where BrowserMCP should be chosen for new projects 
+- If you have existing BrowserMCP configurations: migrate to Playwright MCP; the MCP protocol interface is compatible and Playwright MCP is a direct functional replacement 
+</p>
+<p>
+<strong>Choose neither when:</strong> 
+- Your automation task involves only static HTML pages and you need zero external dependencies — a direct <code>fetch</code> + HTML parser is simpler and cheaper 
+- You need browser automation at very high scale (1,000+ pages/hour) where a dedicated scraping service (Firecrawl, etc.) will be more cost-efficient than Playwright MCP token usage 
+</p>
+<h2>Methodology</h2>
+<p>
+Scores computed from 6 independent evaluations (3 per tool) submitted 2026-03-04 through 2026-03-23. 
+All evaluators disclosed no conflict of interest. No tool author evaluations included. 
+Evidence strings are task-specific; see <code>data/evaluations/gh-microsoft-playwright-mcp-*.yaml</code> and 
+<code>data/evaluations/gh-browsermcp-mcp-*.yaml</code> for raw data. 
+Score confidence: <strong>medium</strong> (3 evaluations each; 10+ required for high confidence). 
+Note: BrowserMCP&#x27;s low scores reflect its archived status, not a deficiency in its original design. 
+</p>
+</div>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <span>Data: <a href="https://github.com/jiohjiohji/AgentRadar" target="_blank">jiohjiohji/AgentRadar</a></span>
+    <span>·</span>
+    <span><a href="https://github.com/jiohjiohji/AgentRadar/blob/main/data/CONTRIBUTING.md" target="_blank">Contribute an evaluation</a></span>
+  </div>
+</footer>
+<script src="/pagefind/pagefind-ui.js"></script>
+</body>
+</html>

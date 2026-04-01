@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gh-gsd-build-get-shit-done vs gh-neolab-context-engineering-kit — AgentRadar</title>
+  <meta name="description" content="Head-to-head: gh-gsd-build-get-shit-done vs gh-neolab-context-engineering-kit on AgentRadar">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-brand" href="/">AgentRadar</a>
+    <div class="nav-links">
+      <a href="/tools/">Tools</a>
+      <a href="/versus/">Versus</a>
+      <a href="https://github.com/jiohjiohji/AgentRadar" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+<main class="container">
+
+<div class="versus-header" data-pagefind-body>
+  <h1><a href="/tools/gh-gsd-build-get-shit-done.html">gh-gsd-build-get-shit-done</a></h1>
+  <span class="vs-divider">vs</span>
+  <h1><a href="/tools/gh-neolab-context-engineering-kit.html">gh-neolab-context-engineering-kit</a></h1>
+</div>
+<p style="color:var(--text-muted);font-size:0.85rem">Category: claudemd-framework · Valid until: 2026-06-29</p>
+<div class="prose" data-pagefind-body>
+  <h1>TÂCHES vs NeoLab Context Engineering Kit</h1>
+<h2>Quick Answer</h2>
+<p>
+<strong>Choose TÂCHES</strong> for spec-driven feature development and complex refactoring where planning discipline compounds into fewer rework cycles. 
+</p>
+<p>
+<strong>Choose NeoLab Context Engineering Kit</strong> for establishing a shared Claude Code context structure across a team, particularly for standardising conventions and reducing per-session re-explanation. 
+</p>
+<h2>Score Comparison</h2>
+<table>
+<tr><th>Dimension</th><th>TÂCHES</th><th>NeoLab CEK</th></tr>
+<tbody>
+<tr><td>Productivity (p)</td><td>**8.7**</td><td>6.0</td></tr>
+<tr><td>Quality (q)</td><td>**8.7**</td><td>6.0</td></tr>
+<tr><td>Cost Efficiency (c)</td><td>**8.7**</td><td>7.0</td></tr>
+<tr><td>Reliability (r)</td><td>8.3</td><td>7.3</td></tr>
+<tr><td>Composability (x)</td><td>**9.0**</td><td>6.0</td></tr>
+<tr><th>Setup Friction (f)</th><th>8.7</th><th>7.0</th></tr>
+<tr><th>**Composite**</th><th>**8.7**</th><th>**6.5**</th></tr>
+<tr><th>Confidence</th><th>medium (3 evals)</th><th>medium (3 evals)</th></tr>
+</tbody></table>
+<h2>Community Verdicts</h2>
+<p>
+<strong>TÂCHES</strong> — 3 evaluations (developer, team-lead, small-team): 
+- 8 features in 3 weeks vs team average of 5–6; zero features required major rework after spec sign-off 
+- Team PR cycle time dropped 31% in a 1-month pilot (4-person team); rework frequency halved 
+- Migration of monolithic Express API to microservices: dependency mapping phase identified 14 hidden couplings in 2 hours that would have been discovered mid-migration otherwise; zero regressions 
+- All 3 evaluators gave composability 9/10: framework drops into existing Claude Code workflows with no CLAUDE.md changes, no shared infrastructure 
+- &quot;The spec discipline compounds over time — teams that stick with it get progressively better at scoping&quot; — team-lead eval 
+</p>
+<p>
+<strong>NeoLab Context Engineering Kit</strong> — 3 evaluations (developer, small-team, researcher): 
+- Time spent re-explaining project conventions per session dropped measurably after kit adoption (5-person team) 
+- Code consistency across team members improved; shared context produced outputs that matched project style guides more reliably 
+- Developer: skills are &quot;surface-level for Go microservices&quot; — kit is optimised for web product development, not all domains 
+- Researcher: required &quot;meaningful adaptation&quot; for data science context; domain-specific skills took 2–3 hours to adapt 
+- NeoLab CEK&#x27;s higher cost efficiency (7.0 vs TÂCHES 8.7) reflects structured prompts that reduce per-session token use for convention re-explanation 
+</p>
+<h2>Use Cases</h2>
+<p>
+<strong>Prefer TÂCHES when:</strong> 
+- You are building features or running complex refactors where scope definition is the highest-risk phase 
+- You want spec-first discipline to reduce late-stage rework — the planning overhead pays back on features with 2+ hours of implementation 
+- You work solo or in a small team and want a lightweight framework with zero infrastructure or licensing cost 
+- Your team is already Claude Code–native; TÂCHES assumes familiarity with Claude Code conventions 
+</p>
+<p>
+<strong>Prefer NeoLab Context Engineering Kit when:</strong> 
+- You need to standardise Claude Code usage across a team that currently has inconsistent prompting practices 
+- Your goal is reducing per-session context re-establishment (conventions, project structure, naming patterns) rather than improving planning discipline 
+- You are onboarding new developers to an existing Claude Code workflow and want a structured starting point they can follow 
+</p>
+<p>
+<strong>Choose neither when:</strong> 
+- Your Claude Code use is already well-structured and you are looking for automation (crawlers, test runners, score computation) rather than methodology — both are process frameworks, not execution tools 
+- Your domain has strong non-web conventions (ML research, embedded systems, data engineering) where both kits require significant adaptation before delivering their claimed value; consider writing a minimal CLAUDE.md from scratch instead 
+</p>
+<h2>Methodology</h2>
+<p>
+Scores computed from 6 independent evaluations (3 per tool) submitted 2026-03-08 through 2026-03-29. 
+All evaluators disclosed no conflict of interest. No tool author evaluations included. 
+Evidence strings are task-specific; see <code>data/evaluations/gh-gsd-build-get-shit-done-*.yaml</code> and 
+<code>data/evaluations/gh-neolab-context-engineering-kit-*.yaml</code> for raw data. 
+Score confidence: <strong>medium</strong> (3 evaluations each; 10+ required for high confidence). 
+</p>
+</div>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <span>Data: <a href="https://github.com/jiohjiohji/AgentRadar" target="_blank">jiohjiohji/AgentRadar</a></span>
+    <span>·</span>
+    <span><a href="https://github.com/jiohjiohji/AgentRadar/blob/main/data/CONTRIBUTING.md" target="_blank">Contribute an evaluation</a></span>
+  </div>
+</footer>
+<script src="/pagefind/pagefind-ui.js"></script>
+</body>
+</html>

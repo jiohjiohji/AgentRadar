@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gh-wshobson-agents vs gh-avifenesh-agentsys — AgentRadar</title>
+  <meta name="description" content="Head-to-head: gh-wshobson-agents vs gh-avifenesh-agentsys on AgentRadar">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-brand" href="/">AgentRadar</a>
+    <div class="nav-links">
+      <a href="/tools/">Tools</a>
+      <a href="/versus/">Versus</a>
+      <a href="https://github.com/jiohjiohji/AgentRadar" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+<main class="container">
+
+<div class="versus-header" data-pagefind-body>
+  <h1><a href="/tools/gh-wshobson-agents.html">gh-wshobson-agents</a></h1>
+  <span class="vs-divider">vs</span>
+  <h1><a href="/tools/gh-avifenesh-agentsys.html">gh-avifenesh-agentsys</a></h1>
+</div>
+<p style="color:var(--text-muted);font-size:0.85rem">Category: orchestration · Valid until: 2026-06-29</p>
+<div class="prose" data-pagefind-body>
+  <h1>wshobson/agents vs AgentSys</h1>
+<h2>Quick Answer</h2>
+<p>
+<strong>Choose wshobson/agents</strong> if you already use Claude Code and want multi-agent orchestration that fits your existing workflow. 
+</p>
+<p>
+<strong>Choose AgentSys</strong> if you want a catalog of pre-built, ready-to-invoke agent skills and are willing to learn its plugin manifest format. 
+</p>
+<h2>Score Comparison</h2>
+<table>
+<tr><th>Dimension</th><th>wshobson/agents</th><th>AgentSys</th></tr>
+<tbody>
+<tr><td>Productivity (p)</td><td>8.7</td><td>6.7</td></tr>
+<tr><td>Quality (q)</td><td>7.7</td><td>6.3</td></tr>
+<tr><td>Cost Efficiency (c)</td><td>7.0</td><td>5.7</td></tr>
+<tr><td>Reliability (r)</td><td>7.7</td><td>7.0</td></tr>
+<tr><td>Composability (x)</td><td>**9.0**</td><td>6.3</td></tr>
+<tr><th>Setup Friction (f)</th><th>8.0</th><th>5.3</th></tr>
+<tr><th>**Composite**</th><th>**8.0**</th><th>**6.2**</th></tr>
+<tr><th>Confidence</th><th>medium (3 evals)</th><th>medium (3 evals)</th></tr>
+</tbody></table>
+<h2>Community Verdicts</h2>
+<p>
+<strong>wshobson/agents</strong> — 3 evaluations (developer, team-lead, small-team): 
+- Full-stack features completed in 55 minutes vs 3–4 hours manually; 28% team velocity improvement during 2-week pilot 
+- Composability score of 9.0 reflects zero changes needed to existing CLAUDE.md or tool configuration 
+- 38 of 42 feature implementations completed without issues; 4 required recoverable developer intervention 
+- &quot;Best multi-agent orchestration for Claude Code native workflows&quot; — developer eval, 2026-03-05 
+</p>
+<p>
+<strong>AgentSys</strong> — 3 evaluations (developer, team-lead, student): 
+- 50% task time reduction vs prompt engineering from scratch for code review, docs, and test generation 
+- 20–30% token overhead vs direct Claude prompts; material cost for teams doing hundreds of daily calls 
+- Team lead: &quot;experienced Claude Code users may find the framework overhead and template limitations add more friction than value&quot; 
+- Setup averaged 45–60 minutes; plugin manifest format requires explicit learning investment 
+</p>
+<h2>Use Cases</h2>
+<p>
+<strong>Prefer wshobson/agents when:</strong> 
+- You use Claude Code as your primary development environment and want parallel agent execution on complex features 
+- Your workflow is already Claude Code–native and you want zero additional toolchain overhead 
+- You&#x27;re solving well-defined, parallelisable tasks (backend + frontend + tests) where agents can run concurrently 
+- Team-wide adoption matters: onboarding averaged 25 minutes per developer in a 6-person pilot 
+</p>
+<p>
+<strong>Prefer AgentSys when:</strong> 
+- You want a library of ready-made agent skills without writing orchestration logic from scratch 
+- Your team is new to Claude Code and benefits from opinionated, structured agent templates 
+- You need specific built-in agents (project management, bug analysis) that AgentSys ships pre-configured 
+</p>
+<p>
+<strong>Choose neither when:</strong> 
+- Your tasks are simple enough that a single Claude Code session with a clear prompt handles them in one pass — both tools add orchestration overhead that is not justified for single-file changes or quick Q&amp;A tasks 
+- You need production-grade reliability guarantees; both tools are community-maintained with no SLA 
+</p>
+<h2>Methodology</h2>
+<p>
+Scores computed from 6 independent evaluations (3 per tool) submitted 2026-03-05 through 2026-03-26. 
+All evaluators disclosed no conflict of interest. No tool author evaluations included. 
+Evidence strings are task-specific; see <code>data/evaluations/gh-wshobson-agents-*.yaml</code> and 
+<code>data/evaluations/gh-avifenesh-agentsys-*.yaml</code> for raw data. 
+Score confidence: <strong>medium</strong> (3 evaluations each; 10+ required for high confidence). 
+</p>
+</div>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <span>Data: <a href="https://github.com/jiohjiohji/AgentRadar" target="_blank">jiohjiohji/AgentRadar</a></span>
+    <span>·</span>
+    <span><a href="https://github.com/jiohjiohji/AgentRadar/blob/main/data/CONTRIBUTING.md" target="_blank">Contribute an evaluation</a></span>
+  </div>
+</footer>
+<script src="/pagefind/pagefind-ui.js"></script>
+</body>
+</html>
