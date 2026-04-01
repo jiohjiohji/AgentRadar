@@ -1,0 +1,51 @@
+# AgentRadar Health Check
+# Audits your installed tools weekly — flags archived, stale, or upgradeable tools.
+# Exit code 1 = action needed. Add `continue-on-error: true` to make this advisory-only.
+#
+# Install: copy this file to .github/workflows/agentRadar-check.yml in your repo.
+
+name: AgentRadar Tool Health Check
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday at 08:00 UTC
+  workflow_dispatch:       # Run manually from the GitHub Actions tab
+
+jobs:
+  check:
+    name: Check tool health
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install AgentRadar CLI
+        run: npm install -g agentRadar
+
+      - name: Run health check
+        run: agentRadar check --json > agentRadar-report.json
+        continue-on-error: true   # don't fail the build — surface issues as annotations
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agentRadar-report
+          path: agentRadar-report.json
+          retention-days: 30
+
+      - name: Annotate issues
+        if: always()
+        run: |
+          node -e "
+          const r = require('./agentRadar-report.json');
+          r.results
+            .filter(x => ['archived','stale','upgrade'].includes(x.status))
+            .forEach(x => {
+              const level = x.status === 'archived' ? 'error' : 'warning';
+              console.log(\`::${level} title=AgentRadar::${x.message}\`);
+            });
+          "

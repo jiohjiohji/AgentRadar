@@ -437,7 +437,7 @@ wrangler deploy
 
 # Environment variables (set via wrangler secret — never in code)
 wrangler secret put GITHUB_TOKEN        # For reading private data (if any)
-wrangler secret put BUTTONDOWN_API_KEY  # For digest sending
+wrangler secret put BUTTONDOWN_API_KEY  # For digest sending (P1-007+)
 
 # KV namespaces (create once)
 wrangler kv:namespace create "RATELIMIT"

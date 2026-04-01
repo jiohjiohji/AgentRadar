@@ -1,0 +1,45 @@
+name: Build and Deploy Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/tools/*.yaml'
+      - 'data/versus/*.md'
+      - 'data/tools-index.json'
+      - 'web/static/**'
+      - 'scripts/build_site.py'
+
+jobs:
+  build-and-deploy:
+    name: Build site and deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python deps
+        run: pip install pyyaml
+
+      - name: Build static site
+        run: python scripts/build_site.py
+
+      - name: Build Pagefind search index
+        run: npx -y pagefind --site web/dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: web/dist
+          force_orphan: true
