@@ -1,0 +1,17 @@
+id: gh-samzong-mdctl
+name: mdctl
+source_url: https://samzong.github.io/mdctl/
+category: complementary
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- cobra
+- llm tools
+- llmstxt
+- markdown
+- translate
+versus_refs: []
