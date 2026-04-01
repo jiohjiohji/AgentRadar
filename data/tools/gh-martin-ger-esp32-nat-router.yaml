@@ -1,0 +1,20 @@
+id: gh-martin-ger-esp32-nat-router
+name: esp32_nat_router
+source_url: https://github.com/martin-ger/esp32_nat_router
+category: mcp-server
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- dhcp server
+- esp idf
+- esp32
+- firewall
+- home assistant integration
+- mcp server
+- nat
+- pcap
+versus_refs: []
