@@ -1,0 +1,20 @@
+id: gh-batrachianai-toad
+name: toad
+source_url: https://www.batrachian.ai/
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents ui
+- ai
+- claude
+- claude code
+- codex cli
+- copilot
+- textual
+- tui
+versus_refs: []
