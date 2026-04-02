@@ -1,0 +1,20 @@
+id: gh-drhelius-gearboy
+name: Gearboy
+source_url: https://x.com/drhelius
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- bsd
+- emulation
+- emulator
+- game boy
+- gameboy
+- gameboy color emulator
+- gameboy emulator
+- libretro
+versus_refs: []
