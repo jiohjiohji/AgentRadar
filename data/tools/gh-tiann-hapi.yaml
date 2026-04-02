@@ -1,0 +1,18 @@
+id: gh-tiann-hapi
+name: hapi
+source_url: https://hapi.run
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- app
+- claude code
+- codex
+- gemini cli
+- opencode
+- remote control
+versus_refs: []
