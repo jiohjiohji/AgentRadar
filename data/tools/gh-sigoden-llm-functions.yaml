@@ -1,0 +1,20 @@
+id: gh-sigoden-llm-functions
+name: llm-functions
+source_url: https://github.com/sigoden/llm-functions
+category: mcp-server
+pricing: free
+license: MIT
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agents
+- ai tools
+- function calling
+- llm
+- llm agents
+- llm functions
+- llm tools
+versus_refs: []
