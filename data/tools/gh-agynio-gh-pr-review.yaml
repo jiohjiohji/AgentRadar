@@ -1,0 +1,20 @@
+id: gh-agynio-gh-pr-review
+name: gh-pr-review
+source_url: https://agyn.io
+category: complementary
+pricing: free
+license: null
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- automation
+- code review
+- command line
+- developer tools
+- devops
+- gh extension
+- github
+versus_refs: []
