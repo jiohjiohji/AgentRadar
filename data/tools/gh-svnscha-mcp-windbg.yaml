@@ -1,0 +1,20 @@
+id: gh-svnscha-mcp-windbg
+name: mcp-windbg
+source_url: https://svnscha.de/posts/ai-meets-windbg/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- copilot
+- copilot chat
+- crash dump
+- crash reports
+- mcp
+- mcp server
+- windbg
+- windbg extension
+versus_refs: []
