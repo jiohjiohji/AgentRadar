@@ -1,0 +1,20 @@
+id: gh-maciek-roboblog-claude-code-usage-monitor
+name: Claude-Code-Usage-Monitor
+source_url: https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor
+category: complementary
+pricing: free
+license: MIT
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- analytics
+- claude
+- claude code
+- claude usage
+- limits
+- monitoring
+- terminal
+versus_refs: []
