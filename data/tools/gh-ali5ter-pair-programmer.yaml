@@ -1,0 +1,20 @@
+id: gh-ali5ter-pair-programmer
+name: pair-programmer
+source_url: https://github.com/ali5ter/pair-programmer
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- ai collaboration
+- bash
+- claude
+- claude agent
+- claude code
+- cli tool
+- code assistant
+versus_refs: []
