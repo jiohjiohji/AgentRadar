@@ -1,0 +1,18 @@
+id: gh-ai-buddy-catalyst-labs-insta-rag
+name: insta_rag
+source_url: https://pypi.org/project/insta-rag
+category: complementary
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- llm
+- llm tools
+- rag
+- rag pipeline
+- retrieval augmented generation
+versus_refs: []
