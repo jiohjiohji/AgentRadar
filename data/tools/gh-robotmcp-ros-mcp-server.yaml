@@ -1,0 +1,19 @@
+id: gh-robotmcp-ros-mcp-server
+name: ros-mcp-server
+source_url: https://robotmcp.ai
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp server
+- modelcontextprotocol
+- ros
+- ros mcp server
+- ros2
+- ros2 mcp server
+versus_refs: []
