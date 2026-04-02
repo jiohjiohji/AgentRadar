@@ -1,0 +1,20 @@
+id: gh-skye-harris-llm-intents
+name: llm_intents
+source_url: https://github.com/skye-harris/llm_intents
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- assist
+- hacs
+- hacs integration
+- hassio
+- hassio integration
+- home assistant
+- home assistant integration
+- home assistant voice
+versus_refs: []
