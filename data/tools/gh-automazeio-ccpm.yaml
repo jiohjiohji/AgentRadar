@@ -1,0 +1,18 @@
+id: gh-automazeio-ccpm
+name: ccpm
+source_url: https://automaze.io
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai coding
+- claude
+- claude code
+- project management
+- vibe coding
+versus_refs: []
