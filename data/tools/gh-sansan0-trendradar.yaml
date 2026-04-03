@@ -1,0 +1,20 @@
+id: gh-sansan0-trendradar
+name: TrendRadar
+source_url: https://sansan0.github.io/TrendRadar/
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- bark
+- data analysis
+- docker
+- hot news
+- llm
+- mail
+- mcp
+versus_refs: []
