@@ -1,0 +1,20 @@
+id: gh-mrexodia-ida-pro-mcp
+name: ida-pro-mcp
+source_url: https://plugins.hex-rays.com/mrexodia/ida-pro-mcp
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- aiagent
+- binary analysis
+- ida plugin
+- ida pro
+- mcp
+- mcp server
+- modelcontextprotocol
+versus_refs: []
