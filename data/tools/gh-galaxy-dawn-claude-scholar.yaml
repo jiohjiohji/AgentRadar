@@ -1,0 +1,20 @@
+id: gh-galaxy-dawn-claude-scholar
+name: claude-scholar
+source_url: https://github.com/Galaxy-Dawn/claude-scholar
+category: mcp-server
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- academic research
+- ai agents
+- claude
+- claude code
+- codex cli
+- developer tools
+- mcp
+- openai codex
+versus_refs: []
