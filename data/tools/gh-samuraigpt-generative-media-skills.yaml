@@ -1,0 +1,20 @@
+id: gh-samuraigpt-generative-media-skills
+name: Generative-Media-Skills
+source_url: https://github.com/SamurAIGPT/Generative-Media-Skills
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent tools
+- ai agents
+- ai art
+- ai music
+- ai video
+- claude code
+- flux
+- generative ai
+versus_refs: []
