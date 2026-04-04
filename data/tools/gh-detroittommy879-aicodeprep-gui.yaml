@@ -1,0 +1,20 @@
+id: gh-detroittommy879-aicodeprep-gui
+name: aicodeprep-gui
+source_url: https://wuu73.org/aicp
+category: prompt-library
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agents
+- chatgpt
+- code analysis
+- context
+- context management
+- developer experience
+- developer tools
+versus_refs: []
