@@ -1,0 +1,20 @@
+id: gh-joey-zhou-xiaozhi-esp32-server-java
+name: xiaozhi-esp32-server-java
+source_url: https://github.com/joey-zhou/xiaozhi-esp32-server-java
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- esp32
+- java
+- mcp
+- mcp client
+- mcp server
+- spring ai
+- stt
+- tts
+versus_refs: []
