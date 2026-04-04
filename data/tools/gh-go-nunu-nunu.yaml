@@ -1,0 +1,20 @@
+id: gh-go-nunu-nunu
+name: nunu
+source_url: https://go-nunu.github.io/nunu/
+category: mcp-server
+pricing: free
+license: MIT
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ddd
+- gin
+- go
+- golang
+- golang cli
+- mcp
+- mcp client
+- mcp server
+versus_refs: []
