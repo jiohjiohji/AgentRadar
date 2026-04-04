@@ -1,0 +1,20 @@
+id: gh-fengshao1227-ccg-workflow
+name: ccg-workflow
+source_url: https://fengshao1227.github.io/ccg-workflow/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent teams
+- ai
+- ccg
+- claude code
+- cli
+- codex
+- gemini
+- llm
+versus_refs: []
