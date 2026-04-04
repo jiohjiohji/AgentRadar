@@ -1,0 +1,20 @@
+id: gh-ogham-mcp-ogham-mcp
+name: ogham-mcp
+source_url: https://ogham-mcp.dev
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent memory
+- ai memory
+- claude
+- codex
+- llm tools
+- mcp
+- memory
+- model context protocol
+versus_refs: []
