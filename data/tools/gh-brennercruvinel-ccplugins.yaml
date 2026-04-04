@@ -1,0 +1,20 @@
+id: gh-brennercruvinel-ccplugins
+name: CCPlugins
+source_url: https://github.com/brennercruvinel/CCPlugins
+category: complementary
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- automated
+- claude
+- claude ai
+- claude code
+- cli
+- collection
+- commands
+- extensions
+versus_refs: []
