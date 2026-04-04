@@ -1,0 +1,20 @@
+id: gh-dcostenco-prism-mcp
+name: prism-mcp
+source_url: https://www.npmjs.com/package/prism-mcp-server
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent memory
+- ai agent
+- autonomous pipeline
+- brave search
+- claude desktop
+- dark factory
+- gdpr
+- google gemini
+versus_refs: []
