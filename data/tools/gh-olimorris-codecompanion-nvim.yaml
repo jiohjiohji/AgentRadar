@@ -1,0 +1,20 @@
+id: gh-olimorris-codecompanion-nvim
+name: codecompanion.nvim
+source_url: https://codecompanion.olimorris.dev
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- acp
+- agent
+- agent client protocol
+- anthropic
+- claude code
+- copilot
+- deepseek
+- gemini
+versus_refs: []
