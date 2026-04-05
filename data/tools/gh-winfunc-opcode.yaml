@@ -1,0 +1,20 @@
+id: gh-winfunc-opcode
+name: opcode
+source_url: https://opcode.sh
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- anthropic claude
+- claude
+- claude 4
+- claude 4 opus
+- claude 4 sonnet
+- claude ai
+- claude code
+versus_refs: []
