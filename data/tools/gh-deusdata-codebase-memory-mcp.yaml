@@ -1,0 +1,20 @@
+id: gh-deusdata-codebase-memory-mcp
+name: codebase-memory-mcp
+source_url: https://deusdata.github.io/codebase-memory-mcp/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- aider
+- c
+- claude code
+- code analysis
+- code intelligence
+- codex
+- cursor
+- developer tools
+versus_refs: []
