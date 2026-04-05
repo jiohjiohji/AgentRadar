@@ -1,0 +1,20 @@
+id: gh-opactorai-claudable
+name: Claudable
+source_url: https://github.com/opactorai/Claudable
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- claude
+- claude code
+- codex
+- codingagent
+- free
+- gemini
+- local
+versus_refs: []
