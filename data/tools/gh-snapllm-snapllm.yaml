@@ -1,0 +1,19 @@
+id: gh-snapllm-snapllm
+name: snapllm
+source_url: https://github.com/snapllm/snapllm
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- llm
+- llm inference
+- llm serving
+- llm tools
+- multi model
+- multimodal
+- ollama alternative
+versus_refs: []
