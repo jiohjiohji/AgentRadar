@@ -1,0 +1,15 @@
+id: gh-gastownhall-beads
+name: beads
+source_url: https://github.com/gastownhall/beads
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- claude code
+- coding
+versus_refs: []
