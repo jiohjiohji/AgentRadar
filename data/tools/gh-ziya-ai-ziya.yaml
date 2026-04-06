@@ -1,0 +1,20 @@
+id: gh-ziya-ai-ziya
+name: ziya
+source_url: https://github.com/ziya-ai/ziya
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai assistant
+- ai client
+- ai frontend
+- architecture
+- bedrock
+- claude
+- coding assistant
+versus_refs: []
