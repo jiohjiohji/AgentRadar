@@ -1,0 +1,20 @@
+id: gh-cyanheads-model-context-protocol-resources
+name: model-context-protocol-resources
+source_url: https://github.com/cyanheads/model-context-protocol-resources
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai development
+- developer guides
+- llm tools
+- mcp
+- mcp servers
+- model context protocol
+- model context protocol servers
+versus_refs: []
