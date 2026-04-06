@@ -1,0 +1,20 @@
+id: gh-ruya-ai-cozempic
+name: cozempic
+source_url: https://pypi.org/project/cozempic/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent teams
+- claude code
+- claude skills
+- cli
+- context
+- context management
+- jsonl
+- llm tools
+versus_refs: []
