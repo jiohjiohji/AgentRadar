@@ -1,0 +1,20 @@
+id: gh-solanabr-solana-claude
+name: solana-claude
+source_url: https://github.com/solanabr/solana-claude
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude agent
+- claude code
+- claude commands
+- claude md
+- claude skills
+- claude subagents
+- solana agents
+- solana claude
+versus_refs: []
