@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-01",
+  "generated": "2026-04-06",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -8,7 +8,7 @@
       "id": "gh-abhishekray07-claude-md-templates",
       "name": "Claude.md Templates",
       "category": "claudemd-framework",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "CLAUDE.md",
         "templates",
