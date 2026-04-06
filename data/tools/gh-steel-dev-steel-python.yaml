@@ -1,0 +1,16 @@
+id: gh-steel-dev-steel-python
+name: steel-python
+source_url: https://pypi.org/project/steel-sdk/
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- browser automation
+- llm tools
+- web scraping
+versus_refs: []
