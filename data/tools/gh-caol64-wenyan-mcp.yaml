@@ -1,0 +1,15 @@
+id: gh-caol64-wenyan-mcp
+name: wenyan-mcp
+source_url: https://wenyan.yuzhi.tech
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp server
+- wechat
+- wenyan
+versus_refs: []
