@@ -1,0 +1,13 @@
+id: gh-oboard-claude-code-rev
+name: claude-code-rev
+source_url: https://github.com/oboard/claude-code-rev
+category: complementary
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+versus_refs: []
