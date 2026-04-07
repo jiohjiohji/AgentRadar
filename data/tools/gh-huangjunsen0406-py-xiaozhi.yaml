@@ -1,0 +1,18 @@
+id: gh-huangjunsen0406-py-xiaozhi
+name: py-xiaozhi
+source_url: https://huangjunsen0406.github.io/py-xiaozhi/
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- esp32
+- esp32 s3
+- mcp
+- mcp server
+- python
+- xiaozhi esp32
+versus_refs: []
