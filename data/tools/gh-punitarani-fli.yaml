@@ -1,0 +1,18 @@
+id: gh-punitarani-fli
+name: fli
+source_url: https://deepwiki.com/punitarani/fli
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- api
+- flights api
+- google flights
+- google flights api
+- mcp
+- mcp server
+versus_refs: []
