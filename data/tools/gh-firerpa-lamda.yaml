@@ -1,0 +1,20 @@
+id: gh-firerpa-lamda
+name: lamda
+source_url: https://device-farm.com/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- adb
+- agents
+- ai
+- android
+- appium
+- automation
+- dynamic analysis
+- frida
+versus_refs: []
