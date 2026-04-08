@@ -1,0 +1,19 @@
+id: gh-zyh530-claude-mobile
+name: claude-mobile
+source_url: https://github.com/zyh530/claude-mobile
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- claude agent
+- mobile
+- nodejs
+- remote control
+- terminal
+- websocket
+versus_refs: []
