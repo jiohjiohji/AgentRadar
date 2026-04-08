@@ -1,0 +1,20 @@
+id: gh-santifer-career-ops
+name: career-ops
+source_url: https://github.com/santifer/career-ops
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- anthropic
+- automation
+- career
+- claude
+- claude code
+- cli
+- golang
+versus_refs: []
