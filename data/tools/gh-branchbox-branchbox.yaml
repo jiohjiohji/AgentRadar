@@ -1,0 +1,20 @@
+id: gh-branchbox-branchbox
+name: branchbox
+source_url: http://branchbox.dev/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic development
+- ai agents
+- ai development
+- devcontainers
+- docker
+- docker compose
+- docker networking
+- environment management
+versus_refs: []
