@@ -1,0 +1,19 @@
+id: gh-chunkhound-chunkhound
+name: chunkhound
+source_url: https://chunkhound.github.io
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- duckdb
+- mcp server
+- rag
+- semantic search
+- tree sitter
+versus_refs: []
