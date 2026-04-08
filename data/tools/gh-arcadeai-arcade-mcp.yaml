@@ -1,0 +1,20 @@
+id: gh-arcadeai-arcade-mcp
+name: arcade-mcp
+source_url: https://docs.arcade.dev
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai gateway
+- arcade
+- arcade ai
+- llm tool call
+- llm tools
+- mcp
+- mcp client
+versus_refs: []
