@@ -1,0 +1,20 @@
+id: gh-refreshdotdev-web-eval-agent
+name: web-eval-agent
+source_url: https://www.operative.sh/mcp
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- debugging
+- debugging tool
+- mcp
+- mcp server
+- modelcontextprotocol
+- playwright
+- qa
+- vibe coding
+versus_refs: []
