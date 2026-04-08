@@ -1,0 +1,20 @@
+id: gh-code-yeongyu-oh-my-openagent
+name: oh-my-openagent
+source_url: https://ohmyopenagent.com/
+category: orchestration
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agents
+- amp
+- anthropic
+- chatgpt
+- claude
+- claude code
+- claude skills
+versus_refs: []
