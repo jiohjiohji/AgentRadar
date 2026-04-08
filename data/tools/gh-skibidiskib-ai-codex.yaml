@@ -1,0 +1,20 @@
+id: gh-skibidiskib-ai-codex
+name: ai-codex
+source_url: https://github.com/skibidiskib/ai-codex
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai coding
+- claude
+- claude code
+- codebase index
+- cursor
+- developer tools
+- llm tools
+- nextjs
+versus_refs: []
