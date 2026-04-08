@@ -1,0 +1,20 @@
+id: gh-hookdeck-webhook-skills
+name: webhook-skills
+source_url: https://github.com/hookdeck/webhook-skills
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai coding
+- api integrations
+- event driven
+- github webhooks
+- llm tools
+- shopify webhooks
+- stripe webhooks
+versus_refs: []
