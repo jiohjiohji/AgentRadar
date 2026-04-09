@@ -1,0 +1,20 @@
+id: gh-cesp99-sussurro
+name: sussurro
+source_url: https://github.com/cesp99/sussurro
+category: complementary
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- cli
+- darwin
+- golang
+- linux
+- llm tools
+- macos
+- whisper
+- whisper cpp
+versus_refs: []
