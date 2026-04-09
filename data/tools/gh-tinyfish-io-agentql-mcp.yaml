@@ -1,0 +1,20 @@
+id: gh-tinyfish-io-agentql-mcp
+name: agentql-mcp
+source_url: https://docs.agentql.com/integrations/mcp
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agentql
+- ai
+- aiagent
+- claude
+- cursor
+- llm tools
+- mcp
+versus_refs: []
