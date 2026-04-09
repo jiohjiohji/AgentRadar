@@ -1,0 +1,20 @@
+id: gh-httprunner-httprunner
+name: httprunner
+source_url: https://httprunner.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- adb
+- agent tars
+- mcp server
+- mcphost
+- testing
+- ui tars
+- ui testing
+- uiautomator2
+versus_refs: []
