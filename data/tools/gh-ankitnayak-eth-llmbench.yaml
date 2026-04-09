@@ -1,0 +1,17 @@
+id: gh-ankitnayak-eth-llmbench
+name: llmBench
+source_url: https://github.com/AnkitNayak-eth/llmBench
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai benchmark
+- llm
+- llm inference
+- llm tools
+- local llm
+versus_refs: []
