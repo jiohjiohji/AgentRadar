@@ -1,0 +1,20 @@
+id: gh-nukeop-nuclear
+name: nuclear
+source_url: https://nuclearplayer.com
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- desktop app
+- linux
+- mac
+- mcp
+- mcp server
+- music
+- music player
+versus_refs: []
