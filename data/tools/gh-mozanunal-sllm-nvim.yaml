@@ -1,0 +1,20 @@
+id: gh-mozanunal-sllm-nvim
+name: sllm.nvim
+source_url: https://github.com/mozanunal/sllm.nvim
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- gpt4all
+- llm tools
+- llms
+- neovim
+- neovim plugin
+- nvim
+- nvim lua
+versus_refs: []
