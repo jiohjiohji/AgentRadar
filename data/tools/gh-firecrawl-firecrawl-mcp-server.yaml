@@ -1,0 +1,20 @@
+id: gh-firecrawl-firecrawl-mcp-server
+name: firecrawl-mcp-server
+source_url: https://firecrawl.dev
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- batch processing
+- claude
+- content extraction
+- data collection
+- firecrawl
+- firecrawl ai
+- javascript rendering
+- llm tools
+versus_refs: []
