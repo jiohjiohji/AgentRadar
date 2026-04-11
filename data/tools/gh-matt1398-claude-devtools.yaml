@@ -1,0 +1,20 @@
+id: gh-matt1398-claude-devtools
+name: claude-devtools
+source_url: https://claude-dev.tools
+category: eval-observability
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent
+- ai debugging
+- ai tools
+- anthropic
+- claude
+- claude code
+- claude code tools
+versus_refs: []
