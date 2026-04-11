@@ -1,0 +1,18 @@
+id: gh-addyosmani-agent-skills
+name: agent-skills
+source_url: https://github.com/addyosmani/agent-skills
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- antigravity
+- antigravity ide
+- claude code
+- cursor
+- skills
+versus_refs: []
