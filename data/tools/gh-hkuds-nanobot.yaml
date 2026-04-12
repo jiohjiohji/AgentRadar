@@ -1,0 +1,20 @@
+id: gh-hkuds-nanobot
+name: nanobot
+source_url: https://nanobot.wiki
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent
+- ai agents
+- anthropic
+- chatgpt
+- claude
+- claude code
+- codex
+versus_refs: []
