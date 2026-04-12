@@ -1,0 +1,20 @@
+id: gh-cherryhq-cherry-studio
+name: cherry-studio
+source_url: https://cherry-ai.com
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agency agents
+- ai agent
+- claude code
+- codex
+- open cli
+- openclaw
+- opencode
+- skills
+versus_refs: []
