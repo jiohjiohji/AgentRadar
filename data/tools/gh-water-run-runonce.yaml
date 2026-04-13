@@ -1,0 +1,20 @@
+id: gh-water-run-runonce
+name: RunOnce
+source_url: https://apps.microsoft.com/detail/9NX07BRMKGH2
+category: complementary
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- code runner
+- context menu
+- csharp
+- desktop app
+- developer tools
+- go
+- llm tools
+- lua
+versus_refs: []
