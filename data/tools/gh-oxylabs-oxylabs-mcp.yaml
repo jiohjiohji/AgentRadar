@@ -1,0 +1,20 @@
+id: gh-oxylabs-oxylabs-mcp
+name: oxylabs-mcp
+source_url: https://oxylabs.io
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai tools
+- data collection
+- e comerce scraping
+- llm
+- llm tools
+- mcp
+- mcp server
+- model context protocol
+versus_refs: []
