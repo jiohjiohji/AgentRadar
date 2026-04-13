@@ -1,0 +1,20 @@
+id: gh-txn2-kubefwd
+name: kubefwd
+source_url: http://kubefwd.com/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- api rest
+- developer tools
+- devops
+- devops tools
+- devtools
+- k8s
+- kubefwd
+- kubernetes
+versus_refs: []
