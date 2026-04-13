@@ -1,0 +1,15 @@
+id: gh-piebald-ai-claude-code-system-prompts
+name: claude-code-system-prompts
+source_url: https://github.com/Piebald-AI/claude-code-system-prompts
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- claude code system prompts
+- system prompts
+versus_refs: []
