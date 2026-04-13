@@ -1,0 +1,20 @@
+id: gh-open-compress-claw-compactor
+name: claw-compactor
+source_url: https://www.opencompress.ai/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent tools
+- ai infrastructure
+- ast code analysis
+- claw compactor
+- context compression
+- context pruning
+- context window optimization
+- developer tools
+versus_refs: []
