@@ -1,0 +1,20 @@
+id: gh-cyberark-agentwatch
+name: agentwatch
+source_url: https://www.cyberark.com
+category: eval-observability
+pricing: free
+license: Apache-2.0
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agentic
+- agentic ai
+- ai
+- cybersecurity
+- large language models
+- llm
+- llm framework
+versus_refs: []
