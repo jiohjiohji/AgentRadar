@@ -1,0 +1,20 @@
+id: gh-archestra-ai-archestra
+name: archestra
+source_url: https://Archestra.AI
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- a2a
+- a2a mcp
+- acp
+- agent
+- ai
+- chatgpt
+- chatgpt api
+- claude
+versus_refs: []
