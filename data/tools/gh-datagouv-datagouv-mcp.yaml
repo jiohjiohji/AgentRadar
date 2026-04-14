@@ -1,0 +1,16 @@
+id: gh-datagouv-datagouv-mcp
+name: datagouv-mcp
+source_url: https://mcp.data.gouv.fr/mcp
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp server
+- open data
+- opendata
+versus_refs: []
