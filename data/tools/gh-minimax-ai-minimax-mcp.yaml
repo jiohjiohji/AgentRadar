@@ -1,0 +1,20 @@
+id: gh-minimax-ai-minimax-mcp
+name: MiniMax-MCP
+source_url: https://www.minimax.io/platform
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- image generation
+- image to video
+- mcp
+- mcp server
+- mcp tools
+- text to image
+- text to speech
+- text to video
+versus_refs: []
