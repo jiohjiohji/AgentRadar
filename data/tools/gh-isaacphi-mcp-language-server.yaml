@@ -1,0 +1,17 @@
+id: gh-isaacphi-mcp-language-server
+name: mcp-language-server
+source_url: https://github.com/isaacphi/mcp-language-server
+category: mcp-server
+pricing: free
+license: BSD-3-Clause
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- language server protocol
+- mcp
+- mcp server
+- model context protocol
+versus_refs: []
