@@ -1,0 +1,20 @@
+id: gh-deedy5-ddgs
+name: ddgs
+source_url: https://github.com/deedy5/ddgs
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- api
+- ddgs
+- mcp
+- mcp server
+- metasearch
+- python
+- search
+- websearch
+versus_refs: []
