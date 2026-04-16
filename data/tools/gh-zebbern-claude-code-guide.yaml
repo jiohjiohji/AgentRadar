@@ -1,0 +1,20 @@
+id: gh-zebbern-claude-code-guide
+name: claude-code-guide
+source_url: https://github.com/zebbern/claude-code-guide
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent
+- ai agent tools
+- anthropic claude
+- claude
+- claude ai
+- claude api
+- claude code
+versus_refs: []
