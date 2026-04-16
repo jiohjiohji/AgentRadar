@@ -1,0 +1,20 @@
+id: gh-mensfeld-llm-docs-builder
+name: llm-docs-builder
+source_url: https://github.com/mensfeld/llm-docs-builder
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai documentation
+- context window
+- documentation
+- large language models
+- llm tools
+- llms
+- llms txt
+versus_refs: []
