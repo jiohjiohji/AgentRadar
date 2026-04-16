@@ -1,0 +1,20 @@
+id: gh-evalstate-fast-agent
+name: fast-agent
+source_url: https://fast-agent.ai
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- acp
+- agent
+- agent framework
+- agent skills
+- cli
+- mcp
+- mcp client
+- mcp server
+versus_refs: []
