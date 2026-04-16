@@ -1,0 +1,20 @@
+id: gh-npc-worldwide-npcpy
+name: npcpy
+source_url: https://github.com/NPC-Worldwide/npcpy
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- ai
+- llm
+- mcp
+- mcp client
+- mcp server
+- ollama
+- perplexity
+versus_refs: []
