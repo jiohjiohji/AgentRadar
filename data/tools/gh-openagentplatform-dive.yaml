@@ -1,0 +1,20 @@
+id: gh-openagentplatform-dive
+name: Dive
+source_url: https://github.com/OpenAgentPlatform/Dive
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agents
+- llm interface
+- llm ui
+- mcp client
+- mcp host
+- mcp server
+- ollama
+versus_refs: []
