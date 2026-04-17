@@ -1,0 +1,20 @@
+id: gh-composiohq-open-claude-cowork
+name: open-claude-cowork
+source_url: https://github.com/ComposioHQ/open-claude-cowork
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- aiagents
+- anthropic
+- anthropic claude
+- claude code
+- claude cowork
+- eclectron app
+- opencode
+- workflow automation
+versus_refs: []
