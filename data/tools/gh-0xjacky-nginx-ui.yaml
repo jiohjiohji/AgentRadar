@@ -1,0 +1,20 @@
+id: gh-0xjacky-nginx-ui
+name: nginx-ui
+source_url: https://nginxui.com
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- chatgpt app
+- code completion
+- copilot
+- cron
+- deepseek r1
+- docker
+- go
+- letsencrypt
+versus_refs: []
