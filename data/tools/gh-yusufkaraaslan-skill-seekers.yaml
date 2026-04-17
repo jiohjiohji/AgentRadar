@@ -1,0 +1,20 @@
+id: gh-yusufkaraaslan-skill-seekers
+name: Skill_Seekers
+source_url: https://skillseekersweb.com/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai tools
+- ast parser
+- automation
+- claude ai
+- claude skills
+- code analysis
+- conflict detection
+- documentation
+versus_refs: []
