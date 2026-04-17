@@ -1,0 +1,20 @@
+id: gh-besoeasy-open-skills
+name: open-skills
+source_url: https://github.com/besoeasy/open-skills
+category: mcp-server
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai
+- ai agents
+- claude code
+- clawdbot
+- clawdbot skill
+- llm tools
+- mcp server
+versus_refs: []
