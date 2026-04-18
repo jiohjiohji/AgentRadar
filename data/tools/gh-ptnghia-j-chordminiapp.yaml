@@ -1,0 +1,20 @@
+id: gh-ptnghia-j-chordminiapp
+name: ChordMiniApp
+source_url: https://www.chordmini.me
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ace
+- acr
+- beat tracking
+- chord progressions
+- chord recognition
+- experiment
+- hacktoberfest
+- llm tools
+versus_refs: []
