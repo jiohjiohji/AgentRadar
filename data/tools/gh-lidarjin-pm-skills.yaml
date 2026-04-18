@@ -1,0 +1,19 @@
+id: gh-lidarjin-pm-skills
+name: pm-skills
+source_url: https://github.com/LidarJin/pm-skills
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai skills
+- claude agent
+- claude code
+- jtbd
+- pm tools
+- product management
+- prompt engineering
+versus_refs: []
