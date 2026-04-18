@@ -1,0 +1,18 @@
+id: gh-taishi-i-toiro
+name: toiro
+source_url: https://taishi-i.github.io/toiro/
+category: complementary
+pricing: free
+license: Apache-2.0
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- japanese
+- llm tools
+- natural language processing
+- nlp
+- nlp library
+- word segmentation
+versus_refs: []
