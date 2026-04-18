@@ -1,0 +1,19 @@
+id: gh-xinnan-tech-xiaozhi-esp32-server
+name: xiaozhi-esp32-server
+source_url: http://xiaozhi.biz
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- dify
+- esp32
+- mcp server
+- xiaozhi
+- xiaozhi ai
+- xiaozhi esp32
+- xiaozhi server
+versus_refs: []
