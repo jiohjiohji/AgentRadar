@@ -1,0 +1,20 @@
+id: gh-generalaction-emdash
+name: emdash
+source_url: https://emdash.sh
+category: orchestration
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- claude code
+- cli
+- coding agents
+- codingagents
+- containerization
+- docker
+- gitworktrees
+versus_refs: []
