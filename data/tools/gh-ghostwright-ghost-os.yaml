@@ -1,0 +1,20 @@
+id: gh-ghostwright-ghost-os
+name: ghost-os
+source_url: https://ghostwright.dev/ghost-os
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- accessibility
+- ai agents
+- automation
+- claude code
+- computer use
+- llm tools
+- macos
+- mcp
+versus_refs: []
