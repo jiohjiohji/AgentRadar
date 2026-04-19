@@ -1,0 +1,20 @@
+id: gh-huangyuchuh-comfyui-skills-openclaw
+name: ComfyUI_Skills_OpenClaw
+source_url: https://huangyuchuh.github.io/ComfyUI_Skills_OpenClaw/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent tools
+- ai agents
+- claude code
+- codex
+- comfyui
+- comfyui skills
+- comfyui workflow
+- image generation
+versus_refs: []
