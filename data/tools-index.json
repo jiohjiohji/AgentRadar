@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-13",
+  "generated": "2026-04-20",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -548,7 +548,7 @@
       "id": "gh-josix-awesome-claude-md",
       "name": "Awesome Claude.md",
       "category": "claudemd-framework",
-      "status": "stale",
+      "status": "active",
       "tags": [
         "CLAUDE.md",
         "templates",
@@ -861,7 +861,7 @@
       "id": "gh-openai-swarm",
       "name": "OpenAI Swarm",
       "category": "orchestration",
-      "status": "archived",
+      "status": "active",
       "tags": [
         "multi-agent",
         "orchestration",
