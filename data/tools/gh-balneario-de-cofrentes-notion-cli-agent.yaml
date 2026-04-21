@@ -1,0 +1,20 @@
+id: gh-balneario-de-cofrentes-notion-cli-agent
+name: notion-cli-agent
+source_url: https://www.npmjs.com/package/notion-cli-agent
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent first
+- agentskills
+- ai agent
+- cli
+- llm tools
+- nodejs
+- notion
+- notion api
+versus_refs: []
