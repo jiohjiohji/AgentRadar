@@ -1,0 +1,20 @@
+id: gh-redhat-data-and-ai-template-mcp-server
+name: template-mcp-server
+source_url: https://aitemplates.io
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- fastapi
+- fastmcp
+- kubernetes
+- llm tools
+- mcp
+- model context protocol
+- openshift
+versus_refs: []
