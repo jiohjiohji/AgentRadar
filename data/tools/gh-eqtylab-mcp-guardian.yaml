@@ -1,0 +1,17 @@
+id: gh-eqtylab-mcp-guardian
+name: mcp-guardian
+source_url: https://mcp-guardian.org/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- claude desktop
+- llm tools
+- mcp
+- model context protocol
+versus_refs: []
