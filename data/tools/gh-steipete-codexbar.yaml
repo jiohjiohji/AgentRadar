@@ -1,0 +1,16 @@
+id: gh-steipete-codexbar
+name: CodexBar
+source_url: https://codexbar.app
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- claude code
+- codex
+- swift
+versus_refs: []
