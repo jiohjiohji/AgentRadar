@@ -1,0 +1,20 @@
+id: gh-composiohq-agent-orchestrator
+name: agent-orchestrator
+source_url: https://composio.dev
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent fleet
+- agent swarm
+- claude code
+- codex cli
+- git worktrees
+- multi agent
+- orchestration
+- orchestrator
+versus_refs: []
