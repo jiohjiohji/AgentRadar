@@ -1,0 +1,18 @@
+id: gh-slopus-happy
+name: happy
+source_url: https://happy.engineering
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- claude desktop
+- claude mobile
+- codex
+- codex cli
+- hacktoberfest
+versus_refs: []
