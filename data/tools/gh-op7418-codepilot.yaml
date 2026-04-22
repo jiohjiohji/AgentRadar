@@ -1,0 +1,20 @@
+id: gh-op7418-codepilot
+name: CodePilot
+source_url: https://www.codepilot.sh/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- anthropic
+- claude
+- claude code
+- desktop app
+- electron
+- gui
+- nextjs
+versus_refs: []
