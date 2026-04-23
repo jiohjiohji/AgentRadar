@@ -1,0 +1,17 @@
+id: gh-furlat-abstractions
+name: Abstractions
+source_url: https://github.com/furlat/Abstractions
+category: complementary
+pricing: free
+license: null
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- entity component system
+- event driven
+- functional programming
+- llm tools
+- react pattern
+versus_refs: []
