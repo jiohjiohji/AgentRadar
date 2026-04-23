@@ -1,0 +1,20 @@
+id: gh-golutra-golutra
+name: golutra
+source_url: https://www.golutra.com
+category: orchestration
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- automation
+- chatgpt
+- claude
+- claude code
+- codex
+- codex cli
+versus_refs: []
