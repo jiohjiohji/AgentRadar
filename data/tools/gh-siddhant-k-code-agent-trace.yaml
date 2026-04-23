@@ -1,0 +1,20 @@
+id: gh-siddhant-k-code-agent-trace
+name: agent-trace
+source_url: https://siddhantkhare.com/writing/agent-observability-gap
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent observability
+- agent trace
+- agent traces
+- agents
+- ai agents
+- cli
+- datadog
+- developer tools
+versus_refs: []
