@@ -1,0 +1,20 @@
+id: gh-bug-ops-mcp-execution
+name: mcp-execution
+source_url: https://github.com/bug-ops/mcp-execution
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- ai tools
+- anthropic
+- claude
+- llm tools
+- mcp
+- rust
+- skills
+versus_refs: []
