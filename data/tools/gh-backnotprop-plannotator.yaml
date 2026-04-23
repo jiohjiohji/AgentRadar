@@ -1,0 +1,18 @@
+id: gh-backnotprop-plannotator
+name: plannotator
+source_url: https://plannotator.ai
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- codex
+- obsidian
+- opencode
+- pi mono
+- plan mode
+versus_refs: []
