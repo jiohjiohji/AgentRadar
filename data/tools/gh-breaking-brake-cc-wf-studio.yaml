@@ -1,0 +1,19 @@
+id: gh-breaking-brake-cc-wf-studio
+name: cc-wf-studio
+source_url: https://open-vsx.org/extension/breaking-brake/cc-wf-studio
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- claude code
+- mcp tools
+- slash commands
+- sub agents
+- vscode extension
+- workflow automation
+versus_refs: []
