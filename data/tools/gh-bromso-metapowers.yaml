@@ -1,0 +1,20 @@
+id: gh-bromso-metapowers
+name: metapowers
+source_url: https://bromso.github.io/metapowers/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude agent
+- claude code
+- claude code plugin
+- claude skills
+- context design
+- context engineering
+- mcp
+- meta prompting
+versus_refs: []
