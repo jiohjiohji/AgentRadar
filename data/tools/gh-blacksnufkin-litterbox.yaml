@@ -1,0 +1,20 @@
+id: gh-blacksnufkin-litterbox
+name: LitterBox
+source_url: https://github.com/BlackSnufkin/LitterBox
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- docker compose
+- malware analysis
+- malware development
+- mcp
+- mcp server
+- offensive security
+- redteam
+versus_refs: []
