@@ -1,0 +1,20 @@
+id: gh-anthroos-openexp
+name: openexp
+source_url: https://welabeldata.com/openexp/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- claude
+- claude code
+- episodic memory
+- llm tools
+- mcp
+- memory
+- q learning
+versus_refs: []
