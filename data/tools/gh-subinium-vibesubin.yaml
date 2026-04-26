@@ -1,0 +1,20 @@
+id: gh-subinium-vibesubin
+name: vibesubin
+source_url: https://github.com/subinium/vibesubin
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai skills
+- claude code
+- codex cli
+- config management
+- dead code
+- llm tools
+- refactoring
+- security audit
+versus_refs: []
