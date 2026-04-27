@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-20",
+  "generated": "2026-04-27",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -195,7 +195,7 @@
       "id": "gh-ayoubben18-ab-method",
       "name": "AB Method",
       "category": "claudemd-framework",
-      "status": "stale",
+      "status": "active",
       "tags": [
         "subagents",
         "mission-driven",
