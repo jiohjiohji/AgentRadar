@@ -1,0 +1,20 @@
+id: gh-xonsh-xonsh
+name: xonsh
+source_url: http://xon.sh
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- alacritty
+- anthropic
+- claude
+- claude code
+- cmux
+- data engineering
+- data scientists
+- devops
+versus_refs: []
