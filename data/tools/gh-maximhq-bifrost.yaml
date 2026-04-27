@@ -1,0 +1,20 @@
+id: gh-maximhq-bifrost
+name: bifrost
+source_url: https://www.getmaxim.ai/bifrost
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai gateway
+- gateway
+- gateway services
+- generative ai
+- guardrails
+- llm
+- llm cost
+- llm gateway
+versus_refs: []
