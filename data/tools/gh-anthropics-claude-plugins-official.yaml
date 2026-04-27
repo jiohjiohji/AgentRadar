@@ -1,0 +1,15 @@
+id: gh-anthropics-claude-plugins-official
+name: claude-plugins-official
+source_url: https://code.claude.com/docs/en/plugins
+category: mcp-server
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- mcp
+- skills
+versus_refs: []
