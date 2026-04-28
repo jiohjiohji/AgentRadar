@@ -1,0 +1,19 @@
+id: gh-qdrant-mcp-server-qdrant
+name: mcp-server-qdrant
+source_url: https://qdrant.tech
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- cursor
+- llm
+- mcp
+- mcp server
+- semantic search
+- windsurf
+versus_refs: []
