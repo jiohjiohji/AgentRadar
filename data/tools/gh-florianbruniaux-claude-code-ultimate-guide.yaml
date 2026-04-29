@@ -1,0 +1,20 @@
+id: gh-florianbruniaux-claude-code-ultimate-guide
+name: claude-code-ultimate-guide
+source_url: https://cc.bruniaux.com/
+category: prompt-library
+pricing: free
+license: CC-BY-SA-4.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic coding
+- ai assistant
+- ai coding
+- ai pair programming
+- ai security
+- anthropic
+- best practices
+- claude
+versus_refs: []
