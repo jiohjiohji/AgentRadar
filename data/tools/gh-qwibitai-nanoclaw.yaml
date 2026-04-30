@@ -1,0 +1,17 @@
+id: gh-qwibitai-nanoclaw
+name: nanoclaw
+source_url: https://nanoclaw.dev
+category: sdk-pattern
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai assistant
+- claude code
+- claude skills
+- openclaw
+versus_refs: []
