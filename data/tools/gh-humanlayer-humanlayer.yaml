@@ -1,0 +1,20 @@
+id: gh-humanlayer-humanlayer
+name: humanlayer
+source_url: https://humanlayer.dev/code
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- ai
+- amp
+- claude code
+- codex
+- human in the loop
+- humanlayer
+- llm
+versus_refs: []
