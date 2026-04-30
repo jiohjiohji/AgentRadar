@@ -1,0 +1,17 @@
+id: gh-abhisekjha-pith
+name: pith
+source_url: https://www.abhisekjha.com.np/pith/
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- claude code
+- claude code plugin
+- llm tools
+- token optimization
+versus_refs: []
