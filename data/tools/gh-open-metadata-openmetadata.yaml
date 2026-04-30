@@ -1,0 +1,20 @@
+id: gh-open-metadata-openmetadata
+name: OpenMetadata
+source_url: https://open-metadata.org
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- data catalog
+- data collaboration
+- data contracts
+- data discovery
+- data governance
+- data lineage
+- data observability
+- data profiling
+versus_refs: []
