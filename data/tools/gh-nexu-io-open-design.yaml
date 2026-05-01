@@ -1,0 +1,20 @@
+id: gh-nexu-io-open-design
+name: open-design
+source_url: https://github.com/nexu-io/open-design
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai design
+- anthropic
+- byok
+- claude
+- claude code
+- claude design
+- codex
+versus_refs: []
