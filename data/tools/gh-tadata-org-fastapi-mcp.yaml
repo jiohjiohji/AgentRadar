@@ -1,0 +1,20 @@
+id: gh-tadata-org-fastapi-mcp
+name: fastapi_mcp
+source_url: https://fastapi-mcp.tadata.com/
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- authentication
+- authorization
+- claude
+- cursor
+- fastapi
+- llm
+- mcp
+versus_refs: []
