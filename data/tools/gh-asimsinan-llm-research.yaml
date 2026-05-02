@@ -1,0 +1,20 @@
+id: gh-asimsinan-llm-research
+name: LLM-Research
+source_url: https://github.com/asimsinan/LLM-Research
+category: complementary
+pricing: free
+license: null
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- arxiv papers
+- buyuk dil modelleri
+- large language models
+- llm
+- llm benchmarking
+- llm datasets
+- llm frameworks
+- llm research
+versus_refs: []
