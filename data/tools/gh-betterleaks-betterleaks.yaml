@@ -1,0 +1,20 @@
+id: gh-betterleaks-betterleaks
+name: betterleaks
+source_url: https://betterleaks.com
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- cicd
+- credentials
+- developer tools
+- devops
+- devsecops
+- git
+- github
+- gitleaks
+versus_refs: []
