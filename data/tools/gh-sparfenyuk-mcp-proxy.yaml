@@ -1,0 +1,17 @@
+id: gh-sparfenyuk-mcp-proxy
+name: mcp-proxy
+source_url: https://github.com/sparfenyuk/mcp-proxy
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp server
+- proxy
+- sse
+- streamable http
+versus_refs: []
