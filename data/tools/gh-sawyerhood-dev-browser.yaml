@@ -1,0 +1,15 @@
+id: gh-sawyerhood-dev-browser
+name: dev-browser
+source_url: https://github.com/SawyerHood/dev-browser
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- playwright
+- skills
+versus_refs: []
