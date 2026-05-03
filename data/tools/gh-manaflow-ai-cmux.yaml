@@ -1,0 +1,20 @@
+id: gh-manaflow-ai-cmux
+name: cmux
+source_url: https://cmux.com
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- amp
+- claude code
+- codex
+- gemini
+- ghostty
+- opencode
+- terminal
+- tmux
+versus_refs: []
