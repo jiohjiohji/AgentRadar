@@ -1,0 +1,17 @@
+id: gh-agentdeskai-browser-tools-mcp
+name: browser-tools-mcp
+source_url: https://agentdesk.ai/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- anthropic
+- cursor
+- mcp
+- mcp server
+versus_refs: []
