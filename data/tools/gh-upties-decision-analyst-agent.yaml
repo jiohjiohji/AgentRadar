@@ -1,0 +1,20 @@
+id: gh-upties-decision-analyst-agent
+name: decision-analyst-agent
+source_url: https://upties.in/
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- algorithm
+- chatgpt prompt
+- claude agent
+- decision analyst agent
+- decision making
+- math
+- prompt engineering
+versus_refs: []
