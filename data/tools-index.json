@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-04-27",
+  "generated": "2026-05-04",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -47,7 +47,7 @@
       "id": "gh-anthropics-prompt-tutorial",
       "name": "Anthropic Prompt Engineering Tutorial",
       "category": "prompt-library",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "prompt-engineering",
         "tutorial",
