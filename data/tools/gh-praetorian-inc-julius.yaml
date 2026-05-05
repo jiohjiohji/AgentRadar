@@ -1,0 +1,20 @@
+id: gh-praetorian-inc-julius
+name: julius
+source_url: https://www.praetorian.com/blog/introducing-julius-open-source-llm-service-fingerprinting/
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai security
+- attack surface
+- capability
+- golang
+- llm evaluation
+- llm fingerprinting
+- llm pentesting
+- llm security
+versus_refs: []
