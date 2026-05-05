@@ -1,0 +1,20 @@
+id: gh-getagentseal-codeburn
+name: codeburn
+source_url: https://github.com/getagentseal/codeburn
+category: eval-observability
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai coding
+- claude code
+- cli
+- codex
+- cost tracking
+- cursor ide
+- developer tools
+- observability
+versus_refs: []
