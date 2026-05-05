@@ -1,0 +1,17 @@
+id: gh-diegosouzapw-omniroute
+name: OmniRoute
+source_url: https://omniroute.online
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- gateway
+- llm tools
+- mcp gateway
+- proxy server
+- token optimization
+versus_refs: []
