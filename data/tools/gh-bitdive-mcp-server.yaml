@@ -1,0 +1,20 @@
+id: gh-bitdive-mcp-server
+name: mcp-server
+source_url: https://bitdive.io/
+category: mcp-server
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- bitdive
+- llm tools
+- mcp
+- mcp server
+- model context protocol
+- observability
+- python
+versus_refs: []
