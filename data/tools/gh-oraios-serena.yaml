@@ -1,0 +1,20 @@
+id: gh-oraios-serena
+name: serena
+source_url: https://oraios.github.io/serena
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- ai coding
+- claude
+- claude code
+- codex
+- ide
+- jetbrains
+versus_refs: []
