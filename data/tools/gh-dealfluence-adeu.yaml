@@ -1,0 +1,20 @@
+id: gh-dealfluence-adeu
+name: adeu
+source_url: https://adeu.ai
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- document automation
+- docx converter
+- legaltech
+- llm tools
+- mcp server
+- python library
+- redline
+versus_refs: []
