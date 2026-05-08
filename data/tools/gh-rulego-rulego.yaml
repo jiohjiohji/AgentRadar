@@ -1,0 +1,20 @@
+id: gh-rulego-rulego
+name: rulego
+source_url: https://rulego.cc
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- automation
+- data flow
+- edge computing
+- go
+- intergrations
+- iot
+- ipaas
+versus_refs: []
