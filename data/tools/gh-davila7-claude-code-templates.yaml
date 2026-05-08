@@ -1,0 +1,16 @@
+id: gh-davila7-claude-code-templates
+name: claude-code-templates
+source_url: https://aitmpl.com
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- anthropic claude
+- claude
+- claude code
+versus_refs: []
