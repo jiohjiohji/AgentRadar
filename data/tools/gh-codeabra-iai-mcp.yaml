@@ -1,0 +1,20 @@
+id: gh-codeabra-iai-mcp
+name: iai-mcp
+source_url: https://github.com/CodeAbra/iai-mcp
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- claude
+- claude code
+- embeddings
+- llm tools
+- local first
+- mcp
+- mcp server
+versus_refs: []
