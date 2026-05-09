@@ -1,0 +1,20 @@
+id: gh-vinkius-labs-vurb-ts
+name: vurb.ts
+source_url: https://vurb.vinkius.com/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- claude desktop
+- fsm
+- function calling
+- llm tools
+- mcp
+- mcp framework
+- mcp server
+versus_refs: []
