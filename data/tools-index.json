@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-05-04",
+  "generated": "2026-05-11",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -319,7 +319,7 @@
       "id": "gh-dair-ai-pe-guide",
       "name": "Prompt Engineering Guide",
       "category": "prompt-library",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "prompt-engineering",
         "guide",
