@@ -1,0 +1,20 @@
+id: gh-svd-ai-lab-sim-cli
+name: sim-cli
+source_url: https://github.com/svd-ai-lab
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent runtime
+- ai agents
+- cad
+- cae
+- cfd
+- llm agents
+- llm tools
+- openfoam
+versus_refs: []
