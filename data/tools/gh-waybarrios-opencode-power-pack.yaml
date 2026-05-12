@@ -1,0 +1,20 @@
+id: gh-waybarrios-opencode-power-pack
+name: opencode-power-pack
+source_url: https://github.com/waybarrios/opencode-power-pack
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- anthropic
+- claude code
+- code review
+- developer tools
+- llm tools
+- opencode
+- plugin
+versus_refs: []
