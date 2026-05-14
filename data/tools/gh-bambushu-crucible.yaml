@@ -1,0 +1,20 @@
+id: gh-bambushu-crucible
+name: crucible
+source_url: https://github.com/Bambushu/crucible
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- adversarial review
+- ai code review
+- claude code
+- claude code skill
+- code review
+- llm tools
+- openrouter
+- security audit
+versus_refs: []
