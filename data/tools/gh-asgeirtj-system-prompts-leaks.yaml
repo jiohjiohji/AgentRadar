@@ -1,0 +1,20 @@
+id: gh-asgeirtj-system-prompts-leaks
+name: system_prompts_leaks
+source_url: https://github.com/asgeirtj/system_prompts_leaks
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai transparency
+- anthropic
+- chatgpt
+- claude
+- claude code
+- claude code cli
+- claude opus 4 7
+versus_refs: []
