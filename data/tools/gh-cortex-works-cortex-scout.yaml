@@ -1,0 +1,20 @@
+id: gh-cortex-works-cortex-scout
+name: cortex-scout
+source_url: https://github.com/cortex-works/cortex-scout
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- anti bot bypass
+- automated testing
+- dev tools
+- knowledge graph
+- llm tools
+- mcp
+- model context protocol
+versus_refs: []
