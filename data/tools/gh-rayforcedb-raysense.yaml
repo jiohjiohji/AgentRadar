@@ -1,0 +1,20 @@
+id: gh-rayforcedb-raysense
+name: raysense
+source_url: https://sense.rayforcedb.com/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- claude agent
+- claude code
+- code architecture
+- code quality
+- dependency graph
+- developer tools
+- mcp
+versus_refs: []
