@@ -1,0 +1,20 @@
+id: gh-mohamed-ashraf-elsaed-claude-agent-sdk-laravel
+name: claude-agent-sdk-laravel
+source_url: https://packagist.org/packages/mohamed-ashraf-elsaed/claude-agent-sdk-laravel
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- ai
+- ai agent
+- ai sdk
+- ai tools
+- anthropic
+- anthropic sdk
+- claude
+versus_refs: []
