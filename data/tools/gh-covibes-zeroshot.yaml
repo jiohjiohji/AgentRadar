@@ -1,0 +1,20 @@
+id: gh-covibes-zeroshot
+name: zeroshot
+source_url: https://covibes.ai
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent orchestration
+- agentic workflow
+- ai agent
+- ai agents
+- autonomous agents
+- claude
+- cli
+- codex
+versus_refs: []
