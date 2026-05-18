@@ -1,0 +1,20 @@
+id: gh-mksglu-context-mode
+name: context-mode
+source_url: https://context-mode.com
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- antigravity
+- claude
+- claude code
+- claude code hooks
+- claude code plugins
+- claude code skill
+- codex
+- codex cli
+versus_refs: []
