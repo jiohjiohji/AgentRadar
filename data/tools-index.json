@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-05-11",
+  "generated": "2026-05-18",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -68,7 +68,7 @@
       "id": "gh-anthropics-quickstarts",
       "name": "Anthropic Quickstarts",
       "category": "sdk-pattern",
-      "status": "stale",
+      "status": "active",
       "tags": [
         "sdk",
         "starter",
@@ -650,7 +650,7 @@
       "id": "gh-makenotion-notion-mcp",
       "name": "Notion MCP Server",
       "category": "mcp-server",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "notion",
         "knowledge-management",
