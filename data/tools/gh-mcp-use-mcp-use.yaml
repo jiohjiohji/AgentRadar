@@ -1,0 +1,20 @@
+id: gh-mcp-use-mcp-use
+name: mcp-use
+source_url: https://manufact.com
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic framework
+- ai
+- apps sdk
+- chatgpt
+- claude code
+- llms
+- mcp
+- mcp apps
+versus_refs: []
