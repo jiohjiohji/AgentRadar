@@ -1,0 +1,20 @@
+id: gh-wei-shaw-claude-relay-service
+name: claude-relay-service
+source_url: https://pincc.ai
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- claude api
+- claude code
+- claude proxy
+- codex cli
+- crs
+- droid
+- droid cli
+versus_refs: []
