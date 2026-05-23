@@ -1,0 +1,20 @@
+id: gh-metatool-ai-metamcp
+name: metamcp
+source_url: https://docs.metamcp.com
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp gateway
+- mcp host
+- mcp middleware
+- mcp server
+- mcp servers
+- mcp to openapi
+- mcp tools
+versus_refs: []
