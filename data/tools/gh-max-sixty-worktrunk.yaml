@@ -1,0 +1,18 @@
+id: gh-max-sixty-worktrunk
+name: worktrunk
+source_url: https://worktrunk.dev
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- claude code
+- codex
+- developer tools
+- git
+- worktrees
+versus_refs: []
