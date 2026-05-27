@@ -1,0 +1,20 @@
+id: gh-op7418-guizang-ppt-skill
+name: guizang-ppt-skill
+source_url: https://github.com/op7418/guizang-ppt-skill
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- claude code
+- codex
+- html deck
+- image generation
+- ppt
+- presentation
+- skill
+versus_refs: []
