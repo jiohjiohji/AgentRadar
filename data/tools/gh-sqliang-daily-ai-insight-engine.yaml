@@ -1,0 +1,16 @@
+id: gh-sqliang-daily-ai-insight-engine
+name: daily-ai-insight-engine
+source_url: https://daily-ai-insight-engine.vercel.app
+category: sdk-pattern
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic workflow
+- claude agent
+- llm pipeline
+- nextjs
+versus_refs: []
