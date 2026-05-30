@@ -1,0 +1,20 @@
+id: gh-mdowis-anansi
+name: anansi
+source_url: https://github.com/mdowis/anansi
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- adaptive scraping
+- ai agent
+- anti bot
+- crawler
+- data extraction
+- llm tools
+- mcp
+- mcp server
+versus_refs: []
