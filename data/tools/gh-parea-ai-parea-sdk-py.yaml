@@ -1,0 +1,20 @@
+id: gh-parea-ai-parea-sdk-py
+name: parea-sdk-py
+source_url: https://docs.parea.ai/sdk/python
+category: prompt-library
+pricing: free
+license: Apache-2.0
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- generative ai
+- good first issue
+- llm
+- llm eval
+- llm evaluation
+- llm evaluation framework
+- llm evaluation toolkit
+- llm tools
+versus_refs: []
