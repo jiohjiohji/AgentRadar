@@ -1,0 +1,19 @@
+id: gh-fusengine-agents
+name: agents
+source_url: https://github.com/fusengine/agents
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude agent
+- claude agents
+- claude code
+- claude code plugin
+- claude skills
+- claudeagent
+- claudecode
+versus_refs: []
