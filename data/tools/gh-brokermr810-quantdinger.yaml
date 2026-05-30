@@ -1,0 +1,20 @@
+id: gh-brokermr810-quantdinger
+name: QuantDinger
+source_url: https://www.quantdinger.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- algotrade
+- alpaca
+- backtesting
+- binance
+- coinbase
+- crypto
+- exchange
+versus_refs: []
