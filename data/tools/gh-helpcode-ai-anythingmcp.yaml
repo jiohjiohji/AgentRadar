@@ -1,0 +1,20 @@
+id: gh-helpcode-ai-anythingmcp
+name: anythingmcp
+source_url: https://anythingmcp.com
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- anthropic
+- api gateway
+- api to mcp
+- chatgpt
+- claude
+- database
+- gemini
+versus_refs: []
