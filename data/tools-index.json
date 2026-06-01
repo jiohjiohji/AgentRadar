@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-05-18",
+  "generated": "2026-06-01",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -486,7 +486,7 @@
       "id": "gh-ithiria894-claude-code-workflows",
       "name": "Awesome Claude Code Workflows",
       "category": "claudemd-framework",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "CLAUDE.md",
         "hooks",
@@ -568,7 +568,7 @@
       "id": "gh-jrenaldi79-harness-engineering",
       "name": "Harness Engineering",
       "category": "claudemd-framework",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "CLAUDE.md",
         "context-engineering",
@@ -650,7 +650,7 @@
       "id": "gh-makenotion-notion-mcp",
       "name": "Notion MCP Server",
       "category": "mcp-server",
-      "status": "stale",
+      "status": "active",
       "tags": [
         "notion",
         "knowledge-management",
@@ -922,7 +922,7 @@
       "id": "gh-ryanmac-code-conductor",
       "name": "Code Conductor",
       "category": "orchestration",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "parallel-agents",
         "orchestration",

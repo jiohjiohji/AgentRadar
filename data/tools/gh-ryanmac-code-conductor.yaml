@@ -4,7 +4,7 @@ source_url: https://github.com/ryanmac/code-conductor
 category: orchestration
 pricing: free
 license: MIT
-status: active
+status: stale
 scores:
   p: 6.3
   q: 6.7
