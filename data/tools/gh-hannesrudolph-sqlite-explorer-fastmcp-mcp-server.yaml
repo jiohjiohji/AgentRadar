@@ -1,0 +1,18 @@
+id: gh-hannesrudolph-sqlite-explorer-fastmcp-mcp-server
+name: sqlite-explorer-fastmcp-mcp-server
+source_url: https://github.com/hannesrudolph/sqlite-explorer-fastmcp-mcp-server
+category: mcp-server
+pricing: free
+license: null
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- database tools
+- llm integration
+- llm tools
+- mcp
+- python
+- sqlite
+versus_refs: []
