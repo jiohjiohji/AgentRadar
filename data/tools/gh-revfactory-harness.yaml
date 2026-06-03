@@ -1,0 +1,16 @@
+id: gh-revfactory-harness
+name: harness
+source_url: https://revfactory.github.io/harness/
+category: claude-plugin
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- claude code plugin
+- harness
+- harness engineering
+versus_refs: []
