@@ -1,0 +1,20 @@
+id: gh-jamkris-everything-gemini-code
+name: everything-gemini-code
+source_url: https://geminicli.com/extensions/?name=Jamkriseverything-gemini-code
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- antigravity
+- developer tools
+- gemini cli
+- gemini cli extension
+- gemini cli skills
+- hooks
+- llm tools
+versus_refs: []
