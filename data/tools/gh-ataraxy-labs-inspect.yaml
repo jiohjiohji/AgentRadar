@@ -1,0 +1,20 @@
+id: gh-ataraxy-labs-inspect
+name: inspect
+source_url: https://inspect.ataraxy-labs.com
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- code intelligence
+- code review
+- developer tools
+- entity graph
+- llm tools
+- pull request
+- static analysis
+versus_refs: []
