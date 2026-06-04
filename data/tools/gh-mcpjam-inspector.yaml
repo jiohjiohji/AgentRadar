@@ -1,0 +1,20 @@
+id: gh-mcpjam-inspector
+name: inspector
+source_url: https://www.mcpjam.com/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- chatgpt
+- cicd
+- debugger
+- evals
+- evaluation
+- inspector
+- mcp
+versus_refs: []
