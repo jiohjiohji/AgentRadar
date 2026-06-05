@@ -1,0 +1,17 @@
+id: gh-open-webui-mcpo
+name: mcpo
+source_url: https://docs.openwebui.com/features/plugin/tools/openapi-servers/mcp
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp server
+- mcp to openapi
+- open webui
+- openapi
+versus_refs: []
