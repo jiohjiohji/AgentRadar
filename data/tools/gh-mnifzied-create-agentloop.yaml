@@ -1,0 +1,20 @@
+id: gh-mnifzied-create-agentloop
+name: agentloop
+source_url: https://ko-fi.com/aimnifzied
+category: sdk-pattern
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agent loop
+- ai agents
+- anthropic
+- anthropic claude
+- anthropic sdk
+- claude
+- claude agent
+versus_refs: []
