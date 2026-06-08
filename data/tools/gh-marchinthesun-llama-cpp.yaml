@@ -1,0 +1,20 @@
+id: gh-marchinthesun-llama-cpp
+name: llama-cpp
+source_url: https://github.com/marchinthesun/llama-cpp
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- amd epyc
+- bare metal
+- hardware topology
+- hpc systems
+- hugepages
+- llm tools
+- mlflow
+- numa
+versus_refs: []
