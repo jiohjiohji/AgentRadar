@@ -1,0 +1,20 @@
+id: gh-minipuft-claude-prompts
+name: claude-prompts
+source_url: https://github.com/minipuft/claude-prompts
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai automation
+- ai development
+- ai workflows
+- claude
+- llm
+- llm tools
+- mcp
+- model context protocol
+versus_refs: []
