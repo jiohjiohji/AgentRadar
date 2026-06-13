@@ -1,0 +1,20 @@
+id: gh-systemslibrarian-claude-agent-standards
+name: claude-agent-standards
+source_url: https://github.com/systemslibrarian/claude-agent-standards
+category: orchestration
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agent framework
+- agentic
+- ai agent
+- ai engineering
+- ai standards
+- anthropic
+- artificial intelligence
+versus_refs: []
