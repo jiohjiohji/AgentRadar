@@ -1,0 +1,20 @@
+id: gh-huangji6693-max-claude-code-dna
+name: claude-code-dna
+source_url: https://github.com/huangji6693-max/claude-code-dna#readme
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent framework
+- agentskills
+- ai agents
+- claude agent
+- claude code
+- developer tools
+- karpathy
+- llm agents
+versus_refs: []
