@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-06-01",
+  "generated": "2026-06-15",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -732,7 +732,7 @@
       "id": "gh-microsoft-autogen",
       "name": "AutoGen",
       "category": "orchestration",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "multi-agent",
         "orchestration",
@@ -861,7 +861,7 @@
       "id": "gh-openai-swarm",
       "name": "OpenAI Swarm",
       "category": "orchestration",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "multi-agent",
         "orchestration",
@@ -962,7 +962,7 @@
       "id": "gh-undeadlist-claude-code-agents",
       "name": "Claude Code Agents (undeadlist)",
       "category": "claude-plugin",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "subagents",
         "prompt-templates",

@@ -4,7 +4,7 @@ source_url: https://github.com/openai/swarm
 category: orchestration
 pricing: free
 license: MIT
-status: active
+status: stale
 scores:
   p: 3.7
   q: 6.0
