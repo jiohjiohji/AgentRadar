@@ -1,0 +1,20 @@
+id: gh-rowboatlabs-rowboat
+name: rowboat
+source_url: https://www.rowboatlabs.com
+category: orchestration
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- agents sdk
+- ai
+- ai agents
+- ai agents automation
+- chatgpt
+- claude code
+- claude cowork
+versus_refs: []
