@@ -1,0 +1,20 @@
+id: gh-exa-labs-exa-mcp-server
+name: exa-mcp-server
+source_url: https://exa.ai/docs/reference/exa-mcp
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- code search
+- codesearch
+- crawling
+- mcp
+- mcp server
+- model context protocol
+- web search
+- websearch
+versus_refs: []
