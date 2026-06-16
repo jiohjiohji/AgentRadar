@@ -1,0 +1,20 @@
+id: gh-mrrezaeiuoft-amg-rag
+name: AMG-RAG
+source_url: https://arxiv.org/abs/2502.13010
+category: complementary
+pricing: free
+license: NOASSERTION
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- claude agent
+- deepseek
+- gemini
+- gemini api
+- generative ai
+- generative ai model
+- gpt
+versus_refs: []
