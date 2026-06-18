@@ -1,0 +1,20 @@
+id: gh-modelscope-funasr
+name: FunASR
+source_url: https://modelscope.github.io/FunASR
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- asr
+- audio
+- chinese
+- emotion recognition
+- mcp server
+- multilingual asr
+- openai compatible api
+- paraformer
+versus_refs: []
