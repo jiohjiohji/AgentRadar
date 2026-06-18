@@ -1,0 +1,20 @@
+id: gh-chopratejas-headroom
+name: headroom
+source_url: https://headroom-docs.vercel.app/docs
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- anthropic
+- claude code
+- compression
+- context engineering
+- context window
+- cursor
+versus_refs: []
