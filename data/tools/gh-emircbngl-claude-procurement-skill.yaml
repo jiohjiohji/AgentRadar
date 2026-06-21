@@ -1,0 +1,20 @@
+id: gh-emircbngl-claude-procurement-skill
+name: claude-procurement-skill
+source_url: https://github.com/emircbngl/claude-procurement-skill
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ahp
+- ai skill
+- anthropic
+- b2b
+- buying guide
+- claude
+- claude agent
+- claude code
+versus_refs: []
