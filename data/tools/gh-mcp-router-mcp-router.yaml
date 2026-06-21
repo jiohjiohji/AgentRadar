@@ -1,0 +1,20 @@
+id: gh-mcp-router-mcp-router
+name: mcp-router
+source_url: https://mcp-router.net
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- llm
+- llmops
+- mcp
+- mcp client
+- mcp manager
+- mcp router
+- mcp server
+- mcp servers
+versus_refs: []
