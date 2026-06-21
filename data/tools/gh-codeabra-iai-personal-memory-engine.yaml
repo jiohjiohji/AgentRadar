@@ -1,0 +1,20 @@
+id: gh-codeabra-iai-personal-memory-engine
+name: iai-personal-memory-engine
+source_url: https://github.com/CodeAbra/iai-personal-memory-engine
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai memory
+- claude
+- claude code
+- encryption
+- episodic memory
+- hnswlib
+- llm tools
+versus_refs: []
