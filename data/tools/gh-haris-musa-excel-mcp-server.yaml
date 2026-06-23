@@ -1,0 +1,20 @@
+id: gh-haris-musa-excel-mcp-server
+name: excel-mcp-server
+source_url: https://excelmcpserver.com
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- automation
+- excel
+- llm
+- mcp
+- mcp server
+- sse
+- stdio
+versus_refs: []
