@@ -1,0 +1,20 @@
+id: gh-zhizhuodemao-js-reverse-mcp
+name: js-reverse-mcp
+source_url: https://github.com/zhizhuodemao/js-reverse-mcp
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anti detection
+- browser automation
+- cdp
+- chrome devtools
+- debugging
+- javascript
+- mcp
+- mcp server
+versus_refs: []
