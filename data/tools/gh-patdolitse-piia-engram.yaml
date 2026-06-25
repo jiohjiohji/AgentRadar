@@ -1,0 +1,20 @@
+id: gh-patdolitse-piia-engram
+name: piia-engram
+source_url: https://pypi.org/project/piia-engram/
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent memory
+- ai agent
+- ai identity
+- ai memory
+- anthropic
+- claude code
+- claude desktop
+- codex
+versus_refs: []
