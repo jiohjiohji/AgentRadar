@@ -1,0 +1,17 @@
+id: gh-nbtdx-claude-cycle-loop
+name: claude-cycle-loop
+source_url: https://github.com/NBTDx/claude-cycle-loop
+category: complementary
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai workflow
+- autonomous agents
+- claude agent
+- claude code
+- dev tools
+versus_refs: []
