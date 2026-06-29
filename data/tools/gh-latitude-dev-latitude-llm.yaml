@@ -1,0 +1,20 @@
+id: gh-latitude-dev-latitude-llm
+name: latitude-llm
+source_url: https://latitude.so
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent monitoring
+- agent observability
+- ai error monitor
+- ai monitoring
+- ai observability
+- llm error tracing
+- llm observability
+- llm tools
+versus_refs: []
