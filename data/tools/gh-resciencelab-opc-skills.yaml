@@ -1,0 +1,19 @@
+id: gh-resciencelab-opc-skills
+name: opc-skills
+source_url: https://opc.dev
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai tools
+- claude code
+- geo
+- llm tools
+- opc
+- seo
+versus_refs: []
