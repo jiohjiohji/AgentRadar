@@ -1,0 +1,17 @@
+id: gh-smtg-ai-claude-squad
+name: claude-squad
+source_url: https://smtg-ai.github.io/claude-squad/
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- cli
+- codex
+- opencode
+- vibe coding
+versus_refs: []
