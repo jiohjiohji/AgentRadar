@@ -1,0 +1,20 @@
+id: gh-headroomlabs-ai-headroom
+name: headroom
+source_url: https://headroomlabs-ai.github.io/headroom/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- anthropic
+- claude code
+- compression
+- context engineering
+- context window
+- cursor
+versus_refs: []
