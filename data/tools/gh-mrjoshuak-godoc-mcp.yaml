@@ -1,0 +1,20 @@
+id: gh-mrjoshuak-godoc-mcp
+name: godoc-mcp
+source_url: https://github.com/mrjoshuak
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai tools
+- anthropic
+- claude
+- documentation
+- golang
+- llm
+- llm tools
+versus_refs: []
