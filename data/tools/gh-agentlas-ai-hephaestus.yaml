@@ -1,0 +1,20 @@
+id: gh-agentlas-ai-hephaestus
+name: Hephaestus
+source_url: https://agentlas.cloud
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- a2a
+- agent
+- agent framework
+- agent os desktop
+- agent skills
+- agentic ai
+- agentic workflow
+- agentos
+versus_refs: []
