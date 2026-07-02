@@ -1,0 +1,20 @@
+id: gh-kanguruonline-claude-batchy-bulk
+name: claude-batchy-bulk
+source_url: https://github.com/kanguruonline/claude-batchy-bulk
+category: complementary
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- anthropic api
+- batch api
+- claude code
+- claude opus
+- claude skill
+- cli
+- cost optimization
+versus_refs: []
