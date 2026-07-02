@@ -1,0 +1,20 @@
+id: gh-infinri-writ
+name: Writ
+source_url: https://github.com/infinri/Writ
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent tools
+- ai coding
+- bm25
+- claude code
+- code quality
+- developer tools
+- fastapi
+- hnswlib
+versus_refs: []
