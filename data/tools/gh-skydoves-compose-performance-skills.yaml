@@ -1,0 +1,20 @@
+id: gh-skydoves-compose-performance-skills
+name: compose-performance-skills
+source_url: https://github.com/skydoves/compose-performance-skills
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- android
+- claude
+- claude code
+- compose
+- compose performance
+- jetpack compose
+- kotlin
+versus_refs: []
