@@ -1,0 +1,19 @@
+id: gh-nizos-tdd-guard
+name: tdd-guard
+source_url: https://github.com/nizos/tdd-guard
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic coding
+- automation
+- claude code
+- code quality
+- hooks
+- llm tools
+- tdd
+versus_refs: []
