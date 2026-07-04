@@ -1,0 +1,20 @@
+id: gh-encircleacity2-slack-daily-digest
+name: slack-daily-digest
+source_url: https://github.com/encircleacity2/slack-daily-digest
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- automation
+- byteplus
+- claude agent
+- claude skill
+- daily report
+- digest
+- feishu
+- lark
+versus_refs: []
