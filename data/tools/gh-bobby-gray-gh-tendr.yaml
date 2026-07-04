@@ -1,0 +1,20 @@
+id: gh-bobby-gray-gh-tendr
+name: gh-tendr
+source_url: https://github.com/Bobby-Gray/gh-tendr
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic workflows
+- async review
+- automation
+- bash
+- claude agent
+- claude code
+- claude skill
+- code review
+versus_refs: []
