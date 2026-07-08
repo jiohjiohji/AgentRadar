@@ -1,0 +1,20 @@
+id: gh-dagucloud-dagu
+name: dagu
+source_url: https://dagu.sh
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic workflow
+- cron
+- data pipeline
+- devops
+- durable execution
+- durable workflows
+- human in the loop
+- job scheduler
+versus_refs: []
