@@ -1,0 +1,20 @@
+id: gh-clay-good-openlore
+name: OpenLore
+source_url: https://www.npmjs.com/package/openlore
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- adr
+- agentic workflows
+- ai agents
+- call graph
+- code navigation
+- codebase analysis
+- coding agents
+- dead code detection
+versus_refs: []
