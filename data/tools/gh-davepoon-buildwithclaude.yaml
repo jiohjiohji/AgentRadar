@@ -1,0 +1,20 @@
+id: gh-davepoon-buildwithclaude
+name: buildwithclaude
+source_url: https://www.buildwithclaude.com
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- claude code
+- claude code commands
+- claude skills
+- cli tool
+- commands
+- mcp
+- mcp server
+versus_refs: []
