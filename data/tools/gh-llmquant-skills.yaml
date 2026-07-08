@@ -1,0 +1,20 @@
+id: gh-llmquant-skills
+name: skills
+source_url: https://llmquantdata.com/agent
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- claude code
+- codex
+- cursor
+- equity research
+- etf
+- financial data
+versus_refs: []
