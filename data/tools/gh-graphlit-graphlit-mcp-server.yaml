@@ -1,0 +1,20 @@
+id: gh-graphlit-graphlit-mcp-server
+name: graphlit-mcp-server
+source_url: https://www.graphlit.com
+category: mcp-server
+pricing: free
+license: MIT
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- content extraction
+- content ingestion
+- data collection
+- llm tools
+- mcp server
+- model context protocol
+- search api
+versus_refs: []
