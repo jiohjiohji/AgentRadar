@@ -1,0 +1,20 @@
+id: gh-agentscope-ai-qwenpaw
+name: QwenPaw
+source_url: http://qwenpaw.agentscope.io/
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agent harness
+- agentscope
+- harness engineering
+- llm tools
+- llms
+- skills
+- super agent
+versus_refs: []
