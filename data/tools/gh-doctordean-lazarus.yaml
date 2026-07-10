@@ -1,0 +1,16 @@
+id: gh-doctordean-lazarus
+name: lazarus
+source_url: https://github.com/DoctorDean/lazarus
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- bioinformatics
+- claude agent
+- computational biology
+- pipeline
+versus_refs: []
