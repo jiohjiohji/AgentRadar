@@ -1,0 +1,20 @@
+id: gh-omnigent-ai-omnigent
+name: omnigent
+source_url: https://omnigent.ai
+category: orchestration
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent framework
+- agent governance
+- agent orchestration
+- agents
+- ai
+- ai agent
+- ai agents
+- claude code
+versus_refs: []
