@@ -4,7 +4,7 @@ source_url: https://github.com/ranaroussi/cc-bridge
 category: claude-plugin
 pricing: free
 license: MIT
-status: stale
+status: archived
 scores:
   p: 3.3
   q: 3.7

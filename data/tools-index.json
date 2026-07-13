@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-06-29",
+  "generated": "2026-07-13",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -882,7 +882,7 @@
       "id": "gh-ranaroussi-cc-bridge",
       "name": "CC Bridge",
       "category": "claude-plugin",
-      "status": "stale",
+      "status": "archived",
       "tags": [
         "api-compatibility",
         "openai-compatible",
