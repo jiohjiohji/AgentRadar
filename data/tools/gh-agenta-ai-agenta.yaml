@@ -1,0 +1,20 @@
+id: gh-agenta-ai-agenta
+name: agenta
+source_url: http://www.agenta.ai
+category: prompt-library
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- evaluation
+- llm as a judge
+- llm evaluation
+- llm framework
+- llm monitoring
+- llm observability
+- llm platform
+versus_refs: []
