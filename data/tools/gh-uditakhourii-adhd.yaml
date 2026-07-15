@@ -1,0 +1,20 @@
+id: gh-uditakhourii-adhd
+name: adhd
+source_url: https://uditakhourii.github.io/adhd/
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- adhd
+- agents
+- ai
+- ai agents
+- brainstorm
+- chain of thought
+- claude
+- claude agent sdk
+versus_refs: []
