@@ -1,0 +1,20 @@
+id: gh-ataraxy-labs-sem
+name: sem
+source_url: https://ataraxy-labs.github.io/sem/
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- code intelligence
+- coding agents
+- developer tools
+- git
+- llm tools
+- semantic diff
+- tree sitter
+versus_refs: []
