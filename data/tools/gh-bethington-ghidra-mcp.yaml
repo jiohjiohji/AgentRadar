@@ -1,0 +1,20 @@
+id: gh-bethington-ghidra-mcp
+name: ghidra-mcp
+source_url: https://github.com/bethington/ghidra-mcp
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- binary analysis
+- ghidra
+- ghidra extension
+- java
+- mcp
+- mcp server
+- model context protocol
+versus_refs: []
