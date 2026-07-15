@@ -1,0 +1,20 @@
+id: gh-stackql-stackql
+name: stackql
+source_url: https://stackql.io/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- asset management
+- cloud
+- cloud automation
+- cloud config
+- cloud operations
+- cloud security
+- cspm
+versus_refs: []
