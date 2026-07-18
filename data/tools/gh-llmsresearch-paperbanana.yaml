@@ -1,0 +1,20 @@
+id: gh-llmsresearch-paperbanana
+name: paperbanana
+source_url: https://github.com/llmsresearch/paperbanana
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- academic diagrams
+- academic research
+- agentic ai
+- arxiv
+- diagram generation
+- gemini
+- google gemini
+- llm
+versus_refs: []
