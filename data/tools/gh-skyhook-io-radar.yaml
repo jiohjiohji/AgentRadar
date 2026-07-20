@@ -1,0 +1,20 @@
+id: gh-skyhook-io-radar
+name: radar
+source_url: https://radarhq.io
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- argocd
+- cloud native
+- gitops
+- helm
+- k8s
+- kubectl plugin
+- kubernetes
+- kubernetes dashboard
+versus_refs: []
