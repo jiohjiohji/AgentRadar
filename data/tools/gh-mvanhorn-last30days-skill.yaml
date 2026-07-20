@@ -1,0 +1,20 @@
+id: gh-mvanhorn-last30days-skill
+name: last30days-skill
+source_url: https://github.com/mvanhorn/last30days-skill
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai prompts
+- ai skill
+- bluesky
+- claude
+- claude code
+- clawhub
+- deep research
+- hackernews
+versus_refs: []
