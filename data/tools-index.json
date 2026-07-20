@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-07-13",
+  "generated": "2026-07-20",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -8,7 +8,7 @@
       "id": "gh-abhishekray07-claude-md-templates",
       "name": "Claude.md Templates",
       "category": "claudemd-framework",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "CLAUDE.md",
         "templates",
@@ -508,7 +508,7 @@
       "id": "gh-jeffallan-claude-skills",
       "name": "Fullstack Dev Skills",
       "category": "claude-plugin",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "skills",
         "fullstack",
