@@ -1,0 +1,20 @@
+id: gh-u14app-deep-research
+name: deep-research
+source_url: https://research.u14.app
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- deep research
+- deep research api
+- deepresearch
+- deepseek
+- gemini
+- grok
+- mcp server
+versus_refs: []
