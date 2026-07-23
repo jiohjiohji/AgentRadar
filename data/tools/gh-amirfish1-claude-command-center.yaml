@@ -1,0 +1,20 @@
+id: gh-amirfish1-claude-command-center
+name: claude-command-center
+source_url: https://ccc.amirfish.ai
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent orchestration
+- agents
+- ai coding agents
+- awesome claude code
+- claude
+- claude code
+- dashboard
+- developer tools
+versus_refs: []
