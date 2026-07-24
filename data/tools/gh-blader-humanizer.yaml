@@ -1,0 +1,19 @@
+id: gh-blader-humanizer
+name: humanizer
+source_url: https://skills.sh/blader/humanizer
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai writing
+- claude code
+- codex
+- cursor
+- prompt engineering
+- writing tools
+versus_refs: []
