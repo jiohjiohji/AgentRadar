@@ -1,0 +1,19 @@
+id: gh-connerohnesorge-claude-agent-sdk-go
+name: claude-agent-sdk-go
+source_url: https://github.com/connerohnesorge/claude-agent-sdk-go
+category: sdk-pattern
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- claude
+- claude agent
+- claude agent sdk
+- claude code
+- golang
+- golang library
+versus_refs: []
