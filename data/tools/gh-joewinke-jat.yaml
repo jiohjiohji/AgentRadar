@@ -1,0 +1,20 @@
+id: gh-joewinke-jat
+name: jat
+source_url: https://jat.tools
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent coordination
+- agent mail
+- agent orchestration
+- agent swarm
+- ai
+- ai agents
+- ai development
+- anthropic mcp
+versus_refs: []
