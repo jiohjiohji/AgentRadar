@@ -1,0 +1,20 @@
+id: gh-mukul975-anthropic-cybersecurity-skills
+name: Anthropic-Cybersecurity-Skills
+source_url: https://mahipal.engineer/Anthropic-Cybersecurity-Skills/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- claude code
+- cloud security
+- cybersecurity
+- devsecops
+- ethical hacking
+- incident response
+- infosec
+versus_refs: []
