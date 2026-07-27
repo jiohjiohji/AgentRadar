@@ -1,0 +1,20 @@
+id: gh-serradura-okf-gem
+name: okf-gem
+source_url: https://okfgem.com/
+category: claude-plugin
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- claude code
+- claude code plugin
+- cli
+- developer tools
+- docker image
+- documentation
+versus_refs: []
