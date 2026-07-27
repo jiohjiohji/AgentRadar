@@ -1,0 +1,20 @@
+id: gh-prest-prest
+name: prest
+source_url: https://www.prestd.com
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- automatic api
+- database
+- databases
+- go
+- golang
+- hacktoberfest
+- low code
+versus_refs: []
