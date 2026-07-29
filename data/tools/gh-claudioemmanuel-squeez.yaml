@@ -1,0 +1,20 @@
+id: gh-claudioemmanuel-squeez
+name: squeez
+source_url: https://github.com/claudioemmanuel/squeez
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai cli
+- bash hook
+- claude code
+- codex cli
+- context engineering
+- context window
+- copilot cli
+- gemini cli
+versus_refs: []
