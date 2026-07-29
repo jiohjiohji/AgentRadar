@@ -1,0 +1,20 @@
+id: gh-koala73-worldmonitor
+name: worldmonitor
+source_url: https://worldmonitor.app
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- dashboard
+- geopolitics
+- mcp
+- mcp server
+- monitoring
+- news
+versus_refs: []
