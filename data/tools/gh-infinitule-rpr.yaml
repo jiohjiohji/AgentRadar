@@ -1,0 +1,20 @@
+id: gh-infinitule-rpr
+name: RPR
+source_url: https://infinitule.github.io/RPR/
+category: complementary
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anomaly detection
+- claude agent
+- computer vision
+- fastapi
+- mvtec ad
+- periodic textures
+- ramanujan sums
+- root cause analysis
+versus_refs: []
