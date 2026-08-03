@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-07-20",
+  "generated": "2026-08-03",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -444,7 +444,7 @@
       "id": "gh-gsd-build-get-shit-done",
       "name": "T\u00c2CHES (Get Shit Done)",
       "category": "claudemd-framework",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "meta-prompting",
         "context-engineering",
