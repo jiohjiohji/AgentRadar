@@ -1,0 +1,19 @@
+id: gh-posit-dev-btw
+name: btw
+source_url: https://posit-dev.github.io/btw/
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent tools
+- ellmer
+- llm
+- llm tools
+- rstats
+- rstats package
+versus_refs: []
