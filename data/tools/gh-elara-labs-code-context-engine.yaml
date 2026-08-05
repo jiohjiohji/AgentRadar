@@ -1,0 +1,20 @@
+id: gh-elara-labs-code-context-engine
+name: code-context-engine
+source_url: https://elara-labs.github.io/code-context-engine/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai coding
+- claude
+- claude code
+- code indexing
+- codex
+- copilot
+- cursor
+- gemini cli
+versus_refs: []
