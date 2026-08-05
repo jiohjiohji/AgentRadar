@@ -1,0 +1,20 @@
+id: gh-junghoonghae-tossinvest-cli
+name: tossinvest-cli
+source_url: https://tossinvest-cli.vercel.app
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- cli
+- go
+- korea stock
+- llm tools
+- mcp
+- model context protocol
+- stock trading
+versus_refs: []
