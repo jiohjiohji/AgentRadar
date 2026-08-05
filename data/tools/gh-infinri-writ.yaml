@@ -1,0 +1,20 @@
+id: gh-infinri-writ
+name: Writ
+source_url: https://infinri.github.io/Writ/docs/architecture/index.html
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent tools
+- ai agents
+- ai coding
+- claude code
+- claude plugin
+- code quality
+- developer tools
+- hybrid search
+versus_refs: []
