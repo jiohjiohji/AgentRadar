@@ -1,0 +1,20 @@
+id: gh-nousresearch-hermes-agent
+name: hermes-agent
+source_url: https://hermes-agent.nousresearch.com
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent
+- ai agents
+- anthropic
+- chatgpt
+- claude
+- claude code
+- clawdbot
+versus_refs: []
