@@ -1,0 +1,20 @@
+id: gh-chromedevtools-chrome-devtools-mcp
+name: chrome-devtools-mcp
+source_url: https://npmjs.org/package/chrome-devtools-mcp
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- browser
+- chrome
+- chrome devtools
+- debugging
+- devtools
+- mcp
+- mcp server
+- puppeteer
+versus_refs: []
