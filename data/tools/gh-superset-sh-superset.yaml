@@ -1,0 +1,20 @@
+id: gh-superset-sh-superset
+name: superset
+source_url: https://superset.sh
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- ai agents
+- claude code
+- cli
+- codex
+- coding agents
+- cursor agent
+- desktop app
+versus_refs: []
