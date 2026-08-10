@@ -4,7 +4,7 @@ source_url: https://github.com/Jeffallan/claude-skills
 category: claude-plugin
 pricing: free
 license: MIT
-status: stale
+status: active
 scores:
   p: 8.0
   q: 7.0
