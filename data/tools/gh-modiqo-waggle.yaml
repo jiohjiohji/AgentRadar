@@ -1,0 +1,16 @@
+id: gh-modiqo-waggle
+name: waggle
+source_url: https://waggle.sh
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- harness engineering
+- llm tools
+- loop engineering
+versus_refs: []
