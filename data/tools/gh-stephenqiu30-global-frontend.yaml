@@ -1,0 +1,20 @@
+id: gh-stephenqiu30-global-frontend
+name: global-frontend
+source_url: https://github.com/StephenQiu30/global-frontend
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai workflow
+- claude agent
+- frontend
+- global
+- openspec
+- rag
+- sdd
+- symphony
+versus_refs: []
