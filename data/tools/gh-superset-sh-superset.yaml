@@ -1,0 +1,20 @@
+id: gh-superset-sh-superset
+name: superset
+source_url: https://superset.sh
+category: orchestration
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ade
+- ai agents
+- claude code
+- cli
+- codex
+- coding agents
+- cursor agent
+- developer tools
+versus_refs: []
