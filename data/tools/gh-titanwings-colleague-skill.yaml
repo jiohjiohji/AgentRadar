@@ -1,0 +1,20 @@
+id: gh-titanwings-colleague-skill
+name: colleague-skill
+source_url: https://github.com/titanwings/colleague-skill
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agent
+- claude code
+- codex
+- deepseek harness
+- dsh plugin
+- hermes agent
+- knowledge distillation
+versus_refs: []
