@@ -1,0 +1,20 @@
+id: gh-rusq-slackdump
+name: slackdump
+source_url: https://github.com/rusq/slackdump
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- archive
+- backup
+- channels
+- dump
+- dumper
+- mattermost
+- mattermost app
+- mcp server
+versus_refs: []
