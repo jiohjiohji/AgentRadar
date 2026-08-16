@@ -1,0 +1,20 @@
+id: gh-jina-ai-cli
+name: cli
+source_url: https://jina.ai
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- cli
+- embeddings
+- jina
+- llm tools
+- nlp
+- rerank
+versus_refs: []
