@@ -1,0 +1,20 @@
+id: gh-geekjourneyx-md2wechat-skill
+name: md2wechat-skill
+source_url: https://md2wechat.cn
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent cli
+- ai agent
+- ai writing
+- claude code
+- claude skills
+- cli
+- go
+- markdown
+versus_refs: []
