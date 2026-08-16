@@ -1,0 +1,20 @@
+id: gh-knockoutez-wigolo
+name: wigolo
+source_url: https://knockoutez.github.io/wigolo/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- ai agent
+- claude
+- cli
+- developer tools
+- local first
+- mcp
+versus_refs: []
