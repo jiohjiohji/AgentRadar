@@ -1,0 +1,20 @@
+id: gh-awslabs-mcp
+name: mcp
+source_url: https://awslabs.github.io/mcp/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- aws
+- mcp
+- mcp client
+- mcp clients
+- mcp host
+- mcp server
+- mcp servers
+- mcp tools
+versus_refs: []
