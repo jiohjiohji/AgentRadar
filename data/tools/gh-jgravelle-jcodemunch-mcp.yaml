@@ -1,0 +1,20 @@
+id: gh-jgravelle-jcodemunch-mcp
+name: jcodemunch-mcp
+source_url: https://jcodemunch.com/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai coding
+- ai tools
+- ast
+- claude
+- claude code
+- code intelligence
+- code retrieval
+- context window
+versus_refs: []
