@@ -1,0 +1,20 @@
+id: gh-agentscope-ai-qwenpaw
+name: QwenPaw
+source_url: http://qwenpaw.agentscope.io/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agent harness
+- agentscope
+- ai agent
+- ai agents
+- chatbot
+- harness engineering
+- llm tools
+versus_refs: []
