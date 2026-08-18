@@ -1,0 +1,20 @@
+id: gh-langchain-ai-langchainjs-mcp-adapters
+name: langchainjs-mcp-adapters
+source_url: https://github.com/langchain-ai/langchainjs-mcp-adapters
+category: mcp-server
+pricing: free
+license: MIT
+status: archived
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent tools
+- ai tools
+- javascript
+- langchain
+- langchainjs
+- llm agents
+- llm integration
+- llm tools
+versus_refs: []
