@@ -1,0 +1,16 @@
+id: gh-huohua325-memslides
+name: Memslides
+source_url: https://arxiv.org/abs/2606.17162
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- deck
+- llm tools
+- slides
+versus_refs: []
