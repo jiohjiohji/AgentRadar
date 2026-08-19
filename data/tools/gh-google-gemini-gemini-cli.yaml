@@ -1,0 +1,19 @@
+id: gh-google-gemini-gemini-cli
+name: gemini-cli
+source_url: https://geminicli.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agents
+- cli
+- gemini
+- gemini api
+- mcp client
+- mcp server
+versus_refs: []
