@@ -1,0 +1,20 @@
+id: gh-titanwings-colleague-skill
+name: colleague-skill
+source_url: https://github.com/titanwings/colleague-skill
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- agentic ai
+- ai agent
+- ai persona
+- claude code
+- claude code skills
+- codex
+- codex skills
+versus_refs: []
