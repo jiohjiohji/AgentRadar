@@ -1,0 +1,20 @@
+id: gh-osaurus-ai-osaurus
+name: osaurus
+source_url: https://osaurus.ai
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- apple foundation models
+- apple intelligence
+- apple neural engine
+- llm
+- mcp
+- mcp server
+- mlx
+versus_refs: []
