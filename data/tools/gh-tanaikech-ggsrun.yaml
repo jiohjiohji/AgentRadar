@@ -1,0 +1,20 @@
+id: gh-tanaikech-ggsrun
+name: ggsrun
+source_url: https://github.com/tanaikech/ggsrun
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- cli
+- cli app
+- cli tool
+- concurrency
+- developer tools
+- gas
+- golang
+versus_refs: []
