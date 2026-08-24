@@ -1,0 +1,20 @@
+id: gh-guoleiycyc-sketch-transcript-to-knowledge-pipeline
+name: transcript-to-knowledge-pipeline
+source_url: https://github.com/guoleiycyc-sketch/transcript-to-knowledge-pipeline
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- audio transcription
+- claude agent
+- claude code
+- claude code skill
+- html
+- knowledge management
+- meeting minutes
+versus_refs: []
