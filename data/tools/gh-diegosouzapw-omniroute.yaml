@@ -1,0 +1,20 @@
+id: gh-diegosouzapw-omniroute
+name: OmniRoute
+source_url: https://omniroute.online
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- a2a
+- ai agents
+- ai gateway
+- anthropic
+- claude
+- claude code
+- cline
+- codex
+versus_refs: []
