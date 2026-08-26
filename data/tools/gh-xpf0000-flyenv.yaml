@@ -1,0 +1,20 @@
+id: gh-xpf0000-flyenv
+name: FlyEnv
+source_url: https://flyenv.com
+category: mcp-server
+pricing: free
+license: BSD-3-Clause
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- dev environment
+- developer tools
+- development environment
+- docker alternative
+- golang
+- java
+- linux
+- local development
+versus_refs: []
