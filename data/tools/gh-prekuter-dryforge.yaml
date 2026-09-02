@@ -1,0 +1,20 @@
+id: gh-prekuter-dryforge
+name: dryforge
+source_url: https://dryforge.dev
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic workflow
+- ai agents
+- automation
+- bounded autonomy
+- claude plugin
+- codex plugin
+- coding
+- coding agent
+versus_refs: []
