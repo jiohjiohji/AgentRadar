@@ -1,0 +1,20 @@
+id: gh-serradura-okf
+name: okf
+source_url: https://okfgem.com/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- claude code
+- cli
+- developer tools
+- docker image
+- documentation
+- harness ai
+versus_refs: []
