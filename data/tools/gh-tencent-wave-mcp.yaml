@@ -1,0 +1,20 @@
+id: gh-tencent-wave-mcp
+name: wave-mcp
+source_url: https://pypi.org/project/wave-mcp/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- chip verification
+- debug
+- eda
+- fsdb
+- fst
+- hardware verification
+- llm tools
+- mcp
+versus_refs: []
