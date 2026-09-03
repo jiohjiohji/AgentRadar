@@ -1,0 +1,20 @@
+id: gh-agents365-ai-drawio-skill
+name: drawio-skill
+source_url: https://agents365-ai.github.io/drawio-skill/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- architecture
+- architecture diagram
+- bpmn
+- c4 model
+- claude code
+- claude skills
+- diagram
+versus_refs: []
