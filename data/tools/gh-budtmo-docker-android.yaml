@@ -1,0 +1,20 @@
+id: gh-budtmo-docker-android
+name: docker-android
+source_url: https://github.com/budtmo/docker-android
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- android
+- android emulator
+- aws
+- azure
+- cloud
+- docker
+- docker android
+- emulator
+versus_refs: []
