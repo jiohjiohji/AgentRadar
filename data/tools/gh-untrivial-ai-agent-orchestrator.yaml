@@ -1,0 +1,20 @@
+id: gh-untrivial-ai-agent-orchestrator
+name: agent-orchestrator
+source_url: http://aoagents.dev/
+category: orchestration
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent fleet
+- agent ide
+- agent orchestration
+- agent swarm
+- claude code
+- codex cli
+- git worktrees
+- multi agent
+versus_refs: []
