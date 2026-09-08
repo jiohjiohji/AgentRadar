@@ -1,0 +1,20 @@
+id: gh-yusong652-itasca-mcp
+name: itasca-mcp
+source_url: https://pypi.org/project/itasca-mcp/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- 3dec
+- ai agent
+- claude
+- claude code
+- codex
+- dem
+- discrete element method
+- flac
+versus_refs: []
