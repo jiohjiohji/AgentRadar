@@ -1,0 +1,19 @@
+id: gh-jayzeng-pi-memory
+name: pi-memory
+source_url: https://www.npmjs.com/package/pi-memory
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- llm memory
+- llm tools
+- pi
+- pi extension
+- qmd
+- scratchpad
+- semantic search
+versus_refs: []
