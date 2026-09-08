@@ -1,0 +1,20 @@
+id: gh-vexa-ai-vexa
+name: vexa
+source_url: https://vexa.ai
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- api
+- claude code
+- codex
+- google meet
+- mcp
+- mcp server
+- meeting assistant
+- meeting minutes
+versus_refs: []
