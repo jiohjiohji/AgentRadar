@@ -1,0 +1,20 @@
+id: gh-leonxlnx-taste-skill
+name: taste-skill
+source_url: https://tasteskill.dev
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- claude
+- claude code
+- codex
+- coding
+- design
+- frontend
+versus_refs: []
