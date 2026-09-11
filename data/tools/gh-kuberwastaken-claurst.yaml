@@ -1,0 +1,20 @@
+id: gh-kuberwastaken-claurst
+name: claurst
+source_url: https://claurst.kuber.studio/
+category: complementary
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- claude code
+- claurst
+- cli
+- codex
+- gemini
+- rust
+- tui
+versus_refs: []
