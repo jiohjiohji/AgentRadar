@@ -1,0 +1,20 @@
+id: gh-zinja-coder-jadx-ai-mcp
+name: jadx-ai-mcp
+source_url: https://github.com/zinja-coder/jadx-ai-mcp
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- java
+- llm
+- mcp
+- mcp server
+- mcp servers
+- mobile
+- model context protocol
+versus_refs: []
