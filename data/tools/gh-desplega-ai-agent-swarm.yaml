@@ -1,0 +1,20 @@
+id: gh-desplega-ai-agent-swarm
+name: agent-swarm
+source_url: https://agent-swarm.dev
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent harness
+- agent memory
+- agent teams
+- agentic
+- agentic framework
+- agentic os
+- ai memory
+- ai memory system
+versus_refs: []
