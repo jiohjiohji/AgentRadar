@@ -1,0 +1,20 @@
+id: gh-deer-flow-llm-space
+name: llm-space
+source_url: https://deer-flow.github.io/llm-space/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- deer flow
+- develop
+- electrobun
+- harness
+- llm
+- llm tools
+- managed agents
+versus_refs: []
