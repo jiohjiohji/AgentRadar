@@ -1,0 +1,20 @@
+id: gh-assafelovic-gpt-researcher
+name: gpt-researcher
+source_url: https://gptr.dev
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- automation
+- deepresearch
+- llms
+- mcp
+- mcp server
+- python
+versus_refs: []
