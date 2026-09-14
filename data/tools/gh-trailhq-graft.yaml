@@ -1,0 +1,20 @@
+id: gh-trailhq-graft
+name: Graft
+source_url: https://graft.nanonets.ai
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- anthropic
+- claude code
+- cli
+- code graph
+- codex
+- context engineering
+- cursor
+versus_refs: []
