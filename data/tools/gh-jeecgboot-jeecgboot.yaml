@@ -1,0 +1,20 @@
+id: gh-jeecgboot-jeecgboot
+name: JeecgBoot
+source_url: https://jeecg.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- activiti
+- agent
+- ai
+- antd
+- claude code
+- cli
+- codegenerator
+- codex
+versus_refs: []
