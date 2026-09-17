@@ -1,0 +1,20 @@
+id: gh-img2threejs-img2threejs
+name: img2threejs
+source_url: https://img2threejs.io
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- 3d
+- ai agents
+- claude code
+- computer graphics
+- generative
+- image to 3d
+- procedural generation
+- threejs
+versus_refs: []
