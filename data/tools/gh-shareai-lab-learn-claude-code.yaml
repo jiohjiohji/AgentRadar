@@ -1,0 +1,20 @@
+id: gh-shareai-lab-learn-claude-code
+name: learn-claude-code
+source_url: https://learn.shareai.run
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agent development
+- ai agent
+- claude
+- claude code
+- educational
+- llm
+- python
+versus_refs: []
