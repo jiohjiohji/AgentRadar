@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-09-14",
+  "generated": "2026-09-21",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -588,7 +588,7 @@
       "id": "gh-korotovsky-slack-mcp",
       "name": "Slack MCP Server",
       "category": "mcp-server",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "slack",
         "messaging",
