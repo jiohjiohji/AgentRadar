@@ -1,0 +1,20 @@
+id: gh-tonhowtf-omniget
+name: omniget
+source_url: https://tonho.wtf
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent client protocol
+- ai agents
+- claude code
+- codex cli
+- coding agent
+- course downloader
+- download manager
+- downloader
+versus_refs: []
