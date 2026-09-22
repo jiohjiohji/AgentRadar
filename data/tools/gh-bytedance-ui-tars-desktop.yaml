@@ -1,0 +1,20 @@
+id: gh-bytedance-ui-tars-desktop
+name: UI-TARS-desktop
+source_url: https://agent-tars.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agent tars
+- browser use
+- computer use
+- cowork
+- gui agent
+- gui operator
+- mcp
+versus_refs: []
