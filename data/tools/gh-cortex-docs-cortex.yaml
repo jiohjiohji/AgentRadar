@@ -1,0 +1,20 @@
+id: gh-cortex-docs-cortex
+name: cortex
+source_url: https://cortexdocs.dev
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- api client
+- api documentation
+- api reference
+- asyncapi
+- code generation
+- docs
+- documentation generator
+- graphql
+versus_refs: []
