@@ -1,0 +1,18 @@
+id: gh-modelcontextprotocol-csharp-sdk
+name: csharp-sdk
+source_url: https://csharp.sdk.modelcontextprotocol.io/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- csharp
+- dotnet
+- mcp
+- mcp client
+- mcp server
+- modelcontextprotocol
+versus_refs: []
