@@ -1,0 +1,20 @@
+id: gh-tlgrcli-tlgr
+name: tlgr
+source_url: https://github.com/tlgrcli/tlgr
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- automation
+- cli
+- llm tools
+- mtproto
+- python
+- telegram
+versus_refs: []
