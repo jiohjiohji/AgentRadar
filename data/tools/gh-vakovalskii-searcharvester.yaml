@@ -1,0 +1,20 @@
+id: gh-vakovalskii-searcharvester
+name: searcharvester
+source_url: https://github.com/vakovalskii/searcharvester
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- ai agents
+- docker compose
+- fastapi
+- llm
+- llm tools
+- markdown
+- rag
+versus_refs: []
