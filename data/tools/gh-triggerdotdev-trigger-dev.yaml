@@ -1,0 +1,20 @@
+id: gh-triggerdotdev-trigger-dev
+name: trigger.dev
+source_url: https://trigger.dev/changelog
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent framework
+- ai agents
+- automation
+- background jobs
+- mcp
+- mcp server
+- nextjs
+versus_refs: []
