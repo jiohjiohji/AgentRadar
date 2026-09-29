@@ -1,0 +1,20 @@
+id: gh-openstatushq-openstatus
+name: openstatus
+source_url: https://openstatus.dev
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- alerting
+- incident management
+- mcp
+- mcp server
+- monitoring
+- monitoring as code
+- observability
+- on call
+versus_refs: []
