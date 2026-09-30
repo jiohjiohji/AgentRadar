@@ -1,0 +1,20 @@
+id: gh-dietrichgebert-ponytail
+name: ponytail
+source_url: https://ponytail.dev
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- claude
+- claude code
+- claude code plugin
+- cursor rules
+- developer tools
+- llm
+versus_refs: []
