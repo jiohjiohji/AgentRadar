@@ -1,0 +1,20 @@
+id: gh-astephenson660-lgtm-claude-plugin-hub
+name: claude-plugin-hub
+source_url: https://github.com/astephenson660-lgtm/claude-plugin-hub
+category: claude-plugin
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent orchestration
+- ai agent
+- anthropic
+- autonomous agent
+- claude agent
+- claude ai
+- claude code
+- claude marketplace
+versus_refs: []
