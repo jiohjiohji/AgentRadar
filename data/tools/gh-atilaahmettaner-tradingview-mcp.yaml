@@ -1,0 +1,20 @@
+id: gh-atilaahmettaner-tradingview-mcp
+name: tradingview-mcp
+source_url: https://pro.cryptosieve.com
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude desktop
+- cryptocurrency
+- futures
+- market data
+- mcp server
+- mcp tools
+- model context protocol
+- openclaw
+versus_refs: []
