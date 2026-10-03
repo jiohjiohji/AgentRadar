@@ -1,0 +1,20 @@
+id: gh-neomjs-neo
+name: neo
+source_url: https://neomjs.com
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent memory
+- ai
+- ai agent
+- ai memory
+- context engineering
+- frontend
+- frontend runtime
+- graph rag
+versus_refs: []
