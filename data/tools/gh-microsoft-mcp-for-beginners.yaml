@@ -1,0 +1,20 @@
+id: gh-microsoft-mcp-for-beginners
+name: mcp-for-beginners
+source_url: https://github.com/microsoft/mcp-for-beginners
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- csharp
+- java
+- javascript
+- javascript applications
+- mcp
+- mcp client
+- mcp security
+- mcp server
+versus_refs: []
