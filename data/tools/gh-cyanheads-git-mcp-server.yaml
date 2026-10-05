@@ -1,0 +1,20 @@
+id: gh-cyanheads-git-mcp-server
+name: git-mcp-server
+source_url: https://www.npmjs.com/package/@cyanheads/git-mcp-server
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai tools
+- cyanheads
+- developer tools
+- git
+- git tools
+- llm tools
+- mcp
+versus_refs: []
