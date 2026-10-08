@@ -1,0 +1,20 @@
+id: gh-pipeshub-ai-pipeshub-ai
+name: pipeshub-ai
+source_url: https://pipeshub.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic rag
+- ai
+- ai agents
+- claude code
+- context engineering
+- context layer
+- deep research
+- enterprise search
+versus_refs: []
