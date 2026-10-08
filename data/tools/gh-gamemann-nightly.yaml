@@ -1,0 +1,20 @@
+id: gh-gamemann-nightly
+name: nightly
+source_url: https://cdeacon.net
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- claude agent
+- claude ai
+- claude code
+- claude runner
+- claude usage
+- next
+- nextjs
+versus_refs: []
