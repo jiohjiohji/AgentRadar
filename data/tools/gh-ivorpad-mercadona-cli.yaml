@@ -1,0 +1,20 @@
+id: gh-ivorpad-mercadona-cli
+name: mercadona-cli
+source_url: https://www.npmjs.com/package/@ivorpad/mercadona
+category: complementary
+pricing: free
+license: null
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- claude code
+- cli
+- command line
+- golang
+- grocery shopping
+- llm tools
+- mercadona
+versus_refs: []
