@@ -1,0 +1,20 @@
+id: gh-kellyiscute-nestjs-llm-tools
+name: nestjs-llm-tools
+source_url: https://github.com/kellyiscute/nestjs-llm-tools
+category: complementary
+pricing: free
+license: null
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai tools
+- llm
+- llm tools
+- nest
+- nestjs
+- openai
+- tool calling
+versus_refs: []
