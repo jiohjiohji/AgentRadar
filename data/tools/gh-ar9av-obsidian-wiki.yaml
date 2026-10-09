@@ -1,0 +1,20 @@
+id: gh-ar9av-obsidian-wiki
+name: obsidian-wiki
+source_url: https://github.com/Ar9av/obsidian-wiki
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent memory
+- agent skills
+- brain
+- claude code
+- claude skills
+- codex
+- karpathy
+- knowledge base
+versus_refs: []
