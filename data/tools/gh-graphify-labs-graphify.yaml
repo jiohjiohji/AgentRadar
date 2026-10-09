@@ -1,0 +1,20 @@
+id: gh-graphify-labs-graphify
+name: graphify
+source_url: https://www.graphify.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- antigravity
+- ast
+- claude code
+- code analysis
+- code search
+- codex
+- cursor
+versus_refs: []
