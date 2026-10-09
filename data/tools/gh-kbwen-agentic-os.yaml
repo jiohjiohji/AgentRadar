@@ -1,0 +1,20 @@
+id: gh-kbwen-agentic-os
+name: agentic-os
+source_url: https://github.com/KbWen/agentic-os
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent framework
+- agent orchestration
+- agentic development
+- agents md
+- ai agent
+- ai coding assistant
+- ai governance
+- ai guardrails
+versus_refs: []
