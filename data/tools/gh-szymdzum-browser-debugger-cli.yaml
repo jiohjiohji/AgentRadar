@@ -1,0 +1,20 @@
+id: gh-szymdzum-browser-debugger-cli
+name: browser-debugger-cli
+source_url: https://www.npmjs.com/package/browser-debugger-cli
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- agentic coding
+- ai agents
+- ai tools
+- browser automation
+- cdp
+- chrome
+- chrome devtools protocol
+versus_refs: []
