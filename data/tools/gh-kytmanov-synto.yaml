@@ -1,0 +1,20 @@
+id: gh-kytmanov-synto
+name: synto
+source_url: https://github.com/kytmanov/synto
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- git based wiki
+- karpathy
+- knowledge base
+- llm knowledge base
+- llm pipeline
+- llm tools
+- llm wiki
+- local first ai
+versus_refs: []
