@@ -1,0 +1,16 @@
+id: gh-modelcontextprotocol-python-sdk
+name: python-sdk
+source_url: https://py.sdk.modelcontextprotocol.io/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp client
+- mcp server
+- python
+versus_refs: []
