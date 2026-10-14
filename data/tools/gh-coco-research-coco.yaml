@@ -1,0 +1,20 @@
+id: gh-coco-research-coco
+name: coco
+source_url: https://cocoresearch.org/coco/
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- agents md
+- ai
+- ai agents
+- claude code
+- codex
+- cursor
+- developer tools
+versus_refs: []
