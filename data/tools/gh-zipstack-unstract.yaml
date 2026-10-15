@@ -1,0 +1,20 @@
+id: gh-zipstack-unstract
+name: unstract
+source_url: https://unstract.com
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- data engineering
+- document ai
+- generative ai
+- idp
+- json extraction
+- llm
+- mcp server
+versus_refs: []
