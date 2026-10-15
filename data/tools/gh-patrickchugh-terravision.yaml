@@ -1,0 +1,20 @@
+id: gh-patrickchugh-terravision
+name: terravision
+source_url: https://patrickchugh.github.io/terravision/
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skill
+- architecture diagram
+- architecture diagram generator
+- aws
+- azure
+- chatgpt
+- claude
+- cloud architecture
+versus_refs: []
