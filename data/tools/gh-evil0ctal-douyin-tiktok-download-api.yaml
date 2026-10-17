@@ -1,0 +1,20 @@
+id: gh-evil0ctal-douyin-tiktok-download-api
+name: Douyin_TikTok_Download_API
+source_url: https://douyin.wtf
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- asyncio
+- crawler
+- data collection
+- douyin
+- douyin api
+- downloader
+- fastapi
+- mcp server
+versus_refs: []
