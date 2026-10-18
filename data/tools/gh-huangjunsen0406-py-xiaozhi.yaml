@@ -1,0 +1,20 @@
+id: gh-huangjunsen0406-py-xiaozhi
+name: py-xiaozhi
+source_url: https://huangjunsen0406.github.io/py-xiaozhi/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- cross platform
+- edge computing
+- embodied ai
+- esp32
+- esp32 s3
+- iot
+- mcp
+- mcp client
+versus_refs: []
