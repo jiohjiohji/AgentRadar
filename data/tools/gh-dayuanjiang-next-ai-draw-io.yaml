@@ -1,0 +1,20 @@
+id: gh-dayuanjiang-next-ai-draw-io
+name: next-ai-draw-io
+source_url: https://next-ai-drawio.jiang.jp/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- architecture diagram
+- claude code
+- diagram generator
+- diagrams
+- draw io
+- drawio
+- electron
+versus_refs: []
