@@ -1,0 +1,20 @@
+id: gh-claude-dev-code-claude-skills-linkedin
+name: claude-skills-linkedin
+source_url: https://linkupapi.com
+category: mcp-server
+pricing: free
+license: null
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- b2b
+- claude
+- claude agent
+- claude code
+- claude skills
+- linkedin
+- linkedin automation
+versus_refs: []
