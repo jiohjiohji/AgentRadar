@@ -1,0 +1,20 @@
+id: gh-lewisdonovan-google-news-scraper
+name: google-news-scraper
+source_url: https://github.com/lewisdonovan/google-news-scraper
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai tools
+- forecasting
+- google crawler
+- google news
+- google news mcp
+- google news scraper
+- llm tools
+- mcp
+versus_refs: []
