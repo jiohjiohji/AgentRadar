@@ -1,0 +1,20 @@
+id: gh-jordanburke-reddit-mcp-server
+name: reddit-mcp-server
+source_url: https://github.com/jordanburke/reddit-mcp-server
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- llm tools
+- mcp
+- mcp server
+- model context protocol
+- reddit
+- reddit api
+- typescript
+versus_refs: []
