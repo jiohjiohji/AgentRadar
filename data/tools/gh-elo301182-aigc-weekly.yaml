@@ -1,0 +1,18 @@
+id: gh-elo301182-aigc-weekly
+name: aigc-weekly
+source_url: https://github.com/Elo301182/aigc-weekly
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai
+- claude agent
+- claude code
+- cloudflare containers
+- payloadcms
+versus_refs: []
