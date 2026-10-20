@@ -1,0 +1,16 @@
+id: gh-modelcontextprotocol-typescript-sdk
+name: typescript-sdk
+source_url: https://ts.sdk.modelcontextprotocol.io/v2
+category: mcp-server
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp client
+- mcp server
+- typescript
+versus_refs: []
