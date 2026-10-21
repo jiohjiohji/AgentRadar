@@ -1,0 +1,18 @@
+id: gh-yetone-magpie
+name: magpie
+source_url: https://usemagpie.ai
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude code
+- codex
+- deepseek
+- gemini cli
+- llm
+- macos
+versus_refs: []
