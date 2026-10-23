@@ -1,0 +1,20 @@
+id: gh-delexw-claude-code-trace
+name: claude-code-trace
+source_url: https://github.com/delexw/claude-code-trace
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai tools
+- anthropic
+- claude
+- claude code
+- desktop app
+- developer tools
+- jsonl
+- llm tools
+versus_refs: []
