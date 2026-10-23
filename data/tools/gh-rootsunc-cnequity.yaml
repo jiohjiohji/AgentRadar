@@ -1,0 +1,20 @@
+id: gh-rootsunc-cnequity
+name: CNEquity
+source_url: https://rootsunc.github.io/CNEquity/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- a shares
+- ai agent
+- akshare
+- backtesting
+- china equity
+- china stock market
+- data lake
+- duckdb
+versus_refs: []
