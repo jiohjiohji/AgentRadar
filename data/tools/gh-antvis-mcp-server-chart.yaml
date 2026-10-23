@@ -1,0 +1,18 @@
+id: gh-antvis-mcp-server-chart
+name: mcp-server-chart
+source_url: https://github.com/antvis/mcp-server-chart
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- antv
+- llm
+- mcp
+- mcp server
+- skills
+- visualization
+versus_refs: []
