@@ -1,0 +1,20 @@
+id: gh-onlook-dev-onlook
+name: onlook
+source_url: https://onlook.com
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- claude code
+- codex
+- cursor
+- design
+- design system
+- design to code
+- design tool
+versus_refs: []
