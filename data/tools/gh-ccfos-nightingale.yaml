@@ -1,0 +1,20 @@
+id: gh-ccfos-nightingale
+name: nightingale
+source_url: https://n9e.github.io
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- alerting
+- alertmanager
+- clickhouse
+- golang
+- logs
+- loki
+- mcp server
+- metrics
+versus_refs: []
