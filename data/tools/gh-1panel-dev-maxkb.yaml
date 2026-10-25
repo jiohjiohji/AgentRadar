@@ -1,0 +1,20 @@
+id: gh-1panel-dev-maxkb
+name: MaxKB
+source_url: https://maxkb.cn
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- agentic ai
+- chatbot
+- deepseek r1
+- knowledgebase
+- langchain
+- llama3
+- llm
+versus_refs: []
