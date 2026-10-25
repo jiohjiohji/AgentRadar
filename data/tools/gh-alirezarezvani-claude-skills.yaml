@@ -1,0 +1,20 @@
+id: gh-alirezarezvani-claude-skills
+name: claude-skills
+source_url: https://alirezarezvani.medium.com/
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent plugins
+- agent skills
+- agentic ai
+- ai coding agent
+- anthropic claude
+- claude ai
+- claude code
+- claude code plugins
+versus_refs: []
