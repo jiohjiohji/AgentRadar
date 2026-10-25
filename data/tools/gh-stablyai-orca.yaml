@@ -1,0 +1,20 @@
+id: gh-stablyai-orca
+name: orca
+source_url: https://orca.dev
+category: orchestration
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ade
+- agent ide
+- ai agents
+- automation
+- bot
+- claude code
+- codex
+- ghostty
+versus_refs: []
