@@ -1,0 +1,16 @@
+id: gh-modelcontextprotocol-java-sdk
+name: java-sdk
+source_url: https://java.sdk.modelcontextprotocol.io/latest/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- java
+- mcp
+- mcp client
+- mcp server
+versus_refs: []
