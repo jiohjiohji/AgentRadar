@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated": "2026-10-19",
+  "generated": "2026-10-26",
   "count": 50,
   "base_url": "https://raw.githubusercontent.com/jiohjiohji/AgentRadar/main/data/tools/",
   "tools": [
@@ -548,7 +548,7 @@
       "id": "gh-josix-awesome-claude-md",
       "name": "Awesome Claude.md",
       "category": "claudemd-framework",
-      "status": "stale",
+      "status": "active",
       "tags": [
         "CLAUDE.md",
         "templates",
@@ -838,7 +838,7 @@
       "id": "gh-neolab-context-engineering-kit",
       "name": "Context Engineering Kit",
       "category": "claude-plugin",
-      "status": "active",
+      "status": "stale",
       "tags": [
         "context-engineering",
         "skills",

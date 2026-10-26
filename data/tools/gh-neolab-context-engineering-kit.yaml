@@ -4,7 +4,7 @@ source_url: https://github.com/NeoLabHQ/context-engineering-kit
 category: claude-plugin
 pricing: free
 license: GPL-3.0
-status: active
+status: stale
 scores:
   p: 6.0
   q: 6.0
