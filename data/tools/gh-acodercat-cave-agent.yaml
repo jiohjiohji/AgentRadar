@@ -1,0 +1,19 @@
+id: gh-acodercat-cave-agent
+name: cave-agent
+source_url: https://caveagent.dev
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- llm
+- llm agent
+- llm agents
+- llm evaluation
+- llm inference
+- llm tools
+- llms
+versus_refs: []
