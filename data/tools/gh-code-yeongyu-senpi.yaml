@@ -1,0 +1,20 @@
+id: gh-code-yeongyu-senpi
+name: senpi
+source_url: https://github.com/code-yeongyu/senpi
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai agent
+- cli
+- coding agent
+- llm
+- llm tools
+- monorepo
+- multi provider
+versus_refs: []
