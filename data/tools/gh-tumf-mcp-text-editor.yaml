@@ -1,0 +1,18 @@
+id: gh-tumf-mcp-text-editor
+name: mcp-text-editor
+source_url: https://github.com/tumf/mcp-text-editor
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- file editing
+- llm tools
+- mcp
+- model context protocol
+- python
+- text editor
+versus_refs: []
