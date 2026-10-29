@@ -1,0 +1,20 @@
+id: gh-dasdigitalemomentum-searxncrawl
+name: searxNcrawl
+source_url: https://www.searxncrawl.io
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- crawl4ai
+- crawler
+- firecrawl alternative
+- llm
+- llm tools
+- markdown
+- mcp
+versus_refs: []
