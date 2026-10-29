@@ -1,0 +1,20 @@
+id: gh-jordan-gibbs-hyperresearch
+name: hyperresearch
+source_url: https://hyperresearch.ai
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- agentskills
+- citations
+- claude code
+- codex
+- codex plugin
+- codex skill
+- deep research
+versus_refs: []
