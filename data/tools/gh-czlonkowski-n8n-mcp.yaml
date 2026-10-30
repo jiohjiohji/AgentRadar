@@ -1,0 +1,16 @@
+id: gh-czlonkowski-n8n-mcp
+name: n8n-mcp
+source_url: https://www.n8n-mcp.com/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- mcp
+- mcp server
+- n8n
+- workflows
+versus_refs: []
