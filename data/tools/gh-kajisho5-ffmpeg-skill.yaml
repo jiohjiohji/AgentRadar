@@ -1,0 +1,20 @@
+id: gh-kajisho5-ffmpeg-skill
+name: ffmpeg-skill
+source_url: https://www.npmjs.com/package/ffmpeg-skill
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- audio processing
+- captions
+- claude code
+- codex
+- coding agent
+- cursor
+versus_refs: []
