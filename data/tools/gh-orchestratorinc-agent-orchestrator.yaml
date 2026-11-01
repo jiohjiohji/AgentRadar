@@ -1,0 +1,20 @@
+id: gh-orchestratorinc-agent-orchestrator
+name: agent-orchestrator
+source_url: https://orchestrator.inc
+category: orchestration
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent fleet
+- agent ide
+- agent orchestration
+- agent swarm
+- agentic coding
+- ai agents
+- ai coding
+- claude code
+versus_refs: []
