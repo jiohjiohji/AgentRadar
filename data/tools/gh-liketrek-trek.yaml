@@ -1,0 +1,20 @@
+id: gh-liketrek-trek
+name: TREK
+source_url: https://demo.liketrek.com
+category: mcp-server
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- budget tracker
+- collaborative
+- docker
+- itinerary
+- mcp server
+- offline first
+- open source
+- openstreetmap
+versus_refs: []
