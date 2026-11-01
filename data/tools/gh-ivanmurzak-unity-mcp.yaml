@@ -1,0 +1,20 @@
+id: gh-ivanmurzak-unity-mcp
+name: Unity-MCP
+source_url: https://ai-game.dev
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai integration
+- anthropic
+- claude
+- claude code
+- claude desktop
+- cli
+- copilot
+versus_refs: []
