@@ -1,0 +1,20 @@
+id: gh-wizzy15-obsidian-skill
+name: obsidian-skill
+source_url: https://github.com/wizzy15/obsidian-skill
+category: claude-plugin
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai agent
+- automation
+- bun
+- claude agent
+- claude code plugin
+- claude skills
+- clawdbot
+versus_refs: []
