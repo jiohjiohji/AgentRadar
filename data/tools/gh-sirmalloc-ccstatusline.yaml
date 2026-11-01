@@ -1,0 +1,20 @@
+id: gh-sirmalloc-ccstatusline
+name: ccstatusline
+source_url: https://github.com/sirmalloc/ccstatusline
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai tools
+- claude code
+- cli
+- developer tools
+- git
+- powerline
+- statusbar
+- statusline
+versus_refs: []
