@@ -1,0 +1,20 @@
+id: gh-xerj-org-xerj
+name: xerj
+source_url: https://xerj.org
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent memory
+- ai agents
+- bm25
+- claude code
+- cli
+- code search
+- cursor
+- database
+versus_refs: []
