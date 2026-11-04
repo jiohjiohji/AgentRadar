@@ -1,0 +1,20 @@
+id: gh-tabularisdb-tabularis
+name: tabularis
+source_url: https://tabularis.dev
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- ai assistant
+- cross platform
+- database client
+- database gui
+- database tool
+- er diagram
+- mariadb
+versus_refs: []
