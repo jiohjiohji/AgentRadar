@@ -1,0 +1,20 @@
+id: gh-clioo-dsh-claude-agent
+name: dsh-claude-agent
+source_url: https://github.com/clioo/dsh-claude-agent
+category: sdk-pattern
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- claude agent
+- claude code
+- deepseek harness
+- dsh plugin
+- llm provider
+- opencode
+- prompt caching
+versus_refs: []
