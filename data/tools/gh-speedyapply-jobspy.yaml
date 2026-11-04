@@ -1,0 +1,20 @@
+id: gh-speedyapply-jobspy
+name: JobSpy
+source_url: https://github.com/speedyapply/JobSpy
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- bayt
+- bdjobs
+- cli
+- glassdoor
+- hellowork
+- indeed
+- internship
+- job scraper
+versus_refs: []
