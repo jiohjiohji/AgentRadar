@@ -1,0 +1,20 @@
+id: gh-slopus-happy
+name: happy
+source_url: https://happy.engineering/
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent orchestration
+- ai agents
+- claude code
+- claude desktop
+- codex
+- codex cli
+- coding agents
+- grok
+versus_refs: []
