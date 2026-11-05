@@ -1,0 +1,20 @@
+id: gh-citrolabs-ego-lite
+name: ego-lite
+source_url: https://lite.ego.app
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agent
+- automation
+- browser
+- browser automation
+- claude code
+- codex
+- hermes agent
+versus_refs: []
