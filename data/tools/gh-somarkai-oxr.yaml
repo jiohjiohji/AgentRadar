@@ -1,0 +1,19 @@
+id: gh-somarkai-oxr
+name: OXR
+source_url: https://somark.ai/oxr
+category: complementary
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- llm tools
+- ocr
+- oxr
+- rsi
+- vlm
+- vlm ocr
+versus_refs: []
