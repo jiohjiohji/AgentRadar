@@ -1,0 +1,20 @@
+id: gh-browser-use-browser-harness
+name: browser-harness
+source_url: https://browser-harness.com
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- browser agent
+- browser automation
+- browser use
+- browser use box
+- browser use cloud
+- cdp
+- chrome
+versus_refs: []
