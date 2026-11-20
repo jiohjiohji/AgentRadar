@@ -1,0 +1,20 @@
+id: gh-nvidia-skillspector
+name: SkillSpector
+source_url: https://docs.nvidia.com/skills/scanning-agent-skills
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent security
+- agent skills
+- agentic ai
+- ai security
+- claude code
+- mcp
+- prompt injection
+- security scanner
+versus_refs: []
