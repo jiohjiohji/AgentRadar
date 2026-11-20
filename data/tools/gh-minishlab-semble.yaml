@@ -1,0 +1,19 @@
+id: gh-minishlab-semble
+name: semble
+source_url: https://minish.ai/packages/semble/introduction/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- code search
+- embeddings
+- mcp
+- mcp server
+- model context protocol
+- retrieval
+versus_refs: []
