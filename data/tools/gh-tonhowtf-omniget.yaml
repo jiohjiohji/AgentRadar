@@ -1,0 +1,20 @@
+id: gh-tonhowtf-omniget
+name: omniget
+source_url: https://getomniget.com/
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent client protocol
+- claude code
+- codex cli
+- coding agent
+- download manager
+- downloader
+- gallery dl
+- instagram downloader
+versus_refs: []
