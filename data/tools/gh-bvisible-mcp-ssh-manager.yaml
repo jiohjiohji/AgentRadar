@@ -1,0 +1,20 @@
+id: gh-bvisible-mcp-ssh-manager
+name: mcp-ssh-manager
+source_url: https://www.npmjs.com/package/mcp-ssh-manager
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- ai agents
+- anthropic
+- audit log
+- claude code
+- claude desktop
+- devops
+- human in the loop
+versus_refs: []
