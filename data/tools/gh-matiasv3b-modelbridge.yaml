@@ -1,0 +1,19 @@
+id: gh-matiasv3b-modelbridge
+name: ModelBridge
+source_url: https://github.com/MatiasV3B/ModelBridge
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude agent
+- copilot
+- fastapi
+- gemini
+- local gateway
+- openai api
+- python
+versus_refs: []
