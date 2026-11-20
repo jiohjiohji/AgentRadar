@@ -1,0 +1,20 @@
+id: gh-prismer-ai-prismercloud
+name: PrismerCloud
+source_url: https://prismer.cloud
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent communication
+- agent memory
+- ai agents
+- claude
+- cursor
+- docker
+- knowledge base
+- llm tools
+versus_refs: []
