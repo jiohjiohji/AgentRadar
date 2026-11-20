@@ -1,0 +1,20 @@
+id: gh-sleepinginsummer-agent-browser-cli
+name: agent-browser-cli
+source_url: https://www.npmjs.com/package/@sleepinsummer/agent-browser-cli
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- ai agent
+- browser automation
+- cdp
+- chrome extension
+- claude code
+- cli
+- codex
+versus_refs: []
