@@ -1,0 +1,20 @@
+id: gh-google-elephant-goldfish-model
+name: elephant-goldfish-model
+source_url: https://egm.dev
+category: claude-plugin
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- antigravity
+- claude code
+- claude code plugin
+- claude skills
+- codex
+- codex plugin
+versus_refs: []
