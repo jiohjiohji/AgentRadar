@@ -1,0 +1,20 @@
+id: gh-nanocoai-nanoclaw
+name: nanoclaw
+source_url: https://nanoclaw.dev
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- ai assistant
+- claude code
+- claude skills
+- codex
+- cursor
+- docker
+- openclaw
+versus_refs: []
