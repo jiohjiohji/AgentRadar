@@ -1,0 +1,20 @@
+id: gh-rocketride-org-rocketride-server
+name: rocketride-server
+source_url: https://rocketride.ai
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent framework
+- agent harness
+- agent orchestration
+- agentic ai
+- ai agents
+- ai observability
+- cpp
+- document processing
+versus_refs: []
