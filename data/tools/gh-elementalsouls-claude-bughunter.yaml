@@ -1,0 +1,20 @@
+id: gh-elementalsouls-claude-bughunter
+name: Claude-BugHunter
+source_url: https://elementalsouls.github.io/Claude-BugHunter
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai security
+- anthropic
+- application security
+- bug bounty
+- bugbounty
+- bugcrowd
+- claude
+- claude code
+versus_refs: []
