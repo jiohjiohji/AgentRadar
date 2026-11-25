@@ -1,0 +1,20 @@
+id: gh-onehumanbeing-esp32-iphone-agent
+name: esp32-iphone-agent
+source_url: https://manina.ai?ref=github
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- airplay
+- claude code
+- computer use
+- esp32
+- esp32 s3
+- ios
+- ios automation
+versus_refs: []
