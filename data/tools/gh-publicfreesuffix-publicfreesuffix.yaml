@@ -1,0 +1,20 @@
+id: gh-publicfreesuffix-publicfreesuffix
+name: PublicFreeSuffix
+source_url: https://publicfreesuffix.org
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai domains
+- dns
+- dns mcp
+- dns server
+- domain mcp
+- domains
+- free
+- freedns
+versus_refs: []
