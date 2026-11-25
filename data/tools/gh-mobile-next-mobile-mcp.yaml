@@ -1,0 +1,20 @@
+id: gh-mobile-next-mobile-mcp
+name: mobile-mcp
+source_url: https://mobilenext.ai
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent
+- android
+- android automation
+- appium alternative
+- claude code
+- codex
+- cursor
+- emulator
+versus_refs: []
