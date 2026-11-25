@@ -1,0 +1,20 @@
+id: gh-lidge-jun-opencodex
+name: opencodex
+source_url: https://opencodex.me/
+category: sdk-pattern
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai gateway
+- ai tools
+- anthropic
+- chatgpt
+- claude
+- claude code
+- codex
+- codex cli
+versus_refs: []
