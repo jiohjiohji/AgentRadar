@@ -1,0 +1,20 @@
+id: gh-utensils-mcp-nixos
+name: mcp-nixos
+source_url: https://mcp-nixos.io/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai assistant
+- ai integration
+- ai tools
+- anthropic
+- claude
+- developer tools
+- devops tools
+- fastmcp
+versus_refs: []
