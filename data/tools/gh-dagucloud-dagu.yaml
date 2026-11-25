@@ -1,0 +1,20 @@
+id: gh-dagucloud-dagu
+name: dagu
+source_url: https://dagu.sh
+category: mcp-server
+pricing: free
+license: GPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic workflows
+- ai agents
+- ai workflows
+- airflow alternative
+- cron
+- dag
+- data pipeline
+- devops
+versus_refs: []
