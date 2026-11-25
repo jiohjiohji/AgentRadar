@@ -1,0 +1,18 @@
+id: gh-nimbleway-webrouter
+name: webrouter
+source_url: https://docs.webrouter.net
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- llm tools
+- mcp
+- python
+- router
+- web search
+versus_refs: []
