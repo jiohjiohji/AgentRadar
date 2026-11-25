@@ -1,0 +1,20 @@
+id: gh-coipond-coi
+name: coi
+source_url: https://coipond.ai
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic ai
+- ai tools
+- anthropic
+- claude
+- claude code
+- code sandbox
+- codex
+- coding assistant
+versus_refs: []
