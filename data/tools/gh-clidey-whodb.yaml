@@ -1,0 +1,20 @@
+id: gh-clidey-whodb
+name: whodb
+source_url: https://whodb.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- data catalog
+- data governance
+- data integration
+- data lineage
+- data pipeline
+- data platform
+- database management
+versus_refs: []
