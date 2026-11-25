@@ -1,0 +1,20 @@
+id: gh-withcoral-coral
+name: coral
+source_url: https://withcoral.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent security
+- ai agents
+- code mode
+- mcp
+- mcp gateway
+- mcp server
+- model context protocol
+- rust
+versus_refs: []
