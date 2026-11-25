@@ -1,0 +1,20 @@
+id: gh-ruvnet-ruview
+name: RuView
+source_url: https://cognitum.one
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- claude
+- claude code
+- esp32
+- firmware
+- home assistant
+- home automation
+- iot
+- mcp
+versus_refs: []
