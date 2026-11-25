@@ -1,0 +1,20 @@
+id: gh-ythx-101-ask-search
+name: ask-search
+source_url: https://github.com/ythx-101/ask-search
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agent tools
+- ai agents
+- claude code
+- docker compose
+- llm tools
+- mcp
+- mcp server
+versus_refs: []
