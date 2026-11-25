@@ -1,0 +1,20 @@
+id: gh-kukemc-bili-cli
+name: bili-cli
+source_url: https://github.com/kukemc/bili-cli
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agent
+- automation
+- bilibili
+- claude code
+- cli
+- codex
+- deepseek
+versus_refs: []
