@@ -1,0 +1,20 @@
+id: gh-devlikeapro-waha
+name: waha
+source_url: https://waha.devlike.pro/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai bot
+- bot
+- http api
+- mcp
+- mcp server
+- mcp whatsapp
+- python bot
+- whatsapp
+versus_refs: []
