@@ -1,0 +1,20 @@
+id: gh-canonical-myna
+name: myna
+source_url: https://github.com/canonical/myna
+category: complementary
+pricing: free
+license: AGPL-3.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- accessibility
+- audio
+- llm
+- llm inference
+- llm tools
+- llms
+- speech recognition
+- speech to text
+versus_refs: []
