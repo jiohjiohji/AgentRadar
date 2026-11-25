@@ -1,0 +1,20 @@
+id: gh-yikart-aitoearn
+name: AiToEarn
+source_url: https://aitoearn.ai/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- auto publish
+- codex skills
+- douyin
+- douyin api
+- dsh plugin
+- electron app
+- electron react
+versus_refs: []
