@@ -1,0 +1,20 @@
+id: gh-obsidianmd-obsidian-skills
+name: obsidian-skills
+source_url: https://github.com/obsidianmd/obsidian-skills
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agents
+- agentskills
+- bases
+- chatgpt
+- claude
+- claude code
+- claude skills
+- cli
+versus_refs: []
