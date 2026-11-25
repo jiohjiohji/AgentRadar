@@ -1,0 +1,20 @@
+id: gh-marker-inc-korea-autorag
+name: AutoRAG
+source_url: https://github.com/Marker-Inc-Korea/AutoRAG
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic rag
+- ai agents
+- document parser
+- embeddings
+- hybrid search
+- knowledge base
+- librarian
+- llm
+versus_refs: []
