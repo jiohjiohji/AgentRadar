@@ -1,0 +1,20 @@
+id: gh-modelstudioai-cli
+name: cli
+source_url: https://bailian.console.aliyun.com/cli
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- ai cli
+- aliyun
+- bailian
+- cli
+- command line tool
+- dashscope
+- llm tools
+versus_refs: []
