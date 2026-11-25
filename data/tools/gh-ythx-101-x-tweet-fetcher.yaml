@@ -1,0 +1,20 @@
+id: gh-ythx-101-x-tweet-fetcher
+name: x-tweet-fetcher
+source_url: https://github.com/ythx-101/openclaw-qa
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- agent tools
+- ai agent
+- automation
+- cli
+- fxtwitter
+- llm tools
+- nitter
+versus_refs: []
