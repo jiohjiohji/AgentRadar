@@ -1,0 +1,20 @@
+id: gh-54yyyu-zotero-mcp
+name: zotero-mcp
+source_url: https://stevenyuyy.com/zotero-mcp/
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agent
+- chatgpt
+- claude
+- claude code
+- mcp
+- mcp server
+- model context protocol
+- research tools
+versus_refs: []
