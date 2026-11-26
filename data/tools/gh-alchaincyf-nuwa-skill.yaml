@@ -1,0 +1,20 @@
+id: gh-alchaincyf-nuwa-skill
+name: nuwa-skill
+source_url: https://github.com/alchaincyf/nuwa-skill
+category: prompt-library
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- ai agents
+- claude code
+- claude code skills
+- claude skills
+- codex
+- cursor
+- decision making
+versus_refs: []
