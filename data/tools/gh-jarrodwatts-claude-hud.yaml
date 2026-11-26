@@ -1,0 +1,19 @@
+id: gh-jarrodwatts-claude-hud
+name: claude-hud
+source_url: https://github.com/jarrodwatts/claude-hud
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- anthropic
+- claude
+- claude code
+- cli
+- plugin
+- statusline
+- typescript
+versus_refs: []
