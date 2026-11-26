@@ -1,0 +1,20 @@
+id: gh-paperclipai-paperclip
+name: paperclip
+source_url: https://paperclip.ing
+category: mcp-server
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- acpx
+- agent orchestration
+- agent skills
+- agentic ai
+- ai agents
+- ai engineering
+- ai governance
+- ai tools
+versus_refs: []
