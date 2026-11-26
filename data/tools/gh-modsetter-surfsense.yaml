@@ -1,0 +1,20 @@
+id: gh-modsetter-surfsense
+name: SurfSense
+source_url: https://www.surfsense.com
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- air gapped
+- document ai
+- electron
+- flashcards
+- legal ai
+- local ai
+- local first
+- local llm
+versus_refs: []
