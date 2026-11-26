@@ -1,0 +1,20 @@
+id: gh-d4vinci-scrapling
+name: Scrapling
+source_url: https://scrapling.readthedocs.io/en/latest/
+category: mcp-server
+pricing: free
+license: BSD-3-Clause
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- ai scraping
+- automation
+- crawler
+- crawling
+- crawling python
+- data
+- data extraction
+versus_refs: []
