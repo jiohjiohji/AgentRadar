@@ -1,0 +1,20 @@
+id: gh-rtk-ai-rtk
+name: rtk
+source_url: https://www.rtk-ai.app
+category: complementary
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agentic coding
+- ai coding
+- anthropic
+- claude code
+- cli
+- command line tool
+- cost reduction
+- developer tools
+versus_refs: []
