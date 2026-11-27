@@ -1,0 +1,20 @@
+id: gh-getpaseo-paseo
+name: paseo
+source_url: https://paseo.sh
+category: orchestration
+pricing: free
+license: NOASSERTION
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ade
+- agents
+- android
+- claude code
+- codex
+- copilot
+- developer tools
+- hermes
+versus_refs: []
