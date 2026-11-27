@@ -1,0 +1,18 @@
+id: gh-emilkowalski-skills
+name: skills
+source_url: https://aiforui.dev/skills
+category: complementary
+pricing: free
+license: MIT
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent skills
+- animation
+- claude code
+- codex
+- cursor
+- design engineering
+versus_refs: []
