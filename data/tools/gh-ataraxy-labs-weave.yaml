@@ -1,0 +1,20 @@
+id: gh-ataraxy-labs-weave
+name: weave
+source_url: https://ataraxy-labs.github.io/weave/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai agents
+- code intelligence
+- coding agents
+- conflict resolution
+- developer tools
+- git merge
+- llm tools
+- mcp
+versus_refs: []
