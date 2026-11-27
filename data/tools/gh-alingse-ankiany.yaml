@@ -1,0 +1,17 @@
+id: gh-alingse-ankiany
+name: ankiany
+source_url: https://ankiany.starsou.com/
+category: sdk-pattern
+pricing: free
+license: null
+status: stale
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- agent application
+- anki
+- anki cards
+- claude agent
+- claude agent sdk
+versus_refs: []
