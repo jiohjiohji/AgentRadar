@@ -1,0 +1,20 @@
+id: gh-lemonade-sdk-lemonade
+name: lemonade
+source_url: https://lemonade-server.ai/
+category: mcp-server
+pricing: free
+license: Apache-2.0
+status: active
+scores: null
+score_confidence: null
+score_history: []
+tags:
+- ai
+- amd
+- genai
+- gpu
+- llama
+- llm
+- llm inference
+- local server
+versus_refs: []
